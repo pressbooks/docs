@@ -26,7 +26,7 @@ IMPORTANT!
 2.  [Create a Network][5] of WordPress sites, i.e.:
 
 3.  Edit the wp-config.php file and add the following:
-
+    
     `define('WP_ALLOW_MULTISITE', true);`
 
 4.  Login to the WordPress admin area. Navigate to Tools → Network Setup, click Install.
@@ -50,7 +50,7 @@ IMPORTANT!
 7.  Navigate to: Settings → Network Settings.
 
 8.  Pick the most appropriate Registration Setting:
-
+    
     *   User accounts may be registered. (do not use this setting, since it will not allow users to create new books)
     *   Logged in users may register new sites. (if you are a publisher using Pressbooks as a production tool, this is the best setting: it allows network administrators to add new users, who can then create books/sites. However, registration is not available to the public.)
     *   Both sites and user accounts can be registered. (use this setting if you intend on offering a publishing-platform open to the public, such as Pressbooks.com)
@@ -72,7 +72,7 @@ IMPORTANT!
 *Part 3, Pressbooks dependencies:*
 
 *   For PDF export install [Prince][6] (note: this is not free software) - Version 11
-*   For PDF export via mPDF install the [Pressbooks mPDF plugin][7]. You will also need to ensure that the following folders have write access and/or they are owned by the appropriate user. See http://codex.wordpress.org/Changing_File_Permissions for more details on adjusting file permissions.
+*   For PDF export via mPDF install the [Pressbooks mPDF plugin][7]. You will also need to ensure that the following folders have write access and/or they are owned by the appropriate user. See http://codex.wordpress.org/Changing_File_Permissions for more details on adjusting file permissions. 
     *   `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/ttfontdata`
     *   `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/tmp`
     *   `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/graph_cache`
@@ -91,7 +91,7 @@ Once installed, define the following `wp-config.php` variables. The defaults are
     define( 'PB_EPUBCHECK_COMMAND', '/usr/bin/java -jar /opt/epubcheck/epubcheck.jar' );
     define( 'PB_XMLLINT_COMMAND', '/usr/bin/xmllint' );
     define( 'PB_SAXON_COMMAND', '/usr/bin/java -jar /opt/saxon-he/saxon-he.jar' );
-
+    
 
 Example config files for a dev site hosted at http://localhost/~dac514/textopress/
 
@@ -106,12 +106,12 @@ Example config files for a dev site hosted at http://localhost/~dac514/textopres
      */
     define('WP_DEBUG', true);
     define('WP_DEBUG_LOG', true);
-
+    
     /**
      * Multi-site support, Part 1
      */
     define('WP_ALLOW_MULTISITE', true);
-
+    
     /**
      * Multi-site support, Part 2
      */
@@ -122,7 +122,7 @@ Example config files for a dev site hosted at http://localhost/~dac514/textopres
     define('PATH_CURRENT_SITE', '/~dac514/textopress/');
     define('SITE_ID_CURRENT_SITE', 1);
     define('BLOG_ID_CURRENT_SITE', 1);
-
+    
     /**
      * Pressbooks
      */
@@ -131,37 +131,37 @@ Example config files for a dev site hosted at http://localhost/~dac514/textopres
     define( 'PB_EPUBCHECK_COMMAND', '/usr/bin/java -jar /home/dac514/bin/epubcheck-4.0/epubcheck-4.0.jar' );
     define( 'PB_XMLLINT_COMMAND', '/usr/bin/xmllint' );
     define( 'PB_SAXON_COMMAND', '/usr/bin/java -jar home/dac514/bin/saxon-he/saxon-he.jar' );
-
+    
     /**
      * Optional definitions
      */
     // define( 'WP_POST_REVISIONS', 5 ); // Limit post revisions: int or false
     // define( 'EMPTY_TRASH_DAYS', 1 ); // Purge trash interval
     // define( 'AUTOSAVE_INTERVAL', 60 ); // Autosave every N seconds
-
+    
     /* That's all, stop editing! Happy blogging. */
-
+    
 
 ### .htaccess file:
 
     RewriteEngine On
     RewriteBase /~dac514/textopress/
     RewriteRule ^index.php$ - [L]
-
+    
     # add a trailing slash to /wp-admin
     RewriteRule ^([_0-9a-zA-Z-]+/)?wp-admin$ $1wp-admin/ [R=301,L]
-
+    
     RewriteCond %{REQUEST_FILENAME} -f [OR]
     RewriteCond %{REQUEST_FILENAME} -d
     RewriteRule ^ - [L]
     RewriteRule  ^[_0-9a-zA-Z-]+/(wp-(content|admin|includes).*) $1 [L]
     RewriteRule  ^[_0-9a-zA-Z-]+/(.*.php)$ $1 [L]
     RewriteRule . index.php [L]
-
+    
 
 ## Installation (WP-CLI)
 
-First, get [WP-CLI][14].
+First, get [WP-CLI][12].
 
 Once WP-CLI is installed on your server, the following shell commands executed in the site root will download and install a fresh version of Pressbooks. Obviously you need to put in the correct information for your server and install on lines 2 and 10, and enter the correct paths to `WP_PRINCE_COMMAND`, `PB_KINDLEGEN_COMMAND`, `PB_EPUBCHECK_COMMAND` and `PB_XMLLINT_COMMAND` where indicated.
 
@@ -187,7 +187,7 @@ Once WP-CLI is installed on your server, the following shell commands executed i
     wp theme enable fitzgerald --network
     wp theme enable austen --network
     wp theme enable pressbooks-custom-css --network
-
+    
 
 Note that this does not install the required libraries for export. See above (Part 3, Pressbooks dependencies).
 
@@ -202,5 +202,4 @@ Note that this does not install the required libraries for export. See above (Pa
  [9]: https://github.com/idpf/epubcheck
  [10]: http://xmlsoft.org/xmllint.html
  [11]: https://sourceforge.net/projects/saxon/files/Saxon-HE/
- [13]: https://github.com/leafo/scssphp/
- [14]: https://wp-cli.org/
+ [12]: https://wp-cli.org/

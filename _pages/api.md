@@ -25,18 +25,28 @@ post_date: 2017-07-07 22:44:41
 WP API respects permissions but the developer must <a href="https://developer.wordpress.org/rest-api/using-the-rest-api/authentication/#authentication-plugins">setup authentication</a> separately.
 <h3 id="schema">Schema</h3>
 WP API is self-documenting. Send an OPTIONS request to any endpoint and get back <a href="http://json-schema.org/">JSON Schema</a> compatible info on how to use it:
-<figure><img src="images/api/options.png" alt="OPTIONS in YARC" /><figcaption>OPTIONS in YARC</figcaption></figure>
+
+[caption id="attachment_127" align="aligncenter" width="653"]<img src="https://pressbooks.org/app/uploads/sites/2/2017/07/options.png" alt="Options in YARC" width="653" height="209" class="size-full wp-image-127" /> Options in YARC[/caption]
+
 <blockquote>To get the entire API schema in a single query, add <code>context=help</code> at the index. (Ie. http://site/book/wp-json?context=help )</blockquote>
 <h3 id="multisite">Multisite</h3>
 Pressbooks has different API endpoints for book and the root site:
-<figure><img src="images/api/namespaces.png" alt="Book vs. Root" /><figcaption>Book vs. Root</figcaption></figure>
+
+[caption id="attachment_128" align="aligncenter" width="1366"]<img src="https://pressbooks.org/app/uploads/sites/2/2017/07/namespaces.png" alt="Book vs. Root" width="1366" height="568" class="size-full wp-image-128" /> Book vs. Root[/caption]
+
 <h3 id="features">Features</h3>
 WP API items have a <code>_links</code> node based on <a href="http://stateless.co/hal_specification.html">HAL</a> (Hypertext Application Language):
-<figure><img src="images/api/links.png" alt="_links" /><figcaption>_links</figcaption></figure>
+
+[caption id="attachment_129" align="aligncenter" width="586"]<img src="https://pressbooks.org/app/uploads/sites/2/2017/07/links.png" alt="_links" width="586" height="800" class="size-full wp-image-129" /> _links[/caption]
+
 To reduce the number of HTTP requests use [the <em>embed parameter](https://developer.wordpress.org/rest-api/using-the-rest-api/global-parameters/#</em>embed) to tell the API that the response should include embeddable resources.
-<figure><img src="images/api/embeded.png" alt="_embeded" /><figcaption>_embeded</figcaption></figure>
+
+[caption id="attachment_130" align="aligncenter" width="680"]<img src="https://pressbooks.org/app/uploads/sites/2/2017/07/embeded.png" alt="_embedded" width="680" height="489" class="size-full wp-image-130" /> _embedded[/caption]
+
 WP API exposes pagination info in the response header.
-<figure><img src="images/api/pagination.png" alt="pagination" /><figcaption>pagination</figcaption></figure>
+
+[caption id="attachment_131" align="aligncenter" width="1024"]<img src="https://pressbooks.org/app/uploads/sites/2/2017/07/pagination.png" alt="Pagination" width="1024" height="584" class="size-full wp-image-131" /> Pagination[/caption]
+
 <h3 id="phptojson">PHP to JSON</h3>
 WP API renders JSON in a generic way that does not match the DB columns. Keep calm and <a href="https://developer.wordpress.org/rest-api/reference/posts/">RTFM</a>:
 <pre><code class="php">if ( ! empty( $schema['properties']['author'] ) ) {

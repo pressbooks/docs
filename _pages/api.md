@@ -1,7 +1,7 @@
 ---
 layout: page
 post_title: Pressbooks REST API
-permalink: /api/
+published: true
 ---
 
 ## Recommended Tools

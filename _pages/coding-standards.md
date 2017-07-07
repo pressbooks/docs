@@ -9,48 +9,42 @@ permalink: >
 published: true
 post_date: 2017-07-07 22:29:32
 ---
-Write accurate [PHPDoc][1] styled code comments.
+## Validating with PHP Code Sniffer
 
-Write real Classes or Namespaced functions.
+Instead of reading any of this why not just let the computer nag you? From the Pressbooks plugin directory:
 
-[PHP Namespaces][2] have been available since 2009. Namespaces are not a new concept. We use them.
+1. `composer install`
+2. `composer standards`
+
+Bonus: You can sometimes automatically fix errors by running `vendor/bin/phpcbf --standard=phpcs.ruleset.xml /path/to/your/file`
+
+## Pressbooks Coding Standards (Mandatory)
+
+We enforce [Human Made Coding Standards](https://github.com/humanmade/coding-standards) with the following small tweaks.
+
+ + Use camelCase for class methods & properties, uppercase for class constants, snake_case everywhere else.
+ + [PHP Sessions](http://php.net/manual/en/book.session.php) are allowed.
+
+### Write Classes or Namespaced functions, stay out of global space!
+
+[PHP Namespaces](https://secure.php.net/manual/en/language.namespaces.php) have been available since 2009. Namespaces are not a new concept. We use them.
 
 Our namespace is: `\Pressbooks\`
 
-*   If your Class isn't an Object like `\WP_User`, `\WP_Dependencies`, `\WP_Query` etc., write a library of functions.
-*   If your Class is a bunch of Static methods and nothing else, write a library of functions.
-*   Afraid of function name collisions? See [Namespaces][2].
+ * If your Class isn't an Object like `\WP_User`, `\WP_Dependencies`, `\WP_Query` etc., write a library of functions.
+ * If your Class is a bunch of Static methods and nothing else, write a library of functions.
+ * Afraid of function name collisions? See [Namespaces](https://secure.php.net/manual/en/language.namespaces.php).
 
-Functions are `written_like_this()`. Class methods are `writtenLikeThis()`.
+## Pressbooks Coding Recommendations (Optional)
 
-Rules of thumb:
+Write accurate [PHPDoc](http://en.wikipedia.org/wiki/PHPDoc) styled code comments.
 
-*   `getFooBar()` is when you are getting something associated with an object -- it implies the set is already defined.
-*   `loadFooBar()` is when you are loading from an external source, like a file or a database.
-*   `isFooBar()` or `hasFooBar()` is when a method returns a boolean value.
-*   `createFooBar()` is when a method creates new files or assets.
+Prefix [action and filter hook](https://developer.wordpress.org/plugins/hooks/) names with `pb_`.
 
-Don't write `public function foo()`, just write `function foo()`. Public is implied. Order of methods in a class:
+Prefix WP Post meta keys with `pb_`.
 
-1.  `magic`
-2.  `public`
-3.  `protected`
-4.  `private`
-5.  `static`
+Prefix WP User meta keys with `pb_`.
 
-Prefix WP Post meta keys with `pb_`. Prefix WP User meta keys with `pb_`. Prefix WP Option names with `pressbooks_`.
+Prefix WP Option names with `pressbooks_`.
 
 Files under `themes-book/` and `themes-root/` are exempt from the above rules, but should still make an effort to follow them.
-
-For everything else not mentioned we respect the [WordPress coding standards][3].
-
-## Validating with PHP Code Sniffer
-
-From the Pressbooks plugin directory:
-
-1.  `composer install --dev`
-2.  `composer standards`
-
- [1]: http://en.wikipedia.org/wiki/PHPDoc
- [2]: https://secure.php.net/manual/en/language.namespaces.php
- [3]: http://make.wordpress.org/core/handbook/coding-standards/php/

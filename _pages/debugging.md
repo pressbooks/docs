@@ -1,10 +1,13 @@
 ---
-layout: page
+ID: 84
 post_title: Debugging
+author: Ned Zimmerman
+post_excerpt: ""
+layout: page
+permalink: http://docs.pressbooks.org/debugging/
 published: true
-permalink: /debugging/
+post_date: 2017-07-07 22:29:32
 ---
-
 A few things you can try:
 
 1. Add this line to `wp-config.php`: `define( 'WP_ENV', 'development' );` (this will enable some debugging features and outputs that are not enabled in production environments).

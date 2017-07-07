@@ -1,10 +1,14 @@
 ---
-layout: page
+ID: 94
 post_title: Theme Development
+author: Ned Zimmerman
+post_excerpt: ""
+layout: page
+permalink: >
+  http://docs.pressbooks.org/theme-development/
 published: true
-permalink: /theme-development/
+post_date: 2017-07-07 22:29:32
 ---
-
 _Follow along with these steps at the [pressbooks/pressbooks-demo](https://github.com/pressbooks/pressbooks-demo) repository._
 
 ## 1. Getting Started

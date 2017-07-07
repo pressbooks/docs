@@ -1,11 +1,14 @@
 ---
-layout: page
+ID: 82
 post_title: Contributors
+author: Ned Zimmerman
+post_excerpt: ""
+layout: page
+permalink: http://docs.pressbooks.org/contributors/
 published: true
-permalink: /contributors/
+post_date: 2017-07-07 22:29:32
 ---
-
- Pressbooks was created by the team at Book Oven Inc. ([code@pressbooks.com](mailto:code@pressbooks.com)), with contributions from:
+Pressbooks was created by the team at Book Oven Inc. ([code@pressbooks.com](mailto:code@pressbooks.com)), with contributions from:
 
  * India Amos ([@indiamos](https://github.com/indiamos))
  * Bryan Borgeson ([@monkecheese](https://github.com/monkecheese))

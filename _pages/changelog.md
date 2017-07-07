@@ -1,10 +1,13 @@
 ---
-layout: page
+ID: 78
 post_title: Changelog
+author: Ned Zimmerman
+post_excerpt: ""
+layout: page
+permalink: http://docs.pressbooks.org/changelog/
 published: true
-permalink: /changelog/
+post_date: 2017-07-07 22:29:32
 ---
-
 ### 3.9.10
 * **Feature:** Strikethrough text (the `<del>` tag) can now be used in front matter, part, chapter and back matter titles (see #790).
 
@@ -33,7 +36,7 @@ permalink: /changelog/
 
 * **Fix:** Switched to an unmodified version of htmLawed to fix a regression in [vanilla/htmlawed](https://github.com/vanilla/htmlawed/) which was stripping paragraph tags from blockquotes (see #723).
 * **Fix:** Fixed an issue where users would be informed that their theme had been unlocked when saving Export options even thought it was already unlocked (see #722).
-* **Fix:** Fixed an issue where wp-cli would give a permissions error because of the `\Pressbooks\ThemeLock::isLocked()` check (see #721).
+* **Fix:** Fixed an issue where wp-cli would give a permissions error because of the `PressbooksThemeLock::isLocked()` check (see #721).
 
 ### 3.9.8.1
 **NOTICE:** Pressbooks' PHP version requirement (>= 5.6) and WordPress version requirement (>= 4.7.3) can no longer be overridden. Before installing Pressbooks 3.9.8, please ensure that your system has been upgraded accordingly.
@@ -48,7 +51,7 @@ permalink: /changelog/
 * **Feature:** The section openings PDF theme option now supports additional options (see #450, #691).
 * **Feature:** When export sharing is enabled, the download links are now stable, e.g. `/open/download?type=pdf` (props to @rootl for the suggestion; see #684, #699).
 * **Enhancement:** Pressbooks now supports third-party export formats (see #385 and #674).
-* **Enhancement:** `\Pressbooks\Options` field display functions have been refactored to use an array of arguments instead of a list of parameters (see #648, #697) [BREAKING CHANGE].
+* **Enhancement:** `PressbooksOptions` field display functions have been refactored to use an array of arguments instead of a list of parameters (see #648, #697) [BREAKING CHANGE].
 * **Enhancement:** SCSS overrides have been moved into their respective theme options classes (see #452, #701).
 * **Enhancement:** Webbook interface styles have been separated from the Luther book theme's content styles (see #656, #708).
 * **Enhancement:** Webbook stylesheet and script enqueuing has been clarified and simplified (see #396).
@@ -58,7 +61,7 @@ permalink: /changelog/
 * **Enhancement:** The sassphp dependency is no longer required (see #693).
 * **Enhancement:** The SaxonHE dependency check can now be overridden (see https://github.com/pressbooks/pressbooks/commit/7ea32fe).
 * **Enhancement:** [perchten/rmrdir](https://packagist.org/packages/perchten/rmrdir) is now used for recursive directory removal (see [37ab804](https://github.com/pressbooks/pressbooks/commit/37ab804489c580ad1d1121c0a07144f37772c7d0)).
-* **Enhancement:** Added \Pressbooks\Utility\rcopy() function for recursive directory copying (props to @blobaugh for the [example code](http://ben.lobaugh.net/blog/864/php-5-recursively-move-or-copy-files); see [52b087b](https://github.com/pressbooks/pressbooks/commit/52b087b5e2185ea08c6f67c24111ad9ef0ee1fa0)).
+* **Enhancement:** Added PressbooksUtilityrcopy() function for recursive directory copying (props to @blobaugh for the [example code](http://ben.lobaugh.net/blog/864/php-5-recursively-move-or-copy-files); see [52b087b](https://github.com/pressbooks/pressbooks/commit/52b087b5e2185ea08c6f67c24111ad9ef0ee1fa0)).
 * **Enhancement:** Added `pb_dependency_errors` filter hook for suppression of dependency errors (see #719).
 * **Fix:** Images on custom title pages are now exported as expected in EPUB and Kindle (see #690, #698).
 * **Fix:** The diagnostics page now functions as expected on the root blog (props to @colomet for the report; see #688, #695);
@@ -85,10 +88,10 @@ permalink: /changelog/
 * **Enhancement:** Added the `pb_root_description` filter to allow the default root blog description to be changed.
 * **Enhancement:** Custom theme options can now be registered, either on an existing tab or on a new tab (see #470 and #618).
 * **Enhancement:** Added the `pb_publisher_catalog_query_args` filter to allow customizing the query for books on the front page of Pressbooks Publisher (see #619).
-* **Enhancement:** Added the `\Pressbooks\Metadata::getJsonMetadata()` function and the `pb_json_metadata` filter to support returning book information as JSON data for posting to an API endpoint (see #637).
+* **Enhancement:** Added the `PressbooksMetadata::getJsonMetadata()` function and the `pb_json_metadata` filter to support returning book information as JSON data for posting to an API endpoint (see #637).
 * **Enhancement:** Added the `pb_add_bisac_subjects_field` filter, which allows those with a licensed copy of the BISAC subject headers to display a multiple select instead of Pressbooks' default text input (see #637).
 * **Enhancement:** Added the `pb_audience` field to the Book Information page to allow setting a book's target audience (see #638).
-* **Enhancement:** The export metadata settings for all book contents are now fetched in a single query within `\Pressbooks\Book::getBookStructure()` (props to @monkecheese; see #633).
+* **Enhancement:** The export metadata settings for all book contents are now fetched in a single query within `PressbooksBook::getBookStructure()` (props to @monkecheese; see #633).
 * **Enhancement:** The book language will now be set to the language selected when the book is registered (see #595).
 * **Enhancement:** The Comments column on the Organize page will now be hidden if comments are disabled (see #644).
 * **Enhancement:** Core textbox styles now apply to the equivalent `.bcc-*` selectors for improved compatibility with Pressbooks Textbook.
@@ -103,7 +106,7 @@ permalink: /changelog/
 * **Enhancement:** Export dependency errors are now grouped intelligently into a single alert (see #646).
 * **Enhancement:** Javascript and SCSS files are now validated on pull requests using [Hound](https://houndci.com) (see #617).
 * **Enhancement:** The sender address and name used for emails from a Pressbooks instance can now be customized by defining constants for `WP_MAIL_FROM` and `WP_MAIL_FROM_NAME` (see #663).
-* **Fix:** To prevent an erroneous reversion to the WordPress < 3.5 uploads directory structure, `\Pressbooks\Utility\get_media_prefix()` now checks for the `ms_files_rewriting` site option instead of for the `blogs.dir` directory.
+* **Fix:** To prevent an erroneous reversion to the WordPress < 3.5 uploads directory structure, `PressbooksUtilityget_media_prefix()` now checks for the `ms_files_rewriting` site option instead of for the `blogs.dir` directory.
 * **Fix:** The custom CSS file URL scheme is now relative, which should prevent mixed content errors under some circumstances (see #599).
 * **Fix:** Fixed an undefined index error in mPDF theme options (props to @monkecheese; see #613).
 * **Fix:** Fixed a database max key length error when creating the catalog tables (see #589).
@@ -130,7 +133,7 @@ permalink: /changelog/
 * **Enhancement:** Added a link from the user's catalog logo or profile image to their profile URL, if set.
 * **Enhancement:** Added variables for textbox header font size and text alignment to book theme partials.
 * **Enhancement:** Removed our custom `user_interface_lang` setting in favour of WordPress 4.7's user locale.
-* **Enhancement:** Removed `\Pressbooks\utility\multi_sort()` in favour of WordPress 4.7's shiny new `wp_list_sort()`.
+* **Enhancement:** Removed `Pressbooksutilitymulti_sort()` in favour of WordPress 4.7's shiny new `wp_list_sort()`.
 * **Enhancement:** Removed our last remaining use of `get_blog_details`, which will be deprecated in a forthcoming WordPress release.
 * **Fix:** Fixed an issue which prevented the Pressbooks admin color scheme from being applied upon manual plugin activation.
 * **Fix:** Fixed an issue which prevented the book name from properly updating under some circumstances.
@@ -169,9 +172,9 @@ permalink: /changelog/
 * **NOTE:** [Saxon-HE 9.7.0-10](https://sourceforge.net/projects/saxon/files/Saxon-HE/) is no longer bundled with Pressbooks and must be installed separately for ODT export support (see [Installation](http://docs.pressbooks.org/installation)).
 * **Feature:** The copy on the publish page can now be replaced by adding a filter to the `pressbooks_publish_page` filter hook.
 * **Feature:** If registration is enabled, a 'Register' button now appears on the front page of the Pressbooks Publisher theme.
-* **Enhancement:** A URL sanitization routine has been added to the `\Pressbooks\Options` class.
-* **Enhancement:** The methods of `\Pressbooks\Options` which list the options of various types (bool, string, float, etc.) are now optional, and the sanitize function now checks for each type before trying to sanitize it.
-* **Enhancement:** The publish page has been refactored using the `\Pressbooks\Options` class.
+* **Enhancement:** A URL sanitization routine has been added to the `PressbooksOptions` class.
+* **Enhancement:** The methods of `PressbooksOptions` which list the options of various types (bool, string, float, etc.) are now optional, and the sanitize function now checks for each type before trying to sanitize it.
+* **Enhancement:** The publish page has been refactored using the `PressbooksOptions` class.
 * **Fix:** Unwanted validation warning emails will no longer be sent.
 
 ### 3.9.2.1
@@ -207,4 +210,3 @@ permalink: /changelog/
 * **Fix:** Fixed an issue where internal links from within part content were broken in EPUB.
 * **Fix:** Fixed an issue where backslashes would be erroneously stripped when replacements were applied in the Search and Replace utility (props to @rootl for the bug report).
 * **Fix:** Fixed an issue where the book title would not be updated on the first save.
-

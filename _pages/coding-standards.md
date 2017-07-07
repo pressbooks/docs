@@ -1,19 +1,23 @@
 ---
-layout: page
+ID: 80
 post_title: Coding Standards
+author: Ned Zimmerman
+post_excerpt: ""
+layout: page
+permalink: >
+  http://docs.pressbooks.org/coding-standards/
 published: true
-permalink: /coding-standards/
+post_date: 2017-07-07 22:29:32
 ---
-
 Write accurate [PHPDoc](http://en.wikipedia.org/wiki/PHPDoc) styled code comments.
 
 Write real Classes or Namespaced functions.
 
 [PHP Namespaces](https://secure.php.net/manual/en/language.namespaces.php) have been available since 2009. Namespaces are not a new concept. We use them.
 
-Our namespace is: `\Pressbooks\`
+Our namespace is: `Pressbooks`
 
- * If your Class isn't an Object like `\WP_User`, `\WP_Dependencies`, `\WP_Query` etc., write a library of functions.
+ * If your Class isn't an Object like `WP_User`, `WP_Dependencies`, `WP_Query` etc., write a library of functions.
  * If your Class is a bunch of Static methods and nothing else, write a library of functions.
  * Afraid of function name collisions? See [Namespaces](https://secure.php.net/manual/en/language.namespaces.php).
 

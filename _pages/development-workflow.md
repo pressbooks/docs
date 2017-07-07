@@ -1,10 +1,14 @@
 ---
-layout: page
+ID: 86
 post_title: Development Workflow
+author: Ned Zimmerman
+post_excerpt: ""
+layout: page
+permalink: >
+  http://docs.pressbooks.org/development-workflow/
 published: true
-permalink: /development-workflow/
+post_date: 2017-07-07 22:29:32
 ---
-
 These are our branches:
 
 *   **[master][1]** is our stable branch, and you'll find it running on Pressbooks.com (and reflected in our [latest release][2]).

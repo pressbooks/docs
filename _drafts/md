@@ -1,9 +1,12 @@
 ---
+ID: 65
+post_title: ""
+author: Ned Zimmerman
+post_excerpt: ""
 layout: page
-title: Unit Testing
-permalink: /unit-testing/
+permalink: http://docs.pressbooks.org/?page_id=65
+published: false
 ---
-
 The Pressbooks unit testing framework was built (then slightly tweaked) using [WP-CLI][1]. The tests run automatically on commit via [Travis-CI][2], with more in-depth reporting via [Codecov][3].
 
 To run the tests locally, do:

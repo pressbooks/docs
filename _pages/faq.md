@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Frequently Asked Questions
+post_title: Frequently Asked Questions
+published: true
 permalink: /faq/
 ---
 

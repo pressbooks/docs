@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Installation
+post_title: Installation
+published: true
 permalink: /installation/
 ---
 

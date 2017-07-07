@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Theme Development
+post_title: Theme Development
+published: true
 permalink: /theme-development/
 ---
 

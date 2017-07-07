@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Debugging
+post_title: Debugging
+published: true
 permalink: /debugging/
 ---
 

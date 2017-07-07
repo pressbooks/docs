@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Contributors
+post_title: Contributors
+published: true
 permalink: /contributors/
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Book Themes
+post_title: Book Themes
+published: true
 permalink: /book-themes/
 ---
 

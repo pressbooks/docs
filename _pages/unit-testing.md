@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Unit Testing
+post_title: Unit Testing
+published: true
 permalink: /unit-testing/
 ---
 

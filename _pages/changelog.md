@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Changelog
+post_title: Changelog
+published: true
 permalink: /changelog/
 ---
 

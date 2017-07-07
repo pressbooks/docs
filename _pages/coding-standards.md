@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Coding Standards
+post_title: Coding Standards
+published: true
 permalink: /coding-standards/
 ---
 

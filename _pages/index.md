@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Welcome
+post_title: Welcome
+published: true
 permalink: /
 ---
 Welcome to the documentation pages for the Pressbooks Open Source project. You can browse various topics above, or review our [SCSS](scss/) variables and mixins.

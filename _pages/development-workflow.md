@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Development Workflow
+post_title: Development Workflow
+published: true
 permalink: /development-workflow/
 ---
 

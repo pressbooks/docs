@@ -13,7 +13,7 @@ Download the [latest release][1] of Pressbooks from our [releases page][2].
 IMPORTANT!
 
 *   Do not install Pressbooks on an existing WordPress blog -- create a new WordPress install instead.
-*   Pressbooks works with [PHP 5.6.x][3] and WordPress 4.8.0. Lower versions are not supported.
+*   Pressbooks works with [PHP 5.6.x][3] and WordPress 4.7.5. Lower versions are not supported.
 
 *Part 1, WordPress generic:*
 
@@ -31,44 +31,39 @@ IMPORTANT!
 
 *Part 2, Pressbooks specific:*
 
-1. Copy/move Pressbooks plugin files to: `__PATH_TO_YOUR_SITE__/wp-content/plugins/pressbooks/*`.
+1.  Copy/move Pressbooks plugin files to: **PATH_TO_YOUR_SITE**/wp-content/plugins/pressbooks/*.
 
-2. Move the file found at `__PATH_TO_YOUR_SITE__/wp-content/plugins/pressbooks/hm-autoloader.php` to `__PATH_TO_YOUR_SITE__/wp-content/mu-plugins/hm-autoloader.php` (you may need to create an `mu-plugins` directory).
+2.  Log out, log in, navigate to: My Sites → Network Admin → Dashboard.
 
-3. Log out, log in, navigate to: My Sites → Network Admin → Dashboard.
+3.  Navigate to: Plugins → Installed Plugins.
 
-4. Navigate to: Plugins → Installed Plugins.
+4.  Network Enable "Pressbooks."
 
-5. Network Enable "Pressbooks."
+5.  Navigate to: Themes → Installed Themes.
 
-6. Navigate to: Themes → Installed Themes.
+6.  Network Enable "Luther", "Clarke", "Donham", "Fitzgerald", "Austen", "Pressbooks Publisher", and any other Pressbooks theme you want to use.
 
-7. Network Enable "Luther", "Clarke", "Donham", "Fitzgerald", "Austen", "Pressbooks Publisher", and any other
-	 Pressbooks theme you want to use.
+7.  Navigate to: Settings → Network Settings.
 
-8. Navigate to: Settings → Network Settings.
+8.  Pick the most appropriate Registration Setting:
 
-9. Pick the most appropriate Registration Setting:
-	 + User accounts may be registered. (do not use this setting, since it will not allow users to create new books)
-	 + Logged in users may register new sites. (if you are a publisher using Pressbooks as a production tool, this is the
-		 best setting: it allows network administrators to add new users, who can then create books/sites. However,
-		 registration is not available to the public.)
-	 + Both sites and user accounts can be registered. (use this setting if you intend on offering a publishing-platform
-		 open to the public, such as Pressbooks.com)
+    *   User accounts may be registered. (do not use this setting, since it will not allow users to create new books)
+    *   Logged in users may register new sites. (if you are a publisher using Pressbooks as a production tool, this is the best setting: it allows network administrators to add new users, who can then create books/sites. However, registration is not available to the public.)
+    *   Both sites and user accounts can be registered. (use this setting if you intend on offering a publishing-platform open to the public, such as Pressbooks.com)
 
-10. Navigate to: My Catalog → __YOUR_SITE__ → Dashboard
+9.  Navigate to: My Catalog → **YOUR_SITE** → Dashboard
 
-11. Navigate to: Appearance. Activate "Pressbooks Publisher"
+10. Navigate to: Appearance. Activate "Pressbooks Publisher"
 
-12. Navigate to: My Catalog → Network Admin → Sites
+11. Navigate to: My Catalog → Network Admin → Sites
 
-13. Add a new site (this will be your first book).
+12. Add a new site (this will be your first book).
 
-14. Navigate to: My Catalog → __YOUR_FIRST_BOOK__
+13. Navigate to: My Catalog → **YOUR_FIRST_BOOK**
 
-15. Navigate to: Book Info. Make sure to fill out Title, Author and Publication Date.
+14. Navigate to: Book Info. Make sure to fill out Title, Author and Publication Date.
 
-16. Navigate to: Text → Organize. Make sure some content is selected for export.
+15. Navigate to: Text → Organize. Make sure some content is selected for export.
 
 *Part 3, Pressbooks dependencies:*
 
@@ -89,7 +84,7 @@ Once installed, define the following `wp-config.php` variables. The defaults are
 
     define( 'PB_PRINCE_COMMAND', '/usr/bin/prince' );
     define( 'PB_KINDLEGEN_COMMAND', '/opt/kindlegen/kindlegen' );
-    define( 'PB_EPUBCHECK_COMMAND', '/usr/bin/epubcheck' );
+    define( 'PB_EPUBCHECK_COMMAND', '/usr/bin/java -jar /opt/epubcheck/epubcheck.jar' );
     define( 'PB_XMLLINT_COMMAND', '/usr/bin/xmllint' );
     define( 'PB_SAXON_COMMAND', '/usr/bin/java -jar /opt/saxon-he/saxon-he.jar' );
 
@@ -180,9 +175,17 @@ Once WP-CLI is installed on your server, the following shell commands executed i
     wp core multisite-convert --title="Pressbooks"
     wp plugin delete hello
     wp plugin update-all
-    wp plugin install https://github.com/pressbooks/pressbooks/releases/download/4.0.0/pressbooks-4.0.0.zip --activate-network
+    wp plugin install https://github.com/pressbooks/pressbooks/releases/download/3.9.10/pressbooks-3.9.10.zip --activate-network
+    wp theme list
+    wp theme enable pressbooks-book --network
+    wp theme enable clarke --network
+    wp theme enable donham --network
+    wp theme enable fitzgerald --network
+    wp theme enable austen --network
+    wp theme enable pressbooks-custom-css --network
 
-Note that this does not install the required themes or libraries for export. See above (Part 3, Pressbooks dependencies).
+
+Note that this does not install the required libraries for export. See above (Part 3, Pressbooks dependencies).
 
  [1]: https://github.com/pressbooks/pressbooks/releases/latest
  [2]: https://github.com/pressbooks/pressbooks/releases/

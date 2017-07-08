@@ -11,7 +11,9 @@ post_date: 2017-07-07 22:29:32
 In addition to being WordPress compatible, a book theme must have the following directories and files. These files are used by our PDF &amp; EPUB export modules. The files can be empty (<code>script.js</code>, for example), but must exist.
 
 We use the SCSS variant of <a href="http://sass-lang.com">SASS</a> for our stylesheets, which allows us dynamically modify font stacks and other variables based on user preferences.
-<pre>├── _fonts-epub.scss
+
+```
+├── _fonts-epub.scss
 ├── _fonts-prince.scss
 ├── _fonts-web.scss
 ├── export
@@ -25,7 +27,8 @@ We use the SCSS variant of <a href="http://sass-lang.com">SASS</a> for our style
 │       ├── script.js
 │       └── style.scss
 ├── style.scss
-</pre>
+```
+
 <h2>Fonts</h2>
 <code>_fonts-epub.scss</code>, <code>_fonts-prince.scss</code>, <code>_fonts-web.scss</code> are SCSS font stack definitions for EPUB, PDF and WEB.
 
@@ -163,7 +166,7 @@ Top level elements (i.e. children nodes of):
  	<li>back-matter</li>
 </ul>
 <h3>Typical structure for <em>front-matter</em> (note: "ugc" stands for "User Generated Content")</h3>
-<pre>
+```
 <div id="post_name" class="front-matter subclass">
 <div class="front-matter-title-wrap">
 <h3 class="front-matter-number">123</h3>
@@ -181,19 +184,19 @@ Top level elements (i.e. children nodes of):
 <div class="endnotes"><!-- h3, ol --></div>
 
 </div>
-</pre>
+```
 
 <h3>Typical structure for <em>part</em></h3>
 
-<pre><div class="part" id="post_name">
+```<div class="part" id="post_name">
   <div class="part-title-wrap">
     <h3 class="part-number">123</h3>
     <h1 class="part-title">Title</h1>
   </div>
-</div></pre>
+</div>```
 
 <h3>Typical structure for <em>chapter</em></h3>
-<pre><div class="chapter" id="post_name">
+```<div class="chapter" id="post_name">
   <div class="chapter-title-wrap">
     <h3 class="chapter-number">123</h3>
     <h2 class="chapter-title">Title</h2>
@@ -206,9 +209,9 @@ Top level elements (i.e. children nodes of):
     <!-- WordPress, post_content -->
   </div>
   <div class="endnotes"><!-- h3, ol--></div>
-</div></pre>
+</div>```
 <h3>Typical structure for <em>back-matter</em></h3>
-<pre><div class="back-matter subclass" id="post_name">
+```<div class="back-matter subclass" id="post_name">
   <div class="back-matter-title-wrap">
     <h3 class="back-matter-number">123</h3>
     <h1 class="back-matter-title">Title</h1>
@@ -217,4 +220,4 @@ Top level elements (i.e. children nodes of):
   <!-- WordPress, post_content -->
   </div>
   <div class="endnotes"><!-- h3, ol --></div>
-</div></pre>
+</div>```

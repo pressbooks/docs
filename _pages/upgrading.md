@@ -10,12 +10,14 @@ post_date: 2017-07-08 15:12:55
 ---
 ## Upgrading from Pressbooks 3.x to Pressbooks 4.x
 
-Pressbooks 4.0 requires that themes previously bundled with Pressbooks 3.9.x be installed separately. Two themes are required for all Pressbooks installations, whether you previously used them or not:
+Pressbooks >= 4.0 requires that themes previously bundled with Pressbooks 3.x be installed separately. For installation instructions, consult the readme of the themes you need to install below.
 
-*   [Pressbooks Book][1]
+Two themes are required for all Pressbooks installations:
+
+*   [Pressbooks Book (Luther)][1]
 *   [Pressbooks Publisher][2]
 
-The remaining themes are optional but required if you previously used them:
+The remaining themes are recommended but optional, and they are required if you used them on Pressbooks 3.x:
 
 *   [Austen Classic][3]
 *   [Clarke][4]

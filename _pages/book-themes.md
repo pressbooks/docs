@@ -121,11 +121,24 @@ More functions available to book designers. See: pressbooks/functions.php
 *   `pb_get_chapter_number( $post_name )`
 *   `pb_thumbify( $thumb, $path )`
 
-### The HTML Top level elements (i.e. children nodes of):
+### The HTML
 
-`<div id="X">` where X can be: * cover-image * half-title-page * title-page * copyright-page * toc
+Top level elements (i.e. children nodes of):
 
-`<div class="X" id="post_name">` where X can be: * front-matter * part * chapter * back-matter
+`<div id="X">` where X can be:
+
+*   cover-image
+*   half-title-page
+*   title-page
+*   copyright-page
+*   toc
+
+`<div class="X" id="post_name">` where X can be:
+
+*   front-matter
+*   part
+*   chapter
+*   back-matter
 
 ### Typical structure for *front-matter* (note: "ugc" stands for "User Generated Content")
 
@@ -173,35 +186,20 @@ More functions available to book designers. See: pressbooks/functions.php
         <h3 class="chapter-number">
           123
         </h3>
-    
-    
         <h2 class="chapter-title">
           Title
         </h2>
-    
       </div>
-    
-    
       <div class="ugc chapter-ugc">
         <!-- Optional -->
-    
-    
         <h2 class="chapter-author">
-    
         </h2>
-    
-    
         <h2 class="chapter-subtitle">
-    
         </h2>
-    
-    
         <h6 class="short-title"></h6>
           </h2>
               <!-- WordPress, post_content -->
             </div>
-    
-    
           <div class="endnotes">
             <!-- h3, ol-->
           </div>
@@ -215,25 +213,16 @@ More functions available to book designers. See: pressbooks/functions.php
         <h3 class="back-matter-number">
           123
         </h3>
-    
-    
         <h1 class="back-matter-title">
           Title
-        </h1>
-    
+        </h1>    
       </div>
-    
-    
       <div class="ugc back-matter-ugc">
-        <!-- WordPress, post_content -->
-    
+        <!-- WordPress, post_content -->    
       </div>
-    
-    
       <div class="endnotes">
         <!-- h3, ol -->
-      </div>
-    
+      </div>    
     </div>
 
  [1]: http://sass-lang.com

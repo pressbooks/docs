@@ -12,7 +12,7 @@ The Pressbooks unit testing framework was built (then slightly tweaked) using [W
 
 To run the tests locally, do:
 
-    cd /path/to/wordpress/wp-content/plugins/pressbook
+    cd /path/to/wordpress/wp-content/plugins/pressbooks
     bash bin/install-wp-tests.sh wordpress_test DBUSER DBPASS localhost latest
     phpunit
     

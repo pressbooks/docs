@@ -5,7 +5,7 @@ author: Ned Zimmerman
 post_excerpt: ""
 layout: page
 permalink: >
-  http://docs.pressbooks.org/coding-standards/
+  https://docs.pressbooks.org/coding-standards/
 published: true
 post_date: 2017-07-07 22:29:32
 ---
@@ -22,7 +22,7 @@ Bonus: You can sometimes automatically fix errors by running `vendor/bin/phpcbf 
 
 We enforce [Human Made Coding Standards][1] with the following small tweaks.
 
-*   Use camelCase for class methods & properties, uppercase for class constants, snake_case everywhere else.
+*   Use `camelCase` for class methods & properties, `UPPERCASE` for class constants, `snake_case` everywhere else.
 *   [PHP Sessions][2] are allowed.
 
 ### Write Classes or Namespaced functions, stay out of global space!

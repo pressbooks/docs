@@ -16,7 +16,9 @@ Instead of reading any of this why not just let the computer nag you? From the P
 1.  `composer install`
 2.  `composer standards`
 
-Bonus: You can sometimes automatically fix errors by running `vendor/bin/phpcbf --standard=phpcs.ruleset.xml /path/to/your/file`
+Bonus: You can sometimes automatically fix errors by running:
+
+`vendor/bin/phpcbf --standard=phpcs.ruleset.xml /path/to/your/file`
 
 ## Pressbooks Coding Standards (Mandatory)
 

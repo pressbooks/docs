@@ -10,21 +10,21 @@ post_date: 2017-07-07 22:29:32
 ---
 In addition to being WordPress compatible, a book theme must have the following directories and files. These files are used by our PDF & EPUB export modules. The files can be empty (`script.js`, for example), but must exist. We use the SCSS variant of [SASS][1] for our stylesheets, which allows us dynamically modify font stacks and other variables based on user preferences.
 
-<pre>├── _fonts-epub.scss
-├── _fonts-prince.scss
-├── _fonts-web.scss
-├── export
-│   ├── epub
-│   │   ├── images
-│   │   │   └── *
-│   │   └── style.scss
-│   └── prince
-│       ├── images
-│       │   └── *
-│       ├── script.js
-│       └── style.scss
-├── style.scss
-</pre>
+    ├── _fonts-epub.scss
+    ├── _fonts-prince.scss
+    ├── _fonts-web.scss
+    ├── export
+    │   ├── epub
+    │   │   ├── images
+    │   │   │   └── *
+    │   │   └── style.scss
+    │   └── prince
+    │       ├── images
+    │       │   └── *
+    │       ├── script.js
+    │       └── style.scss
+    ├── style.scss
+    
 
 ## Fonts
 
@@ -47,14 +47,15 @@ Most themes have at least two font stacks.
 
 <pre>@import 'fonts-prince';</pre>
 
-Font files are located in
+Font files are located in `./themes-book/pressbooks-book/fonts/`.
 
-`./themes-book/pressbooks-book/fonts/` The paths for all such fonts in your Custom CSS need to be as follows:
+The paths for all such fonts in your Custom CSS need to be as follows:
 
-<pre>@font-face {
-// ...
-src: url(themes-book/pressbooks-book/fonts/YourFont.ttf) format("truetype");
-}</pre>
+    @font-face {
+    // ...
+    src: url(themes-book/pressbooks-book/fonts/YourFont.ttf) format("truetype");
+    }
+    
 
 ## PDF (Prince) Best Practices
 
@@ -62,12 +63,17 @@ src: url(themes-book/pressbooks-book/fonts/YourFont.ttf) format("truetype");
 
 ## Ebook Best Practices
 
-1.  CSS must validate as CSS 2.01 with absolutely **no** errors. See: 
+1.  CSS must validate as CSS 2.01 with absolutely **no** errors. See:
+    
     *   [W3C CSS Validation Service][3]
     *   [Open Publication Structure (OPS) Style Sheets][4] Why? Adobe Digital Editions (v1.7.2), a licensed technology used by other vendors, will not render CSS with errors.
-2.  Avoid nested styles.Why? Some CSS styles which are declared in nested form do not work well with Mobi7.
-3.  More Mobi7 superstition.Newer Kindles (KF8) work pretty good! Unfortunately there are no CSS standards for old Kindles (Mobi7). Mobi7 styling is all done inline. The problems you will encounter are when kindlegen converts CSS to inline HTML for backwards compatibility.`font-size`, `font-weight`, and `font-*` on `.someclass p`, `.someclass h5`, and `.someclass *random*` will mess up Mobi7 ouput very badly. You can solve this by making valid CSS 2.1 too complicated for the Mobi7 converter to figure out. For example, defining a CSS selector that only applies to a node that has multi-class CSS inheritance, e.g. `.ugc.ugc-chapter h5`, or by using the `>` symbol.This is "throw salt over your shoulder" and "don't walk on sidewalk cracks" advice. The bugs you will encounter with Mobi7 conversion are time consuming and arbitrary. Expect a ton of exports, a ton of trial and error. You can save some time by unpacking MOBI files and looking directly at the Mobi7 HTML with a tool like: [Mobi Unpack][5].
-4.  We test in: 
+
+2.  Avoid nested styles. Why? Some CSS styles which are declared in nested form do not work well with Mobi7.
+
+3.  More Mobi7 superstition. Newer Kindles (KF8) work pretty good! Unfortunately there are no CSS standards for old Kindles (Mobi7). Mobi7 styling is all done inline. The problems you will encounter are when kindlegen converts CSS to inline HTML for backwards compatibility.`font-size`, `font-weight`, and `font-*` on `.someclass p`, `.someclass h5`, and `.someclass *random*` will mess up Mobi7 ouput very badly. You can solve this by making valid CSS 2.1 too complicated for the Mobi7 converter to figure out. For example, defining a CSS selector that only applies to a node that has multi-class CSS inheritance, e.g. `.ugc.ugc-chapter h5`, or by using the `>` symbol.This is "throw salt over your shoulder" and "don't walk on sidewalk cracks" advice. The bugs you will encounter with Mobi7 conversion are time consuming and arbitrary. Expect a ton of exports, a ton of trial and error. You can save some time by unpacking MOBI files and looking directly at the Mobi7 HTML with a tool like: [Mobi Unpack][5].
+
+4.  We test in:
+    
     *   Calibre
     *   Firefox Epub reader
     *   iBooks
@@ -76,16 +82,21 @@ src: url(themes-book/pressbooks-book/fonts/YourFont.ttf) format("truetype");
     *   Kindle Preview
     *   $69 Kindle
 
-## Theme Options Certain style elements can be overridden by the user under My Books →
+## Theme Options
 
-**YOUR_BOOK** → Appearance → Theme Options. These options are in the book theme, not in the plugin. As a book theme designer you are required to created the following functions in your functions.php file: * `pressbooks_theme_options_display()` * `pressbooks_theme_options_summary()` When it comes time to exporting, the following WordPress filters are available:
+Certain style elements can be overridden by the user under My Books → **YOUR_BOOK** → Appearance → Theme Options. These options are in the book theme, not in the plugin. As a book theme designer you are required to created the following functions in your functions.php file:
+
+*   `pressbooks_theme_options_display()`
+*   `pressbooks_theme_options_summary()`
+
+When it comes time to exporting, the following WordPress filters are available:
 
 *   `pb_pdf_css_override`
 *   `pb_epub_css_override`
 *   `pb_pdf_hacks`
-*   `pb_epub_hacks` The rule of thumb is that 
+*   `pb_epub_hacks`
 
-*all* PDF styling should be done using CSS. In contrast, the HTML piped to the Epub exporter may include HTML hacks to work around bugs found in older Ebook readers. As older hardware is deprecated we expect this situation to improve. Examples:
+The rule of thumb is that *all* PDF styling should be done using CSS. In contrast, the HTML piped to the Epub exporter may include HTML hacks to work around bugs found in older Ebook readers. As older hardware is deprecated we expect this situation to improve. Examples:
 
 <pre>function pressbooks_theme_pdf_css_override( $css ) {
     return $css; // string

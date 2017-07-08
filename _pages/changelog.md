@@ -4,7 +4,7 @@ post_title: Changelog
 author: Ned Zimmerman
 post_excerpt: ""
 layout: page
-permalink: http://docs.pressbooks.org/changelog/
+permalink: https://docs.pressbooks.org/changelog/
 published: true
 post_date: 2017-07-07 22:29:32
 ---
@@ -41,7 +41,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   **Enhancement:** The Pressbooks CLI is now bundled in Pressbooks (see #464 and #826).
 *   **Enhancement:** `new \Pressbooks\Metadata()` now returns book metadata as an implementation of [JsonSerializeable][11] (see #804 and #832).
 *   **Enhancement:** Expanded metadata is now hidden on the **Book Information** page unless needed (see #804 and #832).
-*   **Enhancement:** We now use the [Human Made coding standards][12] for PHP. [Check your code][13] before submitting a PR 👍.
+*   **Enhancement:** We now use the [Human Made coding standards][12] for PHP. [Check your code][13] before submitting a PR ?.
 *   **Enhancement:** We now use [Laravel Mix][14] to handle all plugin assets (see #769 and #795). Making a change in `/assets/src/`? With [Yarn][15] installed in your development environment, run `yarn && yarn run build` to build assets for distribution.
 *   **Enhancement:** SCSS files can now be validated for using [stylelint][16] with the command `yarn run lint` (see #743 and #817).
 *   **Enhancement:** Root and book themes are now distributed separately from the Pressbooks plugin -- make sure you install the required themes when you [upgrade][17]! (See #756 and #799.)
@@ -664,11 +664,11 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
  [1]: https://github.com/pressbooks/pressbooks-book
  [2]: https://github.com/pressbooks/pressbooks-publisher
  [3]: https://github.com/search?q=topic%3Abook-theme+org%3Apressbooks&type=Repositories
- [4]: upgrading.md
+ [4]: https://docs.pressbooks.org/upgrading
  [5]: https://wordpress.org/news/2017/06/evans/
  [6]: http://bradpayne.ca
  [7]: https://developer.wordpress.org/rest-api/
- [8]: http://docs.pressbooks.org/api
+ [8]: https://docs.pressbooks.org/api
  [9]: https://github.com/pressbooks/pb-cli/issues
  [10]: https://github.com/pressbooks/pressbooks/tree/9283c26504007ba55259672c5cb9efc8ee07b3c0
  [11]: https://secure.php.net/manual/en/class.jsonserializable.php

@@ -26,7 +26,7 @@ WP API respects permissions but the developer must <a href="https://developer.wo
 <h3 id="schema">Schema</h3>
 WP API is self-documenting. Send an OPTIONS request to any endpoint and get back <a href="http://json-schema.org/">JSON Schema</a> compatible info on how to use it:
 
-[caption id="attachment_127" align="aligncenter" width="653"]<img class="size-full wp-image-127" src="https://pressbooks.org/app/uploads/sites/2/2017/07/options.png" alt="Options in YARC" width="653" height="209" /> Options in YARC[/caption]
+[caption id="attachment_127" align="aligncenter" width="653"]<a href="https://pressbooks.org/app/uploads/sites/2/2017/07/options.png"><img class="wp-image-127 size-full" src="https://pressbooks.org/app/uploads/sites/2/2017/07/options.png" alt="Options in YARC" width="653" height="209" /></a> Options in YARC[/caption]
 <blockquote>To get the entire API schema in a single query, add <code>context=help</code> at the index. (Ie. http://site/book/wp-json?context=help )</blockquote>
 <h3 id="multisite">Multisite</h3>
 Pressbooks has different API endpoints for book and the root site:

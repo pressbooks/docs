@@ -4,48 +4,43 @@ post_title: API
 author: Ned Zimmerman
 post_excerpt: ""
 layout: page
-permalink: http://docs.pressbooks.org/api/
+permalink: https://docs.pressbooks.org/api/
 published: true
 post_date: 2017-07-07 22:44:41
 ---
-<h2 id="recommendedtools">Recommended Tools</h2>
-<ul>
- 	<li><a href="https://github.com/callumlocke/json-formatter">JSON Formatter</a></li>
- 	<li><a href="https://github.com/paulhitz/yet-another-rest-client">Yet Another REST Client</a></li>
- 	<li><a href="https://github.com/eventespresso/Basic-Auth">Basic Authentication Plugin (FastCGI Compatible Fork)</a></li>
-</ul>
-<h3 id="troubleshooting">Troubleshooting</h3>
-<ul>
- 	<li>JSON Formatter: <strong>CTRL/CMD+Click</strong> a triangle to collapse/expand nodes at the same level.</li>
- 	<li>YARC: When testing with Basic Authentication, make sure you are logged out of WordPress first.</li>
-</ul>
-<h2 id="gettingstarted">Getting Started</h2>
-<a href="https://developer.wordpress.org/rest-api/">WP API</a> supports all HTTP Methods: GET, POST, PUT, PATCH, DELETE, OPTIONS.
+## Recommended Tools {#recommendedtools}
 
-WP API respects permissions but the developer must <a href="https://developer.wordpress.org/rest-api/using-the-rest-api/authentication/#authentication-plugins">setup authentication</a> separately.
-<h3 id="schema">Schema</h3>
-WP API is self-documenting. Send an OPTIONS request to any endpoint and get back <a href="http://json-schema.org/">JSON Schema</a> compatible info on how to use it:
+*   [JSON Formatter][1]
+*   [Yet Another REST Client][2]
+*   [Basic Authentication Plugin (FastCGI Compatible Fork)][3]
 
-[caption id="attachment_127" align="aligncenter" width="653"]<a href="https://pressbooks.org/app/uploads/sites/2/2017/07/options.png"><img class="wp-image-127 size-full" src="https://pressbooks.org/app/uploads/sites/2/2017/07/options.png" alt="Options in YARC" width="653" height="209" /></a> Options in YARC[/caption]
-<blockquote>To get the entire API schema in a single query, add <code>context=help</code> at the index. (Ie. http://site/book/wp-json?context=help )</blockquote>
-<h3 id="multisite">Multisite</h3>
-Pressbooks has different API endpoints for book and the root site:
+### Troubleshooting {#troubleshooting}
 
-[caption id="attachment_128" align="aligncenter" width="1366"]<img class="size-full wp-image-128" src="https://pressbooks.org/app/uploads/sites/2/2017/07/namespaces.png" alt="Book vs. Root" width="1366" height="568" /> Book vs. Root[/caption]
-<h3 id="features">Features</h3>
-WP API items have a <code>_links</code> node based on <a href="http://stateless.co/hal_specification.html">HAL</a> (Hypertext Application Language):
+*   JSON Formatter: **CTRL/CMD+Click** a triangle to collapse/expand nodes at the same level.
+*   YARC: When testing with Basic Authentication, make sure you are logged out of WordPress first.
 
-[caption id="attachment_129" align="aligncenter" width="586"]<img class="size-full wp-image-129" src="https://pressbooks.org/app/uploads/sites/2/2017/07/links.png" alt="_links" width="586" height="800" /> _links[/caption]
+## Getting Started {#gettingstarted}
 
-To reduce the number of HTTP requests use [the <em>embed parameter](https://developer.wordpress.org/rest-api/using-the-rest-api/global-parameters/#</em>embed) to tell the API that the response should include embeddable resources.
+[WP API][4] supports all HTTP Methods: GET, POST, PUT, PATCH, DELETE, OPTIONS. WP API respects permissions but the developer must [setup authentication][5] separately.
 
-[caption id="attachment_130" align="aligncenter" width="680"]<a href="https://pressbooks.org/app/uploads/sites/2/2017/07/embeded.png"><img class="wp-image-130 size-full" src="https://pressbooks.org/app/uploads/sites/2/2017/07/embeded.png" alt="_embedded" width="680" height="489" /></a> _embedded[/caption]
+### Schema {#schema} WP API is self-documenting. Send an OPTIONS request to any endpoint and get back
 
-WP API exposes pagination info in the response header.
+[JSON Schema][6] compatible info on how to use it: [caption id="attachment_127" align="aligncenter" width="653"][<img class="wp-image-127 size-full" src="https://docs.pressbooks.org/app/uploads/2017/07/options.png" alt="Options in YARC" width="653" height="209" />][7][7] Options in YARC[/caption]
 
-[caption id="attachment_131" align="aligncenter" width="1024"]<a href="https://pressbooks.org/app/uploads/sites/2/2017/07/pagination.png"><img class="wp-image-131 size-full" src="https://pressbooks.org/app/uploads/sites/2/2017/07/pagination.png" alt="Pagination" width="1024" height="584" /></a> Pagination[/caption]
-<h3 id="phptojson">PHP to JSON</h3>
-WP API renders JSON in a generic way that does not match the DB columns. Keep calm and <a href="https://developer.wordpress.org/rest-api/reference/posts/">RTFM</a>:
+> To get the entire API schema in a single query, add `context=help` at the index. (Ie. http://site/book/wp-json?context=help )
+
+### Multisite {#multisite} Pressbooks has different API endpoints for book and the root site: [caption id="attachment_128" align="aligncenter" width="1366"]
+
+<img class="size-full wp-image-128" src="https://docs.pressbooks.org/app/uploads/2017/07/namespaces.png" alt="Book vs. Root" width="1366" height="568" /> Book vs. Root[/caption]
+
+### Features {#features} WP API items have a
+
+`_links` node based on [HAL][8] (Hypertext Application Language): [caption id="attachment_129" align="aligncenter" width="586"]<img class="size-full wp-image-129" src="https://docs.pressbooks.org/app/uploads/2017/07/links.png" alt="_links" width="586" height="800" /> _links[/caption] To reduce the number of HTTP requests use [the *embed parameter][9] to tell the API that the response should include embeddable resources. [caption id="attachment_130" align="aligncenter" width="680"][<img class="wp-image-130 size-full" src="https://docs.pressbooks.org/app/uploads/2017/07/embeded.png" alt="_embedded" width="680" height="489" />][9][10] \_embedded[/caption] WP API exposes pagination info in the response header. [caption id="attachment\_131" align="aligncenter" width="1024"][<img class="wp-image-131 size-full" src="https://docs.pressbooks.org/app/uploads/2017/07/pagination.png" alt="Pagination" width="1024" height="584" />][10][11] Pagination[/caption]
+
+### PHP to JSON {#phptojson} WP API renders JSON in a generic way that does not match the DB columns. Keep calm and
+
+[RTFM][12]:
+
 <pre><code class="php">if ( ! empty( $schema['properties']['author'] ) ) {
     $data['author'] = (int) $post-&gt;post_author;
 }
@@ -58,6 +53,7 @@ if ( ! empty( $schema['properties']['content'] ) ) {
         'protected' =&gt; (bool) $post-&gt;post_password,
     );
 }</code></pre>
+
 <pre><code class="json">{
   "author": 1,
   "slug": "chapter-1",
@@ -66,3 +62,16 @@ if ( ! empty( $schema['properties']['content'] ) ) {
     "protected": false
   }
 }</code></pre>
+
+ [1]: https://github.com/callumlocke/json-formatter
+ [2]: https://github.com/paulhitz/yet-another-rest-client
+ [3]: https://github.com/eventespresso/Basic-Auth
+ [4]: https://developer.wordpress.org/rest-api/
+ [5]: https://developer.wordpress.org/rest-api/using-the-rest-api/authentication/#authentication-plugins
+ [6]: http://json-schema.org/
+ [7]: https://docs.pressbooks.org/app/uploads/2017/07/options.png
+ [8]: http://stateless.co/hal_specification.html
+ [9]: https://developer.wordpress.org/rest-api/using-the-rest-api/global-parameters/#*embed
+ [10]: https://docs.pressbooks.org/app/uploads/2017/07/embeded.png
+ [11]: https://docs.pressbooks.org/app/uploads/2017/07/pagination.png
+ [12]: https://developer.wordpress.org/rest-api/reference/posts/

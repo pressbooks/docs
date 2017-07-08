@@ -1,11 +1,10 @@
 ---
 ID: 86
-post_title: Development Workflow
+post_title: Workflow
 author: Ned Zimmerman
 post_excerpt: ""
 layout: page
-permalink: >
-  http://docs.pressbooks.org/development-workflow/
+permalink: https://docs.pressbooks.org/workflow/
 published: true
 post_date: 2017-07-07 22:29:32
 ---

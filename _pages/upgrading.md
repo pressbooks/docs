@@ -10,25 +10,40 @@ post_date: 2017-07-08 15:12:55
 ---
 ## Upgrading from Pressbooks 3.x to Pressbooks 4.x
 
+### Autoloader
+
+Pressbooks 4.0 (and our other open source plugins) rely on the Human Made autoloader, which is [bundled][1] with the Pressbooks plugin. Before you can use Pressbooks 4.0, you will need to copy the file from:
+
+`/path/to/your/site/wp-content/plugins/pressbooks/hm-autoloader.php`
+
+To:
+
+`/path/to/your/site/wp-content/mu-plugins/hm-autoloader.php`
+
+This will make it available to Pressbooks and any other plugins that require it. You may need to create the `wp-content/mu-plugins/` directory if it doesn't yet exist.
+
+### Themes
+
 Pressbooks >= 4.0 requires that themes previously bundled with Pressbooks 3.x be installed separately. For installation instructions, consult the README file of the theme(s) you need to install below.
 
 Two themes are required for all Pressbooks installations:
 
-*   [Pressbooks Book (Luther)][1]
-*   [Pressbooks Publisher][2]
+*   [Pressbooks Book (Luther)][2]
+*   [Pressbooks Publisher][3]
 
 The remaining themes are recommended but optional, and they are required if you used them on Pressbooks 3.x:
 
-*   [Austen Classic][3]
-*   [Clarke][4]
-*   [Donham][5]
-*   [Fitzgerald][6]
-*   [Custom CSS][7]
+*   [Austen Classic][4]
+*   [Clarke][5]
+*   [Donham][6]
+*   [Fitzgerald][7]
+*   [Custom CSS][8]
 
- [1]: https://github.com/pressbooks/pressbooks-book
- [2]: https://github.com/pressbooks/pressbooks-publisher
- [3]: https://github.com/pressbooks/pressbooks-austenclassic
- [4]: https://github.com/pressbooks/pressbooks-clarke
- [5]: https://github.com/pressbooks/pressbooks-donham
- [6]: https://github.com/pressbooks/pressbooks-fitzgerald
- [7]: https://github.com/pressbooks/pressbooks-custom-css
+ [1]: https://github.com/pressbooks/pressbooks/blob/dev/hm-autoloader.php
+ [2]: https://github.com/pressbooks/pressbooks-book
+ [3]: https://github.com/pressbooks/pressbooks-publisher
+ [4]: https://github.com/pressbooks/pressbooks-austenclassic
+ [5]: https://github.com/pressbooks/pressbooks-clarke
+ [6]: https://github.com/pressbooks/pressbooks-donham
+ [7]: https://github.com/pressbooks/pressbooks-fitzgerald
+ [8]: https://github.com/pressbooks/pressbooks-custom-css

@@ -27,7 +27,7 @@ In addition to being WordPress compatible, a book theme must have the following 
 ├── style.scss
 ```
 
-## Fonts
+### Fonts
 
 `_fonts-epub.scss`, `_fonts-prince.scss`, `_fonts-web.scss` are SCSS font stack definitions for EPUB, PDF and WEB. Example code in `_fonts-prince.scss`:
 
@@ -56,11 +56,11 @@ Font files are located in
     src: url(themes-book/pressbooks-book/fonts/YourFont.ttf) format("truetype");
     }
 
-## PDF (Prince) Best Practices
+### PDF (Prince) Best Practices
 
 1.  Use CSS and JavaScript as outlined in the [Prince user guide][2].
 
-## Ebook Best Practices
+### Ebook Best Practices
 
 1.  CSS must validate as CSS 2.01 with absolutely **no** errors. See:
     *   [W3C CSS Validation Service][3]
@@ -76,7 +76,7 @@ Font files are located in
     *   Kindle Preview
     *   $69 Kindle
 
-## Theme Options
+### Theme Options
 
 Certain style elements can be overridden by the user under My Books → **YOUR_BOOK** → Appearance → Theme Options. These options are in the book theme, not in the plugin. As a book theme designer you are required to created the following functions in your functions.php file: * `pressbooks_theme_options_display()` * `pressbooks_theme_options_summary()` When it comes time to exporting, the following WordPress filters are available:
 

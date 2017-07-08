@@ -18,6 +18,7 @@ Pressbooks was created by the team at Book Oven Inc. (<code@pressbooks.com>), wi
 *   Nick Ciske ([@nciske][6])
 *   Kelly de Vries ([@kdv24][7])
 *   Antonio Devís ([@colomet][8])
+*   Jeremy Felt ([@jeremyfelt](https://github.com/jeremyfelt))
 *   Silvia Flórez ([@larusalka][9])
 *   Joe Flowers ([@jflowers45][10])
 *   Michael Giesler ([@MichaelGiesler][11])

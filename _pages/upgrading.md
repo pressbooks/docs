@@ -10,7 +10,7 @@ post_date: 2017-07-08 15:12:55
 ---
 ## Upgrading from Pressbooks 3.x to Pressbooks 4.x
 
-Pressbooks >= 4.0 requires that themes previously bundled with Pressbooks 3.x be installed separately. For installation instructions, consult the readme of the themes you need to install below.
+Pressbooks >= 4.0 requires that themes previously bundled with Pressbooks 3.x be installed separately. For installation instructions, consult the README file of the theme(s) you need to install below.
 
 Two themes are required for all Pressbooks installations:
 

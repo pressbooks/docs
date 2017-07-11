@@ -9,22 +9,22 @@ permalink: >
 published: true
 post_date: 2017-07-07 22:29:32
 ---
-## Download
+## Downloads
 
-Download the [latest release][1] of Pressbooks from our [releases page][2].
+Download the [latest release][1] of Pressbooks. Download the [latest release][2] of Pressbooks Book. Download the [latest release][3] of Pressbooks Publisher.
 
 ## Installation (Manual)
 
 IMPORTANT!
 
 *   Do not install Pressbooks on an existing WordPress blog -- create a new WordPress install instead.
-*   Pressbooks works with [PHP 5.6.x][3] and WordPress 4.8. Lower versions are not supported.
+*   Pressbooks works with [PHP 5.6.x][4] and WordPress 4.8. Lower versions are not supported.
 
 ### Part 1: WordPress
 
-1.  Install WordPress using the [Famous 5-Minute Install][4].
+1.  Install WordPress using the [Famous 5-Minute Install][5].
 
-2.  [Create a Network][5] of WordPress sites, i.e.:
+2.  [Create a Network][6] of WordPress sites, i.e.:
 
 3.  Edit the wp-config.php file and add the following:
     
@@ -56,7 +56,7 @@ IMPORTANT!
     
     *   User accounts may be registered. (Do not use this setting, since it will not allow users to create new books!)
     *   Logged in users may register new sites. (If you are a publisher using Pressbooks as a production tool, this is the best setting: it allows network administrators to add new users, who can then create books/sites. However, registration is not available to the public.)
-    *   Both sites and user accounts can be registered. (Use this setting if you intend on offering a publishing-platform open to the public, such as [Pressbooks.com][6])
+    *   Both sites and user accounts can be registered. (Use this setting if you intend on offering a publishing-platform open to the public, such as [Pressbooks.com][7])
 
 10. Navigate to **My Catalog** → **Your Site** → **Dashboard**
 
@@ -74,15 +74,15 @@ IMPORTANT!
 
 Pressbooks requires some third-party libraries to be installed on your server to enable export capabilities.
 
-*   For PDF export, install [PrinceXML][7] 11 (note: this is not free software)
-*   For PDF export via mPDF, install the [Pressbooks mPDF plugin][8]. You will also need to ensure that the following folders have write access and/or they are owned by the appropriate user. See [http://codex.wordpress.org/Changing_File_Permissions][9] for more details on adjusting file permissions. 
+*   For PDF export, install [PrinceXML][8] 11 (note: this is not free software)
+*   For PDF export via mPDF, install the [Pressbooks mPDF plugin][9]. You will also need to ensure that the following folders have write access and/or they are owned by the appropriate user. See [http://codex.wordpress.org/Changing_File_Permissions][10] for more details on adjusting file permissions. 
     *   `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/ttfontdata`
     *   `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/tmp`
     *   `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/graph_cache`
-*   For MOBI export install [KindleGen][10] 2.9
-*   For EPUB validation install [EpubCheck][11] 4.0
-*   For XML validation install [xmllint][12] 20800
-*   For ODT export install [Saxon-HE][13] 9.7.0-10
+*   For MOBI export install [KindleGen][11] 2.9
+*   For EPUB validation install [EpubCheck][12] 4.0
+*   For XML validation install [xmllint][13] 20800
+*   For ODT export install [Saxon-HE][14] 9.7.0-10
 *   Certain Linux installations do not ship with the `php5-xsl` library enabled by default. If you attempt to export an ePub and get a either a white screen with minimal text, or a "Fatal error: Class 'XSLTProcessor' not found" error, you may need to run a command like `apt-get install php5-xsl`.
 
 Unlisted versions are not supported. Upgrade/downgrade accordingly.
@@ -164,7 +164,7 @@ Example config files for a dev site hosted at http://localhost/~dac514/textopres
 
 ## Installation (WP-CLI)
 
-First, get [WP-CLI][14].
+First, get [WP-CLI][15].
 
 Once WP-CLI is installed on your server, the following shell commands executed in the site root will download and install a fresh version of Pressbooks. Obviously you need to put in the correct information for your server and install on lines 2 and 10, and enter the correct paths to `WP_PRINCE_COMMAND`, `PB_KINDLEGEN_COMMAND`, `PB_EPUBCHECK_COMMAND` and `PB_XMLLINT_COMMAND` where indicated.
 
@@ -182,29 +182,37 @@ Once WP-CLI is installed on your server, the following shell commands executed i
     wp core multisite-convert --title="Pressbooks"
     wp plugin delete hello
     wp plugin update-all
-    wp plugin install https://github.com/pressbooks/pressbooks/releases/download/3.9.10/pressbooks-3.9.10.zip --activate-network
+    wp plugin install https://github.com/pressbooks/pressbooks/releases/download/4.0.0/pressbooks-4.0.0.zip --activate-network
+    wp theme install https://github.com/pressbooks/pressbooks-book/releases/download/1.9.0/pressbooks-1.9.0.zip
+    wp theme install https://github.com/pressbooks/pressbooks-publisher/archive/master.zip
+    wp theme install https://github.com/pressbooks/pressbooks-austenclassic/archive/master.zip
+    wp theme install https://github.com/pressbooks/pressbooks-clarke/archive/master.zip
+    wp theme install https://github.com/pressbooks/pressbooks-donham/archive/master.zip
+    wp theme install https://github.com/pressbooks/pressbooks-fitzgerald/archive/master.zip
+    wp theme install https://github.com/pressbooks/pressbooks-custom-css/archive/master.zip
     wp theme list
     wp theme enable pressbooks-book --network
-    wp theme enable clarke --network
-    wp theme enable donham --network
-    wp theme enable fitzgerald --network
-    wp theme enable austen --network
+    wp theme enable pressbooks-clarke --network
+    wp theme enable pressbooks-donham --network
+    wp theme enable pressbooks-fitzgerald --network
+    wp theme enable pressbooks-austenclassic --network
     wp theme enable pressbooks-custom-css --network
     
 
-Note that this does not install the required libraries for export. See above (Part 3, Pressbooks dependencies).
+Note that this does not install the required libraries for export. See above (Part 3).
 
  [1]: https://github.com/pressbooks/pressbooks/releases/latest
- [2]: https://github.com/pressbooks/pressbooks/releases/
- [3]: https://secure.php.net/supported-versions.php
- [4]: http://codex.wordpress.org/Installing_WordPress
- [5]: http://codex.wordpress.org/Create_A_Network
- [6]: https://pressbooks.com
- [7]: http://pressbooks.com/prince
- [8]: https://wordpress.org/plugins/pressbooks-mpdf
- [9]: here
- [10]: http://www.amazon.com/gp/feature.html?docId=1000765211
- [11]: https://github.com/idpf/epubcheck
- [12]: http://xmlsoft.org/xmllint.html
- [13]: https://sourceforge.net/projects/saxon/files/Saxon-HE/
- [14]: https://wp-cli.org/
+ [2]: https://github.com/pressbooks/pressbooks-book/releases/latest
+ [3]: https://github.com/pressbooks/pressbooks-publisher/releases/latest
+ [4]: https://secure.php.net/supported-versions.php
+ [5]: http://codex.wordpress.org/Installing_WordPress
+ [6]: http://codex.wordpress.org/Create_A_Network
+ [7]: https://pressbooks.com
+ [8]: http://pressbooks.com/prince
+ [9]: https://wordpress.org/plugins/pressbooks-mpdf
+ [10]: here
+ [11]: http://www.amazon.com/gp/feature.html?docId=1000765211
+ [12]: https://github.com/idpf/epubcheck
+ [13]: http://xmlsoft.org/xmllint.html
+ [14]: https://sourceforge.net/projects/saxon/files/Saxon-HE/
+ [15]: https://wp-cli.org/

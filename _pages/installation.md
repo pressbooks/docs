@@ -11,20 +11,20 @@ post_date: 2017-07-07 22:29:32
 ---
 ## Downloads
 
-Download the [latest release][1] of Pressbooks. Download the [latest release][2] of Pressbooks Book. Download the [latest release][3] of Pressbooks Publisher.
+Download the [Pressbooks][1], [Pressbooks Book][2], and [Pressbooks Publisher][3], as well as the latest releases of any other [book themes][4] you wish to install.
 
 ## Installation (Manual)
 
 IMPORTANT!
 
 *   Do not install Pressbooks on an existing WordPress blog -- create a new WordPress install instead.
-*   Pressbooks works with [PHP 5.6.x][4] and WordPress 4.8. Lower versions are not supported.
+*   Pressbooks works with [PHP 5.6.x][5] and WordPress 4.8. Lower versions are not supported.
 
 ### Part 1: WordPress
 
-1.  Install WordPress using the [Famous 5-Minute Install][5].
+1.  Install WordPress using the [Famous 5-Minute Install][6].
 
-2.  [Create a Network][6] of WordPress sites, i.e.:
+2.  [Create a Network][7] of WordPress sites, i.e.:
 
 3.  Edit the wp-config.php file and add the following:
     
@@ -56,7 +56,7 @@ IMPORTANT!
     
     *   User accounts may be registered. (Do not use this setting, since it will not allow users to create new books!)
     *   Logged in users may register new sites. (If you are a publisher using Pressbooks as a production tool, this is the best setting: it allows network administrators to add new users, who can then create books/sites. However, registration is not available to the public.)
-    *   Both sites and user accounts can be registered. (Use this setting if you intend on offering a publishing-platform open to the public, such as [Pressbooks.com][7])
+    *   Both sites and user accounts can be registered. (Use this setting if you intend on offering a publishing-platform open to the public, such as [Pressbooks.com][8])
 
 10. Navigate to **My Catalog** → **Your Site** → **Dashboard**
 
@@ -74,15 +74,15 @@ IMPORTANT!
 
 Pressbooks requires some third-party libraries to be installed on your server to enable export capabilities.
 
-*   For PDF export, install [PrinceXML][8] 11 (note: this is not free software)
-*   For PDF export via mPDF, install the [Pressbooks mPDF plugin][9]. You will also need to ensure that the following folders have write access and/or they are owned by the appropriate user. See [http://codex.wordpress.org/Changing_File_Permissions][10] for more details on adjusting file permissions. 
+*   For PDF export, install [PrinceXML][9] 11 (note: this is not free software)
+*   For PDF export via mPDF, install the [Pressbooks mPDF plugin][10]. You will also need to ensure that the following folders have write access and/or they are owned by the appropriate user. See [http://codex.wordpress.org/Changing_File_Permissions][11] for more details on adjusting file permissions. 
     *   `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/ttfontdata`
     *   `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/tmp`
     *   `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/graph_cache`
-*   For MOBI export install [KindleGen][11] 2.9
-*   For EPUB validation install [EpubCheck][12] 4.0
-*   For XML validation install [xmllint][13] 20800
-*   For ODT export install [Saxon-HE][14] 9.7.0-10
+*   For MOBI export install [KindleGen][12] 2.9
+*   For EPUB validation install [EpubCheck][13] 4.0
+*   For XML validation install [xmllint][14] 20800
+*   For ODT export install [Saxon-HE][15] 9.7.0-10
 *   Certain Linux installations do not ship with the `php5-xsl` library enabled by default. If you attempt to export an ePub and get a either a white screen with minimal text, or a "Fatal error: Class 'XSLTProcessor' not found" error, you may need to run a command like `apt-get install php5-xsl`.
 
 Unlisted versions are not supported. Upgrade/downgrade accordingly.
@@ -164,7 +164,7 @@ Example config files for a dev site hosted at http://localhost/~dac514/textopres
 
 ## Installation (WP-CLI)
 
-First, get [WP-CLI][15].
+First, get [WP-CLI][16].
 
 Once WP-CLI is installed on your server, the following shell commands executed in the site root will download and install a fresh version of Pressbooks. Obviously you need to put in the correct information for your server and install on lines 2 and 10, and enter the correct paths to `WP_PRINCE_COMMAND`, `PB_KINDLEGEN_COMMAND`, `PB_EPUBCHECK_COMMAND` and `PB_XMLLINT_COMMAND` where indicated.
 
@@ -204,15 +204,16 @@ Note that this does not install the required libraries for export. See above (Pa
  [1]: https://github.com/pressbooks/pressbooks/releases/latest
  [2]: https://github.com/pressbooks/pressbooks-book/releases/latest
  [3]: https://github.com/pressbooks/pressbooks-publisher/releases/latest
- [4]: https://secure.php.net/supported-versions.php
- [5]: http://codex.wordpress.org/Installing_WordPress
- [6]: http://codex.wordpress.org/Create_A_Network
- [7]: https://pressbooks.com
- [8]: http://pressbooks.com/prince
- [9]: https://wordpress.org/plugins/pressbooks-mpdf
- [10]: here
- [11]: http://www.amazon.com/gp/feature.html?docId=1000765211
- [12]: https://github.com/idpf/epubcheck
- [13]: http://xmlsoft.org/xmllint.html
- [14]: https://sourceforge.net/projects/saxon/files/Saxon-HE/
- [15]: https://wp-cli.org/
+ [4]: https://github.com/search?q=topic:book-theme%20org:pressbooks&type=Repositories
+ [5]: https://secure.php.net/supported-versions.php
+ [6]: http://codex.wordpress.org/Installing_WordPress
+ [7]: http://codex.wordpress.org/Create_A_Network
+ [8]: https://pressbooks.com
+ [9]: http://pressbooks.com/prince
+ [10]: https://wordpress.org/plugins/pressbooks-mpdf
+ [11]: here
+ [12]: http://www.amazon.com/gp/feature.html?docId=1000765211
+ [13]: https://github.com/idpf/epubcheck
+ [14]: http://xmlsoft.org/xmllint.html
+ [15]: https://sourceforge.net/projects/saxon/files/Saxon-HE/
+ [16]: https://wp-cli.org/

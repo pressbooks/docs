@@ -8,7 +8,7 @@ permalink: https://docs.pressbooks.org/changelog/
 published: true
 post_date: 2017-07-07 22:29:32
 ---
-### 4\.0.0 (Forthcoming)
+### 4\.0.0
 
 **NOTICE:** Upon upgrading to Pressbooks 4.0, you will need to install the [Pressbooks Book][1] and [Pressbooks Publisher][2] themes along with any of our other open source [book themes][3] that were bundled with earlier versions of Pressbooks. For more information, see the [upgrading instructions][4].
 

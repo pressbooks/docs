@@ -181,8 +181,9 @@ Once WP-CLI is installed on your server, the following shell commands executed i
     wp core multisite-install --url="http://domain.com" --title="Pressbooks" --admin_user="username" --admin_password="password" --admin_email="user@domain.com"
     wp plugin delete hello
     wp plugin update-all
-    wp plugin install https://github.com/pressbooks/pressbooks/releases/download/4.0.0/pressbooks-4.0.0.zip --activate-network
+    wp plugin install https://github.com/pressbooks/pressbooks/releases/download/4.0.0/pressbooks-4.0.0.zip
     mkdir wp-content/mu-plugins && cp wp-content/plugins/pressbooks/hm-autoloader.php wp-content/mu-plugins
+    wp plugin activate pressbooks --network
     wp theme install https://github.com/pressbooks/pressbooks-book/releases/download/1.9.1/pressbooks-book-1.9.1.zip
     wp theme install https://github.com/pressbooks/pressbooks-publisher/archive/master.zip
     wp theme install https://github.com/pressbooks/pressbooks-austenclassic/archive/master.zip

@@ -8,6 +8,8 @@ permalink: http://docs.pressbooks.org/book-themes/
 published: true
 post_date: 2017-07-07 22:29:32
 ---
+_**NOTE:** These theme docs are deprecated! New docs coming soon._
+
 In addition to being WordPress compatible, a book theme must have the following directories and files. These files are used by our PDF & EPUB export modules. The files can be empty (`script.js`, for example), but must exist. We use the SCSS variant of [SASS][1] for our stylesheets, which allows us dynamically modify font stacks and other variables based on user preferences.
 
     ├── _fonts-epub.scss

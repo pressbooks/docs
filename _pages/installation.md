@@ -178,8 +178,7 @@ Once WP-CLI is installed on your server, the following shell commands executed i
     define( 'PB_XMLLINT_COMMAND', '/usr/bin/xmllint' );
     define( 'PB_SAXON_COMMAND', '/usr/bin/java -jar /opt/saxon-he/saxon-he.jar' );
     PHP
-    wp core install --url="http://domain.com" --title="Pressbooks" --admin_user="username" --admin_password="password" --admin_email="user@domain.com"
-    wp core multisite-convert --title="Pressbooks"
+    wp core multisite-install --url="http://domain.com" --title="Pressbooks" --admin_user="username" --admin_password="password" --admin_email="user@domain.com"
     wp plugin delete hello
     wp plugin update-all
     wp plugin install https://github.com/pressbooks/pressbooks/releases/download/4.0.0/pressbooks-4.0.0.zip --activate-network
@@ -190,7 +189,6 @@ Once WP-CLI is installed on your server, the following shell commands executed i
     wp theme install https://github.com/pressbooks/pressbooks-donham/archive/master.zip
     wp theme install https://github.com/pressbooks/pressbooks-fitzgerald/archive/master.zip
     wp theme install https://github.com/pressbooks/pressbooks-custom-css/archive/master.zip
-    wp theme list
     wp theme enable pressbooks-book --network
     wp theme enable pressbooks-clarke --network
     wp theme enable pressbooks-donham --network

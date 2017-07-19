@@ -24,7 +24,7 @@ This will make it available to Pressbooks and any other plugins that require it.
 
 ### Themes
 
-Pressbooks >= 4.0 requires that themes previously bundled with Pressbooks 3.x be installed separately. For installation instructions, consult the README file of the theme(s) you need to install below.
+Pressbooks >= 4.0 requires that themes previously bundled with Pressbooks 3.x be installed separately. For installation instructions, consult the README file of the theme(s) you need to install below. (NOTE: theme folders must not have version numbers on the end. Good: `pressbooks-publisher`. Bad: `pressbooks-publisher-3.1.0`. If you are installing manually, make sure that you rename the folders appropriately.)
 
 Two themes are required for all Pressbooks installations:
 

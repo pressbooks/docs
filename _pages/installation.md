@@ -38,37 +38,39 @@ IMPORTANT!
 
 1.  Copy the Pressbooks plugin folder to: `/path/to/your/site/wp-content/plugins/*`.
 
-2.  Copy the Pressbooks Book, Pressbooks Publisher and other theme folders to: `/path/to/your/site/wp-content/themes/*`
+2.  Copy Pressbooks' autoloader file from `/path/to/your/site/wp-content/plugins/pressbooks/hm-autoloader.php` to `/path/to/your/site/wp-content/mu-plugins/hm-autoloader.php`. You may need to create the `wp-content/mu-plugins/` directory if it doesn't yet exist.
 
-3.  Log out, log in, navigate to: **My Sites** → **Network Admin** → **Dashboard**.
+3.  Copy the Pressbooks Book, Pressbooks Publisher and other theme folders to: `/path/to/your/site/wp-content/themes/*` (NOTE: theme folders must not have version numbers on the end. Good: `pressbooks-publisher`. Bad: `pressbooks-publisher-3.1.0`. Make sure that you rename these folders appropriately.)
 
-4.  Navigate to **Plugins** → **Installed Plugins**.
+4.  Log out, log in, navigate to: **My Sites** → **Network Admin** → **Dashboard**.
 
-5.  Network Enable "Pressbooks".
+5.  Navigate to **Plugins** → **Installed Plugins**.
 
-6.  Navigate to **Themes** → **Installed Themes**.
+6.  Network Enable "Pressbooks".
 
-7.  Network Enable "Luther", "Pressbooks Publisher", and any other Pressbooks theme you want to use.
+7.  Navigate to **Themes** → **Installed Themes**.
 
-8.  Navigate to **Settings** → **Network Settings**.
+8.  Network Enable "Luther", "Pressbooks Publisher", and any other Pressbooks theme you want to use.
 
-9.  Pick the most appropriate Registration setting:
+9.  Navigate to **Settings** → **Network Settings**.
+
+10. Pick the most appropriate Registration setting:
     
     *   User accounts may be registered. (Do not use this setting, since it will not allow users to create new books!)
     *   Logged in users may register new sites. (If you are a publisher using Pressbooks as a production tool, this is the best setting: it allows network administrators to add new users, who can then create books/sites. However, registration is not available to the public.)
     *   Both sites and user accounts can be registered. (Use this setting if you intend on offering a publishing-platform open to the public, such as [Pressbooks.com][8])
 
-10. Navigate to **My Catalog** → **Your Site** → **Dashboard**
+11. Navigate to **My Catalog** → **Your Site** → **Dashboard**
 
-11. Navigate to **Appearance** and activate "Pressbooks Publisher".
+12. Navigate to **Appearance** and activate "Pressbooks Publisher".
 
-12. Navigate to **My Catalog** → **Add A New Book** (this will be your first book).
+13. Navigate to **My Catalog** → **Add A New Book** (this will be your first book).
 
-13. Navigate to **My Catalog** → **Your First Book** → **Dashboard**.
+14. Navigate to **My Catalog** → **Your First Book** → **Dashboard**.
 
-14. Navigate to **Book Info**. Make sure to fill out Title, Author and Publication Date.
+15. Navigate to **Book Info**. Make sure to fill out Title, Author and Publication Date.
 
-15. Navigate to **Text** → **Organize**. Make sure some content is selected for export.
+16. Navigate to **Text** → **Organize**. Make sure some content is selected for export.
 
 ### Part 3: Pressbooks Dependencies
 

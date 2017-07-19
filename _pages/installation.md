@@ -40,7 +40,7 @@ IMPORTANT!
 
 2.  Copy Pressbooks' autoloader file from `/path/to/your/site/wp-content/plugins/pressbooks/hm-autoloader.php` to `/path/to/your/site/wp-content/mu-plugins/hm-autoloader.php`. You may need to create the `wp-content/mu-plugins/` directory if it doesn't yet exist.
 
-3.  Copy the Pressbooks Book, Pressbooks Publisher and other theme folders to: `/path/to/your/site/wp-content/themes/*` (NOTE: theme folders must not have version numbers on the end. Good: `pressbooks-publisher`. Bad: `pressbooks-publisher-3.1.0`. Make sure that you rename these folders appropriately.)
+3.  Copy the Pressbooks Book, Pressbooks Publisher and other theme folders to: `/path/to/your/site/wp-content/themes/*` (NOTE: theme folders must not have version numbers on the end. Good: `pressbooks-publisher`. Bad: `pressbooks-publisher-3.1.0`. Make sure that you rename the folders appropriately.)
 
 4.  Log out, log in, navigate to: **My Sites** → **Network Admin** → **Dashboard**.
 

@@ -8,6 +8,10 @@ permalink: https://docs.pressbooks.org/changelog/
 published: true
 post_date: 2017-07-07 22:29:32
 ---
+### 4\.0.2
+
+* **Fix:** Fixed an issue where locating a PDF output intent file would fail on certain systems (see #866).
+
 ### 4\.0.1
 
 *   **Fix:** Fixed an issue where the template root for book themes was not properly updated (see #854, #859).
@@ -534,7 +538,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 
 ### 2\.6.1
 
-*   Fixed issues with subsection parsing where < h1> tags had inline styles or were wrapped in other block elements. * Fixed an issue where changing a book's language to "English" as opposed to "English (United States)" would fail to override the network's language setting. * Updated documentation. 
+*   Fixed issues with subsection parsing where < h1> tags had inline styles or were wrapped in other block elements. * Fixed an issue where changing a book's language to "English" as opposed to "English (United States)" would fail to override the network's language setting. * Updated documentation.
 
 ### 2\.6
 

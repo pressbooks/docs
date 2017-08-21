@@ -4,7 +4,8 @@ post_title: Contributors
 author: Ned Zimmerman
 post_excerpt: ""
 layout: page
-permalink: http://docs.pressbooks.org/contributors/
+permalink: >
+  https://docs.pressbooks.org/contributors/
 published: true
 post_date: 2017-07-07 22:29:32
 ---
@@ -34,11 +35,12 @@ Pressbooks was created by the team at Book Oven Inc. (<code@pressbooks.com>), wi
 *   Bracken Mosbacker ([@bracken][22])
 *   Daisuke Muro ([@dicekmuro][23])
 *   Wendell Norman ([@unit29868][24])
-*   Brad Payne ([@bdolor][25])
-*   John Rankin ([WikiPublisher][26])
+*   Alex Paredes ([@alexpflores][25])
+*   Brad Payne ([@bdolor][26])
+*   John Rankin ([WikiPublisher][27])
 *   Ron
-*   Christian Widlund ([@chrillep][27])
-*   Ashlee Zhang ([@BakingSoda][28])
+*   Christian Widlund ([@chrillep][28])
+*   Ashlee Zhang ([@BakingSoda][29])
 
  [1]: https://github.com/indiamos
  [2]: https://github.com/monkecheese
@@ -64,7 +66,8 @@ Pressbooks was created by the team at Book Oven Inc. (<code@pressbooks.com>), wi
  [22]: https://github.com/bracken
  [23]: https://github.com/dicekmuro
  [24]: https://github.com/unit29868
- [25]: https://github.com/bdolor
- [26]: http://www.wikipublisher.org
- [27]: https://github.com/chrillep
- [28]: https://github.com/BakingSoda
+ [25]: https://github.com/alexpflores
+ [26]: https://github.com/bdolor
+ [27]: http://www.wikipublisher.org
+ [28]: https://github.com/chrillep
+ [29]: https://github.com/BakingSoda

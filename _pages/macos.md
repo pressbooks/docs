@@ -1,6 +1,6 @@
 ---
 ID: 239
-post_title: Pressbooks Local Development on macOS
+post_title: Local Development on macOS
 author: Ned Zimmerman
 post_excerpt: ""
 layout: page

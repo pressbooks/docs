@@ -5,7 +5,7 @@ author: Ned Zimmerman
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.pressbooks.org/local-development/pressbooks-local-development-on-macos/
+  https://docs.pressbooks.org/local-development/macos/
 published: true
 post_date: 2017-08-24 12:42:26
 ---

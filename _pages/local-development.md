@@ -7,7 +7,7 @@ layout: page
 permalink: >
   https://docs.pressbooks.org/local-development/
 published: true
-post_date: 2017-08-24 12:41:23
+post_date: 2017-08-24 12:40:06
 ---
 Set up your Pressbooks development environment on [macOS][1] or [Windows][2]. Work with the [Pressbooks v2 REST API][3]. Configure [PhpStorm][4] for Pressbooks development.
 

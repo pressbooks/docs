@@ -68,7 +68,7 @@ Create and run new test configurations with "Test scope: Defined in the configur
 
 ![PHPUnit Running][10]
 
-Troubleshooting: If you have restarted your VM you will see a `PHP Fatal error:  require_once(): Failed opening required '/tmp/wordpress-tests-lib/includes/functions.php'` Fix by re-runing `bin/install-wp-tests.sh` (@see *Unit Testing and Coding Standards*)
+Troubleshooting: If you have restarted your VM you will see a `PHP Fatal error:  require_once(): Failed opening required '/tmp/wordpress-tests-lib/includes/functions.php'` Fix by re-runing `bin/install-wp-tests.sh` (@see [Unit Testing][11] and [Coding Standards][12])
 
  [1]: https://docs.pressbooks.org/app/uploads/2017/08/WordPress.png
  [2]: https://docs.pressbooks.org/app/uploads/2017/08/npm-Tasks.png
@@ -80,3 +80,5 @@ Troubleshooting: If you have restarted your VM you will see a `PHP Fatal error: 
  [8]: https://docs.pressbooks.org/app/uploads/2017/08/PHPUnit.png
  [9]: https://docs.pressbooks.org/app/uploads/2017/08/PHP-Mappings.png
  [10]: https://docs.pressbooks.org/app/uploads/2017/08/PHPUnit-Running.png
+ [11]: https://docs.pressbooks.org/unit-testing/
+ [12]: https://docs.pressbooks.org/coding-standards/

@@ -8,6 +8,24 @@ permalink: https://docs.pressbooks.org/changelog/
 published: true
 post_date: 2017-07-07 22:29:32
 ---
+### 4\.2.0
+
+**NOTICE:** Pressbooks 4.2 requires WordPress 4.8.1.
+
+* **Feature:** Full-sized images will be used where possible in Print PDF exports to ensure that exported PDFs meet image resolution requirements (see #894, #898 and #900).
+* **Feature:** WXR import and clone operations will now attempt to fetch original images from the source book in addition to the scaled/cropped version in the book content (see #895 and #902).
+* **Feature:** Content on the organize page now has a View link as will as Edit and Trash (see #840 and #893).
+* **Enhancement:** The [Masterminds HTML5 parser](https://github.com/Masterminds/html5-php) is now used instead of `\DOMDocument` where possible for improved error handling and compatibility with HTML5 elements (see #889 and #896).
+* **Enhancement:** Unnecessary HTTP calls have been removed from export routines (see #899).
+* **Enhancement:** Installation instructions are now linked from the readme file instead of being included (see #891 and #892).
+* **Fix:** Resolved some inconsistencies with custom copyright notice and copyright year display (see #922).
+* **Fix:** Clone operations now have a 5-minute time limit which should reduce the occurrence of timeouts (props to @bdolor for the bug report; see #903 and #904).
+* **Fix:** Visiting `/catalog` on the root site no longer causes an error (see #905).
+* **Fix:** Pressbooks LaTeX settings no longer appear on the root site's dashboard (see #910 and #911).
+* **Fix:** The Organize page now supports all post statuses (see #915).
+* **Fix:** Fixed an issue where the Pressbooks News dashboard widget would be cached in the wrong language (see #918 and #921).
+* **Fix:** Removed some unused code from the PB LaTeX symbiont (props to @jeremyfelt; see #923).
+
 ### 4\.1.0
 
 **NOTICE:** Pressbooks 4.1 requires [WordPress 4.8.1][1].

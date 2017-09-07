@@ -31,4 +31,5 @@ post_date: 2017-09-06 21:04:06
 
 ## 1\.9.0
 
-*   This release migrates all theme partials and fonts from Pressbooks to Pressbooks Book, and adds full compatibility with Pressbooks 4.0.
+*   Initial independent release.
+*   Migrates all theme partials and fonts from Pressbooks to Pressbooks Book, and adds full compatibility with Pressbooks 4.0.

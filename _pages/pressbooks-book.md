@@ -9,6 +9,11 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:04:06
 ---
+## 1\.10.2
+
+* **[ENHANCEMENT]** Updated to version 2.1 of [pressbooks/mix](https://github.com/pressbooks/mix).
+* **[FIX]** The cover page now displays the subtitle from Book Information as the book's subtitle, rather than the tagline.
+
 ## 1\.10.1
 
 *   **Fix:** Consistent display of custom copyright notice (see #38).

@@ -9,6 +9,19 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+### 4.3.0
+
+**NOTICE:** Pressbooks 4.3 requires WordPress 4.8.1.
+**NOTICE:** Users of the Pressbooks Custom CSS theme must upgrade to Pressbooks Custom CSS 1.0 for compatibility with Pressbooks 4.3.
+
+* **[FEATURE]** Custom Styles: Navigate to _Appearance_ &rarr; _Custom Styles_ on your book's dashboard to add custom CSS or SCSS to any book theme (see #658, #912, #925, #937, #938, #940, #941, and #942).
+* **[ENHANCEMENT]** Expanded the `license` property of the `/metadata` endpoint to include a human-readable license name and custom license text (if present) (see #934 and #936).
+* **[ENHANCEMENT]** Added the book's short description to the `/metadata` endpoint as a [`disambiguatingDescription`](http://schema.org/disambiguatingDescription) (see #930 and #932).
+* **[ENHANCEMENT]** Clarified errors when trying to clone a book from Pressbooks < 4.1 (see #914 and #931).
+* **[ENHANCEMENT]** Renamed several action and filter hooks and deprecated the old versions (see #926).
+* **[FIX]** Fixed an issue which would prevent super administrators without any books on a network from accessing the cloning page (see #913 and #933).
+* **[FIX]** Fixed a regression which blocked the use of custom LaTeX renderers (props to @monkecheese; see #928).
+
 ### 4\.2.0
 
 **NOTICE:** Pressbooks 4.2 requires WordPress 4.8.1.

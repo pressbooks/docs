@@ -9,6 +9,8 @@ permalink: >
 published: true
 post_date: 2017-09-13 09:22:57
 ---
-## 3\.1.2
+## 1\.0.0
 
-*   **[FIX]** Prevented Pressbooks Publisher's wrapper from being added to the user catalog page.
+**NOTICE:** Pressbooks Custom CSS 1.0.0 requires Pressbooks 4.3.0.
+
+*   **[ENHANCEMENT]** Custom CSS functionality is now included in this theme (see #2).

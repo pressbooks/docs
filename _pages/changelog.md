@@ -14,7 +14,11 @@ post_date: 2017-07-07 22:29:32
 
 ## Themes
 
-[Pressbooks Book][2]
+[Pressbooks Book][2]  
+[Pressbooks Custom CSS][3]  
+[Pressbooks Publisher][4]
 
  [1]: https://docs.pressbooks.org/changelog/pressbooks
  [2]: https://docs.pressbooks.org/changelog/pressbooks-book
+ [3]: https://docs.pressbooks.org/changelog/pressbooks-custom-css
+ [4]: https://docs.pressbooks.org/changelog/pressbooks-publisher

@@ -9,6 +9,12 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+### 4\.3.2
+
+**NOTICE:** Pressbooks 4.3.2 requires WordPress 4.8.1. **NOTICE:** Users of the Pressbooks Custom CSS theme must upgrade to Pressbooks Custom CSS 1.0 for compatibility with Pressbooks 4.3.2.
+
+*   **[FIX]** Fixed an issue which prevented the Print PDF profile from loading properly (see #951).
+
 ### 4\.3.1
 
 **NOTICE:** Pressbooks 4.3.1 requires WordPress 4.8.1. **NOTICE:** Users of the Pressbooks Custom CSS theme must upgrade to Pressbooks Custom CSS 1.0 for compatibility with Pressbooks 4.3.1.

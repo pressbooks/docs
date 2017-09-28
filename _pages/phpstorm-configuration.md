@@ -27,11 +27,26 @@ In the Database tool window, click the plus symbol, select Data Source > MySQL:
 
 ![Databases][3]
 
-In the SSH/SSL tab: + Proxy host: pressbooks.dev (Port: 22) + Proxy user: vagrant + Auth type: Key pair (OpenSSH) + Private key file: `~\Code\pressbooks-dev\trellis\.vagrant\machines\default\virtualbox\private_key`
+In the SSH/SSL tab: 
 
-In the General tab: + Host: 127.0.0.1 (Port: 3306) + Database: example_com_development + User: example_com + Password: example_dbpassword
+  + Proxy host: pressbooks.dev (Port: 22) 
+  + Proxy user: vagrant 
+  + Auth type: Key pair (OpenSSH) 
+  + Private key file: `~\Code\pressbooks-dev\trellis\.vagrant\machines\default\virtualbox\private_key`
 
-In the General tab for the testing database *(use the same config as above for SSH/SSL)*: + Host: 127.0.0.1 (Port: 3306) + Database: pressbooks_tests + User: pressbooks_test + Password: \<leave blank\>
+In the General tab: 
+
+  + Host: 127.0.0.1 (Port: 3306) 
+  + Database: example_com_development 
+  + User: example_com 
+  + Password: example_dbpassword
+
+In the General tab for the testing database *(use the same config as above for SSH/SSL)*: 
+
+  + Host: 127.0.0.1 (Port: 3306) 
+  + Database: pressbooks_tests 
+  + User: pressbooks_test 
+  + Password: \<leave blank\>
 
 #### Configure Remote PHP Interpreter
 

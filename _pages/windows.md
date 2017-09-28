@@ -56,39 +56,35 @@ Clone [pressbooks/bedrock][10] into `~/Code/pressbooks-dev/site`:
 
 Add [pressbooks/pressbooks][11], [pressbooks/pressbooks-publisher][12] and [pressbooks/pressbooks-book][13] to your Bedrock dependencies (for more information on this strategy, [see this post][14])
 
-```
-cd ~/Code/pressbooks-dev/site
-composer.phar require pressbooks/pressbooks:dev-dev
-composer.phar require pressbooks/pressbooks-publisher:dev-dev
-composer.phar require pressbooks/pressbooks-book:dev-dev
-```
+    cd ~/Code/pressbooks-dev/site
+    composer.phar require pressbooks/pressbooks:dev-dev
+    composer.phar require pressbooks/pressbooks-publisher:dev-dev
+    composer.phar require pressbooks/pressbooks-book:dev-dev
 
 ## 3\. Configuration
 
 Edit `~/Code/pressbooks-dev/trellis/group_vars/development/wordpress_sites.yml` to reflect your desired local development site URL, replacing all instances of `example.dev` with `pressbooks.dev`, `pressbooks.test` or whatever you prefer. For example:
 
-```
-wordpress_sites:
-  example.com:
-    site_hosts:
-      - canonical: pressbooks.dev
-        redirects:
-          - www.pressbooks.dev
-    local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    admin_email: admin@pressbooks.dev
-    multisite:
-      enabled: true
-      subdomains: false
-    ssl:
-      enabled: false
-      provider: self-signed
-    cache:
-      enabled: false
-    env:
-      domain_current_site: pressbooks.dev
-      wp_home: http://pressbooks.dev
-      wp_siteurl: http://pressbooks.dev/wp
-```
+    wordpress_sites:
+      example.com:
+        site_hosts:
+          - canonical: pressbooks.dev
+            redirects:
+              - www.pressbooks.dev
+        local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
+        admin_email: admin@pressbooks.dev
+        multisite:
+          enabled: true
+          subdomains: false
+        ssl:
+          enabled: false
+          provider: self-signed
+        cache:
+          enabled: false
+        env:
+          domain_current_site: pressbooks.dev
+          wp_home: http://pressbooks.dev
+          wp_siteurl: http://pressbooks.dev/wp
 
 You can leave `example.com` as is unless you plan on setting up matching staging or production environments. In that case, you will need to update all instances of `example.com` in `~/Code/pressbooks-dev/trellis/group_vars/` to a consistent value. If you are interested in configuring a staging or production environment, you should consult the [Trellis docs][15] as that is outside the scope of this tutorial.
 
@@ -150,12 +146,11 @@ We use [webpack][6] wrapped in [Laravel Mix][16] to build plugin assets (CSS and
 
 In [Git Bash][8]:
 
-```
-cd ~/Code/pressbooks-dev/site
-composer.phar update pressbooks/pressbooks --with-dependencies
-composer.phar update pressbooks/pressbooks-publisher --with-dependencies
-composer.phar update pressbooks/pressbooks-book --with-dependencies
-```
+
+    cd ~/Code/pressbooks-dev/site
+    composer.phar update pressbooks/pressbooks --with-dependencies
+    composer.phar update pressbooks/pressbooks-publisher --with-dependencies
+    composer.phar update pressbooks/pressbooks-book --with-dependencies
 
  [1]: https://roots.io/bedrock
  [2]: https://roots.io/trellis

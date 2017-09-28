@@ -56,16 +56,19 @@ Clone [pressbooks/bedrock][10] into `~/Code/pressbooks-dev/site`:
 
 Add [pressbooks/pressbooks][11], [pressbooks/pressbooks-publisher][12] and [pressbooks/pressbooks-book][13] to your Bedrock dependencies (for more information on this strategy, [see this post][14])
 
-`cd ~/Code/pressbooks-dev/site
+```
+cd ~/Code/pressbooks-dev/site
 composer.phar require pressbooks/pressbooks:dev-dev
 composer.phar require pressbooks/pressbooks-publisher:dev-dev
-composer.phar require pressbooks/pressbooks-book:dev-dev`
+composer.phar require pressbooks/pressbooks-book:dev-dev
+```
 
 ## 3\. Configuration
 
 Edit `~/Code/pressbooks-dev/trellis/group_vars/development/wordpress_sites.yml` to reflect your desired local development site URL, replacing all instances of `example.dev` with `pressbooks.dev`, `pressbooks.test` or whatever you prefer. For example:
 
-`wordpress_sites:
+```
+wordpress_sites:
   example.com:
     site_hosts:
       - canonical: pressbooks.dev
@@ -84,7 +87,8 @@ Edit `~/Code/pressbooks-dev/trellis/group_vars/development/wordpress_sites.yml` 
     env:
       domain_current_site: pressbooks.dev
       wp_home: http://pressbooks.dev
-      wp_siteurl: http://pressbooks.dev/wp`
+      wp_siteurl: http://pressbooks.dev/wp
+```
 
 You can leave `example.com` as is unless you plan on setting up matching staging or production environments. In that case, you will need to update all instances of `example.com` in `~/Code/pressbooks-dev/trellis/group_vars/` to a consistent value. If you are interested in configuring a staging or production environment, you should consult the [Trellis docs][15] as that is outside the scope of this tutorial.
 
@@ -96,8 +100,10 @@ Start the default Windows Command Prompt (right click, run as Administrator)
 
 Change to the `~/Code/pressbooks-dev/trellis/` directory and run `vagrant up`:
 
-`cd %HOMEPATH%\Code\pressbooks-dev\trellis
-vagrant up`
+```
+cd %HOMEPATH%\Code\pressbooks-dev\trellis
+vagrant up
+```
 
 Fully provisioning your development environment may take up to 30 minutes.
 
@@ -137,17 +143,19 @@ Coding standards in the VM:
 
 We use [webpack][6] wrapped in [Laravel Mix][16] to build plugin assets (CSS and JavaScript) for Pressbooks.
 
-1.  At the command prompt from the Pressbooks plugin directory, e.g. `~/Code/pressbooks-dev/site/web/app/plugins/pressbooks`, run `yarn` to install build dependencies.
-2.  Then, run `yarn run dev` or `yarn run production` to build your plugin assets (`yarn run production` will add a version hash to the asset manifest for browser cache busting).
+  1.  At the command prompt from the Pressbooks plugin directory, e.g. `~/Code/pressbooks-dev/site/web/app/plugins/pressbooks`, run `yarn` to install build dependencies.
+  2.  Then, run `yarn run dev` or `yarn run production` to build your plugin assets (`yarn run production` will add a version hash to the asset manifest for browser cache busting).
 
 ### Updates
 
 In [Git Bash][8]:
 
-`cd ~/Code/pressbooks-dev/site
+```
+cd ~/Code/pressbooks-dev/site
 composer.phar update pressbooks/pressbooks --with-dependencies
 composer.phar update pressbooks/pressbooks-publisher --with-dependencies
-composer.phar update pressbooks/pressbooks-book --with-dependencies`
+composer.phar update pressbooks/pressbooks-book --with-dependencies
+```
 
  [1]: https://roots.io/bedrock
  [2]: https://roots.io/trellis

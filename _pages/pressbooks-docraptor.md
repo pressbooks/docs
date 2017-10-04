@@ -5,7 +5,7 @@ author: Ned Zimmerman
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.pressbooks.org/changelog/docraptor-for-pressbooks/
+  https://docs.pressbooks.org/changelog/pressbooks-docraptor/
 published: true
 post_date: 2017-10-04 14:05:53
 ---

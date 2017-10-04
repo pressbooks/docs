@@ -10,15 +10,17 @@ post_date: 2017-07-07 22:29:32
 ---
 ## Plugins
 
-[Pressbooks][1]
+[Pressbooks][1]  
+[DocRaptor for Pressbooks][2]
 
 ## Themes
 
-[Pressbooks Book][2]  
-[Pressbooks Custom CSS][3]  
-[Pressbooks Publisher][4]
+[Pressbooks Book][3]  
+[Pressbooks Custom CSS][4]  
+[Pressbooks Publisher][5]
 
  [1]: https://docs.pressbooks.org/changelog/pressbooks
- [2]: https://docs.pressbooks.org/changelog/pressbooks-book
- [3]: https://docs.pressbooks.org/changelog/pressbooks-custom-css
- [4]: https://docs.pressbooks.org/changelog/pressbooks-publisher
+ [2]: https://docs.pressbooks.org/changelog/pressbooks-docraptor
+ [3]: https://docs.pressbooks.org/changelog/pressbooks-book
+ [4]: https://docs.pressbooks.org/changelog/pressbooks-custom-css
+ [5]: https://docs.pressbooks.org/changelog/pressbooks-publisher

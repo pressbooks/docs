@@ -9,6 +9,16 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+### 4\.3.3
+
+**NOTICE:** Pressbooks 4.3.3 requires WordPress 4.8.2. **NOTICE:** Users of the Pressbooks Custom CSS theme must upgrade to Pressbooks Custom CSS 1.0 for compatibility with Pressbooks 4.3.3.
+
+*   **[CORE ENHANCEMENT]** The Pressbooks plugin is now self-updating — GitHub Updater is no longer required (see #897 and #954).
+*   **[CORE ENHANCEMENT]** Error logs from export routines can be emailed to an array of email addresses supplied via the `pb_error_log_emails` filter (see #956).
+*   **[CORE ENHANCEMENT]** Images in cloned or imported books can now be properly edited using the WordPress image editor (see #920 and #949).
+*   **[FIX]** We’ve implemented a better solution for the PDF profile bug (see #951, #952).
+*   **[FIX]** URLs like `/catalog/page/1` will no longer attempt to load user catalogs (see #953).
+
 ### 4\.3.2
 
 **NOTICE:** Pressbooks 4.3.2 requires WordPress 4.8.1. **NOTICE:** Users of the Pressbooks Custom CSS theme must upgrade to Pressbooks Custom CSS 1.0 for compatibility with Pressbooks 4.3.2.

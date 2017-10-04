@@ -9,6 +9,10 @@ permalink: >
 published: true
 post_date: 2017-09-13 09:22:30
 ---
-## 3\.1.2
+### 3\.1.3
+
+*   **[FIX]** Removed duplicate footer markup (thanks to @jeremyfelt; see #11).
+
+### 3\.1.2
 
 *   **[FIX]** Prevented Pressbooks Publisher's wrapper from being added to the user catalog page.

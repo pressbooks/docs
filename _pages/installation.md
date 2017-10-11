@@ -18,7 +18,7 @@ Download the latest releases of [Pressbooks][1], [Pressbooks Book][2], and [Pres
 IMPORTANT!
 
 *   Do not install Pressbooks on an existing WordPress blog -- create a new WordPress install instead.
-*   Pressbooks works with [PHP 5.6.x][5] and WordPress 4.8.1. Lower versions are not supported.
+*   Pressbooks works with [PHP 5.6.x][5] and WordPress 4.8.2. Lower versions are not supported.
 
 ### Part 1: WordPress
 
@@ -183,10 +183,10 @@ Once WP-CLI is installed on your server, the following shell commands executed i
     wp core multisite-install --url="http://domain.com" --title="Pressbooks" --admin_user="username" --admin_password="password" --admin_email="user@domain.com"
     wp plugin delete hello
     wp plugin update-all
-    wp plugin install https://github.com/pressbooks/pressbooks/releases/download/4.3.1/pressbooks-4.3.2.zip
+    wp plugin install https://github.com/pressbooks/pressbooks/releases/download/4.3.4/pressbooks-4.3.4.zip
     mkdir wp-content/mu-plugins && cp wp-content/plugins/pressbooks/hm-autoloader.php wp-content/mu-plugins
     wp plugin activate pressbooks --network
-    wp theme install https://github.com/pressbooks/pressbooks-book/releases/download/1.10.3/pressbooks-book-1.10.3.zip
+    wp theme install https://github.com/pressbooks/pressbooks-book/releases/download/1.10.4/pressbooks-book-1.10.4.zip
     wp theme install https://github.com/pressbooks/pressbooks-publisher/archive/master.zip
     wp theme install https://github.com/pressbooks/pressbooks-austenclassic/archive/master.zip
     wp theme install https://github.com/pressbooks/pressbooks-clarke/archive/master.zip

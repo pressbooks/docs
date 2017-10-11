@@ -11,7 +11,8 @@ post_date: 2017-09-06 21:02:12
 ---
 ### 4\.3.4
 
-**NOTICE:** Pressbooks >= 4.3.3 requires WordPress 4.8.2. **NOTICE:** Users of the Pressbooks Custom CSS theme must upgrade to Pressbooks Custom CSS 1.0 for compatibility with Pressbooks >= 4.3.0.
+**NOTICE:** Pressbooks >= 4.3.3 requires WordPress 4.8.2.  
+**NOTICE:** Users of the Pressbooks Custom CSS theme must upgrade to Pressbooks Custom CSS 1.0 for compatibility with Pressbooks >= 4.3.0.
 
 *   **[CORE ENHANCEMENT]** The user catalog title can now be changed via the `pb_catalog_title` filter (props to @monkecheese; see #961).
 *   **[CORE ENHANCEMENT]** SCSS variables from theme options will now be passed to the SCSS compiler as key/value pairs rather than by building SCSS in PHP (see #782 and #963).
@@ -21,7 +22,8 @@ post_date: 2017-09-06 21:02:12
 
 ### 4\.3.3
 
-**NOTICE:** Pressbooks 4.3.3 requires WordPress 4.8.2. **NOTICE:** Users of the Pressbooks Custom CSS theme must upgrade to Pressbooks Custom CSS 1.0 for compatibility with Pressbooks 4.3.3.
+**NOTICE:** Pressbooks 4.3.3 requires WordPress 4.8.2.  
+**NOTICE:** Users of the Pressbooks Custom CSS theme must upgrade to Pressbooks Custom CSS 1.0 for compatibility with Pressbooks 4.3.3.
 
 *   **[CORE ENHANCEMENT]** The Pressbooks plugin is now self-updating — GitHub Updater is no longer required (see #897 and #954).
 *   **[CORE ENHANCEMENT]** Error logs from export routines can be emailed to an array of email addresses supplied via the `pb_error_log_emails` filter (see #956).
@@ -37,7 +39,8 @@ post_date: 2017-09-06 21:02:12
 
 ### 4\.3.1
 
-**NOTICE:** Pressbooks 4.3.1 requires WordPress 4.8.1. **NOTICE:** Users of the Pressbooks Custom CSS theme must upgrade to Pressbooks Custom CSS 1.0 for compatibility with Pressbooks 4.3.1.
+**NOTICE:** Pressbooks 4.3.1 requires WordPress 4.8.1.  
+**NOTICE:** Users of the Pressbooks Custom CSS theme must upgrade to Pressbooks Custom CSS 1.0 for compatibility with Pressbooks 4.3.1.
 
 *   **[CORE ENHANCEMENT]** Added a debugging switch to Custom Styles (see #946).
 *   **[FIX]** Resolved an issue where some fonts would not be loaded properly during the PDF export routine (see #944 and #945).
@@ -45,7 +48,8 @@ post_date: 2017-09-06 21:02:12
 
 ### 4\.3.0
 
-**NOTICE:** Pressbooks 4.3 requires WordPress 4.8.1. **NOTICE:** Users of the Pressbooks Custom CSS theme must upgrade to Pressbooks Custom CSS 1.0 for compatibility with Pressbooks 4.3.
+**NOTICE:** Pressbooks 4.3 requires WordPress 4.8.1.  
+**NOTICE:** Users of the Pressbooks Custom CSS theme must upgrade to Pressbooks Custom CSS 1.0 for compatibility with Pressbooks 4.3.
 
 *   **[FEATURE]** Custom Styles: Navigate to *Appearance* → *Custom Styles* on your book's dashboard to add custom CSS or SCSS to any book theme (see #658, #912, #925, #937, #938, #940, #941, and #942).
 *   **[ENHANCEMENT]** Expanded the `license` property of the `/metadata` endpoint to include a human-readable license name and custom license text (if present) (see #934 and #936).

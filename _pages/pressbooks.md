@@ -9,6 +9,16 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+### 4\.3.4
+
+**NOTICE:** Pressbooks >= 4.3.3 requires WordPress 4.8.2. **NOTICE:** Users of the Pressbooks Custom CSS theme must upgrade to Pressbooks Custom CSS 1.0 for compatibility with Pressbooks >= 4.3.0.
+
+*   **[CORE ENHANCEMENT]** The user catalog title can now be changed via the `pb_catalog_title` filter (props to @monkecheese; see #961).
+*   **[CORE ENHANCEMENT]** SCSS variables from theme options will now be passed to the SCSS compiler as key/value pairs rather than by building SCSS in PHP (see #782 and #963).
+*   **[FIX]** Fixed an issue where the PDF margins theme option was not being applied properly.
+*   **[FIX]** Fixed a conflict between the updated Pressbooks LaTeX module and third-party renderers (props to @monkecheese; see #958 and #959).
+*   **[FIX]** The publication date should now save properly, regardless of book language (thanks to @thomasdumm for the bug report; see #965 and #966).
+
 ### 4\.3.3
 
 **NOTICE:** Pressbooks 4.3.3 requires WordPress 4.8.2. **NOTICE:** Users of the Pressbooks Custom CSS theme must upgrade to Pressbooks Custom CSS 1.0 for compatibility with Pressbooks 4.3.3.

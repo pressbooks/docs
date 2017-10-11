@@ -9,6 +9,10 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:04:06
 ---
+### 1\.10.4
+
+*   **[FIX]** Fixed an issue where part numbering would not reset properly in Prince if the part was the book’s first content (see #45).
+
 ### 1\.10.3
 
 *   **[FIX]** Fix some issues with Biblical Hebrew, Devanagari, and Turkish fonts.

@@ -32,7 +32,7 @@ In the SSH/SSL tab:
   + Proxy host: pressbooks.dev (Port: 22) 
   + Proxy user: vagrant 
   + Auth type: Key pair (OpenSSH) 
-  + Private key file: `~\Code\pressbooks-dev\trellis\.vagrant\machines\default\virtualbox\private_key`
+  + Private key file: `~/Code/pressbooks-dev/trellis/.vagrant/machines/default/virtualbox/private_key`
 
 In the General tab: 
 
@@ -60,8 +60,8 @@ Get the [Xdebug Helper][5] Chrome plugin.
 
 Go to Settings > Languages & Frameworks > PHP > Servers, create a new server named pressbooks.dev and map:
 
-*   `pressbooks-dev\site` to `/srv/www/example.com/current`
-*   `pressbooks-dev\trellis` to `/home/vagrant/trellis`
+*   `pressbooks-dev/site` to `/srv/www/example.com/current`
+*   `pressbooks-dev/trellis` to `/home/vagrant/trellis`
 
 ![Xdebug Setup][6]
 
@@ -75,7 +75,7 @@ Settings > Languages & Frameworks > PHP > PHPUnit, create a new configuration ba
 
 ![PHPUnit][8]
 
-Click the three dots [...] next to path mappings and set `pressbooks-dev\site` to `/srv/www/example.com/current`:
+Click the three dots [...] next to path mappings and set `pressbooks-dev/site` to `/srv/www/example.com/current`:
 
 ![PHP Mappings][9]
 

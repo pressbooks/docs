@@ -5,7 +5,7 @@ author: Ned Zimmerman
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.pressbooks.org/changelog/donham/
+  https://docs.pressbooks.org/changelog/pressbooks-donham/
 published: true
 post_date: 2017-11-16 13:57:48
 ---

@@ -9,6 +9,21 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+### 4\.4.0
+
+**NOTICE:** Pressbooks >= 4.4 requires [WordPress 4.9][1].
+
+*   **[FEATURE]** You can now assign [Thema][2] subject categories to your book on the Book Information page (see #978).
+*   **[FEATURE]** Part slugs are now editable (props to @colomet for the suggestion; see 3f5eca2).
+*   **[CORE ENHANCEMENT]** Pressbooks now uses WordPress’ included [CodeMirror][3] scripts and styles for our Custom Styles editor (see #980).
+*   **[CORE ENHANCEMENT]** Added the `pb_global_components_path` filter which lets book themes override the global components path to point to their own bundled components libraries (see #982).
+*   **[CORE ENHANCEMENT]** Added the `pb_pre_export` action to allow tweaks prior to an export routine (see 5302eea).
+*   **[CORE ENHANCEMENT]** Our `app()` function now matches Laravel 5.4’s function signature (see cdcb9e8).
+*   **[FIX]** Importing a Word document with multiple images now works properly (props to @rootl for the bug report; see #288 and #977).
+*   **[FIX]** Chapters will now correctly inherit their book’s license in the API (see #979).
+*   **[FIX]** Chapters will no longer show raw content in the API if they are password-protected (see #975).
+*   **[FIX]** Uploading an image to the user catalog no longer causes an error (props to @emasters for the bug report; see #983).
+
 ### 4\.3.5
 
 **NOTICE:** Pressbooks >= 4.3.3 requires WordPress 4.8.2.  
@@ -66,7 +81,7 @@ post_date: 2017-09-06 21:02:12
 
 *   **[FEATURE]** Custom Styles: Navigate to *Appearance* → *Custom Styles* on your book's dashboard to add custom CSS or SCSS to any book theme (see #658, #912, #925, #937, #938, #940, #941, and #942).
 *   **[ENHANCEMENT]** Expanded the `license` property of the `/metadata` endpoint to include a human-readable license name and custom license text (if present) (see #934 and #936).
-*   **[ENHANCEMENT]** Added the book's short description to the `/metadata` endpoint as a [`disambiguatingDescription`][1] (see #930 and #932).
+*   **[ENHANCEMENT]** Added the book's short description to the `/metadata` endpoint as a [`disambiguatingDescription`][4] (see #930 and #932).
 *   **[ENHANCEMENT]** Clarified errors when trying to clone a book from Pressbooks < 4.1 (see #914 and #931).
 *   **[ENHANCEMENT]** Renamed several action and filter hooks and deprecated the old versions (see #926).
 *   **[FIX]** Fixed an issue which would prevent super administrators without any books on a network from accessing the cloning page (see #913 and #933).
@@ -79,7 +94,7 @@ post_date: 2017-09-06 21:02:12
 *   **Feature:** Full-sized images will be used where possible in Print PDF exports to ensure that exported PDFs meet image resolution requirements (see #894, #898 and #900).
 *   **Feature:** WXR import and clone operations will now attempt to fetch original images from the source book in addition to the scaled/cropped version in the book content (see #895 and #902).
 *   **Feature:** Content on the organize page now has a View link as will as Edit and Trash (see #840 and #893).
-*   **Enhancement:** The [Masterminds HTML5 parser][2] is now used instead of `DOMDocument` where possible for improved error handling and compatibility with HTML5 elements (see #889 and #896).
+*   **Enhancement:** The [Masterminds HTML5 parser][5] is now used instead of `DOMDocument` where possible for improved error handling and compatibility with HTML5 elements (see #889 and #896).
 *   **Enhancement:** Unnecessary HTTP calls have been removed from export routines (see #899).
 *   **Enhancement:** Installation instructions are now linked from the readme file instead of being included (see #891 and #892).
 *   **Fix:** Resolved some inconsistencies with custom copyright notice and copyright year display (see #922).
@@ -92,14 +107,14 @@ post_date: 2017-09-06 21:02:12
 
 ### 4\.1.0
 
-**NOTICE:** Pressbooks 4.1 requires [WordPress 4.8.1][3].
+**NOTICE:** Pressbooks 4.1 requires [WordPress 4.8.1][6].
 
 *   **Feature:** Cloning! Clone any public, properly-licensed book from any Pressbooks 4.1 network including your own (super admins can clone any book from their own network, regardless of license) (see #841, #857, #881, #885).
 *   **Feature:** Granular display controls for content licenses at the book and section level (see #805, #867, #873, #883, #884).
 *   **Feature:** Word count for the entire book and for content marked for export is now displayed on the Organize page (see #842, #878, #880).
 *   **Feature:** Users can now delete their own books from the book menu (see #845, #864).
 *   **Feature:** Custom taxonomies are now available in the Pressbooks REST API v2 (see #851, #853).
-*   **Feature:** The Schema.org [isBasedOn][4] property is now saved in metadata and displayed in the Pressbooks REST API v2 (see #850, #852).
+*   **Feature:** The Schema.org [isBasedOn][7] property is now saved in metadata and displayed in the Pressbooks REST API v2 (see #850, #852).
 *   **Feature:** Search & Replace with RegEx is now available for super admins without additional configuration (see #870, #871, #879).
 *   **Feature:** Punjabi Gurmukhi support (props to @alexpflores) (see #877).
 *   **Enhancement:** Book editors can now modify theme options and custom CSS (see #862, #863).
@@ -122,15 +137,15 @@ post_date: 2017-09-06 21:02:12
 
 ### 4\.0.0
 
-**NOTICE:** Upon upgrading to Pressbooks 4.0, you will need to install the [Pressbooks Book][5] and [Pressbooks Publisher][6] themes along with any of our other open source [book themes][7] that were bundled with earlier versions of Pressbooks. For more information, see the [upgrading instructions][8].
+**NOTICE:** Upon upgrading to Pressbooks 4.0, you will need to install the [Pressbooks Book][8] and [Pressbooks Publisher][9] themes along with any of our other open source [book themes][10] that were bundled with earlier versions of Pressbooks. For more information, see the [upgrading instructions][11].
 
-**NOTICE:** Pressbooks 4.0 requires [WordPress 4.8.0][9].
+**NOTICE:** Pressbooks 4.0 requires [WordPress 4.8.0][12].
 
 #### Pressbooks 4.0 "Slate"
 
 ##### Next-Generation REST API
 
-Building on [Brad Payne's][10] original REST API for Pressbooks, we've introduced an improved and expanded REST API based on the WordPress Core [REST API][11] infrastructure. The Pressbooks REST API v2 supports authenticated CRUD (Create, Read, Update, Destroy) access to all Pressbooks content types (front and back matter, parts, and chapters) as well as read-only access to book structure and metadata. For more information, see our [REST API documentation][12]. We're excited to see what the Pressbooks Open Source community will do with these new API capabilities! Share your projects with us: <code@pressbooks.com>.
+Building on [Brad Payne's][13] original REST API for Pressbooks, we've introduced an improved and expanded REST API based on the WordPress Core [REST API][14] infrastructure. The Pressbooks REST API v2 supports authenticated CRUD (Create, Read, Update, Destroy) access to all Pressbooks content types (front and back matter, parts, and chapters) as well as read-only access to book structure and metadata. For more information, see our [REST API documentation][15]. We're excited to see what the Pressbooks Open Source community will do with these new API capabilities! Share your projects with us: <code@pressbooks.com>.
 
 ##### Enhanced LaTeX Rendering
 
@@ -142,26 +157,26 @@ Want to mark all chapters for export on the Organize screen? You can do that now
 
 ##### Pressbooks CLI
 
-The Pressbooks command line interface is now part of Pressbooks. Want to make your own book theme? Run `wp scaffold book-theme` from the root of your Pressbooks install and take advantage of our intuitive SCSS-based theme structure. More commands to come -- [submit your ideas][13]!
+The Pressbooks command line interface is now part of Pressbooks. Want to make your own book theme? Run `wp scaffold book-theme` from the root of your Pressbooks install and take advantage of our intuitive SCSS-based theme structure. More commands to come -- [submit your ideas][16]!
 
 #### Detailed Changelog
 
-*   **Feature:** REST API v2 (see #472, #763, #770, #771, #774, #778, #780, #781, #783, #785, #788, #798, #803, #804, #806, #807, #810, #812, #815, #816, #823, #832, and our [API Docs][12]
+*   **Feature:** REST API v2 (see #472, #763, #770, #771, #774, #778, #780, #781, #783, #785, #788, #798, #803, #804, #806, #807, #810, #812, #815, #816, #823, #832, and our [API Docs][15]
 *   **Feature:** LaTeX outputs are now at a sufficient resolution for print applications (see #819).
 *   **Feature:** You can now change statuses in bulk on the **Organize** page (see #249 and #822).
-*   **Feature:** Deleted content can now be restored from **Text → Trash** (see [9283c26][14]).
+*   **Feature:** Deleted content can now be restored from **Text → Trash** (see [9283c26][17]).
 *   **Enhancement:** The Pressbooks CLI is now bundled in Pressbooks (see #464 and #826).
-*   **Enhancement:** `new PressbooksMetadata()` now returns book metadata as an implementation of [JsonSerializeable][15] (see #804 and #832).
+*   **Enhancement:** `new PressbooksMetadata()` now returns book metadata as an implementation of [JsonSerializeable][18] (see #804 and #832).
 *   **Enhancement:** Expanded metadata is now hidden on the **Book Information** page unless needed (see #804 and #832).
-*   **Enhancement:** We now use the [Human Made coding standards][16] for PHP. [Check your code][17] before submitting a PR ?.
-*   **Enhancement:** We now use [Laravel Mix][18] to handle all plugin assets (see #769 and #795). Making a change in `/assets/src/`? With [Yarn][19] installed in your development environment, run `yarn && yarn run build` to build assets for distribution.
-*   **Enhancement:** SCSS files can now be checked against our coding standards using [stylelint][20] with the command `yarn run lint` (see #743 and #817).
-*   **Enhancement:** JS files have been updated to ES6 and can now be checked against our coding standards using [eslint][21] with the command `yarn run lint` (see #829).
-*   **Enhancement:** Root and book themes are now distributed separately from the Pressbooks plugin -- make sure you install the required themes when you [upgrade][22]! (See #756 and #799.)
+*   **Enhancement:** We now use the [Human Made coding standards][19] for PHP. [Check your code][20] before submitting a PR ?.
+*   **Enhancement:** We now use [Laravel Mix][21] to handle all plugin assets (see #769 and #795). Making a change in `/assets/src/`? With [Yarn][22] installed in your development environment, run `yarn && yarn run build` to build assets for distribution.
+*   **Enhancement:** SCSS files can now be checked against our coding standards using [stylelint][23] with the command `yarn run lint` (see #743 and #817).
+*   **Enhancement:** JS files have been updated to ES6 and can now be checked against our coding standards using [eslint][24] with the command `yarn run lint` (see #829).
+*   **Enhancement:** Root and book themes are now distributed separately from the Pressbooks plugin -- make sure you install the required themes when you [upgrade][25]! (See #756 and #799.)
 *   **Enhancement:** Part content has been migrated to the standard content editor instead of a custom field (see #486 and #764).
 *   **Enhancement:** The Search and Replace module has been heavily optimized, reducing memory usage by ~85% (see #759 and #793).
-*   **Enhancement:** Additional post types can be added to the list of permitted post types for editing using the [`pb_supported_post_types` filter][23] (props to @steelwagstaff, see #758).
-*   **Enhancement:** We now use [vanilla/htmlawed][24] as our htmLawed provider (see #767).
+*   **Enhancement:** Additional post types can be added to the list of permitted post types for editing using the [`pb_supported_post_types` filter][26] (props to @steelwagstaff, see #758).
+*   **Enhancement:** We now use [vanilla/htmlawed][27] as our htmLawed provider (see #767).
 *   **Enhancement:** Developers can now add new import types via the `pb_import_table_cell` and `pb_initialize_import` filter hooks (props @bdolor; see #802 and #811).
 *   **Enhancement:** Releases are now packaged automatically via Travis (see #730 and #821).
 *   **Fix:** DOCX and ODT files exported from Google Docs (which lack standard metadata) can now be imported without issue via the import module (see #837 and #838).
@@ -174,7 +189,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 
 ### 3\.9.9
 
-**NOTICE:** Pressbooks now requires [WordPress 4.7.5][25].
+**NOTICE:** Pressbooks now requires [WordPress 4.7.5][28].
 
 *   **Feature:** A curated listed of recommended plugins is now displayed within the plugin installer (see #729).
 *   **Feature:** Search and Replace now supports regular expressions (props to @stepmuel; see #754). This feature can be enabled by adding: `define( 'PB_ENABLE_REGEX_SEARCHREPLACE', true );` to `wp-config.php`.
@@ -197,7 +212,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 
 **NOTICE:** Pressbooks' PHP version requirement (>= 5.6) and WordPress version requirement (>= 4.7.3) can no longer be overridden. Before installing Pressbooks 3.9.8, please ensure that your system has been upgraded accordingly.
 
-*   **Fix:** Switched to an unmodified version of htmLawed to fix a regression in [vanilla/htmlawed][26] which was stripping paragraph tags from blockquotes (see #723).
+*   **Fix:** Switched to an unmodified version of htmLawed to fix a regression in [vanilla/htmlawed][29] which was stripping paragraph tags from blockquotes (see #723).
 *   **Fix:** Fixed an issue where users would be informed that their theme had been unlocked when saving Export options even thought it was already unlocked (see #722).
 *   **Fix:** Fixed an issue where wp-cli would give a permissions error because of the `PressbooksThemeLock::isLocked()` check (see #721).
 
@@ -225,8 +240,8 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   **Enhancement:** htmLawed is now a Composer dependency (see #702).
 *   **Enhancement:** The sassphp dependency is no longer required (see #693).
 *   **Enhancement:** The SaxonHE dependency check can now be overridden (see https://github.com/pressbooks/pressbooks/commit/7ea32fe).
-*   **Enhancement:** [perchten/rmrdir][27] is now used for recursive directory removal (see [37ab804][28]).
-*   **Enhancement:** Added PressbooksUtilityrcopy() function for recursive directory copying (props to @blobaugh for the [example code][29]; see [52b087b][30]).
+*   **Enhancement:** [perchten/rmrdir][30] is now used for recursive directory removal (see [37ab804][31]).
+*   **Enhancement:** Added PressbooksUtilityrcopy() function for recursive directory copying (props to @blobaugh for the [example code][32]; see [52b087b][33]).
 *   **Enhancement:** Added `pb_dependency_errors` filter hook for suppression of dependency errors (see #719).
 *   **Fix:** Images on custom title pages are now exported as expected in EPUB and Kindle (see #690, #698).
 *   **Fix:** The diagnostics page now functions as expected on the root blog (props to @colomet for the report; see #688, #695);
@@ -236,7 +251,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 
 ### 3\.9.7.2
 
-**NOTICE:** Pressbooks now requires [WordPress 4.7.3][31]. * **Enhancement:** Streamlined and refactored the running content SCSS partials for SCSS-based themes (see #675 and #686).
+**NOTICE:** Pressbooks now requires [WordPress 4.7.3][34]. * **Enhancement:** Streamlined and refactored the running content SCSS partials for SCSS-based themes (see #675 and #686).
 
 ### 3\.9.7.1
 
@@ -244,7 +259,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 
 ### 3\.9.7
 
-**NOTICE:** Pressbooks now requires [WordPress 4.7.2][32].
+**NOTICE:** Pressbooks now requires [WordPress 4.7.2][35].
 
 *   **Feature:** Added support for Canadian Indigenous syllabics, which are used for the Chipewyan, Inuktitut, Plains Cree, Cree, Moose Cree, Slave, Northern Cree, Naskapi, Swampy Cree, Southern East Cree, and Ojibwa languages (props to @bdolor; see #635).
 *   **Feature:** Part numbers are now displayed consistently across all formats (see #341).
@@ -270,7 +285,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   **Enhancement:** Inline language attributes are now properly imported from Word documents (props to @crism; see #630 and #639).
 *   **Enhancement:** Removed the Postmark-specific `wp_mail()` override (see #587).
 *   **Enhancement:** Export dependency errors are now grouped intelligently into a single alert (see #646).
-*   **Enhancement:** Javascript and SCSS files are now validated on pull requests using [Hound][33] (see #617).
+*   **Enhancement:** Javascript and SCSS files are now validated on pull requests using [Hound][36] (see #617).
 *   **Enhancement:** The sender address and name used for emails from a Pressbooks instance can now be customized by defining constants for `WP_MAIL_FROM` and `WP_MAIL_FROM_NAME` (see #663).
 *   **Fix:** To prevent an erroneous reversion to the WordPress < 3.5 uploads directory structure, `PressbooksUtilityget_media_prefix()` now checks for the `ms_files_rewriting` site option instead of for the `blogs.dir` directory.
 *   **Fix:** The custom CSS file URL scheme is now relative, which should prevent mixed content errors under some circumstances (see #599).
@@ -288,15 +303,15 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 
 ### 3\.9.6
 
-**NOTICE:** Pressbooks now requires [WordPress 4.7 "Vaughan"][34].
+**NOTICE:** Pressbooks now requires [WordPress 4.7 "Vaughan"][37].
 
-**NOTICE:** Pressbooks now requires [PrinceXML 11][35] for PDF exports.
+**NOTICE:** Pressbooks now requires [PrinceXML 11][38] for PDF exports.
 
 *   **Feature:** If you select a language on the book information page and the WordPress language pack for that language is available but not installed, Pressbooks will try to install it for you (and politely inform you if it can't).
-*   **Feature:** Added Hindi language support using [Noto Sans Devanagari][36] and [Noto Serif Devanagari][37].
+*   **Feature:** Added Hindi language support using [Noto Sans Devanagari][39] and [Noto Serif Devanagari][40].
 *   **Enhancement:** The whitelist-based theme filtering behaviour of Pressbooks =< 3.9.5.1 has been removed; all book themes are now available for use in all books (if network enabled), and all non-book themes are now available for use on the root blog (if network enabled). If you wish to restrict theme availability further, you can do so by adding additional filters to the `allowed_themes` filter hook.
-*   **Enhancement:** Added the ability to retry asset fetching during EPUB export in the event of server errors (props to @nathanielks, see [7344674][38])
-*   **Enhancement:** Added filter and action hooks to support the addition of import modules via third-party plugins (props to @monkecheese, see [4d7ca64][39]).
+*   **Enhancement:** Added the ability to retry asset fetching during EPUB export in the event of server errors (props to @nathanielks, see [7344674][41])
+*   **Enhancement:** Added filter and action hooks to support the addition of import modules via third-party plugins (props to @monkecheese, see [4d7ca64][42]).
 *   **Enhancement:** Added the `pb_disable_root_comments` filter hook for control over comment display on the root blog (defaults to `true` -- disable comments -- as Pressbooks Publisher does not support comments).
 *   **Enhancement:** Added a link from the user's catalog logo or profile image to their profile URL, if set.
 *   **Enhancement:** Added variables for textbox header font size and text alignment to book theme partials.
@@ -309,7 +324,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 
 ### 3\.9.5.1
 
-*   **Enhancement:** Added [`pb_cover_image`][40] filter to improve support for networks which host uploaded content on a third-party server (props to @monkecheese).
+*   **Enhancement:** Added [`pb_cover_image`][43] filter to improve support for networks which host uploaded content on a third-party server (props to @monkecheese).
 *   **Fix:** Fixed a discrepancy in the line height of PrinceXML PDF exports of books using Cardo as the body font which resulted from an invalid descender value.
 *   **Fix:** Fixed an issue where the Network Sharing & Privacy page would not update the associated site option value.
 *   **Fix:** Fixed the vertical alignment of the Facebook share button in the webbook theme (props to @colomet).
@@ -335,7 +350,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 
 ### 3\.9.4
 
-*   **Feature:** Pressbooks + Hypothesis: Version 0.4.8 of the [Hypothesis][41] WordPress plugin now supports custom post types, and Pressbooks 3.9.4 adds Hypothesis support to all of ours (parts, chapters, front and back matter).
+*   **Feature:** Pressbooks + Hypothesis: Version 0.4.8 of the [Hypothesis][44] WordPress plugin now supports custom post types, and Pressbooks 3.9.4 adds Hypothesis support to all of ours (parts, chapters, front and back matter).
 *   **Feature:** Having a problem with Pressbooks? We've added a diagnostics page which is accessible from the 'Diagnostics' link in the footer of every dashboard screen. If you need to report a bug, copy your system configuration info from your Diagnostics page to help us help you resolve the issue more efficiently.
 *   **Enhancement:** `check_epubcheck_install` can now be overridden using the `pb_epub_has_dependencies` hook for use cases where EPUB validation is not required (props to @monkecheese for the PR).
 *   **Enhancement:** Some adjustments were made to the PDF output stylesheets for running headers and footers.
@@ -343,7 +358,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 
 ### 3\.9.3
 
-*   **NOTE:** [Saxon-HE 9.7.0-10][42] is no longer bundled with Pressbooks and must be installed separately for ODT export support (see [Installation][43]).
+*   **NOTE:** [Saxon-HE 9.7.0-10][45] is no longer bundled with Pressbooks and must be installed separately for ODT export support (see [Installation][46]).
 *   **Feature:** The copy on the publish page can now be replaced by adding a filter to the `pressbooks_publish_page` filter hook.
 *   **Feature:** If registration is enabled, a 'Register' button now appears on the front page of the Pressbooks Publisher theme.
 *   **Enhancement:** A URL sanitization routine has been added to the `PressbooksOptions` class.
@@ -353,13 +368,13 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 
 ### 3\.9.2.1
 
-*   **NOTE:** Pressbooks 3.9.2 requires [PrinceXML 20160929][44] or later.
+*   **NOTE:** Pressbooks 3.9.2 requires [PrinceXML 20160929][47] or later.
 *   **Fix:** Fixed an issue where user actions on the Organize page would fail to update certain properties.
 
 ### 3\.9.2
 
-*   **NOTE:** Pressbooks 3.9.2 requires [PrinceXML 20160929][44] or later.
-*   **Feature:** Added an export format for print-ready PDF, compatible with the [CreateSpace PDF Submission Specification][45] (**Requires [PrinceXML 20160929][44] or later**).
+*   **NOTE:** Pressbooks 3.9.2 requires [PrinceXML 20160929][47] or later.
+*   **Feature:** Added an export format for print-ready PDF, compatible with the [CreateSpace PDF Submission Specification][48] (**Requires [PrinceXML 20160929][47] or later**).
 *   **Feature:** Added a button to the editor which lets you assign a custom class to any element.
 *   **Feature:** Simplified the Disable Comments feature, which can now be found under Sharing & Privacy settings.
 *   **Enhancement:** Added version-based dependency checks for all Pressbooks dependencies.
@@ -376,11 +391,11 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   **Feature:** Added a web theme option to display the title of the current part in the webbook (props to @bdolor).
 *   **Feature:** Noto CJK fonts (required for Chinese, Japanese and Korean PDF output) are now downloaded only when needed from within Pressbooks, reducing the overall size of the Pressbooks download.
 *   **Feature:** Added a recompile routine for webbook stylesheets to allow more straightforward development (only enabled when `WP_ENV` is defined and set to `development`).
-*   **Enhancement:** Applied our [coding standards][46] across the board and added PHP_CodeSniffer to our CI routines.
+*   **Enhancement:** Applied our [coding standards][49] across the board and added PHP_CodeSniffer to our CI routines.
 *   **Enhancement:** Added some unit tests.
 *   **Enhancement:** Moved the Pressbooks API to /vendor.
 *   **Enhancement:** Changed some colour variables for clarity.
-*   **Enhancement:** Added initial support for SVG LaTeX images in PDF exports (requires [QuickLaTex][47]).
+*   **Enhancement:** Added initial support for SVG LaTeX images in PDF exports (requires [QuickLaTex][50]).
 *   **Enhancement:** Added some scaffolding to allow option defaults to be filtered in pages built using the new options class.
 *   **Enhancement:** The book information post is now created when a book is registered.
 *   **Fix:** Added missing methods which were triggering fatal errors in the Export Options page (props to @bdolor).
@@ -395,13 +410,13 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 
 ### 3\.8.0
 
-*   **Feature:** The redistribution option from [Pressbooks Textbook][48], which allows a book administrator to share the latest export files of their book on the webbook cover page, has been migrated into Pressbooks and can be found under (Network) Settings -> Sharing and Privacy. Many thanks to @bdolor for developing this feature (and fixing a display bug in our implementation of it).
+*   **Feature:** The redistribution option from [Pressbooks Textbook][51], which allows a book administrator to share the latest export files of their book on the webbook cover page, has been migrated into Pressbooks and can be found under (Network) Settings -> Sharing and Privacy. Many thanks to @bdolor for developing this feature (and fixing a display bug in our implementation of it).
 *   **Feature:** Luther and all child themes now support searching within webbooks.
 *   **Feature:** The Pressbooks.com promotion on book covers can now be hidden using the `PB_HIDE_COVER_PROMO` constant.
-*   **Enhancement:** [Hypothesis][49] has been added to the supported plugins list, and the supported plugins list is now built more intelligently.
+*   **Enhancement:** [Hypothesis][52] has been added to the supported plugins list, and the supported plugins list is now built more intelligently.
 *   **Enhancement:** The hard-coded default theme for new books has been replaced by the following logic: 1. Use `PB_BOOK_THEME` (if set); 2. Use `WP_DEFAULT_THEME` (if set); 3. Use Luther.
 *   **Enhancement:** Added the `pressbooks_register_theme_directory` action to support the registration of custom theme directores by third-party developers (props to @bdolor).
-*   **Enhancement:** Added support for testing PrinceXML's built-in [PDF profile][50] support by setting the `PB_PDF_PROFILE` constant to the desired profile.
+*   **Enhancement:** Added support for testing PrinceXML's built-in [PDF profile][53] support by setting the `PB_PDF_PROFILE` constant to the desired profile.
 *   **Enhancement:** Refactored generic shortcodes to allow testing and tests were written for them.
 *   **Enhancement:** Switched from internal fork to dev-master of gridonic/princexmlphp and switched to versioned copy of pressbooks/saxonhe.
 *   **Enhancement:** The `PressbooksModulesThemeOptions` class now supports the registration of custom tags by third-party developers.
@@ -490,7 +505,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   ENHANCED: Plugin assets are now managed using Bower and compiled using gulp. Your Pressbooks dashboard will now load more efficiently (thanks to the @rootswp team for their development of this workflow).
 *   ENHANCED: All symbionts except for that weird ICML one are now managed using Composer.
 *   ENHANCED: `check_prince_install()` now tries to run `prince --version` instead of looking for the executable file.
-*   FIXED: The Tweet button had stopped working, so we replaced our previous sharing script with @ellisonleao's excellent [sharer.js][51].
+*   FIXED: The Tweet button had stopped working, so we replaced our previous sharing script with @ellisonleao's excellent [sharer.js][54].
 *   FIXED: Our fork of @johngodley's Search Regex plugin has been updated for PHP 7.0 compatibility (props to @r66r for the bug report).
 
 ### 3\.3.2
@@ -513,7 +528,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   Allow a network administrator to replace the Pressbooks News dashboard feed with their own RSS feed or disable the dashboard feed entirely.
 *   Fixed an issue where the "Show Title" checkbox on the "Organize" page had no effect (props to @sswettenham for the bug report).
 *   Fixed an issue where uploaded media were not attached to their parent Front Matter, Chapter or Back Matter.
-*   Internal dependencies are now managed using [Composer][52].
+*   Internal dependencies are now managed using [Composer][55].
 
 ### 3\.2.0
 
@@ -554,7 +569,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   Added a new Textboxes menu in TinyMCE which supports some new types of textboxes in addition to standard and shaded.
 *   Added support for assigning classes to tables within the TinyMCE Table Editor and removed some unnecessary features from it.
 *   Added a new Greek language font.
-*   Moved the mPDF library to an external plugin, [Pressbooks mPDF][53].
+*   Moved the mPDF library to an external plugin, [Pressbooks mPDF][56].
 *   Localized strings within some of our TinyMCE plugins. More to come.
 *   Improved SCSS theme structure and SCSS compilation routines.
 *   Improved XSL file for ODT export.
@@ -700,7 +715,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 ### 2\.5
 
 *   Requires WordPress 4.2.2.
-*   New root theme, Pressbooks Publisher 2.0. Pressbooks Publisher One has been deprecated and is now available (unsupported) [here][54].
+*   New root theme, Pressbooks Publisher 2.0. Pressbooks Publisher One has been deprecated and is now available (unsupported) [here][57].
 *   Added centralized `show_experimental_features()` function to control where such things appear.
 *   Added experimental PDF export via mPDF as an open source alternative to Prince (props to @bdolor).
 *   Added fallbacks for title, author and cover image fetching in `getBookInformation()` function.
@@ -774,57 +789,60 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   Cleaner print output from webbooks.
 *   Ebook theme option to skip line between paragraphs is now honored in all themes.
 
- [1]: http://schema.org/disambiguatingDescription
- [2]: https://github.com/Masterminds/html5-php
- [3]: https://wordpress.org/news/2017/08/wordpress-4-8-1-maintenance-release/
- [4]: http://bib.schema.org/isBasedOn
- [5]: https://github.com/pressbooks/pressbooks-book
- [6]: https://github.com/pressbooks/pressbooks-publisher
- [7]: https://github.com/search?q=topic%3Abook-theme+org%3Apressbooks&type=Repositories
- [8]: https://docs.pressbooks.org/upgrading
- [9]: https://wordpress.org/news/2017/06/evans/
- [10]: http://bradpayne.ca
- [11]: https://developer.wordpress.org/rest-api/
- [12]: https://docs.pressbooks.org/api
- [13]: https://github.com/pressbooks/pb-cli/issues
- [14]: https://github.com/pressbooks/pressbooks/tree/9283c26504007ba55259672c5cb9efc8ee07b3c0
- [15]: https://secure.php.net/manual/en/class.jsonserializable.php
- [16]: https://engineering.hmn.md/how-we-work/style/php/
- [17]: http://docs.pressbooks.org/coding-standards/#validating-with-php-code-sniffer
- [18]: https://github.com/jeffreyway/laravel-mix
- [19]: https://yarnpkg.com
- [20]: https://stylelint.io
- [21]: http://eslint.org
- [22]: http://docs.pressbooks.org/upgrading
- [23]: https://github.com/pressbooks/pressbooks/blob/4.0.0/inc/posttype/namespace.php#L16-L29
- [24]: https://packagist.org/packages/vanilla/htmlawed
- [25]: https://wordpress.org/news/2017/05/wordpress-4-7-5/
- [26]: https://github.com/vanilla/htmlawed/
- [27]: https://packagist.org/packages/perchten/rmrdir
- [28]: https://github.com/pressbooks/pressbooks/commit/37ab804489c580ad1d1121c0a07144f37772c7d0
- [29]: http://ben.lobaugh.net/blog/864/php-5-recursively-move-or-copy-files
- [30]: https://github.com/pressbooks/pressbooks/commit/52b087b5e2185ea08c6f67c24111ad9ef0ee1fa0
- [31]: https://wordpress.org/news/2017/03/wordpress-4-7-3-security-and-maintenance-release/
- [32]: https://wordpress.org/news/2017/01/wordpress-4-7-2-security-release/
- [33]: https://houndci.com
- [34]: https://wordpress.org/news/2016/12/vaughan/
- [35]: http://www.princexml.com/download/
- [36]: https://www.google.com/get/noto/#sans-deva
- [37]: https://www.google.com/get/noto/#serif-deva
- [38]: https://github.com/pressbooks/pressbooks/commit/7344674f823517ed7eb2fef462a4795f7182ce56
- [39]: https://github.com/pressbooks/pressbooks/commit/4d7ca649ec3b6c05c40e1c5bb8f92beb1de5ea30
- [40]: https://github.com/pressbooks/pressbooks/pull/540/
- [41]: https://hypothes.is
- [42]: https://sourceforge.net/projects/saxon/files/Saxon-HE/
- [43]: http://docs.pressbooks.org/installation
- [44]: http://www.princexml.com/latest/
- [45]: https://www.createspace.com/ServicesWorkflow/ResourceDownload.do?id=1583
- [46]: https://github.com/pressbooks/pressbooks/blob/master/docs/coding-standards.md
- [47]: https://wordpress.org/plugins/wp-quicklatex/
- [48]: https://github.com/BCcampus/pressbooks-textbook/
- [49]: https://wordpress.org/plugins/hypothesis/
- [50]: http://www.princexml.com/doc/properties/prince-pdf-profile/
- [51]: https://github.com/ellisonleao/sharer.js/
- [52]: https://getcomposer.org
- [53]: https://wordpress.org/plugins/pressbooks-mpdf
- [54]: https://github.com/pressbooks/pressbooks-publisher-one/
+ [1]: https://wordpress.org/news/2017/11/tipton/
+ [2]: https://ns.editeur.org/thema/en
+ [3]: https://make.wordpress.org/core/2017/10/22/code-editing-improvements-in-wordpress-4-9/
+ [4]: http://schema.org/disambiguatingDescription
+ [5]: https://github.com/Masterminds/html5-php
+ [6]: https://wordpress.org/news/2017/08/wordpress-4-8-1-maintenance-release/
+ [7]: http://bib.schema.org/isBasedOn
+ [8]: https://github.com/pressbooks/pressbooks-book
+ [9]: https://github.com/pressbooks/pressbooks-publisher
+ [10]: https://github.com/search?q=topic%3Abook-theme+org%3Apressbooks&type=Repositories
+ [11]: https://docs.pressbooks.org/upgrading
+ [12]: https://wordpress.org/news/2017/06/evans/
+ [13]: http://bradpayne.ca
+ [14]: https://developer.wordpress.org/rest-api/
+ [15]: https://docs.pressbooks.org/api
+ [16]: https://github.com/pressbooks/pb-cli/issues
+ [17]: https://github.com/pressbooks/pressbooks/tree/9283c26504007ba55259672c5cb9efc8ee07b3c0
+ [18]: https://secure.php.net/manual/en/class.jsonserializable.php
+ [19]: https://engineering.hmn.md/how-we-work/style/php/
+ [20]: http://docs.pressbooks.org/coding-standards/#validating-with-php-code-sniffer
+ [21]: https://github.com/jeffreyway/laravel-mix
+ [22]: https://yarnpkg.com
+ [23]: https://stylelint.io
+ [24]: http://eslint.org
+ [25]: http://docs.pressbooks.org/upgrading
+ [26]: https://github.com/pressbooks/pressbooks/blob/4.0.0/inc/posttype/namespace.php#L16-L29
+ [27]: https://packagist.org/packages/vanilla/htmlawed
+ [28]: https://wordpress.org/news/2017/05/wordpress-4-7-5/
+ [29]: https://github.com/vanilla/htmlawed/
+ [30]: https://packagist.org/packages/perchten/rmrdir
+ [31]: https://github.com/pressbooks/pressbooks/commit/37ab804489c580ad1d1121c0a07144f37772c7d0
+ [32]: http://ben.lobaugh.net/blog/864/php-5-recursively-move-or-copy-files
+ [33]: https://github.com/pressbooks/pressbooks/commit/52b087b5e2185ea08c6f67c24111ad9ef0ee1fa0
+ [34]: https://wordpress.org/news/2017/03/wordpress-4-7-3-security-and-maintenance-release/
+ [35]: https://wordpress.org/news/2017/01/wordpress-4-7-2-security-release/
+ [36]: https://houndci.com
+ [37]: https://wordpress.org/news/2016/12/vaughan/
+ [38]: http://www.princexml.com/download/
+ [39]: https://www.google.com/get/noto/#sans-deva
+ [40]: https://www.google.com/get/noto/#serif-deva
+ [41]: https://github.com/pressbooks/pressbooks/commit/7344674f823517ed7eb2fef462a4795f7182ce56
+ [42]: https://github.com/pressbooks/pressbooks/commit/4d7ca649ec3b6c05c40e1c5bb8f92beb1de5ea30
+ [43]: https://github.com/pressbooks/pressbooks/pull/540/
+ [44]: https://hypothes.is
+ [45]: https://sourceforge.net/projects/saxon/files/Saxon-HE/
+ [46]: http://docs.pressbooks.org/installation
+ [47]: http://www.princexml.com/latest/
+ [48]: https://www.createspace.com/ServicesWorkflow/ResourceDownload.do?id=1583
+ [49]: https://github.com/pressbooks/pressbooks/blob/master/docs/coding-standards.md
+ [50]: https://wordpress.org/plugins/wp-quicklatex/
+ [51]: https://github.com/BCcampus/pressbooks-textbook/
+ [52]: https://wordpress.org/plugins/hypothesis/
+ [53]: http://www.princexml.com/doc/properties/prince-pdf-profile/
+ [54]: https://github.com/ellisonleao/sharer.js/
+ [55]: https://getcomposer.org
+ [56]: https://wordpress.org/plugins/pressbooks-mpdf
+ [57]: https://github.com/pressbooks/pressbooks-publisher-one/

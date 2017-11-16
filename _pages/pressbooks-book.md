@@ -9,6 +9,11 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:04:06
 ---
+### 1\.11.0
+
+*   **[FEATURE]** Add parameter to pressbooks_copyright_license() to allow hiding custom copyright license (see #50).
+*   **[CORE ENHANCEMENT]** Remove WordPress generator meta tag (see 6c621ad).
+
 ### 1\.10.5
 
 *   **[FIX]** Added cache busting to ensure that custom styles are loaded after save (see #46).

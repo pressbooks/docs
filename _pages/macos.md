@@ -73,31 +73,36 @@ Clone [pressbooks/bedrock][17] into `~/Code/pressbooks-dev/site`:
 
 Add [pressbooks/pressbooks][18], [pressbooks/pressbooks-publisher][19] and [pressbooks/pressbooks-book][20] to your Bedrock dependencies (for more information on this strategy, [see this post][21])
 
+```
 cd ~/Code/pressbooks-dev/site
 composer require pressbooks/pressbooks:dev-dev
 composer require pressbooks/pressbooks-publisher:dev-dev
 composer require pressbooks/pressbooks-book:dev-dev`
+```
 
 ## 3. Configuration
 
 Edit `~/Code/pressbooks-dev/trellis/group_vars/development/wordpress_sites.yml` to reflect your desired local development site URL, replacing all instances of `example.test` with `pressbooks.test` or whatever you prefer. For example:
 
+```
 wordpress_sites:
-example.com:
-site_hosts:
-- canonical: pressbooks.test
-redirects:
-- www.pressbooks.test
-local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-admin_email: admin@pressbooks.dev
-multisite:
-enabled: true
-subdomains: false
-ssl:
-enabled: false
-provider: self-signed
-cache:
-enabled: false
+    example.com:
+        site_hosts:
+            - canonical: pressbooks.test
+        redirects:
+            - www.pressbooks.test
+        local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
+        admin_email: admin@pressbooks.test
+        multisite:
+            enabled: true
+            subdomains: false
+        ssl:
+            enabled: false
+            provider: self-signed
+        cache:
+            enabled: false
+```
+
 
 You can leave `example.com` as is unless you plan on setting up matching staging or production environments. In that case, you will need to update all instances of `example.com` in `~/Code/pressbooks-dev/trellis/group_vars/` to a consistent value. If you are interested in configuring a staging or production environment, you should consult the [Trellis docs][22] as that is outside the scope of this tutorial.
 
@@ -119,22 +124,26 @@ The default Pressbooks username:password is `admin:admin`
 
 Acess and error logs are located on the VM in following directory:
 
-/srv/www/example.com/logs/
+`/srv/www/example.com/logs/`
 
 ### Unit Testing and Coding Standards
 
 Unit testing in the VM:
 
+```
 vagrant ssh
 cd /srv/www/example.com/current
 bin/install-wp-tests.sh pressbooks_tests pressbooks_test '' 127.0.0.1 latest true
 composer test
+```
 
 Coding standards in the VM:
 
+```
 vagrant ssh
 cd /srv/www/example.com/current
 composer standards
+```
 
 ### Asset Building
 
@@ -145,38 +154,48 @@ We use [webpack][6] wrapped in [Laravel Mix][23] to build plugin assets (CSS and
 
 ### Updating Plugins & Themes
 
+```
 cd ~/Code/pressbooks-dev/site
 composer update pressbooks/pressbooks --with-dependencies
 composer update pressbooks/pressbooks-publisher --with-dependencies
 composer update pressbooks/pressbooks-book --with-dependencies
+```
 
 ### Updating Trellis & Bedrock
 
 To update Trellis, it's best to rename the `origin` remote to `upstream` and check out the `upstream` master branch as a new branch called upstream:
 
+```
 ~/Code/pressbooks-dev/trellis
 git remote rename origin upstream
 git checkout -b upstream upstream/master
+```
 
 Then any time you wish to update Trellis, you can run the following commands:
 
+```
 git checkout upstream && git pull
 git checkout master
 git merge upstream
+```
 
 Then commit the merge.
 
 For Bedrock, follow the same process:
 
+```
 ~/Code/pressbooks-dev/site
 git remote rename origin upstream
 git checkout -b upstream upstream/master
+```
 
 Then any time you wish to update Bedrock, you can run the following commands:
 
+```
 git checkout upstream && git pull
 git checkout master
 git merge upstream
+```
 
 Then commit the merge. You may need to regenerate your composer.lock file before you can commit, as there will often be merge conflicts.
 

@@ -61,7 +61,7 @@ Install [Yarn][5]:
 
 Create a directory for your local development environment and `cd` there:
 
-`mkdir ~/Code/pressbooks-dev &amp;&amp; cd ~/Code/pressbooks-dev`
+`mkdir ~/Code/pressbooks-dev && cd ~/Code/pressbooks-dev`
 
 Clone [pressbooks/trellis][16] into `~/Code/pressbooks-dev/trellis`:
 
@@ -105,7 +105,7 @@ You can leave `example.com` as is unless you plan on setting up matching staging
 
 Change to the `~/Code/pressbooks-dev/trellis/` directory and run `vagrant up`:
 
-`cd ~/Code/pressbooks-dev/trellis/ &amp;&amp; vagrant up`
+`cd ~/Code/pressbooks-dev/trellis/ && vagrant up`
 
 You will be required to enter your macOS password at a certain point in the process. Fully provisioning your development environment may take up to 30 minutes.
 
@@ -143,14 +143,14 @@ We use [webpack][6] wrapped in [Laravel Mix][23] to build plugin assets (CSS and
 1. At the command prompt from the Pressbooks plugin directory, e.g. `~/Code/pressbooks-dev/site/web/app/plugins/pressbooks`, run `yarn` to install build dependencies.
 2. Then, run `yarn run dev` or `yarn run production` to build your plugin assets (`yarn run production` will add a version hash to the asset manifest for browser cache busting).
 
-### Updating Plugins &amp; Themes
+### Updating Plugins & Themes
 
 cd ~/Code/pressbooks-dev/site
 composer update pressbooks/pressbooks --with-dependencies
 composer update pressbooks/pressbooks-publisher --with-dependencies
 composer update pressbooks/pressbooks-book --with-dependencies
 
-### Updating Trellis &amp; Bedrock
+### Updating Trellis & Bedrock
 
 To update Trellis, it's best to rename the `origin` remote to `upstream` and check out the `upstream` master branch as a new branch called upstream:
 
@@ -160,7 +160,7 @@ git checkout -b upstream upstream/master
 
 Then any time you wish to update Trellis, you can run the following commands:
 
-git checkout upstream &amp;&amp; git pull
+git checkout upstream && git pull
 git checkout master
 git merge upstream
 
@@ -174,7 +174,7 @@ git checkout -b upstream upstream/master
 
 Then any time you wish to update Bedrock, you can run the following commands:
 
-git checkout upstream &amp;&amp; git pull
+git checkout upstream && git pull
 git checkout master
 git merge upstream
 

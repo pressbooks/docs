@@ -17,17 +17,17 @@ Following these instructions will give you a local development network of Pressb
 
 ## 1. Dependencies
 
-Install Git for Windows: &lt;https://git-for-windows.github.io/&gt;
+Install Git for Windows: <https://git-for-windows.github.io/>
 
-Install PHP7 and Composer: &lt;http://kizu514.com/blog/install-php7-and-composer-on-windows-10/&gt;
+Install PHP7 and Composer: <http://kizu514.com/blog/install-php7-and-composer-on-windows-10/>
 
-Install Node.js LTS: &lt;https://nodejs.org/en/download/&gt;
+Install Node.js LTS: <https://nodejs.org/en/download/>
 
 Install Yarn: [https://yarnpkg.com/en/docs/install][7]
 
-Install Virtual Box: &lt;https://www.virtualbox.org/&gt;
+Install Virtual Box: <https://www.virtualbox.org/>
 
-Install Vagrant: &lt;https://www.vagrantup.com/&gt;
+Install Vagrant: <https://www.vagrantup.com/>
 
 At the Command Prompt, install the following Vagrant plugins:
 
@@ -43,7 +43,7 @@ Start [Git Bash][8] *(it comes with Git For Windows)*
 
 Create a directory for your local development environment and `cd` there:
 
-`mkdir ~/Code/pressbooks-dev &amp;&amp; cd ~/Code/pressbooks-dev`
+`mkdir ~/Code/pressbooks-dev && cd ~/Code/pressbooks-dev`
 
 Clone [pressbooks/trellis][9] into `~/Code/pressbooks-dev/trellis`:
 
@@ -114,16 +114,16 @@ Access and error logs are located on the VM in following directory:
 
 Unit testing in the VM:
 
-vagrant ssh
-cd /srv/www/example.com/current
-bin/install-wp-tests.sh pressbooks_tests pressbooks_test '' 127.0.0.1 latest true
-composer test
+  vagrant ssh
+  cd /srv/www/example.com/current
+  bin/install-wp-tests.sh pressbooks_tests pressbooks_test '' 127.0.0.1 latest true
+  composer test
 
 Coding standards in the VM:
 
-vagrant ssh
-cd /srv/www/example.com/current
-composer standards
+  vagrant ssh
+  cd /srv/www/example.com/current
+  composer standards
 
 ### Asset Building
 
@@ -132,7 +132,7 @@ We use [webpack][6] wrapped in [Laravel Mix][16] to build plugin assets (CSS and
 1. At the command prompt from the Pressbooks plugin directory, e.g. `~/Code/pressbooks-dev/site/web/app/plugins/pressbooks`, run `yarn` to install build dependencies.
 2. Then, run `yarn run dev` or `yarn run production` to build your plugin assets (`yarn run production` will add a version hash to the asset manifest for browser cache busting).
 
-### Updating Plugins &amp; Themes
+### Updating Plugins & Themes
 
 In [Git Bash][8]:
 
@@ -141,7 +141,7 @@ composer.phar update pressbooks/pressbooks --with-dependencies
 composer.phar update pressbooks/pressbooks-publisher --with-dependencies
 composer.phar update pressbooks/pressbooks-book --with-dependencies
 
-### Updating Trellis &amp; Bedrock
+### Updating Trellis & Bedrock
 
 To update Trellis, it's best to rename the `origin` remote to `upstream` and check out the `upstream` master branch as a new branch called upstream:
 
@@ -151,7 +151,7 @@ git checkout -b upstream upstream/master
 
 Then any time you wish to update Trellis, you can run the following commands:
 
-git checkout upstream &amp;&amp; git pull
+git checkout upstream && git pull
 git checkout master
 git merge upstream
 
@@ -165,7 +165,7 @@ git checkout -b upstream upstream/master
 
 Then any time you wish to update Bedrock, you can run the following commands:
 
-git checkout upstream &amp;&amp; git pull
+git checkout upstream && git pull
 git checkout master
 git merge upstream
 

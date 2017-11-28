@@ -97,9 +97,10 @@ Start the default Windows Command Prompt (right click, run as Administrator)
 Change to the `~/Code/pressbooks-dev/trellis/` directory and run `vagrant up`:
 
 ```
-cd %HOMEPATH%\Code\pressbooks-dev\trellis
+cd %HOMEPATH%\\Code\\pressbooks-dev\\trellis
 vagrant up
 ```
+
 Fully provisioning your development environment may take up to 30 minutes.
 
 When finished, do a `vagrant halt`, exit the Administrator Command Prompt, then redo `vagrant up` in a regular user privileged Command Prompt.

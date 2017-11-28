@@ -17,7 +17,8 @@ post_date: 2017-07-07 22:29:32
 
 [Pressbooks Book][3]  
 [Pressbooks Custom CSS][4]  
-[Pressbooks Publisher][5] [Donham][6]
+[Pressbooks Publisher][5]  
+[Donham][6]
 
  [1]: https://docs.pressbooks.org/changelog/pressbooks
  [2]: https://docs.pressbooks.org/changelog/pressbooks-docraptor

@@ -9,7 +9,7 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
-### 4\.4.0
+### 4.4.0
 
 **NOTICE:** Pressbooks >= 4.4 requires [WordPress 4.9][1].
 
@@ -24,7 +24,7 @@ post_date: 2017-09-06 21:02:12
 *   **[FIX]** Chapters will no longer show raw content in the API if they are password-protected (see #975).
 *   **[FIX]** Uploading an image to the user catalog no longer causes an error (props to @emasters for the bug report; see #983).
 
-### 4\.3.5
+### 4.3.5
 
 **NOTICE:** Pressbooks >= 4.3.3 requires WordPress 4.8.2.  
 **NOTICE:** Users of the Pressbooks Custom CSS theme must upgrade to Pressbooks Custom CSS 1.0 for compatibility with Pressbooks >= 4.3.0.
@@ -37,7 +37,7 @@ post_date: 2017-09-06 21:02:12
 *   **[FIX]** Shortcodes will now be cloned as is to preserve more footnote and LaTeX data (see #973).
 *   **[FIX]** Special characters in a book title will no longer lead to filename issues under certain circumstances (see #974).
 
-### 4\.3.4
+### 4.3.4
 
 **NOTICE:** Pressbooks >= 4.3.3 requires WordPress 4.8.2.  
 **NOTICE:** Users of the Pressbooks Custom CSS theme must upgrade to Pressbooks Custom CSS 1.0 for compatibility with Pressbooks >= 4.3.0.
@@ -48,7 +48,7 @@ post_date: 2017-09-06 21:02:12
 *   **[FIX]** Fixed a conflict between the updated Pressbooks LaTeX module and third-party renderers (props to @monkecheese; see #958 and #959).
 *   **[FIX]** The publication date should now save properly, regardless of book language (thanks to @thomasdumm for the bug report; see #965 and #966).
 
-### 4\.3.3
+### 4.3.3
 
 **NOTICE:** Pressbooks 4.3.3 requires WordPress 4.8.2.  
 **NOTICE:** Users of the Pressbooks Custom CSS theme must upgrade to Pressbooks Custom CSS 1.0 for compatibility with Pressbooks 4.3.3.
@@ -59,13 +59,13 @@ post_date: 2017-09-06 21:02:12
 *   **[FIX]** We’ve implemented a better solution for the PDF profile bug (see #951, #952).
 *   **[FIX]** URLs like `/catalog/page/1` will no longer attempt to load user catalogs (see #953).
 
-### 4\.3.2
+### 4.3.2
 
 **NOTICE:** Pressbooks 4.3.2 requires WordPress 4.8.1. **NOTICE:** Users of the Pressbooks Custom CSS theme must upgrade to Pressbooks Custom CSS 1.0 for compatibility with Pressbooks 4.3.2.
 
 *   **[FIX]** Fixed an issue which prevented the Print PDF profile from loading properly (see #951).
 
-### 4\.3.1
+### 4.3.1
 
 **NOTICE:** Pressbooks 4.3.1 requires WordPress 4.8.1.  
 **NOTICE:** Users of the Pressbooks Custom CSS theme must upgrade to Pressbooks Custom CSS 1.0 for compatibility with Pressbooks 4.3.1.
@@ -74,7 +74,7 @@ post_date: 2017-09-06 21:02:12
 *   **[FIX]** Resolved an issue where some fonts would not be loaded properly during the PDF export routine (see #944 and #945).
 *   **[FIX]** Updated routines that use XPath for compatibility with HTML5, resolving some issues with multi-level TOC and EpubCheck validation (see #947).
 
-### 4\.3.0
+### 4.3.0
 
 **NOTICE:** Pressbooks 4.3 requires WordPress 4.8.1.  
 **NOTICE:** Users of the Pressbooks Custom CSS theme must upgrade to Pressbooks Custom CSS 1.0 for compatibility with Pressbooks 4.3.
@@ -87,7 +87,7 @@ post_date: 2017-09-06 21:02:12
 *   **[FIX]** Fixed an issue which would prevent super administrators without any books on a network from accessing the cloning page (see #913 and #933).
 *   **[FIX]** Fixed a regression which blocked the use of custom LaTeX renderers (props to @monkecheese; see #928).
 
-### 4\.2.0
+### 4.2.0
 
 **NOTICE:** Pressbooks 4.2 requires WordPress 4.8.1.
 
@@ -105,7 +105,7 @@ post_date: 2017-09-06 21:02:12
 *   **Fix:** Fixed an issue where the Pressbooks News dashboard widget would be cached in the wrong language (see #918 and #921).
 *   **Fix:** Removed some unused code from the PB LaTeX symbiont (props to @jeremyfelt; see #923).
 
-### 4\.1.0
+### 4.1.0
 
 **NOTICE:** Pressbooks 4.1 requires [WordPress 4.8.1][6].
 
@@ -124,18 +124,18 @@ post_date: 2017-09-06 21:02:12
 *   **Fix:** Users without super admin privileges can no longer access the trash when they shouldn't be able to do so (see #865).
 *   **Fix:** Image URLs with `#fixme` on the end will now be properly copied into EPUBs during export (see #887).
 
-### 4\.0.2
+### 4.0.2
 
 *   **Fix:** Fixed an issue where locating a PDF output intent file would fail on certain systems (see #866).
 
-### 4\.0.1
+### 4.0.1
 
 *   **Fix:** Fixed an issue where the template root for book themes was not properly updated (see #854, #859).
 *   **Fix:** Fixed an issue where ampersands were not being sanitized in XML outputs (see #860).
 *   **Fix:** Fixed an issue where the Disable Comments setting was not being saved properly (see #861).
 *   **Fix:** Fixed an incorrect link in upgrade notices (see #848, #849).
 
-### 4\.0.0
+### 4.0.0
 
 **NOTICE:** Upon upgrading to Pressbooks 4.0, you will need to install the [Pressbooks Book][8] and [Pressbooks Publisher][9] themes along with any of our other open source [book themes][10] that were bundled with earlier versions of Pressbooks. For more information, see the [upgrading instructions][11].
 
@@ -187,7 +187,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   **Fix:** The editor style is now enqueued with a version for cache busting (see #813 and #814).
 *   **Fix:** Miscellaneous improvements to improve performance and reduce unnecessary error output.
 
-### 3\.9.9
+### 3.9.9
 
 **NOTICE:** Pressbooks now requires [WordPress 4.7.5][28].
 
@@ -208,7 +208,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   **Fix:** Fixed issues that arose when `pb_language` or `user_interface_lang` were not set (props to @monkecheese for initial bug report and testing; see #738, #739, #740).
 *   **Fix:** Fixed an issue where a database error would be thrown when installing on a utf8mb4 MySQL instance (props to @jeremyfelt; see #733).
 
-### 3\.9.8.2
+### 3.9.8.2
 
 **NOTICE:** Pressbooks' PHP version requirement (>= 5.6) and WordPress version requirement (>= 4.7.3) can no longer be overridden. Before installing Pressbooks 3.9.8, please ensure that your system has been upgraded accordingly.
 
@@ -216,13 +216,13 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   **Fix:** Fixed an issue where users would be informed that their theme had been unlocked when saving Export options even thought it was already unlocked (see #722).
 *   **Fix:** Fixed an issue where wp-cli would give a permissions error because of the `PressbooksThemeLock::isLocked()` check (see #721).
 
-### 3\.9.8.1
+### 3.9.8.1
 
 **NOTICE:** Pressbooks' PHP version requirement (>= 5.6) and WordPress version requirement (>= 4.7.3) can no longer be overridden. Before installing Pressbooks 3.9.8, please ensure that your system has been upgraded accordingly.
 
 *   **Fix:** Restored some webbook styles that were being omitted in older book themes.
 
-### 3\.9.8
+### 3.9.8
 
 **NOTICE:** Pressbooks' PHP version requirement (>= 5.6) and WordPress version requirement (>= 4.7.3) can no longer be overridden. Before installing Pressbooks 3.9.8, please ensure that your system has been upgraded accordingly.
 
@@ -249,15 +249,15 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   **Fix:** Numberless chapters no longer display a lonely period in PDF outputs from SCSS v2 themes (props to @thomasdumm for the report; see #670).
 *   **Fix:** Importing as a draft now works for EPUB imports (props to @thomasdumm for the report; see #668).
 
-### 3\.9.7.2
+### 3.9.7.2
 
 **NOTICE:** Pressbooks now requires [WordPress 4.7.3][34]. * **Enhancement:** Streamlined and refactored the running content SCSS partials for SCSS-based themes (see #675 and #686).
 
-### 3\.9.7.1
+### 3.9.7.1
 
 *   **Fix:** Fixed an issue where the custom CSS file for webbooks would not be loaded on subdirectory installs.
 
-### 3\.9.7
+### 3.9.7
 
 **NOTICE:** Pressbooks now requires [WordPress 4.7.2][35].
 
@@ -301,7 +301,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   **Fix:** We now use the https endpoint for the Automattic LaTeX server to avoid mixed content errors (props to @bdolor; see #651).
 *   **Fix:** Publisher logos inserted via `add_theme_support( 'pressbooks_publisher_logo' )` hook are now properly copied into EPUB outputs (see #666).
 
-### 3\.9.6
+### 3.9.6
 
 **NOTICE:** Pressbooks now requires [WordPress 4.7 "Vaughan"][37].
 
@@ -322,33 +322,33 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   **Fix:** Fixed an issue which prevented the book name from properly updating under some circumstances.
 *   **Fix:** Fixed some styles on the registration screen in the Pressbooks Publisher theme (now at v3.0.1).
 
-### 3\.9.5.1
+### 3.9.5.1
 
 *   **Enhancement:** Added [`pb_cover_image`][43] filter to improve support for networks which host uploaded content on a third-party server (props to @monkecheese).
 *   **Fix:** Fixed a discrepancy in the line height of PrinceXML PDF exports of books using Cardo as the body font which resulted from an invalid descender value.
 *   **Fix:** Fixed an issue where the Network Sharing & Privacy page would not update the associated site option value.
 *   **Fix:** Fixed the vertical alignment of the Facebook share button in the webbook theme (props to @colomet).
 
-### 3\.9.5
+### 3.9.5
 
 *   **Enhancement:** The Pressbooks Publisher theme has been streamlined and refreshed.
 *   **Fix:** The version requirement for xmllint has been downgraded to 20706 to maintain RHEL 6 compatibility (props to @bdolor for the PR).
 
-### 3\.9.4.2
+### 3.9.4.2
 
 *   **Feature:** It is now possibled to modify the default session configuration via the `pressbooks_session_configuration` filter hook (props to @monkecheese).
 *   **Feature:** The `pb_append_chapter_content` is now available in the mPDF exporter (props to @monkecheese).
 *   **Enhancement:** The `generator` meta property has been added to XHTML exports.
 *   **Fix:** A bug which resulted in anchors being added to internal links twice in EPUB exports has been resolved.
 
-### 3\.9.4.1
+### 3.9.4.1
 
 *   **Feature:** The copyright string in the Pressbooks Publisher theme footer can now be customized via the `pressbooks_publisher_content_info` filter.
 *   **Feature:** The text that is displayed when there are no books in a Pressbooks Publisher catalog can now be customized via the `pressbooks_publisher_empty_catalog` filter.
 *   **Fix:** Updated a component of the Diagnostics page to remove a deprecation notice (props to @thomasdumm for the report).
 *   **Fix:** Fixed a glitch in the Pressbooks colour scheme.
 
-### 3\.9.4
+### 3.9.4
 
 *   **Feature:** Pressbooks + Hypothesis: Version 0.4.8 of the [Hypothesis][44] WordPress plugin now supports custom post types, and Pressbooks 3.9.4 adds Hypothesis support to all of ours (parts, chapters, front and back matter).
 *   **Feature:** Having a problem with Pressbooks? We've added a diagnostics page which is accessible from the 'Diagnostics' link in the footer of every dashboard screen. If you need to report a bug, copy your system configuration info from your Diagnostics page to help us help you resolve the issue more efficiently.
@@ -356,7 +356,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   **Enhancement:** Some adjustments were made to the PDF output stylesheets for running headers and footers.
 *   **Fix:** Fixed a visual glitch by hiding the TinyMCE table editor's inline toolbar.
 
-### 3\.9.3
+### 3.9.3
 
 *   **NOTE:** [Saxon-HE 9.7.0-10][45] is no longer bundled with Pressbooks and must be installed separately for ODT export support (see [Installation][46]).
 *   **Feature:** The copy on the publish page can now be replaced by adding a filter to the `pressbooks_publish_page` filter hook.
@@ -366,12 +366,12 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   **Enhancement:** The publish page has been refactored using the `PressbooksOptions` class.
 *   **Fix:** Unwanted validation warning emails will no longer be sent.
 
-### 3\.9.2.1
+### 3.9.2.1
 
 *   **NOTE:** Pressbooks 3.9.2 requires [PrinceXML 20160929][47] or later.
 *   **Fix:** Fixed an issue where user actions on the Organize page would fail to update certain properties.
 
-### 3\.9.2
+### 3.9.2
 
 *   **NOTE:** Pressbooks 3.9.2 requires [PrinceXML 20160929][47] or later.
 *   **Feature:** Added an export format for print-ready PDF, compatible with the [CreateSpace PDF Submission Specification][48] (**Requires [PrinceXML 20160929][47] or later**).
@@ -382,11 +382,11 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   **Enhancement:** Custom styles, table classes, row classes and cell classes are now filterable.
 *   **Fix:** Fixed an issue where email validation logs would not be sent.
 
-### 3\.9.1
+### 3.9.1
 
 *   **Fix:** Fixed an issue where the htmLawed and PrinceXMLPHP dependencies were not being loaded properly.
 
-### 3\.9.0
+### 3.9.0
 
 *   **Feature:** Added a web theme option to display the title of the current part in the webbook (props to @bdolor).
 *   **Feature:** Noto CJK fonts (required for Chinese, Japanese and Korean PDF output) are now downloaded only when needed from within Pressbooks, reducing the overall size of the Pressbooks download.
@@ -404,11 +404,11 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   **Fix:** Fixed an issue where backslashes would be erroneously stripped when replacements were applied in the Search and Replace utility (props to @rootl for the bug report).
 *   **Fix:** Fixed an issue where the book title would not be updated on the first save.
 
-### 3\.8.1
+### 3.8.1
 
 *   **Fix:** Internal links are now *actually* fixed in EPUB exports.
 
-### 3\.8.0
+### 3.8.0
 
 *   **Feature:** The redistribution option from [Pressbooks Textbook][51], which allows a book administrator to share the latest export files of their book on the webbook cover page, has been migrated into Pressbooks and can be found under (Network) Settings -> Sharing and Privacy. Many thanks to @bdolor for developing this feature (and fixing a display bug in our implementation of it).
 *   **Feature:** Luther and all child themes now support searching within webbooks.
@@ -427,11 +427,11 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   **Fix:** Fixed a misplaced comment in the conditional check for IE 9 in Pressbooks Book (props to @chrillep).
 *   **Fix:** Fixed a bug where protocol-relative images would not be exported properly in EPUB (props to @bdolor).
 
-### 3\.7.1
+### 3.7.1
 
 *   **Fix:** Fixed a bug where increased font size would be applied to all PDF exports.
 
-### 3\.7.0
+### 3.7.0
 
 *   **Feature:** Introduced `PressbooksOptions` class and rebuilt theme options using on this class.
 *   **Feature:** Introduced `PressbooksTaxonomy` class and rebuilt front matter, chapter and back matter types using this class.
@@ -445,21 +445,21 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   **Fix:** Added user feedback to allow recovery from JPEG errors (props to @bdolor).
 *   **Fix:** Added a call to `wp_cache_flush()` to fix an error during book creation.
 
-### 3\.6.3
+### 3.6.3
 
 *   **Fix:** Fixed an error caused by the change to get_sites().
 
-### 3\.6.2
+### 3.6.2
 
 *   Requires WordPress 4.6.
 *   **Fix:** Replaced deprecated wp_get_sites() function with get_sites() (props to @bdolor for the bug report).
 
-### 3\.6.1
+### 3.6.1
 
 *   **Fix:** An issue where footnotes would not display in endnote mode has been resolved.
 *   **Fix:** An SCSS error in Luther has been resolved (props to @bearkrust for the bug report).
 
-### 3\.6.0
+### 3.6.0
 
 *   Requires WordPress 4.5.3.
 *   **Feature:** Structural SCSS and supports are in place for the new book theme model (see http://pressbooks.org/core/2016/05/16/rethinking-book-themes/).
@@ -475,7 +475,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   **Fix:** Search and Replace is now accessible to book administrators, not just network administrators.
 *   **Fix:** The broken Forum link in the Pressbooks menu has been replaced with a link to our Help page.
 
-### 3\.5.2
+### 3.5.2
 
 *   **Feature:** Login screen logo and color scheme can now be changed via filters (see https://github.com/pressbooks/pressbooks/commit/d09a104bfbbe3ad00a108004d0375ad1f7057ae0).
 *   **Enhancement:** Google Fonts are now requested over https under all circumstances.
@@ -483,13 +483,13 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   **Fix:** Imports will no longer fail in certain environments (props to @monkecheese for the bug fix).
 *   **Fix:** Subsection titles are now properly sanitized for XHTML output.
 
-### 3\.5.1
+### 3.5.1
 
 *   Requires WordPress 4.5.2.
 *   **Fixed:** Resolved a formatting issue on the Export page (props to @bdolor).
 *   **Under the Hood:** Added anchor, superscript and subscript buttons to core MCE routines (eliminating dependencies).
 
-### 3\.5.0
+### 3.5.0
 
 *   FEATURE: Search and Replace functionality has been rebuilt and more closely integrated with Pressbooks core.
 *   FEATURE: Pressbooks plugins (specifications forthcoming) can now be activated at the book level by book administrators.
@@ -498,7 +498,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   UNDER THE HOOD: Pressbooks now bundles the WordPress API feature plugin (more to come on this front).
 *   UNDER THE HOOD: Our namespace is now Pressbooks.
 
-### 3\.4.0
+### 3.4.0
 
 *   Requires WordPress 4.5.1.
 *   FEATURE: OpenDocument (beta) is now available as an export format.
@@ -508,17 +508,17 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   FIXED: The Tweet button had stopped working, so we replaced our previous sharing script with @ellisonleao's excellent [sharer.js][54].
 *   FIXED: Our fork of @johngodley's Search Regex plugin has been updated for PHP 7.0 compatibility (props to @r66r for the bug report).
 
-### 3\.3.2
+### 3.3.2
 
 *   FIXED: Themes were not appearing to be network enabled due to changes introduced in https://core.trac.wordpress.org/ticket/28436.
 
-### 3\.3.1
+### 3.3.1
 
 *   FIXED: The custom logo feature introduced in v3.3.0 now displays logos at a more reasonable size.
 *   FIXED: Some extraneous files were bundled in v3.3.0. They are gone now.
 *   FIXED: An extra line break was introduced to the Export screen in v3.3.0. It is gone now too.
 
-### 3\.3.0
+### 3.3.0
 
 *   Requires WordPress 4.5.
 *   ICML is now an experimental export format (see http://pressbooks.com/blog/discontinuing-support-for-icml-exports-on-april-12/).
@@ -530,7 +530,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   Fixed an issue where uploaded media were not attached to their parent Front Matter, Chapter or Back Matter.
 *   Internal dependencies are now managed using [Composer][55].
 
-### 3\.2.0
+### 3.2.0
 
 *   Requires WordPress 4.4.2.
 *   Added Google Analytics support at the network level (subdomain and subdirectory installs) and the book level (subdomain installs only).
@@ -546,7 +546,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   Fixed an issue where the "My Books" button would appear in Pressbooks Publisher for logged-in users with no books.
 *   Fixed the way the PB_PLUGIN_DIR and PB_PLUGIN_URL constants are defined to support installations of Pressbooks where plugins and themes are symlinked.
 
-### 3\.1.2
+### 3.1.2
 
 *   Requires WordPress 4.4.1.
 *   Added internal links (anchors) to the built in 'Insert/edit Link' dialog.
@@ -558,12 +558,12 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   Fixed an issue where PDF themes would not be imported for editing properly when using the Pressbooks Custom CSS theme.
 *   Expanded test suites.
 
-### 3\.1.1
+### 3.1.1
 
 *   Fixed an issue where custom web book themes would not be properly loaded.
 *   Updated the PB_PLUGIN_VERSION constant, which slipped under our radar when we released Pressbooks 3.1.
 
-### 3\.1
+### 3.1
 
 *   Requires WordPress 4.4.
 *   Added a new Textboxes menu in TinyMCE which supports some new types of textboxes in addition to standard and shaded.
@@ -578,7 +578,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   Fixed an issue where loading the Search and Replace tool would cause an error (props to @rootl for the bug report).
 *   Updated some assets.
 
-### 3\.0
+### 3.0
 
 *   SASS-y themes: book themes are now built with SASS (specifically the SCSS variant) and compiled for export or web display using either the bundled scssphp compiler (https://github.com/leafo/scssphp/) or the SASS PHP extension if installed (https://github.com/sensational/sassphp). See `/docs/themes-book.txt` for details if you are developing your own themes.
 *   Global Typography: users can add fonts to display Ancient Greek, Arabic, Biblical Hebrew, Chinese (Simplified or Traditional), Coptic, Gujarati, Japanese, Korean, Syriac, Tamil or Tibetan in any theme across all standard export formats via the Theme Options page.
@@ -601,7 +601,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   Various localization updates.
 *   Various performance enhancements.
 
-### 2\.7.2
+### 2.7.2
 
 *   Requires WordPress 4.3.1.
 *   Added MCE Anchor Button (migrated from Pressbooks Textbook, props to @bdolor).
@@ -609,33 +609,33 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   Fixed an issue where loading a user's catalog would call memory-intensive functions repeatedly (props to @connerbw).
 *   Suppressed unhelpful errors when calling getSubsections() function (props to @connerbw).
 
-### 2\.7.1
+### 2.7.1
 
 *   Fixed an issue where changes made with the Search & Replace tool would not be saved (props to @connerbw).
 *   Fixed an issue where users without super admin privileges would be incorrectly prevented from using the Import or Search & Replace tools.
 *   Fixed a display bug in recent builds of Google Chrome (props to @connerbw).
 
-### 2\.7
+### 2.7
 
 *   Major cleanup of the administration interface.
 
-### 2\.6.7
+### 2.6.7
 
 *   Added the ability to edit a table's class in the MCE Table Button's properties editor.
 *   Fixed an issue where Chinese would appear as the default user interface language.
 *   Fixed an issue where disabling social media sharing buttons would only disable Facebook (props to @colomet for the bug report).
 *   Updated localizations.
 
-### 2\.6.6
+### 2.6.6
 
 *   Exporting a MOBI file no longer requires you to export an EPUB file also.
 
-### 2\.6.5
+### 2.6.5
 
 *   Fixed a number of issues with multi-level TOC parsing.
 *   Fixed an issue where internal links on subdirectory installs were not being properly modified for PDF output (props to @bdolor).
 
-### 2\.6.4
+### 2.6.4
 
 *   Added support for audio shortcodes in EPUB3 (props to @jflowers45).
 *   Modified login buttons to redirect users to the page they were viewing after login rather than force redirecting them to their dashboard (props to @marcusschiesser for the feature request).
@@ -644,26 +644,26 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   Fixed an issue where updating a book's URL would break permalinks to front matter, back matter and parts (props to @programmieraffe for the bug report).
 *   Removed the WordPress contextual help button to avoid confusion on the dashboard (props to @colomet for noting its presence).
 
-### 2\.6.3
+### 2.6.3
 
 *   Fixed issue with self-closing tags introduced in 2.6.1.
 
-### 2\.6.2
+### 2.6.2
 
 *   Fixed issues with character encoding and improperly formed tags introduced in 2.6.1.
 
-### 2\.6.1
+### 2.6.1
 
 *   Fixed issues with subsection parsing where < h1> tags had inline styles or were wrapped in other block elements. * Fixed an issue where changing a book's language to "English" as opposed to "English (United States)" would fail to override the network's language setting. * Updated documentation. 
 
-### 2\.6
+### 2.6
 
 *   Requires WordPress 4.3.
 *   The language selected on the book info page now applies to the book's webbook display.
 *   The language selected on the network settings page now applies automatically to new books and users.
 *   The language selected on a user's profile now overrides the network and book languages when they view the Pressbooks dashboard.
 
-### 2\.5.4
+### 2.5.4
 
 *   Requires WordPress 4.2.4.
 *   Added Disable Comments (migrated from Pressbooks Textbook, props to @bdolor and the plugin's creators).
@@ -675,13 +675,13 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   Fixed two issues related to permissive private content (props to @marcusschiesser for the bug reports).
 *   Fixed an issue that caused a recursion during PDF export (props to @bseeger for the bug report).
 
-### 2\.5.3
+### 2.5.3
 
 *   Added option to allow logged-in subscribers, contributors and authors to view a book's private content (props to @marcusschiesser for the feature request).
 *   Fixed an issue where the webbook TOC would not be displayed for any user who was not logged in (props to @sswettenham for the bug report).
 *   Fixed an issue where the media folder was not being deleted after ODT exports without a cover image.
 
-### 2\.5.2
+### 2.5.2
 
 *   Added MCE Superscript & Subscript Buttons (migrated from Pressbooks Textbook, props to @bdolor and the plugin's creators).
 *   Improved ODT export: temporary files are now deleted when export fails (props to @sswettenham for the bug report).
@@ -689,7 +689,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   Improved user catalog: sidebars are sized to fit content instead of being restricted to window height (props to @changemachine).
 *   Fixed an issue where private chapters would appear in webbook TOC for logged-in users without the permissions to actually view them (props to @marcusschiesser for the bug report).
 
-### 2\.5.1
+### 2.5.1
 
 *   Added MCE Table Editor (migrated from Pressbooks Textbook, props to @bdolor and the plugin's creators).
 *   Added support for excluding root domains *and* subdomains in `show_experimental_features()` function.
@@ -712,7 +712,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   Fixed an issue where the `introduction` class would not be applied in certain exports.
 *   Fixed an issue where exports would fail because the `get_user_by` function was being improperly namespaced (props to @borayeris for the bug report).
 
-### 2\.5
+### 2.5
 
 *   Requires WordPress 4.2.2.
 *   New root theme, Pressbooks Publisher 2.0. Pressbooks Publisher One has been deprecated and is now available (unsupported) [here][57].
@@ -726,17 +726,17 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   Fixed issue with the network administration menu in the admin bar.
 *   Fixed issue with spacing and punctuation in webbook license module output.
 
-### 2\.4.5
+### 2.4.5
 
 *   Requires WordPress 4.2.1.
 
-### 2\.4.4
+### 2.4.4
 
 *   Requires WordPress 4.2.
 *   Added experimental ODT export capability.
 *   Fixed issue where useful backslashes were stripped on import (props to @lukaiser for identifying this issue).
 
-### 2\.4.3
+### 2.4.3
 
 *   Requires WordPress 4.1.2.
 *   Removed Hpub export routines.
@@ -752,16 +752,16 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   Updated included custom-metadata plugin to fix `array_reverse` bug (@props to bdolor).
 *   Swedish translation (props to @chrillep).
 
-### 2\.4.2
+### 2.4.2
 
 *   Fixed licenses.
 *   Added child theme support to collapsible TOC functionality (props to @bdolor).
 
-### 2\.4.1
+### 2.4.1
 
 *   Fixed issue with improperly parsed sections in chapters and back matter.
 
-### 2\.4
+### 2.4
 
 *   Requires WordPress 4.1.
 *   Refined export logic to ensure that parts are handled properly under all circumstances.
@@ -776,7 +776,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   Import enhancements (props to @bdolor).
 *   EPUB export enhancements (props to @bdolor).
 
-### 2\.3.3
+### 2.3.3
 
 *   Compatibility with WordPress 4.0.
 *   Fixed some issues with our experimental EPUB3 export (props to @bdolor).
@@ -784,7 +784,7 @@ The Pressbooks command line interface is now part of Pressbooks. Want to make yo
 *   Added support for contributing authors in webbooks and exports (props to @bdolor).
 *   Added some new translation files.
 
-### 2\.3.2
+### 2.3.2
 
 *   Cleaner print output from webbooks.
 *   Ebook theme option to skip line between paragraphs is now honored in all themes.

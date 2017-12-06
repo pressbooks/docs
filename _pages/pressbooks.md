@@ -16,6 +16,7 @@ post_date: 2017-09-06 21:02:12
 
 * **[FEATURE]** Switching to a new theme will now update some PDF theme options to match the theme's values (see #456, #984).
 * **[FEATURE]** Add initial support to PDF and Ebook theme options for themes which skip lines between paragraphs by default (see #985).
+* **[CORE ENHANCEMENT]** Use standard build tools package [pressbooks-build-tools](https://www.npmjs.com/package/pressbooks-build-tools) for asset handling, upgrade Stylelint (see #1000).
 * **[CORE ENHANCEMENT]** Require PHP 7.0 or greater (see #935, #987).
 * **[CORE ENHANCEMENT]** Add exclude and include support to `Pressbooks\Utility\rcopy()` (see #990).
 * **[CORE ENHANCEMENT]** Improve Theme Lock feature in preparation for Pressbooks 5.0 (see #995).

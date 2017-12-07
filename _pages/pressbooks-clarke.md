@@ -9,6 +9,10 @@ permalink: >
 published: true
 post_date: 2017-11-16 13:59:58
 ---
-### 2\.1.0
+### 2.1.1
 
-*   Preparations for Book 2.0 compatibility.
+* Fixed incorrect fonts in description.
+
+### 2.1.0
+
+* Preparations for Book 2.0 compatibility.

@@ -65,19 +65,21 @@ Create a directory for your local development environment and `cd` there:
 
 Clone [pressbooks/trellis][16] into `~/Code/pressbooks-dev/trellis`:
 
-`git clone https://github.com/pressbooks/trellis.git`
+`git clone git@github.com:pressbooks/trellis.git`
 
 Clone [pressbooks/bedrock][17] into `~/Code/pressbooks-dev/site`:
 
-`git clone https://github.com/pressbooks/bedrock.git site`
+`git clone git@github.com:pressbooks/bedrock.git site`
 
-Add [pressbooks/pressbooks][18], [pressbooks/pressbooks-publisher][19] and [pressbooks/pressbooks-book][20] to your Bedrock dependencies (for more information on this strategy, [see this post][21])
+Add [pressbooks/pressbooks][18], [pressbooks/pressbooks-publisher][19] and  [the required themes][20] to your Bedrock dependencies (for more information on this strategy, [see this post][21])
 
 ```
 cd ~/Code/pressbooks-dev/site
 composer require pressbooks/pressbooks:dev-dev
 composer require pressbooks/pressbooks-publisher:dev-dev
-composer require pressbooks/pressbooks-book:dev-dev`
+composer require pressbooks/pressbooks-book:dev-dev
+composer require pressbooks/pressbooks-clarke:dev-dev
+composer require pressbooks/pressbooks-donham:dev-dev
 ```
 
 ## 3. Configuration

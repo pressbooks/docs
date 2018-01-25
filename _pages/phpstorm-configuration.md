@@ -29,7 +29,7 @@ In the Database tool window, click the plus symbol, select Data Source &gt; MySQ
 
 In the SSH/SSL tab:
 
-+ Proxy host: pressbooks.dev (Port: 22)
++ Proxy host: pressbooks.test (Port: 22)
 + Proxy user: vagrant
 + Auth type: Key pair (OpenSSH)
 + Private key file: `~/Code/pressbooks-dev/trellis/.vagrant/machines/default/virtualbox/private_key`

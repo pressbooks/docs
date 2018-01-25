@@ -9,6 +9,13 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+### 4.5.1
+
+**NOTICE:** Pressbooks >= 4.5.1 requires [WordPress 4.9.2](https://wordpress.org/news/2018/01/wordpress-4-9-2-security-and-maintenance-release/).
+
+* **[FIX]**: Disallow dangerous file types from upload via the Import form ([9bcebf1](https://github.com/pressbooks/pressbooks/commit/9bcebf1))
+* **[FIX]**: Handle `author` objects containing multiple authors during clone operations for forward-compatibility with Pressbooks 5 ([9231ffa](https://github.com/pressbooks/pressbooks/commit/9231ffa), [b0e03c4](https://github.com/pressbooks/pressbooks/commit/b0e03c4), [035c1b9](https://github.com/pressbooks/pressbooks/commit/035c1b9))
+
 ### 4.5.0
 
 **NOTICE:** Pressbooks >= 4.5 requires [PHP 7.0](https://secure.php.net/supported-versions.php) or greater.

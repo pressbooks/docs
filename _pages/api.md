@@ -27,7 +27,7 @@ post_date: 2017-07-07 22:44:41
 
 WP API is self-documenting. Send an OPTIONS request to any endpoint and get back
 
-[JSON Schema][6] compatible info on how to use it: [caption id="attachment_127" align="aligncenter" width="653"][<img class="wp-image-127 size-full" src="https://docs.pressbooks.org/app/uploads/2017/07/options.png" alt="Options in YARC" width="653" height="209" />][7][7] Options in YARC[/caption]
+[JSON Schema][6] compatible info on how to use it: [caption id="attachment_127" align="aligncenter" width="653"][<img class="wp-image-127 size-full" src="https://pressbooks.org/app/uploads/sites/2/2017/07/options.png" alt="Options in YARC" width="653" height="209" />][7][7] Options in YARC[/caption]
 
 > To get the entire API schema in a single query, add `context=help` at the index. (Ie. http://site/book/wp-json?context=help )
 
@@ -35,11 +35,11 @@ WP API is self-documenting. Send an OPTIONS request to any endpoint and get back
 
 Pressbooks has different API endpoints for book and the root site: [caption id="attachment_128" align="aligncenter" width="1366"]
 
-<img class="size-full wp-image-128" src="https://docs.pressbooks.org/app/uploads/2017/07/namespaces.png" alt="Book vs. Root" width="1366" height="568" /> Book vs. Root[/caption]
+<img class="size-full wp-image-128" src="https://pressbooks.org/app/uploads/sites/2/2017/07/namespaces.png" alt="Book vs. Root" width="1366" height="568" /> Book vs. Root[/caption]
 
 ### Features
 
-WP API items have a `_links` node based on [HAL][8] (Hypertext Application Language): [caption id="attachment_129" align="aligncenter" width="586"]<img class="size-full wp-image-129" src="https://docs.pressbooks.org/app/uploads/2017/07/links.png" alt="_links" width="586" height="800" /> _links[/caption] To reduce the number of HTTP requests use [the *embed parameter][9] to tell the API that the response should include embeddable resources. [caption id="attachment_130" align="aligncenter" width="680"][<img class="wp-image-130 size-full" src="https://docs.pressbooks.org/app/uploads/2017/07/embeded.png" alt="_embedded" width="680" height="489" />][9][10] \_embedded[/caption] WP API exposes pagination info in the response header. [caption id="attachment\_131" align="aligncenter" width="1024"][<img class="wp-image-131 size-full" src="https://docs.pressbooks.org/app/uploads/2017/07/pagination.png" alt="Pagination" width="1024" height="584" />][10][11] Pagination[/caption]
+WP API items have a `_links` node based on [HAL][8] (Hypertext Application Language): [caption id="attachment_129" align="aligncenter" width="586"]<img class="size-full wp-image-129" src="https://pressbooks.org/app/uploads/sites/2/2017/07/links.png" alt="_links" width="586" height="800" /> _links[/caption] To reduce the number of HTTP requests use [the *embed parameter][9] to tell the API that the response should include embeddable resources. [caption id="attachment_130" align="aligncenter" width="680"][<img class="wp-image-130 size-full" src="https://pressbooks.org/app/uploads/sites/2/2017/07/embeded.png" alt="_embedded" width="680" height="489" />][9][10] \_embedded[/caption] WP API exposes pagination info in the response header. [caption id="attachment\_131" align="aligncenter" width="1024"][<img class="wp-image-131 size-full" src="https://pressbooks.org/app/uploads/sites/2/2017/07/pagination.png" alt="Pagination" width="1024" height="584" />][10][11] Pagination[/caption]
 
 ### PHP to JSON
 
@@ -75,9 +75,9 @@ if ( ! empty( $schema['properties']['content'] ) ) {
  [4]: https://developer.wordpress.org/rest-api/
  [5]: https://developer.wordpress.org/rest-api/using-the-rest-api/authentication/#authentication-plugins
  [6]: http://json-schema.org/
- [7]: https://docs.pressbooks.org/app/uploads/2017/07/options.png
+ [7]: https://pressbooks.org/app/uploads/sites/2/2017/07/options.png
  [8]: http://stateless.co/hal_specification.html
  [9]: https://developer.wordpress.org/rest-api/using-the-rest-api/global-parameters/#*embed
- [10]: https://docs.pressbooks.org/app/uploads/2017/07/embeded.png
- [11]: https://docs.pressbooks.org/app/uploads/2017/07/pagination.png
+ [10]: https://pressbooks.org/app/uploads/sites/2/2017/07/embeded.png
+ [11]: https://pressbooks.org/app/uploads/sites/2/2017/07/pagination.png
  [12]: https://developer.wordpress.org/rest-api/reference/posts/

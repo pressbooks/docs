@@ -85,15 +85,15 @@ Create and run new test configurations with "Test scope: Defined in the configur
 
 Troubleshooting: If you have restarted your VM you will see a `PHP Fatal error: require_once(): Failed opening required '/tmp/wordpress-tests-lib/includes/functions.php'` Fix by re-runing `bin/install-wp-tests.sh` (@see [Unit Testing][11] and [Coding Standards][12])
 
-[1]: https://github.com/pressbooks/docs/raw/master/assets/enable-wordpress-integration.png
-[2]: https://github.com/pressbooks/docs/raw/master/assets/show-npm-scripts.png
-[3]: https://github.com/pressbooks/docs/raw/master/assets/databases.png
-[4]: https://github.com/pressbooks/docs/raw/master/assets/php-interpreter.png
+[1]: https://pressbooks.org/app/uploads/sites/2/2017/08/WordPress.png
+[2]: https://pressbooks.org/app/uploads/sites/2/2017/08/npm-Tasks.png
+[3]: https://pressbooks.org/app/uploads/sites/2/2017/08/Databases.png
+[4]: https://pressbooks.org/app/uploads/sites/2/2017/08/PHP-Intepreter.png
 [5]: https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc?utm_source=chrome-app-launcher-info-dialog
-[6]: https://docs.pressbooks.org/app/uploads/2017/08/Xdebug-1.png
-[7]: https://docs.pressbooks.org/app/uploads/2017/08/Xdebug-2.png
-[8]: https://docs.pressbooks.org/app/uploads/2017/08/PHPUnit.png
-[9]: https://docs.pressbooks.org/app/uploads/2017/08/PHP-Mappings.png
-[10]: https://docs.pressbooks.org/app/uploads/2017/08/PHPUnit-Running.png
+[6]: https://pressbooks.org/app/uploads/sites/2/2017/08/Xdebug-1.png
+[7]: https://pressbooks.org/app/uploads/sites/2/2017/08/Xdebug-2.png
+[8]: https://pressbooks.org/app/uploads/sites/2/2017/08/PHPUnit.png
+[9]: https://pressbooks.org/app/uploads/sites/2/2017/08/PHP-Mappings.png
+[10]: https://pressbooks.org/app/uploads/sites/2/2017/08/PHPUnit-Running.png
 [11]: https://docs.pressbooks.org/unit-testing/
 [12]: https://docs.pressbooks.org/coding-standards/

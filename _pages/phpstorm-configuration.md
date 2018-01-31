@@ -88,7 +88,7 @@ Troubleshooting: If you have restarted your VM you will see a `PHP Fatal error: 
 [1]: https://github.com/pressbooks/docs/raw/master/assets/enable-wordpress-integration.png
 [2]: https://github.com/pressbooks/docs/raw/master/assets/show-npm-scripts.png
 [3]: https://github.com/pressbooks/docs/raw/master/assets/databases.png
-[4]: https://docs.pressbooks.org/app/uploads/2017/08/PHP-Intepreter.png
+[4]: https://github.com/pressbooks/docs/raw/master/assets/php-interpreter.png
 [5]: https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc?utm_source=chrome-app-launcher-info-dialog
 [6]: https://docs.pressbooks.org/app/uploads/2017/08/Xdebug-1.png
 [7]: https://docs.pressbooks.org/app/uploads/2017/08/Xdebug-2.png

@@ -9,6 +9,15 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:04:06
 ---
+### 2.0.0
+* **Feature**: New Look, Part 1: Book 2.0 includes a new book theme, McLuhan, designed for textbooks and created with the support of [eCampus Ontario](https://ecampusontario.ca). Users of Luther must download it [here](https://github.com/pressbooks/pressbooks-luther) to continue using it.
+* **Feature**: New Look, Part 2: Book 2.0 includes a redesigned webbook theme with many oft-requested features, including…
+* **Feature**: Accessibility: We've made the Table of Contents accessible via keyboard navigation, and added other accessibility and inclusivity features throughout the theme.
+* **Feature**: Customizeable Colors & Logo: Your webbook will share the color scheme and logo defined by your network's [root theme](https://github.com/pressbooks/pressbooks-aldine) for easy branding.
+* **Feature**: Variable Reading Widths: Visit the Web Theme Options page to adjust your webbook's reading width.
+* **Feature**: Version Tracking: Cloned books will now display a link back to their source on the webbook cover page.
+* **Core Enhancement**: We've added new action hooks for appending content throughout the cover page and other areas of the webbook theme (see [here](https://gist.github.com/greatislander/65c8c2db065211e1d7da85bcb26ad031)).
+
 ### 1.12.0
 
 * **[CORE ENHANCEMENT]** Updated Ekatra fonts (for the Gujarati language) to the latest version.

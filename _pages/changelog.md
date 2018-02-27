@@ -19,6 +19,7 @@ post_date: 2017-07-07 22:29:32
 [Clarke][6]
 [Custom CSS][4]  
 [Donham][7]
+[Jacobs][11]
 [Luther][8]
 [Publisher][5]  
 [McLuhan][3]  
@@ -33,3 +34,4 @@ post_date: 2017-07-07 22:29:32
  [8]: https://docs.pressbooks.org/changelog/pressbooks-luther
  [9]: https://docs.pressbooks.org/changelog/excalibur
  [10]: https://docs.pressbooks/org/changelog/pressbooks-aldine
+ [11]: https://docs.pressbooks/org/changelog/pressbooks-jacobs

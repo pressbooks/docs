@@ -15,6 +15,7 @@ post_date: 2017-07-07 22:29:32
 [Excalibur][9]
 ## Themes
 
+[Aldine][10]
 [Clarke][6]
 [Custom CSS][4]  
 [Donham][7]
@@ -31,3 +32,4 @@ post_date: 2017-07-07 22:29:32
  [7]: https://docs.pressbooks.org/changelog/pressbooks-donham
  [8]: https://docs.pressbooks.org/changelog/pressbooks-luther
  [9]: https://docs.pressbooks.org/changelog/excalibur
+ [10]: https://docs.pressbooks/org/changelog/pressbooks-aldine

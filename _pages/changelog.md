@@ -12,14 +12,15 @@ post_date: 2017-07-07 22:29:32
 
 [Pressbooks][1]  
 [DocRaptor for Pressbooks][2]
-
+[Excalibur][9]
 ## Themes
 
-[Pressbooks Book][3]  
-[Pressbooks Custom CSS][4]  
-[Pressbooks Publisher][5]  
 [Clarke][6]
+[Custom CSS][4]  
 [Donham][7]
+[Luther][8]
+[Publisher][5]  
+[McLuhan][3]  
 
  [1]: https://docs.pressbooks.org/changelog/pressbooks
  [2]: https://docs.pressbooks.org/changelog/pressbooks-docraptor
@@ -28,3 +29,5 @@ post_date: 2017-07-07 22:29:32
  [5]: https://docs.pressbooks.org/changelog/pressbooks-publisher
  [6]: https://docs.pressbooks.org/changelog/pressbooks-clarke
  [7]: https://docs.pressbooks.org/changelog/pressbooks-donham
+ [8]: https://docs.pressbooks.org/changelog/pressbooks-luther
+ [9]: https://docs.pressbooks.org/changelog/excalibur

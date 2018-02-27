@@ -1,6 +1,6 @@
 ---
 ID: 272
-post_title: Pressbooks Book
+post_title: McLuhan
 author: Ned Zimmerman
 post_excerpt: ""
 layout: page
@@ -9,6 +9,28 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:04:06
 ---
+### 2.0.0
+
+#### Introducing McLuhan
+
+As we move forward with an improved theme structure, McLuhan is replacing Luther as the new default theme for all books. Luther is now available as a standalone theme; see our [instructions for upgrading](https://docs.pressbooks.org/upgrading/#upgrading-to-pressbooks-5-x). McLuhan has been designed with textbooks in mind, but supports all kinds of content. The creation of this theme was supported by [eCampus Ontario](https://ecampusontario.ca).
+
+#### Webbook Overhaul
+
+The webbook has undergone a much needed design refresh, with several long requested features being introduced. These include an increased default reading width and variable width in theme options, a keyboard accessible table of contents and customizable colours and logos (inherited from network settings). We expect to continue building on this in the coming months. This development work was supported by [Ryerson University](https://www.ryerson.ca/).
+
+#### Detailed Changelog
+
+* **Feature**: New Look, Part 1: Book 2.0 includes a new book theme, McLuhan, designed for textbooks and created with the support of [eCampus Ontario](https://ecampusontario.ca). Users of Luther must follow our [instructions for upgrading](https://docs.pressbooks.org/upgrading/#upgrading-to-pressbooks-5-x) to continue using it.
+* **Feature**: New Look, Part 2: Book 2.0 includes a redesigned webbook theme based on our new style guide, Aetna, with many oft-requested features, including…
+* **Feature**: Accessibility: We've made the Table of Contents accessible via keyboard navigation, and added other accessibility and inclusivity features throughout the theme.
+* **Feature**: Customizeable Colors & Logo: Your webbook will share the color scheme and logo defined by your network's [root theme](https://github.com/pressbooks/pressbooks-aldine) for easy branding.
+* **Feature**: Variable Reading Widths: Visit the Web Theme Options page to adjust your webbook's reading width.
+* **Feature**: Version Tracking: Cloned books will now display a link back to their source on the webbook cover page.
+* **Core Enhancement**: We've improved and updated [Buckram](https://github.com/pressbooks/buckram/), our style library for book themes.
+* **Core Enhancement**: We've added new action hooks for appending content throughout the cover page and other areas of the webbook theme (see [here](https://gist.github.com/greatislander/65c8c2db065211e1d7da85bcb26ad031)).
+* **Core Enhancement**: We've added automated accessibility feedback for our ongoing development of the theme using [AccessLint](https://www.accesslint.com/)
+
 ### 1.12.0
 
 * **[CORE ENHANCEMENT]** Updated Ekatra fonts (for the Gujarati language) to the latest version.

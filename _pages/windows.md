@@ -54,12 +54,12 @@ Clone [pressbooks/bedrock][10] into `~/Code/pressbooks-dev/site`:
 
 `git clone git@github.com:pressbooks/bedrock.git site`
 
-Add [pressbooks/pressbooks][11], [pressbooks/pressbooks-publisher][12] and [the required themes][13] to your Bedrock dependencies (for more information on this strategy, [see this post][14])
+Add [pressbooks/pressbooks][11], [pressbooks/pressbooks-aldine][12] and [the required themes][13] to your Bedrock dependencies (for more information on this strategy, [see this post][14])
 
 ```
 cd ~/Code/pressbooks-dev/site
 composer.phar require pressbooks/pressbooks:dev-dev
-composer.phar require pressbooks/pressbooks-publisher:dev-dev
+composer.phar require pressbooks/pressbooks-aldine:dev-dev
 composer.phar require pressbooks/pressbooks-book:dev-dev
 composer.phar require pressbooks/pressbooks-clarke:dev-dev
 composer.phar require pressbooks/pressbooks-donham:dev-dev
@@ -152,7 +152,7 @@ In [Git Bash][8]:
 ```
 cd ~/Code/pressbooks-dev/site
 composer.phar update pressbooks/pressbooks --with-dependencies
-composer.phar update pressbooks/pressbooks-publisher --with-dependencies
+composer.phar update pressbooks/pressbooks-aldine --with-dependencies
 composer.phar update pressbooks/pressbooks-book --with-dependencies
 ```
 
@@ -205,7 +205,7 @@ Then commit the merge. You may need to regenerate your composer.lock file before
 [9]: https://github.com/pressbooks/trellis/
 [10]: https://github.com/pressbooks/bedrock/
 [11]: https://github.com/pressbooks/pressbooks/
-[12]: https://github.com/pressbooks/pressbooks-publisher/
+[12]: https://github.com/pressbooks/pressbooks-aldine/
 [13]: https://github.com/pressbooks/pressbooks-book/
 [14]: http://kizu514.com/blog/php-composer-for-developers/
 [15]: https://roots.io/trellis/docs/windows/

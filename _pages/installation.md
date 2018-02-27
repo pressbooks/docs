@@ -11,14 +11,14 @@ post_date: 2017-07-07 22:29:32
 ---
 ## Downloads
 
-Download the latest releases of [Pressbooks][1], [Pressbooks Book][2], and [Pressbooks Publisher][3], as well as the latest releases of any other [book themes][4] you wish to install.
+Download the latest releases of [Pressbooks][1], [Pressbooks Book][2], and [Pressbooks Aldine][3], as well as the latest releases of any other [book themes][4] you wish to install.
 
 ## Installation (Manual)
 
 IMPORTANT!
 
 *   Do not install Pressbooks on an existing WordPress blog -- create a new WordPress install instead.
-*   Pressbooks works with [PHP 7.0][5] and WordPress 4.9.2. Lower versions are not supported.
+*   Pressbooks works with [PHP 7.0][5] and WordPress 4.9.4. Lower versions are not supported.
 
 ### Part 1: WordPress
 
@@ -40,7 +40,7 @@ IMPORTANT!
 
 2.  Copy Pressbooks' autoloader file from `/path/to/your/site/wp-content/plugins/pressbooks/hm-autoloader.php` to `/path/to/your/site/wp-content/mu-plugins/hm-autoloader.php`. You may need to create the `wp-content/mu-plugins/` directory if it doesn't yet exist.
 
-3.  Copy the Pressbooks Book, Pressbooks Publisher and other theme folders to: `/path/to/your/site/wp-content/themes/*` (**NOTE**: theme folders must not have version numbers on the end. **GOOD**: `pressbooks-publisher`. **BAD**: `pressbooks-publisher-3.1.0`. Make sure that you rename the folders appropriately.)
+3.  Copy the Pressbooks Book, Pressbooks Aldine and other theme folders to: `/path/to/your/site/wp-content/themes/*` (**NOTE**: theme folders must not have version numbers on the end. **GOOD**: `pressbooks-aldine`. **BAD**: `pressbooks-aldine-3.1.0`. Make sure that you rename the folders appropriately.)
 
 4.  Log out, log in, navigate to: **My Sites** → **Network Admin** → **Dashboard**.
 
@@ -50,7 +50,7 @@ IMPORTANT!
 
 7.  Navigate to **Themes** → **Installed Themes**.
 
-8.  Network Enable "Luther", "Pressbooks Publisher", and any other Pressbooks theme you want to use.
+8.  Network Enable "McLuhan", "Pressbooks Aldine", and any other Pressbooks theme you want to use.
 
 9.  Navigate to **Settings** → **Network Settings**.
 
@@ -62,7 +62,7 @@ IMPORTANT!
 
 11. Navigate to **My Catalog** → **Your Site** → **Dashboard**
 
-12. Navigate to **Appearance** and activate "Pressbooks Publisher".
+12. Navigate to **Appearance** and activate "Pressbooks Aldine".
 
 13. Navigate to **My Catalog** → **Add A New Book** (this will be your first book).
 
@@ -82,10 +82,10 @@ Pressbooks requires some third-party libraries to be installed on your server to
     *   `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/tmp`
     *   `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/graph_cache`
 *   For MOBI export install [KindleGen][12] 2.9
-*   For EPUB validation install [EpubCheck][13] 4.0
-*   For XML validation install [xmllint][14] 20800
+*   For EPUB validation install [EpubCheck][13] 4.0.2
+*   For XML validation install [xmllint][14] 20903
 *   For ODT export install [Saxon-HE][15] 9.7.0-10
-*   Certain Linux installations do not ship with the `php5-xsl` library enabled by default. If you attempt to export an ePub and get a either a white screen with minimal text, or a "Fatal error: Class 'XSLTProcessor' not found" error, you may need to run a command like `apt-get install php5-xsl`.
+*   Certain Linux installations do not ship with the `php-xsl` library enabled by default. If you attempt to export an ePub and get a either a white screen with minimal text, or a "Fatal error: Class 'XSLTProcessor' not found" error, you may need to run a command like `apt install php-xsl`.
 
 Unlisted versions are not supported. Upgrade/downgrade accordingly.
 
@@ -98,7 +98,7 @@ Once installed, define the following `wp-config.php` variables. The defaults are
     define( 'PB_SAXON_COMMAND', '/usr/bin/java -jar /opt/saxon-he/saxon-he.jar' );
     
 
-Example config files for a dev site hosted at http://localhost/~dac514/textopress/
+Example config files for a dev site hosted at http://localhost/~example/textopress/
 
 ### wp-config.php file [snippet]:
 
@@ -122,9 +122,9 @@ Example config files for a dev site hosted at http://localhost/~dac514/textopres
      */
     define('MULTISITE', true);
     define('SUBDOMAIN_INSTALL', false);
-    $base = '/~dac514/textopress/';
+    $base = '/~example/textopress/';
     define('DOMAIN_CURRENT_SITE', 'localhost');
-    define('PATH_CURRENT_SITE', '/~dac514/textopress/');
+    define('PATH_CURRENT_SITE', '/~example/textopress/');
     define('SITE_ID_CURRENT_SITE', 1);
     define('BLOG_ID_CURRENT_SITE', 1);
     
@@ -132,10 +132,10 @@ Example config files for a dev site hosted at http://localhost/~dac514/textopres
      * Pressbooks
      */
     define( 'PB_PRINCE_COMMAND', '/usr/bin/prince' );
-    define( 'PB_KINDLEGEN_COMMAND', '/home/dac514/bin/kindlegen' );
-    define( 'PB_EPUBCHECK_COMMAND', '/usr/bin/java -jar /home/dac514/bin/epubcheck-4.0/epubcheck-4.0.jar' );
+    define( 'PB_KINDLEGEN_COMMAND', '/home/example/bin/kindlegen' );
+    define( 'PB_EPUBCHECK_COMMAND', '/usr/bin/java -jar /home/example/bin/epubcheck-4.0/epubcheck-4.0.jar' );
     define( 'PB_XMLLINT_COMMAND', '/usr/bin/xmllint' );
-    define( 'PB_SAXON_COMMAND', '/usr/bin/java -jar home/dac514/bin/saxon-he/saxon-he.jar' );
+    define( 'PB_SAXON_COMMAND', '/usr/bin/java -jar home/example/bin/saxon-he/saxon-he.jar' );
     
     /**
      * Optional definitions
@@ -150,7 +150,7 @@ Example config files for a dev site hosted at http://localhost/~dac514/textopres
 ### .htaccess file:
 
     RewriteEngine On
-    RewriteBase /~dac514/textopress/
+    RewriteBase /~example/textopress/
     RewriteRule ^index.php$ - [L]
     
     # add a trailing slash to /wp-admin
@@ -187,7 +187,7 @@ Once WP-CLI is installed on your server, the following shell commands executed i
     mkdir wp-content/mu-plugins && cp wp-content/plugins/pressbooks/hm-autoloader.php wp-content/mu-plugins
     wp plugin activate pressbooks --network
     wp theme install https://github.com/pressbooks/pressbooks-book/releases/download/1.12.0/pressbooks-book-1.12.0.zip
-    wp theme install https://github.com/pressbooks/pressbooks-publisher/archive/master.zip
+    wp theme install https://github.com/pressbooks/pressbooks-aldine/archive/master.zip
     wp theme install https://github.com/pressbooks/pressbooks-austenclassic/archive/master.zip
     wp theme install https://github.com/pressbooks/pressbooks-clarke/archive/master.zip
     wp theme install https://github.com/pressbooks/pressbooks-donham/archive/master.zip
@@ -205,7 +205,7 @@ Note that this does not install the required libraries for export. See above (Pa
 
  [1]: https://github.com/pressbooks/pressbooks/releases/latest
  [2]: https://github.com/pressbooks/pressbooks-book/releases/latest
- [3]: https://github.com/pressbooks/pressbooks-publisher/releases/latest
+ [3]: https://github.com/pressbooks/pressbooks-aldine/releases/latest
  [4]: https://github.com/search?q=topic:book-theme%20org:pressbooks&type=Repositories
  [5]: https://secure.php.net/supported-versions.php
  [6]: http://codex.wordpress.org/Installing_WordPress

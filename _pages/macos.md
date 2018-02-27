@@ -71,12 +71,12 @@ Clone [pressbooks/bedrock][17] into `~/Code/pressbooks-dev/site`:
 
 `git clone git@github.com:pressbooks/bedrock.git site`
 
-Add [pressbooks/pressbooks][18], [pressbooks/pressbooks-publisher][19] and  [the required themes][20] to your Bedrock dependencies (for more information on this strategy, [see this post][21])
+Add [pressbooks/pressbooks][18], [pressbooks/pressbooks-aldine][19] and [the required themes][20] to your Bedrock dependencies (for more information on this strategy, [see this post][21])
 
 ```
 cd ~/Code/pressbooks-dev/site
 composer require pressbooks/pressbooks:dev-dev
-composer require pressbooks/pressbooks-publisher:dev-dev
+composer require pressbooks/pressbooks-aldine:dev-dev
 composer require pressbooks/pressbooks-book:dev-dev
 composer require pressbooks/pressbooks-clarke:dev-dev
 composer require pressbooks/pressbooks-donham:dev-dev
@@ -159,7 +159,7 @@ We use [webpack][6] wrapped in [Laravel Mix][23] to build plugin assets (CSS and
 ```
 cd ~/Code/pressbooks-dev/site
 composer update pressbooks/pressbooks --with-dependencies
-composer update pressbooks/pressbooks-publisher --with-dependencies
+composer update pressbooks/pressbooks-aldine --with-dependencies
 composer update pressbooks/pressbooks-book --with-dependencies
 ```
 
@@ -219,7 +219,7 @@ Then commit the merge. You may need to regenerate your composer.lock file before
 [16]: https://github.com/pressbooks/trellis/
 [17]: https://github.com/pressbooks/bedrock/
 [18]: https://github.com/pressbooks/pressbooks/
-[19]: https://github.com/pressbooks/pressbooks-publisher/
+[19]: https://github.com/pressbooks/pressbooks-aldine/
 [20]: https://github.com/pressbooks/pressbooks-book/
 [21]: http://kizu514.com/blog/php-composer-for-developers/
 [22]: https://roots.io/trellis/docs/wordpress-sites/

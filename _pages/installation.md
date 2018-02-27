@@ -191,14 +191,12 @@ Once WP-CLI is installed on your server, the following shell commands executed i
     wp theme install https://github.com/pressbooks/pressbooks-austenclassic/archive/master.zip
     wp theme install https://github.com/pressbooks/pressbooks-clarke/archive/master.zip
     wp theme install https://github.com/pressbooks/pressbooks-donham/archive/master.zip
-    wp theme install https://github.com/pressbooks/pressbooks-fitzgerald/archive/master.zip
-    wp theme install https://github.com/pressbooks/pressbooks-custom-css/archive/master.zip
+    wp theme install https://github.com/pressbooks/pressbooks-fitzgerald/archive/master.zip    
     wp theme enable pressbooks-book --network
     wp theme enable pressbooks-clarke --network
     wp theme enable pressbooks-donham --network
     wp theme enable pressbooks-fitzgerald --network
-    wp theme enable pressbooks-austenclassic --network
-    wp theme enable pressbooks-custom-css --network
+    wp theme enable pressbooks-austenclassic --network    
     
 
 Note that this does not install the required libraries for export. See above (Part 3).

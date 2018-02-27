@@ -68,7 +68,7 @@ The webbook has undergone a much needed design refresh, with several long reques
 *   **Feature:** Add support for Punjabi Gurmukhi script (props to @alexpflores) (see #27).
 *   **Fix:** Fix an issue where enabling social media would break the mobile webbook layout (see #28, #30).
 *   **Fix:** Fix an issue where numberless chapters in a book would cause the MOBI export to fail with certain book themes (see #33).
-*   **Fix:** Add webbook theme support for WordPress' built-in `<!--nextpage--> tag`, which splits a single post into multiple web pages (see #35).
+*   **Fix:** Add webbook theme support for WordPress' built-in `<!--nextpage-->` tag, which splits a single post into multiple web pages (see #35).
 
 ### 1.9.2
 

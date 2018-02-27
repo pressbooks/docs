@@ -140,9 +140,9 @@ Example config files for a dev site hosted at http://localhost/~dac514/textopres
     /**
      * Optional definitions
      */
-    // define( 'WP_POST_REVISIONS', 5 ); // Limit post revisions: int or false
-    // define( 'EMPTY_TRASH_DAYS', 1 ); // Purge trash interval
     // define( 'AUTOSAVE_INTERVAL', 60 ); // Autosave every N seconds
+    // define( 'WP_POST_REVISIONS', 5 ); // Limit post revisions: int or false
+    // define( 'EMPTY_TRASH_DAYS', 1 ); // Purge trash interval. PB default is after 30 days.
     
     /* That's all, stop editing! Happy blogging. */
     

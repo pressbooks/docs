@@ -8,6 +8,17 @@ permalink: https://docs.pressbooks.org/upgrading/
 published: true
 post_date: 2017-07-08 15:12:55
 ---
+
+## Upgrading to Pressbooks 5.x
+
+Pressbooks 5.0 requires McLuhan, our [new default book theme](https://github.com/pressbooks/pressbooks-book/releases/tag/2.0.0/). McLuhan takes the place of [Luther](https://github.com/pressbooks/pressbooks-luther/), and will replace the theme currently known as Luther when you install the latest update on your Pressbooks network. To keep using Luther, you must make sure to install the new [standalone version of Luther](https://github.com/pressbooks/pressbooks-luther/releases/tag/1.8.2) and network activate it on your Pressbooks network _before_ you upgrade to Pressbooks 5.0 and McLuhan. If you do this, books that were using Luther will be switched to the new standalone version automatically. If Luther is _not_ installed or network active when you upgrade to Pressbooks 5.0, you may have to switch books to Luther manually.
+
+### Steps
+
+1. Verify that upgrade are available for Pressbooks (to version 5.0.0) and Luther (to version 2.0.0).
+2. Install [Luther 1.8.2](https://github.com/pressbooks/pressbooks-luther/releases/tag/1.8.2) and network activate it. You will now have two versions of Luther installed (sorry).
+2. Run the upgrades for Pressbooks and Luther. This will replace the old Luther with McLuhan and switch any books that were using it to Luther 1.8.2.
+
 ## Upgrading from Pressbooks 3.x to Pressbooks 4.x
 
 ### Autoloader

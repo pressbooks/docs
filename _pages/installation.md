@@ -77,7 +77,7 @@ IMPORTANT!
 Pressbooks requires some third-party libraries to be installed on your server to enable export capabilities.
 
 *   For PDF export, install [PrinceXML][9] 11 (note: this is not free software)
-*   For PDF export via mPDF, install the [Pressbooks mPDF plugin][10]. You will also need to ensure that the following folders have write access and/or they are owned by the appropriate user. See [http://codex.wordpress.org/Changing_File_Permissions][11] for more details on adjusting file permissions. 
+*   For PDF export via mPDF, install the [Pressbooks mPDF plugin][10]. You will also need to ensure that the following folders have write access and/or they are owned by the appropriate user. See [here][11] for more details on adjusting file permissions. 
     *   `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/ttfontdata`
     *   `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/tmp`
     *   `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/graph_cache`
@@ -183,10 +183,10 @@ Once WP-CLI is installed on your server, the following shell commands executed i
     wp core multisite-install --url="http://domain.com" --title="Pressbooks" --admin_user="username" --admin_password="password" --admin_email="user@domain.com"
     wp plugin delete hello
     wp plugin update-all
-    wp plugin install https://github.com/pressbooks/pressbooks/releases/download/4.5.1/pressbooks-4.5.1.zip
+    wp plugin install https://github.com/pressbooks/pressbooks/releases/download/5.0.0/pressbooks-5.0.0.zip
     mkdir wp-content/mu-plugins && cp wp-content/plugins/pressbooks/hm-autoloader.php wp-content/mu-plugins
     wp plugin activate pressbooks --network
-    wp theme install https://github.com/pressbooks/pressbooks-book/releases/download/1.12.0/pressbooks-book-1.12.0.zip
+    wp theme install https://github.com/pressbooks/pressbooks-book/releases/download/2.0.0/pressbooks-book-2.0.0.zip
     wp theme install https://github.com/pressbooks/pressbooks-aldine/archive/master.zip
     wp theme install https://github.com/pressbooks/pressbooks-austenclassic/archive/master.zip
     wp theme install https://github.com/pressbooks/pressbooks-clarke/archive/master.zip
@@ -211,7 +211,7 @@ Note that this does not install the required libraries for export. See above (Pa
  [8]: https://pressbooks.com
  [9]: http://pressbooks.com/prince
  [10]: https://wordpress.org/plugins/pressbooks-mpdf
- [11]: here
+ [11]: http://codex.wordpress.org/Changing_File_Permissions
  [12]: http://www.amazon.com/gp/feature.html?docId=1000765211
  [13]: https://github.com/idpf/epubcheck
  [14]: http://xmlsoft.org/xmllint.html

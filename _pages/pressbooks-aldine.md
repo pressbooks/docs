@@ -5,7 +5,7 @@ author: Ned Zimmerman
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.pressbooks.org/changelog/aldine/
+  https://docs.pressbooks.org/changelog/pressbooks-aldine/
 published: true
 post_date: 2018-02-26 20:46:14
 ---

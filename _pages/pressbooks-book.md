@@ -1,6 +1,6 @@
 ---
 ID: 272
-post_title: Pressbooks Book
+post_title: McLuhan
 author: Ned Zimmerman
 post_excerpt: ""
 layout: page
@@ -10,7 +10,18 @@ published: true
 post_date: 2017-09-06 21:04:06
 ---
 ### 2.0.0
-* **Feature**: New Look, Part 1: Book 2.0 includes a new book theme, McLuhan, designed for textbooks and created with the support of [eCampus Ontario](https://ecampusontario.ca). Users of Luther must download it [here](https://github.com/pressbooks/pressbooks-luther) to continue using it.
+
+#### Introducing McLuhan
+
+As we move forward with an improved theme structure, McLuhan is replacing Luther as the new default theme for all books. Luther is now available as a standalone theme; see our [instructions for upgrading](https://docs.pressbooks.org/upgrading/#upgrading-to-pressbooks-5-x). McLuhan has been designed with textbooks in mind, but supports all kinds of content. The creation of this theme was supported by [eCampus Ontario](https://ecampusontario.ca).
+
+#### Webbook Overhaul
+
+The webbook has undergone a much needed design refresh, with several long requested features being introduced. These include an increased default reading width and variable width in theme options, a keyboard accessible table of contents and customizable colours and logos (inherited from network settings). We expect to continue building on this in the coming months. This development work was supported by [Ryerson University](https://www.ryerson.ca/).
+
+#### Detailed Changelog
+
+* **Feature**: New Look, Part 1: Book 2.0 includes a new book theme, McLuhan, designed for textbooks and created with the support of [eCampus Ontario](https://ecampusontario.ca). Users of Luther must follow our [instructions for upgrading](https://docs.pressbooks.org/upgrading/#upgrading-to-pressbooks-5-x) to continue using it.
 * **Feature**: New Look, Part 2: Book 2.0 includes a redesigned webbook theme based on our new style guide, Aetna, with many oft-requested features, including…
 * **Feature**: Accessibility: We've made the Table of Contents accessible via keyboard navigation, and added other accessibility and inclusivity features throughout the theme.
 * **Feature**: Customizeable Colors & Logo: Your webbook will share the color scheme and logo defined by your network's [root theme](https://github.com/pressbooks/pressbooks-aldine) for easy branding.

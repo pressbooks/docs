@@ -17,52 +17,54 @@ Download the latest releases of [Pressbooks][1], [Pressbooks Book][2], and [Pres
 
 IMPORTANT!
 
-*   Do not install Pressbooks on an existing WordPress blog -- create a new WordPress install instead.
-*   Pressbooks works with [PHP 7.0][5] and WordPress 4.9.4. Lower versions are not supported.
+* Do not install Pressbooks on an existing WordPress blog -- create a new WordPress install instead.
+* Pressbooks works with [PHP 7.0][5] and WordPress 4.9.4. Lower versions are not supported.
 
 ### Part 1: WordPress
 
-1.  Install WordPress using the [Famous 5-Minute Install][6].
+1. Install WordPress using the [Famous 5-Minute Install][6].
 
-2.  [Create a Network][7] of WordPress sites, i.e.:
+2. [Create a Network][7] of WordPress sites, i.e.:
 
-3.  Edit the wp-config.php file and add the following:
-    
-    `define('WP_ALLOW_MULTISITE', true);`
+3. Edit the `wp-config.php` file and add the following:
 
-4.  Login to the WordPress admin area. Navigate to **Tools** → **Network Setup**, click **Install**.
+```
+define('WP_ALLOW_MULTISITE', true);
+```
 
-5.  Complete the steps printed on the screen (i.e. edit your `wp-config.php` and `.htaccess files` with the information provided).
+4. Login to the WordPress admin area. Navigate to **Tools** → **Network Setup**, click **Install**.
+
+5. Complete the steps printed on the screen (i.e. edit your `wp-config.php` and `.htaccess` files with the information provided).
 
 ### Part 2: Pressbooks
 
-1.  Copy the Pressbooks plugin folder to: `/path/to/your/site/wp-content/plugins/*`.
+1. Copy the Pressbooks plugin folder to: `/path/to/your/site/wp-content/plugins/*`.
 
-2.  Copy Pressbooks' autoloader file from `/path/to/your/site/wp-content/plugins/pressbooks/hm-autoloader.php` to `/path/to/your/site/wp-content/mu-plugins/hm-autoloader.php`. You may need to create the `wp-content/mu-plugins/` directory if it doesn't yet exist.
+2. Copy Pressbooks' autoloader file from `/path/to/your/site/wp-content/plugins/pressbooks/hm-autoloader.php` to `/path/to/your/site/wp-content/mu-plugins/hm-autoloader.php`. You may need to create the `wp-content/mu-plugins/` directory if it doesn't yet exist.
 
-3.  Copy the Pressbooks Book, Pressbooks Aldine and other theme folders to: `/path/to/your/site/wp-content/themes/*` (**NOTE**: theme folders must not have version numbers on the end. **GOOD**: `pressbooks-aldine`. **BAD**: `pressbooks-aldine-3.1.0`. Make sure that you rename the folders appropriately.)
+3. Copy the Pressbooks Book, Pressbooks Aldine and other theme folders to: `/path/to/your/site/wp-content/themes/*` (**NOTE**: theme folders must not have version numbers on the end. **GOOD**: `pressbooks-aldine`. **BAD**: `pressbooks-aldine-3.1.0`. Make sure that you rename the folders appropriately.)
 
-4.  Log out, log in, navigate to: **My Sites** → **Network Admin** → **Dashboard**.
+4. Log out, log in, navigate to: **My Sites** → **Network Admin** → **Dashboard**.
 
-5.  Navigate to **Plugins** → **Installed Plugins**.
+5. Navigate to **Plugins** → **Installed Plugins**.
 
-6.  Network Enable "Pressbooks".
+6. Network Enable "Pressbooks".
 
-7.  Navigate to **Themes** → **Installed Themes**.
+7. Navigate to **Themes** → **Installed Themes**.
 
-8.  Network Enable "McLuhan", "Pressbooks Aldine", and any other Pressbooks theme you want to use.
+8. Network Enable "McLuhan", "Aldine", and any other Pressbooks theme you want to use.
 
-9.  Navigate to **Settings** → **Network Settings**.
+9. Navigate to **Settings** → **Network Settings**.
 
 10. Pick the most appropriate Registration setting:
-    
-    *   User accounts may be registered. (Do not use this setting, since it will not allow users to create new books!)
-    *   Logged in users may register new sites. (If you are a publisher using Pressbooks as a production tool, this is the best setting: it allows network administrators to add new users, who can then create books/sites. However, registration is not available to the public.)
-    *   Both sites and user accounts can be registered. (Use this setting if you intend on offering a publishing-platform open to the public, such as [Pressbooks.com][8])
+
+    * User accounts may be registered. (Do not use this setting, since it will not allow users to create new books!)
+    * Logged in users may register new sites. (If you are a publisher using Pressbooks as a production tool, this is the best setting: it allows network administrators to add new users, who can then create books/sites. However, registration is not available to the public.)
+    * Both sites and user accounts can be registered. (Use this setting if you intend on offering a publishing-platform open to the public, such as [Pressbooks.com][8])
 
 11. Navigate to **My Catalog** → **Your Site** → **Dashboard**
 
-12. Navigate to **Appearance** and activate "Pressbooks Aldine".
+12. Navigate to **Appearance** and activate "Aldine".
 
 13. Navigate to **My Catalog** → **Add A New Book** (this will be your first book).
 
@@ -76,16 +78,16 @@ IMPORTANT!
 
 Pressbooks requires some third-party libraries to be installed on your server to enable export capabilities.
 
-*   For PDF export, install [PrinceXML][9] 11 (note: this is not free software)
-*   For PDF export via mPDF, install the [Pressbooks mPDF plugin][10]. You will also need to ensure that the following folders have write access and/or they are owned by the appropriate user. See [here][11] for more details on adjusting file permissions. 
-    *   `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/ttfontdata`
-    *   `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/tmp`
-    *   `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/graph_cache`
-*   For MOBI export install [KindleGen][12] 2.9
-*   For EPUB validation install [EpubCheck][13] 4.0.2
-*   For XML validation install [xmllint][14] 20903
-*   For ODT export install [Saxon-HE][15] 9.7.0-10
-*   Certain Linux installations do not ship with the `php-xsl` library enabled by default. If you attempt to export an ePub and get a either a white screen with minimal text, or a "Fatal error: Class 'XSLTProcessor' not found" error, you may need to run a command like `apt install php-xsl`.
+* For PDF export, install [PrinceXML][9] 11 (note: this is not free software)
+* For PDF export via mPDF, install the [mPDF for Pressbooks][10] plugin. You will also need to ensure that the following folders have write access and/or they are owned by the appropriate user. See [here][11] for more details on adjusting file permissions.
+    * `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/ttfontdata`
+    * `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/tmp`
+    * `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/graph_cache`
+* For MOBI export install [KindleGen][12] 2.9
+* For EPUB validation install [EpubCheck][13] 4.0.2
+* For XML validation install [xmllint][14] 20903
+* For ODT export install [Saxon-HE][15] 9.7.0-10
+* Certain Linux installations do not ship with the `php-xsl` library enabled by default. If you attempt to export an ePub and get a either a white screen with minimal text, or a "Fatal error: Class 'XSLTProcessor' not found" error, you may need to run a command like `apt install php-xsl`.
 
 Unlisted versions are not supported. Upgrade/downgrade accordingly.
 
@@ -96,7 +98,6 @@ Once installed, define the following `wp-config.php` variables. The defaults are
     define( 'PB_EPUBCHECK_COMMAND', '/usr/bin/epubcheck' );
     define( 'PB_XMLLINT_COMMAND', '/usr/bin/xmllint' );
     define( 'PB_SAXON_COMMAND', '/usr/bin/java -jar /opt/saxon-he/saxon-he.jar' );
-    
 
 Example config files for a dev site hosted at http://localhost/~example/textopress/
 
@@ -183,16 +184,18 @@ Once WP-CLI is installed on your server, the following shell commands executed i
     wp core multisite-install --url="http://domain.com" --title="Pressbooks" --admin_user="username" --admin_password="password" --admin_email="user@domain.com"
     wp plugin delete hello
     wp plugin update-all
-    wp plugin install https://github.com/pressbooks/pressbooks/releases/download/5.0.0/pressbooks-5.0.0.zip
+    wp plugin install https://github.com/pressbooks/pressbooks/releases/download/5.0.1/pressbooks-5.0.1.zip
     mkdir wp-content/mu-plugins && cp wp-content/plugins/pressbooks/hm-autoloader.php wp-content/mu-plugins
     wp plugin activate pressbooks --network
-    wp theme install https://github.com/pressbooks/pressbooks-book/releases/download/2.0.0/pressbooks-book-2.0.0.zip
-    wp theme install https://github.com/pressbooks/pressbooks-aldine/archive/master.zip
+    wp theme install https://github.com/pressbooks/pressbooks-book/releases/download/2.0.1/pressbooks-book-2.0.1.zip
+    wp theme install https://github.com/pressbooks/pressbooks-aldine/releases/download/1.0.1/pressbooks-book-1.0.1.zip
+    wp theme install https://github.com/pressbooks/pressbooks-jacobs/archive/master.zip
     wp theme install https://github.com/pressbooks/pressbooks-austenclassic/archive/master.zip
     wp theme install https://github.com/pressbooks/pressbooks-clarke/archive/master.zip
     wp theme install https://github.com/pressbooks/pressbooks-donham/archive/master.zip
     wp theme install https://github.com/pressbooks/pressbooks-fitzgerald/archive/master.zip    
     wp theme enable pressbooks-book --network
+    wp theme enable pressbooks-jacobs --network
     wp theme enable pressbooks-clarke --network
     wp theme enable pressbooks-donham --network
     wp theme enable pressbooks-fitzgerald --network

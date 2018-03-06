@@ -9,6 +9,20 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+
+### 5.0.1
+#### Patches
+
+* Ensure that iframes aren't removed during the `\Pressbooks\Metadata::upgradeToPressbooksFive()` method: [#1138](https://github.com/pressbooks/pressbooks/pull/1138)
+* Add parts with readable content to the book navigation order (props to [@beckej13820](https://github.com/beckej13820) for reporting): [#1136](https://github.com/pressbooks/pressbooks/pull/1136)
+* Restore link to view current content from admin bar (props to [@colomet](https://github.com/colomet) for reporting): [#1132](https://github.com/pressbooks/pressbooks/issues/1132), [#1134](https://github.com/pressbooks/pressbooks/pull/1134)
+* Use MySQL transactions to optimize `\Pressbooks\Metadata::upgradeToPressbooksFive()`: [#1133](https://github.com/pressbooks/pressbooks/pull/1133)
+* Optimize `pb_get_chapter_number()`: [#1128](https://github.com/pressbooks/pressbooks/pull/1128)
+* Fix missing login screen logo: [#1129](https://github.com/pressbooks/pressbooks/pull/1129)
+* Fix `"Invalid argument supplied for foreach"` warning by handling `false` return values from `get_post_meta()`: [#1128](https://github.com/pressbooks/pressbooks/pull/1128)
+* Fix `"Directory not empty"` warning in `\Pressbooks\Redirect\migrate_generated_content()` by moving action to `plugins_loaded` hook: [#1127](https://github.com/pressbooks/pressbooks/pull/1127)
+* Bump tinymce to 4.7.9: [#1125](https://github.com/pressbooks/pressbooks/pull/1125), [#1126](https://github.com/pressbooks/pressbooks/pull/1126)
+
 ### 5.0.0
 
 **NOTICE:** Pressbooks 5.0.0 requires [WordPress 4.9.4](https://wordpress.org/news/2018/02/wordpress-4-9-4-maintenance-release/).  
@@ -16,14 +30,18 @@ post_date: 2017-09-06 21:02:12
 **NOTICE:** Pressbooks 5.0.0 requires that users of the Luther book theme install and network activate the standalone [Luther theme](https://github.com/pressbooks/pressbooks-luther/) _before_ upgrading to Pressbooks 5.0. For more information, see the [upgrading instructions](https://docs.pressbooks.org/upgrading/#upgrading-to-pressbooks-5-x).
 
 #### Key Features
-##### Contributor Management
+
+_Contributor Management_
+
 We’ve added a centralized contributor management tool where you can add contributors who can then be reused throughout your book as authors, editors, translators, reviewers, illustrators, and generic contributors.
-##### Changes to the Organize Page & Section Visibility
+
+_Changes to the Organize Page & Section Visibility_
 
 We’ve made a few key changes to the Organize page in this release. The first is to add keyboard navigation, which has been a known shortcoming in the interface, and some improvements for those using screen readers, both for accessibility. We’ve also improved the display on mobile devices. 
 
 Included in this is a change to handling chapter/section visibility, both in the Organize page and editing interface. Each chapter now has two simple controls — “Show in Web” and “Show in Exports” — which do exactly what you would expect.
-##### Chapter Importing
+
+_Chapter Importing_
 
 Building on the book cloning feature, we have introduced the ability to easily import individual chapters from Pressbooks webbooks using the import tool. We’ve also added the ability to upload supported files from remote (web-based) sources.
 

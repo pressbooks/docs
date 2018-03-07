@@ -10,6 +10,12 @@ published: true
 post_date: 2017-09-06 21:02:12
 ---
 
+### 5.0.2
+
+#### Patches
+
+* Remove debugging code (props @colomet for reporting): [6a3c9e8](https://github.com/pressbooks/pressbooks/commit/6a3c9e834666928c3a4240908dd964a3e8c02ff7)
+
 ### 5.0.1
 #### Patches
 

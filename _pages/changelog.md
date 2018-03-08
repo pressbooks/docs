@@ -10,21 +10,21 @@ post_date: 2017-07-07 22:29:32
 ---
 ## Plugins
 
-[Pressbooks][1]  
-[DocRaptor for Pressbooks][2]
-[Excalibur][9]
-[Pressbooks Stats](https://docs.pressbooks.org/changelog/pressbooks-stats)
+- [Pressbooks][1]  
+- [DocRaptor for Pressbooks][2]  
+- [Excalibur][9]  
+- [Pressbooks Stats](https://docs.pressbooks.org/changelog/pressbooks-stats)
 
 ## Themes
 
-[Aldine][10]
-[Clarke][6]
-[Custom CSS][4]  
-[Donham][7]
-[Jacobs][11]
-[Luther][8]
-[Publisher][5]  
-[McLuhan][3]  
+- [Aldine][10]  
+- [Clarke][6]  
+- [Custom CSS][4]   
+- [Donham][7]
+- [Jacobs][11]
+- [Luther][8]
+- [Publisher][5]  
+- [McLuhan][3]  
 
  [1]: https://docs.pressbooks.org/changelog/pressbooks
  [2]: https://docs.pressbooks.org/changelog/pressbooks-docraptor

@@ -14,3 +14,5 @@ post_date: 2018-03-07 19:53:56
 #### Patches
 
 - Update license and add Pressbooks compatibility header: [0cdd8d5](https://github.com/pressbooks/pressbooks-stats/commit/0cdd8d53081d2fb8035f0f0108a9fe088d98b1bc)
+
+[_Older Releases_](https://github.com/pressbooks/pressbooks-stats/releases)

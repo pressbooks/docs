@@ -9,6 +9,18 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+### 5.1.0
+
+#### Minor Changes
+
+- Add support for interactive content with fallbacks for ebook and PDF exports: [#1135](https://github.com/pressbooks/pressbooks/pull/1135)
+- Restore support for password-protected webbook content: [#1144](https://github.com/pressbooks/pressbooks/pull/1144)
+
+#### Patches
+
+- Hide "Add Part" menu for users who can't edit parts (props [@colomet](https://github.com/colomet) for reporting): [12ab81e](https://github.com/pressbooks/pressbooks/commit/12ab81e0808f049235e3b2647681e38af272685f)
+- Fix an issue where PDF page numbering didn't reset in books without an introduction: [#1141](https://github.com/pressbooks/pressbooks/pull/1141)
+- Fix an issue where ODT exports would fail: [#1146](https://github.com/pressbooks/pressbooks/pull/1146)
 
 ### 5.0.2
 

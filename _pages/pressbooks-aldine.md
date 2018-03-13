@@ -9,6 +9,16 @@ permalink: >
 published: true
 post_date: 2018-02-26 20:46:14
 ---
+### 1.1.0
+
+#### Minor Changes
+
+- Add editor buttons to insert shortcodes for page sections and calls to action: [#108](https://github.com/pressbooks/pressbooks-aldine/pull/108/)
+ 
+#### Patches
+
+- Hide archived, spammed and deleted books from catalog (props [@colomet](https://github.com/colomet) for reporting): [#107](https://github.com/pressbooks/pressbooks-aldine/pull/107)
+
 ### 1.0.1
 
 #### Patches

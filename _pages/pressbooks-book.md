@@ -9,6 +9,19 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:04:06
 ---
+### 2.1.0
+#### Minor Changes
+
+- Add support for interactive content in ebook and PDF: [#136](https://github.com/pressbooks/pressbooks-book/pull/136/) 
+
+#### Patches
+
+- Restore running content author string: [#141](https://github.com/pressbooks/pressbooks-book/pull/141/)
+- Fix public domain license icon: [dab3511](https://github.com/pressbooks/pressbooks-book/commit/dab3511)
+- Improve support for password-protected content (see pressbooks/pressbooks#1144): [dcc829a](https://github.com/pressbooks/pressbooks-book/commit/dcc829a)
+- Improve link styles in web content: [f5052d6](https://github.com/pressbooks/pressbooks-book/commit/f5052d6)
+- Update footer links: [aa7c398](https://github.com/pressbooks/pressbooks-book/commit/aa7c398)
+
 ### 2.0.1
 
 #### Patches

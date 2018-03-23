@@ -35,5 +35,5 @@ post_date: 2017-07-07 22:29:32
  [7]: https://docs.pressbooks.org/changelog/pressbooks-donham
  [8]: https://docs.pressbooks.org/changelog/pressbooks-luther
  [9]: https://docs.pressbooks.org/changelog/excalibur
- [10]: https://docs.pressbooks/org/changelog/pressbooks-aldine
- [11]: https://docs.pressbooks/org/changelog/pressbooks-jacobs
+ [10]: https://docs.pressbooks.org/changelog/pressbooks-aldine
+ [11]: https://docs.pressbooks.org/changelog/pressbooks-jacobs

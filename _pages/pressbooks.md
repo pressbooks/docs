@@ -9,6 +9,22 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+### 5.1.1
+
+#### Patches
+
+- Fix some bugs in the `Book::get()` method: [6da412c](https://github.com/pressbooks/pressbooks/commit/6da412c)
+- Fix an issue where network administers were not able to clone a restrictively-licensed book within their own network ([#1157](https://github.com/pressbooks/pressbooks/issues/1157)): [#1162](https://github.com/pressbooks/pressbooks/issues/1162)
+- Add support for WordPress `[audio]` and `[video]` source parameters other than `src` ([#1159](https://github.com/pressbooks/pressbooks/issues/1159), props to [Michael Shiflet](https://discourse.pressbooks.org/u/shiflet.16/) on [Discourse](https://discourse.pressbooks.org/t/shortcode-and-fallbacks/439) for reporting): [#1161](https://github.com/pressbooks/pressbooks/issues/1161) 
+- Ensure that fallback webbook content styles are generated for books using the deprecated Custom CSS theme: [#1160](https://github.com/pressbooks/pressbooks/issues/1160)
+- Add revisions support to parts (props to [Naomi Salmon](https://discourse.pressbooks.org/u/Naomi_Salmon) on [Discourse](https://discourse.pressbooks.org/t/revision-history-in-parts/440) for reporting): [#1158](https://github.com/pressbooks/pressbooks/issues/1158)
+- Fix an uncaught exception ("Mismatch between length of FootnoteReference array number of footnotes available") when importing Word documents: [#1156](https://github.com/pressbooks/pressbooks/issues/1156) 
+- Fix a fatal error ("Too many open files") when exporting books with lots of images to EPUB: [#1155](https://github.com/pressbooks/pressbooks/issues/1155)
+- Update Pressbooks CLI to 1.8.0: [#1154](https://github.com/pressbooks/pressbooks/issues/1154)
+- Fix an issue where importing HTML would result in an empty chapter ([#1148](https://github.com/pressbooks/pressbooks/issues/1148), props to [@josieg](https://github.com/josieg) for reporting): [#1153](https://github.com/pressbooks/pressbooks/issues/1153) 
+- Fix a notice ("Undefined index: css in pb-latex.php on line 98") when visiting the webbook of a freshly cloned book: [#1147](https://github.com/pressbooks/pressbooks/issues/1147) 
+
+
 ### 5.1.0
 
 #### Minor Changes

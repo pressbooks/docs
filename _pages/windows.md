@@ -143,7 +143,7 @@ composer standards
 We use [webpack][6] wrapped in [Laravel Mix][16] to build plugin assets (CSS and JavaScript) for Pressbooks.
 
 1. At the command prompt from the Pressbooks plugin directory, e.g. `~/Code/pressbooks-dev/site/web/app/plugins/pressbooks`, run `yarn` to install build dependencies.
-2. Then, run `yarn run dev` or `yarn run production` to build your plugin assets (`yarn run production` will add a version hash to the asset manifest for browser cache busting).
+2. Then, run `yarn run build` or `yarn run build:production` to build your plugin assets (`yarn run build:production` will add a version hash to the asset manifest for browser cache busting).
 
 ### Updating Plugins & Themes
 

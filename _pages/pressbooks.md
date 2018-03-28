@@ -19,7 +19,7 @@ post_date: 2017-09-06 21:02:12
 
 #### Minor Changes
 
-- Add book navigation to the edit screen ([#1150](https://github.com/pressbooks/pressbooks/issues/1150)): [#1164](https://github.com/pressbooks/pressbooks/issues/1164)
+- Add book navigation to the edit screen ([#1150](https://github.com/pressbooks/pressbooks/issues/1150); props to [Justin Swapp](https://twitter.com/justinswapp) for the suggestion): [#1164](https://github.com/pressbooks/pressbooks/issues/1164)
 - Add book source URL to Book Info for cloned books ([#1152](https://github.com/pressbooks/pressbooks/issues/1152)): [#1166](https://github.com/pressbooks/pressbooks/issues/1166)
 - Optimize chapter numbering functions: [#1165](https://github.com/pressbooks/pressbooks/issues/1165)
 
@@ -61,14 +61,14 @@ post_date: 2017-09-06 21:02:12
 ### 5.0.1
 #### Patches
 
-* Ensure that iframes aren't removed during the `\Pressbooks\Metadata::upgradeToPressbooksFive()` method: [#1138](https://github.com/pressbooks/pressbooks/pull/1138)
+* Ensure that iframes aren't removed during the `PressbooksMetadata::upgradeToPressbooksFive()` method: [#1138](https://github.com/pressbooks/pressbooks/pull/1138)
 * Add parts with readable content to the book navigation order (props to [@beckej13820](https://github.com/beckej13820) for reporting): [#1136](https://github.com/pressbooks/pressbooks/pull/1136)
 * Restore link to view current content from admin bar (props to [@colomet](https://github.com/colomet) for reporting): [#1132](https://github.com/pressbooks/pressbooks/issues/1132), [#1134](https://github.com/pressbooks/pressbooks/pull/1134)
-* Use MySQL transactions to optimize `\Pressbooks\Metadata::upgradeToPressbooksFive()`: [#1133](https://github.com/pressbooks/pressbooks/pull/1133)
+* Use MySQL transactions to optimize `PressbooksMetadata::upgradeToPressbooksFive()`: [#1133](https://github.com/pressbooks/pressbooks/pull/1133)
 * Optimize `pb_get_chapter_number()`: [#1128](https://github.com/pressbooks/pressbooks/pull/1128)
 * Fix missing login screen logo: [#1129](https://github.com/pressbooks/pressbooks/pull/1129)
 * Fix `"Invalid argument supplied for foreach"` warning by handling `false` return values from `get_post_meta()`: [#1128](https://github.com/pressbooks/pressbooks/pull/1128)
-* Fix `"Directory not empty"` warning in `\Pressbooks\Redirect\migrate_generated_content()` by moving action to `plugins_loaded` hook: [#1127](https://github.com/pressbooks/pressbooks/pull/1127)
+* Fix `"Directory not empty"` warning in `PressbooksRedirectmigrate_generated_content()` by moving action to `plugins_loaded` hook: [#1127](https://github.com/pressbooks/pressbooks/pull/1127)
 * Bump tinymce to 4.7.9: [#1125](https://github.com/pressbooks/pressbooks/pull/1125), [#1126](https://github.com/pressbooks/pressbooks/pull/1126)
 
 ### 5.0.0
@@ -151,7 +151,7 @@ Building on the book cloning feature, we have introduced the ability to easily i
 * **[FEATURE]** Add initial support to PDF and Ebook theme options for themes which skip lines between paragraphs by default (see #985).
 * **[CORE ENHANCEMENT]** Use standard build tools package [pressbooks-build-tools](https://www.npmjs.com/package/pressbooks-build-tools) for asset handling, upgrade Stylelint (see #1000).
 * **[CORE ENHANCEMENT]** Require PHP 7.0 or greater (see #935, #987).
-* **[CORE ENHANCEMENT]** Add exclude and include support to `Pressbooks\Utility\rcopy()` (see #990).
+* **[CORE ENHANCEMENT]** Add exclude and include support to `PressbooksUtilityrcopy()` (see #990).
 * **[CORE ENHANCEMENT]** Improve Theme Lock feature in preparation for Pressbooks 5.0 (see #995).
 * **[CORE ENHANCEMENT]** Add Prettier for SCSS and JS formatting (see #991).
 * **[CORE ENHANCEMENT]** Optimize subsection parsing (see #992).
@@ -160,7 +160,7 @@ Building on the book cloning feature, we have introduced the ability to easily i
 * **[FIX]** Replace 'Sites' with 'Books' throughout Pressbooks interface (see #993).
 * **[FIX]** Replace 'Exotic formats' with 'Other formats' on the Export page (see #996).
 * **[FIX]** Fix bug related to [#42574](https://core.trac.wordpress.org/ticket/42574) which prevented widget editing on the root blog (#998).
-* **[FIX]** Fix type mismatch in `\Pressbooks\Licensing` class (see [23ee4ff](https://github.com/pressbooks/pressbooks/commit/23ee4ffee60b585d1390690af627c455bf969883))
+* **[FIX]** Fix type mismatch in `PressbooksLicensing` class (see [23ee4ff](https://github.com/pressbooks/pressbooks/commit/23ee4ffee60b585d1390690af627c455bf969883))
 * **[FIX]** Fix typo in EPUB exporter — the acronym is OEBPS (Open eBook Publication Structure) (props @bdolor; see #988).
 
 ### 4.4.0

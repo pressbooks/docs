@@ -9,6 +9,30 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:04:06
 ---
+### 2.2.0
+
+#### Upgrade Notice
+
+- McLuhan 2.2.0 requires [Pressbooks 5.2.0](https://github.com/pressbooks/pressbooks/).
+
+#### Minor Changes
+
+- Indicate the current section in the dropdown Table of Contents ([#116](https://github.com/pressbooks/pressbooks-book/issues/116); props to [@thomasdumm](https://github.com/thomasdumm) for the suggestion): [#160](https://github.com/pressbooks/pressbooks-book/issues/160)
+- Add "Show All"/"Hide All" buttons to the cover Table of Contents ([#146](https://github.com/pressbooks/pressbooks-book/issues/146); props to [@colomet](https://github.com/colomet) for the suggestion): [#161](https://github.com/pressbooks/pressbooks-book/issues/161) 
+
+#### Patches
+
+- Improve cache invalidation in environments where object caching occurs outside the database: [#162](https://github.com/pressbooks/pressbooks-book/issues/162) 
+- Remove titlecase on `<h1>` elements: [0177f0d](https://github.com/pressbooks/pressbooks-book/commit/0177f0d)
+- Fix undefined variables when visiting Table of Contents page ([#154](https://github.com/pressbooks/pressbooks-book/issues/154)): [#160](https://github.com/pressbooks/pressbooks-book/issues/160)
+- Remove gap in table of contents caused by an invisible part with hidden chapters (props to [@beckej13820](https://github.com/beckej13820) for reporting): [b6ef40d](https://github.com/pressbooks/pressbooks-book/commit/b6ef40d)
+- Hide "Read" actions for books without visible content ([#144](https://github.com/pressbooks/pressbooks-book/issues/144); props to [@colomet](https://github.com/colomet) for reporting): [#158](https://github.com/pressbooks/pressbooks-book/issues/158) 
+- Hide the title on single views if "Show title" is disabled for current content ([#148](https://github.com/pressbooks/pressbooks-book/issues/148)): [#157](https://github.com/pressbooks/pressbooks-book/issues/157)
+- Direct readers to 404 page when they try to visit missing content ([#145](https://github.com/pressbooks/pressbooks-book/issues/145); props to [@colomet](https://github.com/colomet) for reporting): [#155](https://github.com/pressbooks/pressbooks-book/issues/155) 
+- Contributor labels now use singular/plural depending on how many their are ([#149](https://github.com/pressbooks/pressbooks-book/issues/149)): [#156](https://github.com/pressbooks/pressbooks-book/issues/156) 
+- Add focus style to cover page "Download" button ([#143](https://github.com/pressbooks/pressbooks-book/issues/143); props to [@josieg](https://github.com/josieg) for reporting): [014148e](https://github.com/pressbooks/pressbooks-book/commit/014148e)
+- Improve styling of paged navigation for search results ([#147](https://github.com/pressbooks/pressbooks-book/issues/147); props to [@colomet](https://github.com/colomet) for reporting): [2134fb1](https://github.com/pressbooks/pressbooks-book/commit/2134fb1)s
+
 ### 2.1.0
 #### Minor Changes
 

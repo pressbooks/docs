@@ -187,7 +187,7 @@ Once WP-CLI is installed on your server, the following shell commands executed i
     wp plugin install https://github.com/pressbooks/pressbooks/releases/download/5.2.0/pressbooks-5.2.0.zip
     mkdir wp-content/mu-plugins && cp wp-content/plugins/pressbooks/hm-autoloader.php wp-content/mu-plugins
     wp plugin activate pressbooks --network
-    wp theme install https://github.com/pressbooks/pressbooks-book/releases/download/2.1.0/pressbooks-book-2.1.0.zip
+    wp theme install https://github.com/pressbooks/pressbooks-book/releases/download/2.2.0/pressbooks-book-2.2.0.zip
     wp theme install https://github.com/pressbooks/pressbooks-aldine/releases/download/1.2.0/pressbooks-aldine-1.2.0.zip
     wp theme install https://github.com/pressbooks/pressbooks-jacobs/archive/master.zip
     wp theme install https://github.com/pressbooks/pressbooks-austenclassic/archive/master.zip

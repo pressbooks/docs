@@ -9,6 +9,20 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+### 5.2.0
+
+#### Upgrade Notice
+
+- Pressbooks 5.2.0 requires [WordPress 4.9.4](https://wordpress.org/news/2018/02/wordpress-4-9-4-maintenance-release/).
+- Pressbooks 5.2.0 requires [McLuhan 2.2.0](https://github.com/pressbooks/pressbooks-book/).
+- Pressbooks 5.2.0 requires that users of the Luther book theme install and network activate the standalone [Luther theme](https://github.com/pressbooks/pressbooks-luther/) _before_ upgrading to - Pressbooks 5.2.0. For more information, see the [upgrading instructions](https://docs.pressbooks.org/upgrading/#upgrading-to-pressbooks-5-x).
+
+#### Minor Changes
+
+- Add book navigation to the edit screen ([#1150](https://github.com/pressbooks/pressbooks/issues/1150)): [#1164](https://github.com/pressbooks/pressbooks/issues/1164)
+- Add book source URL to Book Info for cloned books ([#1152](https://github.com/pressbooks/pressbooks/issues/1152)): [#1166](https://github.com/pressbooks/pressbooks/issues/1166)
+- Optimize chapter numbering functions: [#1165](https://github.com/pressbooks/pressbooks/issues/1165)
+
 ### 5.1.1
 
 #### Patches

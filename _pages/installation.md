@@ -11,20 +11,20 @@ post_date: 2017-07-07 22:29:32
 ---
 ## Downloads
 
-Download the latest releases of [Pressbooks][1], [Pressbooks Book][2], and [Pressbooks Aldine][3], as well as the latest releases of any other [book themes][4] you wish to install.
+Download the latest releases of [Pressbooks][pressbooks], [McLuhan][mcluhan], and [Aldine][aldine], as well as the latest releases of any other [book themes][book-themes] you wish to install.
 
 ## Installation (Manual)
 
 IMPORTANT!
 
 * Do not install Pressbooks on an existing WordPress blog -- create a new WordPress install instead.
-* Pressbooks works with [PHP 7.0][5] and WordPress 4.9.4. Lower versions are not supported.
+* Pressbooks works with [PHP 7.0][php] and WordPress 4.9.4. Lower versions are not supported.
 
 ### Part 1: WordPress
 
-1. Install WordPress using the [Famous 5-Minute Install][6].
+1. Install WordPress using the [Famous 5-Minute Install][wp-install].
 
-2. [Create a Network][7] of WordPress sites, i.e.:
+2. [Create a Network][create-a-network] of WordPress sites, i.e.:
 
 3. Edit the `wp-config.php` file and add the following:
 
@@ -184,11 +184,11 @@ Once WP-CLI is installed on your server, the following shell commands executed i
     wp core multisite-install --url="http://domain.com" --title="Pressbooks" --admin_user="username" --admin_password="password" --admin_email="user@domain.com"
     wp plugin delete hello
     wp plugin update-all
-    wp plugin install https://github.com/pressbooks/pressbooks/releases/download/5.2.0/pressbooks-5.2.0.zip
+    wp plugin install https://pressbooks.org/download/pressbooks/
     mkdir wp-content/mu-plugins && cp wp-content/plugins/pressbooks/hm-autoloader.php wp-content/mu-plugins
     wp plugin activate pressbooks --network
-    wp theme install https://github.com/pressbooks/pressbooks-book/releases/download/2.2.0/pressbooks-book-2.2.0.zip
-    wp theme install https://github.com/pressbooks/pressbooks-aldine/releases/download/1.2.0/pressbooks-aldine-1.2.0.zip
+    wp theme install https://pressbooks.org/download/mcluhan/
+    wp theme install https://pressbooks.org/download/aldine/
     wp theme install https://github.com/pressbooks/pressbooks-jacobs/archive/master.zip
     wp theme install https://github.com/pressbooks/pressbooks-austenclassic/archive/master.zip
     wp theme install https://github.com/pressbooks/pressbooks-clarke/archive/master.zip
@@ -204,13 +204,13 @@ Once WP-CLI is installed on your server, the following shell commands executed i
 
 Note that this does not install the required libraries for export. See above (Part 3).
 
- [1]: https://github.com/pressbooks/pressbooks/releases/latest
- [2]: https://github.com/pressbooks/pressbooks-book/releases/latest
- [3]: https://github.com/pressbooks/pressbooks-aldine/releases/latest
- [4]: https://github.com/search?q=topic:book-theme%20org:pressbooks&type=Repositories
- [5]: https://secure.php.net/supported-versions.php
- [6]: http://codex.wordpress.org/Installing_WordPress
- [7]: http://codex.wordpress.org/Create_A_Network
+ [pressbooks]: https://pressbooks.org/download/pressbooks/
+ [mcluhan]: https://pressbooks.org/download/mcluhan/
+ [aldine]: https://pressbooks.org/download/aldine/
+ [book-themes]: https://github.com/search?q=topic:book-theme%20org:pressbooks&type=Repositories
+ [php]: https://secure.php.net/supported-versions.php
+ [wp-install]: http://codex.wordpress.org/Installing_WordPress
+ [create-a-network]: http://codex.wordpress.org/Create_A_Network
  [8]: https://pressbooks.com
  [9]: http://pressbooks.com/prince
  [10]: https://wordpress.org/plugins/pressbooks-mpdf

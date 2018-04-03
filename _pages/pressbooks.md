@@ -9,13 +9,23 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
-### 5.2.0
+
+### 5.2.1
 
 #### Upgrade Notice
 
-- Pressbooks 5.2.0 requires [WordPress 4.9.4](https://wordpress.org/news/2018/02/wordpress-4-9-4-maintenance-release/).
-- Pressbooks 5.2.0 requires [McLuhan 2.2.0](https://github.com/pressbooks/pressbooks-book/).
-- Pressbooks 5.2.0 requires that users of the Luther book theme install and network activate the standalone [Luther theme](https://github.com/pressbooks/pressbooks-luther/) _before_ upgrading to - Pressbooks 5.2.0. For more information, see the [upgrading instructions](https://docs.pressbooks.org/upgrading/#upgrading-to-pressbooks-5-x).
+- Pressbooks 5.2.1 requires [WordPress 4.9.4](https://wordpress.org/news/2018/02/wordpress-4-9-4-maintenance-release/).
+- Pressbooks 5.2.1 requires [McLuhan >= 2.2.0](https://github.com/pressbooks/pressbooks-book/).
+
+#### Patches
+
+- Patch [select2](https://github.com/select2/select2) and [Custom Metadata Manager](https://github.com/Automattic/custom-metadata) to save multiselect data in the specified order: [#1167](https://github.com/pressbooks/pressbooks/pull/1167)
+- Fix an edge case where invalid author data would persist following upgrade to Pressbooks 5: [#1168](https://github.com/pressbooks/pressbooks/pull/1168)
+- Fix focus style for admin menu icons: [#1169](https://github.com/pressbooks/pressbooks/pull/1169)
+- Allow super admins to access network theme and plugin menus directly: [#1169](https://github.com/pressbooks/pressbooks/pull/1169)
+- Remove unit test that was failing due to inaccessible Creative Commons API: [#1171](https://github.com/pressbooks/pressbooks/pull/1171)
+
+### 5.2.0
 
 #### Minor Changes
 

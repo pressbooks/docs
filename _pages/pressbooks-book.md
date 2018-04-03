@@ -9,6 +9,16 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:04:06
 ---
+### 2.2.1
+
+#### Upgrade Notice
+
+- McLuhan 2.2.1 requires [Pressbooks >= 5.2.0](https://github.com/pressbooks/pressbooks/).
+
+#### Patches
+
+- Restore some missing webbook styles in legacy themes ([#150](https://github.com/pressbooks/pressbooks-book/issues/150)): [b7b42ec](https://github.com/pressbooks/pressbooks-book/commit/b7b42ec2f70ae6a0b6556e0864a90b9a90a21af4)
+
 ### 2.2.0
 
 #### Upgrade Notice

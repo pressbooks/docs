@@ -9,6 +9,12 @@ permalink: >
 published: true
 post_date: 2018-02-26 20:46:14
 ---
+### 1.2.1
+
+#### Patches
+
+- Fix an issue where inserting a Call to Action via the toolbar used the wrong shortcode attribute for the link ([#118](https://github.com/pressbooks/pressbooks-aldine/issues/118)): [#119](https://github.com/pressbooks/pressbooks-aldine/pull/119)
+
 ### 1.2.0
 
 #### Minor Changes

@@ -63,6 +63,7 @@ composer.phar require pressbooks/pressbooks-aldine:dev-dev
 composer.phar require pressbooks/pressbooks-book:dev-dev
 composer.phar require pressbooks/pressbooks-clarke:dev-dev
 composer.phar require pressbooks/pressbooks-donham:dev-dev
+composer.phar require pressbooks/pressbooks-jacobs:dev-dev
 ```
 
 ## 3. Configuration

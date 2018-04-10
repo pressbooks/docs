@@ -80,6 +80,7 @@ composer require pressbooks/pressbooks-aldine:dev-dev
 composer require pressbooks/pressbooks-book:dev-dev
 composer require pressbooks/pressbooks-clarke:dev-dev
 composer require pressbooks/pressbooks-donham:dev-dev
+composer require pressbooks/pressbooks-jacobs:dev-dev
 ```
 
 ## 3. Configuration

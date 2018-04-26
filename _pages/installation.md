@@ -78,7 +78,7 @@ define('WP_ALLOW_MULTISITE', true);
 
 Pressbooks requires some third-party libraries to be installed on your server to enable export capabilities.
 
-* For PDF export, install [PrinceXML][9] 11 (note: this is not free software although a free version is available for non-commercial use)
+* For PDF export, install [PrinceXML][9] 11 (note: this is not free software although you can use it free of charge for non-commercial purposes.)
 * For PDF export via mPDF, install the [mPDF for Pressbooks][10] plugin. You will also need to ensure that the following folders have write access and/or they are owned by the appropriate user. See [here][11] for more details on adjusting file permissions.
     * `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/ttfontdata`
     * `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/tmp`

@@ -78,7 +78,7 @@ define('WP_ALLOW_MULTISITE', true);
 
 Pressbooks requires some third-party libraries to be installed on your server to enable export capabilities.
 
-* For PDF export, install [PrinceXML][9] 11 (note: this is not free software)
+* For PDF export, install [PrinceXML][9] 11 (note: this is not free software although a free version is available for non-commercial use)
 * For PDF export via mPDF, install the [mPDF for Pressbooks][10] plugin. You will also need to ensure that the following folders have write access and/or they are owned by the appropriate user. See [here][11] for more details on adjusting file permissions.
     * `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/ttfontdata`
     * `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/tmp`
@@ -88,14 +88,15 @@ Pressbooks requires some third-party libraries to be installed on your server to
 * For XML validation install [xmllint][14] 20903
 * For ODT export install [Saxon-HE][15] 9.7.0-10
 * Certain Linux installations do not ship with the `php-xsl` library enabled by default. If you attempt to export an ePub and get a either a white screen with minimal text, or a "Fatal error: Class 'XSLTProcessor' not found" error, you may need to run a command like `apt install php-xsl`.
+* Certain Linux installations do not ship with the `php-exif` library enabled by default. If you attempt to export an ePub and get a either a white screen with minimal text, or an error, you may need to install this extension (e.g. `apt install php-exif` )
 
 Unlisted versions are not supported. Upgrade/downgrade accordingly.
 
-Once installed, define the following `wp-config.php` variables. The defaults are:
+Once installed, define the following `wp-config.php` variables (make sure to update the paths to correspond to your specific installation). The defaults are:
 
     define( 'PB_PRINCE_COMMAND', '/usr/bin/prince' );
     define( 'PB_KINDLEGEN_COMMAND', '/opt/kindlegen/kindlegen' );
-    define( 'PB_EPUBCHECK_COMMAND', '/usr/bin/epubcheck' );
+    define( 'PB_EPUBCHECK_COMMAND', '/usr/bin/java -jar /opt/epubcheck/epubcheck.jar' );
     define( 'PB_XMLLINT_COMMAND', '/usr/bin/xmllint' );
     define( 'PB_SAXON_COMMAND', '/usr/bin/java -jar /opt/saxon-he/saxon-he.jar' );
 

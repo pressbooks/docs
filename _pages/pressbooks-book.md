@@ -9,6 +9,35 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:04:06
 ---
+### 2.3.0
+
+#### Upgrade Notice
+
+- McLuhan 2.3.0 requires [Pressbooks >= 5.3.0](https://github.com/pressbooks/pressbooks/).
+
+#### Minor Changes
+
+- Add tool for comparison with source of cloned content ([#152](https://github.com/pressbooks/pressbooks-book/issues/152)): [#177](https://github.com/pressbooks/pressbooks-book/pull/177)
+- Add support for collapsible sections ([#166](https://github.com/pressbooks/pressbooks-book/issues/166)): [#168](https://github.com/pressbooks/pressbooks-book/pull/168)
+- Add support for updated license module ([pressbooks/pressbooks#1201](https://github.com/pressbooks/pressbooks/pull/1201)): [#194](https://github.com/pressbooks/pressbooks-book/pull/194)
+- Add support for hiding navigational elements via .no-navigation body class ([#36](https://github.com/pressbooks/pressbooks-book/issues/36)): [#196](https://github.com/pressbooks/pressbooks-book/pull/196)
+- Add context to webbook navigation ([#192](https://github.com/pressbooks/pressbooks-book/issues/192), props [@jhung](https://github.com/jhung)): [#197](https://github.com/pressbooks/pressbooks-book/pull/197)
+- Update sharer.js to 0.3.3: [#176](https://github.com/pressbooks/pressbooks-book/pull/176)
+- Improve font size tool ([#172](https://github.com/pressbooks/pressbooks-book/issues/172), [#173](https://github.com/pressbooks/pressbooks-book/issues/173); props [@jhung](https://github.com/jhung)): [#181](https://github.com/pressbooks/pressbooks-book/pull/181)
+- Add labels to cover heading block ([#174](https://github.com/pressbooks/pressbooks-book/issues/174), props [@jhung](https://github.com/jhung)): [#182](https://github.com/pressbooks/pressbooks-book/pull/182)
+- Add label to search field to clarify scope of search ([#171](https://github.com/pressbooks/pressbooks-book/issues/171), props [@jhung](https://github.com/jhung)): [#183](https://github.com/pressbooks/pressbooks-book/pull/183)
+- Add aria-label and aria-role to header logo ([#170](https://github.com/pressbooks/pressbooks-book/issues/170), props [@jhung](https://github.com/jhung)): [#184](https://github.com/pressbooks/pressbooks-book/pull/184)
+- Improve TOC markup ([#175](https://github.com/pressbooks/pressbooks-book/issues/175), props [@jhung](https://github.com/jhung)): [#185](https://github.com/pressbooks/pressbooks-book/pull/185), [#187](https://github.com/pressbooks/pressbooks-book/pull/187)
+- Refactor helper functions: [#186](https://github.com/pressbooks/pressbooks-book/pull/186)
+- Add information for usage to book title on reading pages ([#188](https://github.com/pressbooks/pressbooks-book/issues/188), props [@jhung](https://github.com/jhung)): [#191](https://github.com/pressbooks/pressbooks-book/pull/191)
+- Update to Buckram 0.8.0: [#194](https://github.com/pressbooks/pressbooks-book/pull/194)
+
+#### Patches
+
+- Show part titles in webbook reading view: [#180](https://github.com/pressbooks/pressbooks-book/pull/180)
+- Use `wp_login_url()` where possible to allow custom redirects: [#164](https://github.com/pressbooks/pressbooks-book/pull/164)
+- Fix an issue where short titles would cause a page break: [#194](https://github.com/pressbooks/pressbooks-book/pull/194)
+
 ### 2.2.1
 
 #### Upgrade Notice

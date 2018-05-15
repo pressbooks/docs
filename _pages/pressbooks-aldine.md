@@ -9,6 +9,19 @@ permalink: >
 published: true
 post_date: 2018-02-26 20:46:14
 ---
+### 1.3.0
+
+#### Minor Changes
+
+- Add customizer options for dark (hover) colours: [#125](https://github.com/pressbooks/pressbooks-aldine/issues/125)
+- Update Isotope to 3.0.6: [#120](https://github.com/pressbooks/pressbooks-aldine/issues/120)
+
+#### Patches
+
+- Fix incorrect contact form title ([#122](https://github.com/pressbooks/pressbooks-aldine/issues/122)): [#123](https://github.com/pressbooks/pressbooks-aldine/issues/123)
+- Don't run Intervention functions during AJAX: [#121](https://github.com/pressbooks/pressbooks-aldine/issues/121)
+
+
 ### 1.2.1
 
 #### Patches

@@ -9,6 +9,15 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+### 5.3.1
+
+#### Patches
+
+- Fix ODT export errors caused by images with percentage width or height attributes: [#1215](https://github.com/pressbooks/pressbooks/pull/1215)
+- Improve `$_SESSION` handling: [#1217](https://github.com/pressbooks/pressbooks/pull/1217)
+- Fix display issue when login screen buttons require multiple lines: [283e570](https://github.com/pressbooks/pressbooks/commit/283e5707b35fd0ad28e3f155b65d9df7de6927d6)
+- Fix display issue with mobile content editor: [1efb2c7](https://github.com/pressbooks/pressbooks/commit/1efb2c73b2de9c67a21304fd6013524c37159cdc)
+
 ### 5.3.0
 
 - Pressbooks 5.3.0 requires [WordPress 4.9.5](https://wordpress.org/news/2018/04/wordpress-4-9-5-security-and-maintenance-release/).

@@ -9,6 +9,13 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+### 5.3.2
+
+#### Patches
+
+- Fix a bug with `fetchAndSaveUniqueImage` and `fetchAndSaveUniqueFont` methods introduced in [0c84a5d](https://github.com/pressbooks/pressbooks/commit/0c84a5deb5d603d97ddf9745fcf4792275c36bc5): [#1220](https://github.com/pressbooks/pressbooks/pull/1220)
+- Use `wp dist-archive` to build release asset [#1219](https://github.com/pressbooks/pressbooks/issues/1219): [#1221](https://github.com/pressbooks/pressbooks/pull/1221)
+
 ### 5.3.1
 
 #### Patches

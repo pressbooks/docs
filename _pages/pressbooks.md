@@ -9,6 +9,12 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+### 5.3.3
+
+#### Patches
+
+- Fix EPUB internal links by stripping trailing slash before `#`: [#1222](https://github.com/pressbooks/pressbooks/pull/1222)
+
 ### 5.3.2
 
 #### Patches

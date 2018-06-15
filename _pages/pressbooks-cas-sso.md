@@ -18,6 +18,8 @@ post_date: 2018-06-14 16:56:46
 
 ## Installation / Activation
 
+Get the plugin here: https://github.com/pressbooks/pressbooks-cas-sso
+
 The CAS SSO plugin is installed and activated on the network level.
 
 ## Admin interface description

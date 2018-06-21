@@ -16,6 +16,8 @@ post_date: 2018-06-21 16:47:35
 * [Manually Set up a LTI Configuration](#manually-set-up-a-lti-configuration)
 * [Common Cartridge](#common-cartridge)
 
+This documentation is up to date as of version 0.4.2 of the Pressbooks LTI Provider plugin.
+
 # Installation
 Get the plugin here: [https://github.com/pressbooks/pressbooks-lti-provider](https://github.com/pressbooks/pressbooks-lti-provider)
 This plugin is installed and activated on the network level, but has configurations available both at the network and book level.

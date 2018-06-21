@@ -16,6 +16,8 @@ post_date: 2018-06-14 16:56:46
 *   [Details of settings behaviours](#details-of-settings-behaviours)
 *   [User identification mechanism](#user-identification-mechanism)
 
+This documentation is up to date as of version 1.0.0 of the Pressbooks CAS Single Sign-on plugin.
+
 ## Installation / Activation
 
 Get the plugin here: https://github.com/pressbooks/pressbooks-cas-sso
@@ -26,7 +28,7 @@ The CAS SSO plugin is installed and activated on the network level.
 
 Upon activation of the plugin, a submenu item (“CAS”) is added to the Network Admin interface under “Integrations”. This leads to the CAS settings page:
 
-\[caption id="attachment_483" align="aligncenter" width="248"\][![Screenshot of the CAS settings page](https://pressbooks.org/app/uploads/sites/2/2018/06/cas-settings-248x300.png)](https://pressbooks.org/app/uploads/sites/2/2018/06/cas-settings.png) Click to enlarge\[/caption\]
+[caption id="attachment_483" align="aligncenter" width="248"][![Screenshot of the CAS settings page](https://pressbooks.org/app/uploads/sites/2/2018/06/cas-settings-248x300.png)](https://pressbooks.org/app/uploads/sites/2/2018/06/cas-settings.png) Click to enlarge[/caption]
 
 ## Required Settings:
 
@@ -96,7 +98,7 @@ The mechanism to match the CAS user with the Pressbooks user is the following:
 3.  This allows us to, if we wanted to, manually assign any NETID to any user with an imaginary mass import script, a new doesn't yet exist interface, etc.
 4.  If NETID is not found, try to match a user by their email.
 5.  Because CAS doesn't send us the user email, it only sends a `NETID`, we make up an email using either: `NETID@CAS-OPTIONS-{Email Domain}`, or if that Admin Option is empty: `NETID@{noreply.}CAS-OPTIONS-{Server Hostname}`
-6.  wp\_usermeta.meta\_key and wp\_usermeta.meta\_value are set by the CAS plugin upon first user matching; subsequent logins follow case #1 above.
+6.  wp_usermeta.meta_key and wp_usermeta.meta_value are set by the CAS plugin upon first user matching; subsequent logins follow case #1 above.
 7.  If neither #1 or #2 are found, create a new user.
 8.  `wp_usermeta.meta_key` and `wp_usermeta.meta_value` are set by the CAS plugin upon user creation; subsequent logins follow case #1 above.
 

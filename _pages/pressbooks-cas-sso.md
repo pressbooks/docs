@@ -94,13 +94,13 @@ When a user logs into Pressbooks via CAS, the CAS plugin will attempt to find an
 The mechanism to match the CAS user with the Pressbooks user is the following:
 
 1.  Plugin tries to find a user `where wp_usermeta.meta_key = pressbooks_cas_identity and wp_usermeta.meta_value = NETID`
-2.  Where `NETID` is unique key sent by CAS
-3.  This allows us to, if we wanted to, manually assign any NETID to any user with an imaginary mass import script, a new doesn't yet exist interface, etc.
-4.  If NETID is not found, try to match a user by their email.
-5.  Because CAS doesn't send us the user email, it only sends a `NETID`, we make up an email using either: `NETID@CAS-OPTIONS-{Email Domain}`, or if that Admin Option is empty: `NETID@{noreply.}CAS-OPTIONS-{Server Hostname}`
-6.  wp_usermeta.meta_key and wp_usermeta.meta_value are set by the CAS plugin upon first user matching; subsequent logins follow case #1 above.
-7.  If neither #1 or #2 are found, create a new user.
-8.  `wp_usermeta.meta_key` and `wp_usermeta.meta_value` are set by the CAS plugin upon user creation; subsequent logins follow case #1 above.
+      * Where `NETID` is unique key sent by CAS
+      * This allows us to, if we wanted to, manually assign any NETID to any user with an imaginary mass import script, a new doesn't yet exist interface, etc.
+2.  If NETID is not found, try to match a user by their email.
+      * Because CAS doesn't send us the user email, it only sends a `NETID`, we make up an email using either: `NETID@CAS-OPTIONS-{Email Domain}`, or if that Admin Option is empty: `NETID@{noreply.}CAS-OPTIONS-{Server Hostname}`
+      * wp_usermeta.meta_key and wp_usermeta.meta_value are set by the CAS plugin upon first user matching; subsequent logins follow case #1 above.
+3.  If neither #1 or #2 are found, create a new user.
+      * `wp_usermeta.meta_key` and `wp_usermeta.meta_value` are set by the CAS plugin upon user creation; subsequent logins follow case #1 above.
 
 For network admins creating new users in Pressbooks, this means that they need to use the correct user email address so the CAS plugin can properly match the users logging in via CAS and manually-created Pressbooks users.
 

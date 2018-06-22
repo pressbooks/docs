@@ -20,7 +20,10 @@ This documentation is up to date as of version 0.4.2 of the Pressbooks LTI Provi
 
 # Installation
 Get the plugin here: [https://github.com/pressbooks/pressbooks-lti-provider](https://github.com/pressbooks/pressbooks-lti-provider)
+
 This plugin is installed and activated on the network level, but has configurations available both at the network and book level.
+
+**Note**: If the user's web browser does not allow 3rd Party Cookies, then logins will not work when Pressbooks is in an iframe.
 
 **Note**: Please ensure that your web server has correct X-Frame-Options settings, otherwise iframes will refuse to display. More info: [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
 

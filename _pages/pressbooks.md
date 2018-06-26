@@ -9,6 +9,12 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+### 5.3.4
+
+#### Patches
+
+- Hotfix for [WordPress core security issue](https://blog.ripstech.com/2018/wordpress-file-delete-to-code-execution/): [a462e0d](https://github.com/pressbooks/pressbooks/commit/a462e0d/)
+
 ### 5.3.3
 
 #### Patches

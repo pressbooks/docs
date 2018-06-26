@@ -1,11 +1,11 @@
 ---
 ID: 507
-post_title: Pressbooks LTI Provider Plugin
+post_title: Pressbooks LTI Provider
 author: JC Guan
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.pressbooks.org/integrations/pressbooks-lti-provider-plugin/
+  https://docs.pressbooks.org/integrations/pressbooks-lti-provider/
 published: true
 post_date: 2018-06-21 16:47:35
 ---

@@ -9,6 +9,25 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:04:06
 ---
+### 2.4.0
+
+#### Upgrade Notice
+
+- McLuhan 2.4.0 requires [Pressbooks >= 5.4.0](https://github.com/pressbooks/pressbooks/releases/5.4.0).
+
+##### Minor Changes
+
+- Update to Buckram 1.0: [#226](https://github.com/pressbooks/pressbooks-book/pull/226)
+- Buckram 1.0 compatibility: [#227](https://github.com/pressbooks/pressbooks-book/pull/227)
+- Add lightbox feature for linked images ([#229](https://github.com/pressbooks/pressbooks-book/issues/229)): [#230](https://github.com/pressbooks/pressbooks-book/pull/230)
+- Use `wp-dist-archive` for release ([#222](https://github.com/pressbooks/pressbooks-book/issues/222)): [87612eb](https://github.com/pressbooks/pressbooks-book/commit/87612eb4ca5c056b3def079c1c7e15f0c56d4315)
+
+#### Patches
+
+- Hide additional navigation elements and suppress keyboard navigation within an LMS ([#207](https://github.com/pressbooks/pressbooks-book/issues/207), [#219](https://github.com/pressbooks/pressbooks-book/issues/219)): [#221](https://github.com/pressbooks/pressbooks-book/pull/221)
+- Ensure that navigational elements appear above H5P activities and embedded audio ([#220](https://github.com/pressbooks/pressbooks-book/issues/220)): [#223](https://github.com/pressbooks/pressbooks-book/pull/223)
+- Add textdomain: [2311845](https://github.com/pressbooks/pressbooks-book/commit/2311845d770d0031fed76b32b7ca1cf26f3b1b60)
+
 ### 2.3.0
 
 #### Upgrade Notice

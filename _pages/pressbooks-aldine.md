@@ -9,6 +9,16 @@ permalink: >
 published: true
 post_date: 2018-02-26 20:46:14
 ---
+### 1.4.0
+
+#### Upgrade Notice
+
+- Aldine 1.4.0 requires [WordPress 4.9.6](https://github.com/pressbooks/pressbooks/releases/5.4.0).
+
+#### Minor Changes
+
+- Add support for privacy tools in WordPress 4.9.6: [#129](https://github.com/pressbooks/pressbooks-aldine/pull/129)
+
 ### 1.3.0
 
 #### Minor Changes

@@ -9,6 +9,37 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+### 5.4.0
+
+#### Upgrade Notice
+
+- Pressbooks 5.4.0 requires [WordPress 4.9.6](https://github.com/pressbooks/pressbooks/releases/5.4.0).
+- Pressbooks 5.4.0 requires [McLuhan 2.4.0](https://github.com/pressbooks/pressbooks-book/releases/2.4.0).
+
+#### Minor Changes
+
+- Add support for PDF exports via [DocRaptor](https://docraptor.com) to Pressbooks core ([#1238](https://github.com/pressbooks/pressbooks/issues/1238)): [#1240](https://github.com/pressbooks/pressbooks/pull/1240)
+- Bump minimum supported WordPress to 4.9.6: [#1237](https://github.com/pressbooks/pressbooks/pull/1237)
+- Add support for WordPress 4.9.6 privacy policy management: [#1236](https://github.com/pressbooks/pressbooks/pull/1236)
+- Improve admin bar for network administrators and network managers: [#1226](https://github.com/pressbooks/pressbooks/pull/1226), [#1232](https://github.com/pressbooks/pressbooks/pull/1232), [#1234](https://github.com/pressbooks/pressbooks/pull/1234)
+- Improve educational textbox markup, add sidebar textboxes: [#1210](https://github.com/pressbooks/pressbooks/pull/1210)
+- Allow default book cover image to be filtered, add size parameter: [#1214](https://github.com/pressbooks/pressbooks/pull/1214)
+- Allow access to webbook sharing & visibility settings to be restricted by a filter: [#1239](https://github.com/pressbooks/pressbooks/pull/1239)
+- Bump tinymce from 4.7.12 to 4.7.13: [#1213](https://github.com/pressbooks/pressbooks/pull/1213)
+- Bump leafo/scssphp from 0.7.5 to 0.7.6: [#1223](https://github.com/pressbooks/pressbooks/pull/1223)
+
+#### Patches
+
+- Allow usernames to be an email address in the catalog rewrite rule (props [@lukaiser](https://github.com/lukaiser)): [#1216](https://github.com/pressbooks/pressbooks/pull/1216)
+- Ensure that classnames are output properly for EPUB table of contents: [#1224](https://github.com/pressbooks/pressbooks/pull/1224)
+- Improve `reverse_wpautop()` function to avoid stripping newlines from within `<pre>` tags during import and clone operations ([#1225](https://github.com/pressbooks/pressbooks/issues/1225), props [@SteelWagstaff](https://github.com/SteelWagstaff) for reporting): [#1227](https://github.com/pressbooks/pressbooks/pull/1227)
+- Enable `$concatenate_scripts` and remove unused admin JS dependency: [#1233](https://github.com/pressbooks/pressbooks/pull/1233)
+- Use polyfills to avoid warnings in PHP 7.2 environment: [#1237](https://github.com/pressbooks/pressbooks/pull/1237)
+- Fix an issue where PDF internal links would not function as expected: [#1245](https://github.com/pressbooks/pressbooks/pull/1245)
+- Lower personal data export cron frequency to twicedaily ([#1242](https://github.com/pressbooks/pressbooks/issues/1242)): [#1246](https://github.com/pressbooks/pressbooks/pull/1246)
+- Increase HTTP timeout for the Prince and DocRaptor PDF export modules to PHP `max_execution_time` (props [@rootl](https://github.com/rootl) for the bug report): [#1248](https://github.com/pressbooks/pressbooks/pull/1248)
+- Fix the suppression of TOC part and chapter numbers for Buckram 1.0 themes: [#1249](https://github.com/pressbooks/pressbooks/pull/1249)
+
 ### 5.3.4
 
 #### Patches

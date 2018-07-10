@@ -184,14 +184,14 @@ Once WP-CLI is installed on your server, the following shell commands executed i
     wp core download
     wp core config --dbname="dbname" --dbuser="dbuser" --dbpass="dbpass" --extra-php &lt;&lt;PHP
     /* Pressbooks */
-    define( &#039;WP_DEFAULT_THEME&#039;, &#039;pressbooks-book&#039; );
-    define( &#039;PB_PRINCE_COMMAND&#039;, &#039;/usr/bin/prince&#039; );
-    define( &#039;PB_KINDLEGEN_COMMAND&#039;, &#039;/opt/kindlegen/kindlegen&#039; );
-    define( &#039;PB_EPUBCHECK_COMMAND&#039;, &#039;/usr/bin/java -jar /opt/epubcheck/epubcheck.jar&#039; );
-    define( &#039;PB_XMLLINT_COMMAND&#039;, &#039;/usr/bin/xmllint&#039; );
-    define( &#039;PB_SAXON_COMMAND&#039;, &#039;/usr/bin/java -jar /opt/saxon-he/saxon-he.jar&#039; );
+    define( 'WP_DEFAULT_THEME', 'pressbooks-book' );
+    define( 'PB_PRINCE_COMMAND', '/usr/bin/prince' );
+    define( 'PB_KINDLEGEN_COMMAND', '/opt/kindlegen/kindlegen' );
+    define( 'PB_EPUBCHECK_COMMAND', '/usr/bin/java -jar /opt/epubcheck/epubcheck.jar' );
+    define( 'PB_XMLLINT_COMMAND', '/usr/bin/xmllint' );
+    define( 'PB_SAXON_COMMAND', '/usr/bin/java -jar /opt/saxon-he/saxon-he.jar' );
     PHP
-    wp core multisite-install --url=&quot;http://domain.com&quot; --title=&quot;Pressbooks&quot; --admin_user=&quot;username&quot; --admin_password=&quot;password&quot; --admin_email=&quot;user@domain.com&quot;
+    wp core multisite-install --url='http://domain.com' --title='Pressbooks' --admin_user='username' --admin_password='password' --admin_email='user@domain.com'
     wp plugin delete hello
     wp plugin update-all
     wp plugin install https://pressbooks.org/download/pressbooks/

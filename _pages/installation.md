@@ -18,7 +18,7 @@ Download the latest releases of [Pressbooks][pressbooks], [McLuhan][mcluhan], an
 IMPORTANT!
 
 * Do not install Pressbooks on an existing WordPress blog -- create a new WordPress install instead.
-* Pressbooks works with [PHP 7.0][php] and WordPress 4.9.4. Lower versions are not supported.
+* Pressbooks works with [PHP 7.0][php] and WordPress 4.9.6. Lower versions are not supported.
 
 The installed network (Wordpress + Pressbooks + McLuhan + Aldine) will use approximately 50 MB of server space. The total amount of server space you should provision will depend on the projected size of your network and the amount of media you expect to upload. 
 

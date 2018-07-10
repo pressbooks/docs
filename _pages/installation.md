@@ -80,8 +80,15 @@ define('WP_ALLOW_MULTISITE', true);
 
 Pressbooks requires some third-party libraries to be installed on your server to enable export capabilities.
 
-* For PDF export, install [PrinceXML][9] 11 (note: this is not free software although you can use it free of charge for non-commercial purposes.)
-* For PDF export via mPDF, install the [mPDF for Pressbooks][10] plugin. You will also need to ensure that the following folders have write access and/or they are owned by the appropriate user. See [here][11] for more details on adjusting file permissions.
+* For PDF export, you have three options:
+  * Configure [DocRaptor](https://docraptor.com), which is a software as a service version of [PrinceXML][9]. To do this, you just need to add your DocRaptor API key to `wp-config.php`:
+  
+    ```php
+    define( 'DOCRAPTOR_API_KEY', 'YOUR_API_KEY_HERE' );
+    ```
+    
+  * Install [PrinceXML][9] 11 on your server (note: this is not free software although you can use it free of charge for non-commercial purposes).
+  * Install the [mPDF for Pressbooks][10] plugin to use the open source mPDF library. You will also need to ensure that the following folders have write access and/or they are owned by the appropriate user. See [here][11] for more details on adjusting file permissions.
     * `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/ttfontdata`
     * `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/tmp`
     * `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/graph_cache`
@@ -96,7 +103,7 @@ Unlisted versions are not supported. Upgrade/downgrade accordingly.
 
 Once installed, define the following `wp-config.php` variables (make sure to update the paths to correspond to your specific installation). The defaults are:
 
-    define( 'PB_PRINCE_COMMAND', '/usr/bin/prince' );
+    define( 'PB_PRINCE_COMMAND', '/usr/bin/prince' ); // Only required if you are using Prince on your server
     define( 'PB_KINDLEGEN_COMMAND', '/opt/kindlegen/kindlegen' );
     define( 'PB_EPUBCHECK_COMMAND', '/usr/bin/java -jar /opt/epubcheck/epubcheck.jar' );
     define( 'PB_XMLLINT_COMMAND', '/usr/bin/xmllint' );

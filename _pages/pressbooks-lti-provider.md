@@ -66,6 +66,8 @@ The LTI Settings link (on the network admin level) leads to the general, network
 - **Appearance**: whether or not to include navigation elements when embedding Pressbooks content in the LMS.
 - **Common Cartridge version**: Default Common Cartridge version for CC exports. Can be overridden at the book level.
 
+<a href="https://pressbooks.org/app/uploads/sites/2/2018/07/ltiNetworkSettings.png"><img src="https://pressbooks.org/app/uploads/sites/2/2018/07/ltiNetworkSettings-248x300.png" alt="Screenshot of LTI network settings page" width="248" height="300" class="aligncenter size-medium wp-image-557" /></a>
+
 ## LTI Settings (book admin)
 
 The LTI Settings link (at the book admin level) leads to a configuration page that is specific for the book. The book administrator can then override the network defaults for the following settings:

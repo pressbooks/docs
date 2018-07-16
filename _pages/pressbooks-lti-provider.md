@@ -48,10 +48,10 @@ The table containing the list of LTI configurations is based on the IMS Global e
 - **Version**: LTI protocol version (automatic configuration only)
 - **Last access**: date the LTI consumer last accessed the content
 - **Available:** Shows whether the content can be accessed via LTI
-- Unavailable content will be shown with an "X"
-- Cases where content is unavailable:
-- It is not marked as "Enabled"
-- It is marked as "Enabled" but is currently outside of the Enabled date range.
+    - Unavailable content will be shown with an "X"
+    - Cases where content is unavailable:
+    - It is not marked as "Enabled"
+    - It is marked as "Enabled" but is currently outside of the Enabled date range.
 - **Protected**: When turned on, the code will bail with 'A tool consumer GUID must be included in the launch request.' if one is not provided by the LMS.
 
 The "**Add New**" button leads to a form where the network manager can create a new configuration manually. See "[Manually Set Up a LTI Configuration](#manually-set-up-a-lti-configuration)" below for instructions.
@@ -62,9 +62,10 @@ The LTI Settings link (on the network admin level) leads to the general, network
 
 - **LTI2 Registration Whitelist**: whitelisted domains for automatic registration
 - **Sensible defaults:** default configuration for book-level settings. These defaults can be overridden at the book level:
-- **Map [Administrator/Staff/Learner] to the following Pressbooks role**: default mapping of LMS user role to Pressbooks user role when the LMS triggers the creation of a new user. (These can be overridden at the book level.)
-- **Appearance**: whether or not to include navigation elements when embedding Pressbooks content in the LMS.
-- **Common Cartridge version**: Default Common Cartridge version for CC exports. Can be overridden at the book level.
+    - **Allow books to override...**: option to enable or disable book settings to override the network defaults
+    - **Map [Administrator/Staff/Learner] to the following Pressbooks role**: default mapping of LMS user role to Pressbooks user role when the LMS triggers the creation of a new user. (These can be overridden at the book level.)
+    - **Appearance**: whether or not to include navigation elements when embedding Pressbooks content in the LMS.
+- **Common Cartridge version**: Default Common Cartridge version shown in the exports page for CC exports. Can be overridden at the book level.
 
 <a href="https://pressbooks.org/app/uploads/sites/2/2018/07/ltiNetworkSettings.png"><img class="aligncenter wp-image-557 size-large" src="https://pressbooks.org/app/uploads/sites/2/2018/07/ltiNetworkSettings-846x1024.png" alt="Screenshot of LTI network settings page" width="840" height="1017" /></a>
 
@@ -109,24 +110,36 @@ By default, all mappings at the network and book levels are set to Anonymous Gue
 Newly-created books inherit the default network-level mappings
 
 - IF the network defaults are modified AFTER a book has been created
-- And IF the book mappings have never been changed from the default
-- The book mappings will be updated according to the new network defaults
-- Otherwise (if the book mappings have been changed)
-- The book mappings will not be updated.
+    - And IF the book mappings have never been changed from the default
+        - The book mappings will be updated according to the new network defaults
+    - Otherwise (if the book mappings have been changed)
+        - The book mappings will not be updated.
 
 **Mapping effects on users/access to Pressbooks content:**
 
 If the mapping is set to:
 
 - "**Anonymous Guest"**, no user will be created in Pressbooks and the LMS will display the web page as it appears on the open Web
-- If the book is set to Private, the LMS will display the "Access denied" message
+    - If the book is set to Private, the LMS will display the "Access denied" message
 - **any other role**,
-- a first-time LMS visitor will have a new user automatically created on Pressbooks and added to the book they are trying to access with the specified role
-- a returning LMS visitor will be logged into Pressbooks; the incoming user will be matched to the existing Pressbooks user based on the email address.
-* if the user does not exist at the book level, they will be added to the book
-* at every login, the user role will be verified and updated according to the mapping.
-- Note: If the user is a super admin, the book role assignment will not impact their super admin privileges.
-- since the user is now logged in, the LMS will be able to display contents of books set to "private"
+    - a first-time LMS visitor will have a new user automatically created on Pressbooks and added to the book they are trying to access with the specified role
+    - a returning LMS visitor will be logged into Pressbooks; the incoming user will be matched to the existing Pressbooks user based on the email address.
+        * if the user does not exist at the book level, they will be added to the book
+        * at every login, the user role will be verified and updated according to the mapping.
+            - Note: If the user is a super admin, the book role assignment will not impact their super admin privileges.
+            - since the user is now logged in, the LMS will be able to display contents of books set to "private"
+
+**User mapping mechanism **
+- Get the user role from the LMS. (abstracted as: Anonymous Guest, Learner, Staff, Admin)
+- Get the email from the LMS.
+- Get LTI ID from the LMS. [tool_consumer_instance_guid + user_id]
+
+Sometimes an email is not sent so we create a fake email using the [UserID@127.0.0.1](mailto:UserID@127.0.0.1). Canvas user ids look like `967620f91cb9080c633b4e55f561d40ed83924a4`. This behavior mirrors the Candela LTI Plugin.
+
+- Try to match a Pressbooks user by LTI ID (Stored in user_meta table.)
+- If no match, then try to match a Pressbooks user by email.
+- If there's no match, then check if we should create a user (Anonymous Guest = No, Everything Else = Yes).  When creating a user: Username = email prefix,  email = see above, and the LTI ID will be stored in the user_meta table. A user can have more than one LTI ID (Example: Moodle, Sakai, Canvas, Blackboard all point to the same Book and we can match the user's email). 
+- If the user does not have rights to the book, and role is not Anonymous Guest, then add them to the book with appropriate role and log them in.
 
 # Manually Set Up a LTI Configuration
 1. Click the Add new button on the LTI Consumers page. You will be brought to the "Adding LTI Consumer" form:

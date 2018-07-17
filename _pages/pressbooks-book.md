@@ -9,6 +9,16 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:04:06
 ---
+### 2.4.1
+
+#### Upgrade Notice
+
+- McLuhan 2.4.1 requires [Pressbooks >= 5.4.0](https://github.com/pressbooks/pressbooks/releases/5.4.0).
+
+#### Patches
+
+- Resolve issue where visiting a page requiring authentication would return a 200 status code instead of the correct 401 status code: [#232](https://github.com/pressbooks/pressbooks-book/pull/232), [#233](https://github.com/pressbooks/pressbooks-book/pull/233)
+
 ### 2.4.0
 
 #### Upgrade Notice

@@ -9,6 +9,22 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+### 5.4.1
+
+#### Upgrade Notice
+
+* Pressbooks 5.4.1 requires [WordPress 4.9.7](https://wordpress.org/news/2018/07/wordpress-4-9-7-security-and-maintenance-release/).
+* Pressbooks 5.4.1 requires [McLuhan >= 2.4.0](https://github.com/pressbooks/pressbooks-book/).
+
+#### Patches
+
+* Convert iframes to `[embed]` shortcodes rather than deleting them if the user lacks permissions: [#1247](https://github.com/pressbooks/pressbooks/pull/1247)
+* Resolve issue where PDF dependencies were incorrectly reported as missing ([#1253](https://github.com/pressbooks/pressbooks/issues/1253)): [#1254](https://github.com/pressbooks/pressbooks/pull/1254)
+* Ensure that themes which don't support the new textbox markup use the old textbox markup: [#1252](https://github.com/pressbooks/pressbooks/pull/1252)
+* Remove hotfix for WordPress core vulnerability that was patched in WordPress 4.9.7 ([#1255](https://github.com/pressbooks/pressbooks/issues/1255)): [#1258](https://github.com/pressbooks/pressbooks/pull/1258)
+* Resolve issue where part content would not be imported from Pressbooks XML files ([#1259](https://github.com/pressbooks/pressbooks/issues/1259)): [#1260](https://github.com/pressbooks/pressbooks/pull/1260)
+* Resolve issue where visiting a user catalog would return a 404 status code instead of the correct 200 status code: [#1261](https://github.com/pressbooks/pressbooks/pull/1261)
+
 ### 5.4.0
 
 #### Upgrade Notice

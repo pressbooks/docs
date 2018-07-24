@@ -9,6 +9,24 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+### 5.4.2
+
+#### Upgrade Notice
+
+* Pressbooks 5.4.2 requires [WordPress 4.9.7](https://wordpress.org/news/2018/07/wordpress-4-9-7-security-and-maintenance-release/).
+* Pressbooks 5.4.2 requires [McLuhan >= 2.4.0](https://github.com/pressbooks/pressbooks-book/).
+
+#### Patches
+
+* Update the TinyMCE table plugin to apply some [upstream bugfixes](https://github.com/tinymce/tinymce-dist/blob/master/changelog.txt#L3-L4): [#1262](https://github.com/pressbooks/pressbooks/pull/1262)
+* Improve colour contrast contrast for some TinyMCE buttons and menus ([#1250](https://github.com/pressbooks/pressbooks/issues/1250)): [#1273](https://github.com/pressbooks/pressbooks/pull/1273)
+* Restore correct chapter subtitle and author order in EPUB/MOBI exports ([#1271](https://github.com/pressbooks/pressbooks/issues/1271)): [#1274](https://github.com/pressbooks/pressbooks/pull/1274)
+* Grant access to the style debugging tool to super admins regardless of `WP_DEBUG` status ([#1272](https://github.com/pressbooks/pressbooks/issues/1272)): [#1275](https://github.com/pressbooks/pressbooks/pull/1275)
+* Retain original slug of chapters with differing title and slug during WXR import ([#1276](https://github.com/pressbooks/pressbooks/issues/1276)): [#1277](https://github.com/pressbooks/pressbooks/pull/1277)
+* Only force DocRaptor into test mode when in development environments ([#1289](https://github.com/pressbooks/pressbooks/issues/1289)): [#1290](https://github.com/pressbooks/pressbooks/pull/1290)
+* Correct the label for the contributor last name field ([#1291](https://github.com/pressbooks/pressbooks/issues/1291)): [#1292](https://github.com/pressbooks/pressbooks/pull/1292)
+* Rebuild editor stylesheet on Buckram updates ([#1278](https://github.com/pressbooks/pressbooks/issues/1278), props [@beckej13820](https://github.com/beckej13820) for the bug report): [#1294](https://github.com/pressbooks/pressbooks/pull/1294)
+
 ### 5.4.1
 
 #### Upgrade Notice

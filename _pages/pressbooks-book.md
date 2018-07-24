@@ -9,6 +9,18 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:04:06
 ---
+### 2.4.2
+
+#### Upgrade Notice
+
+- McLuhan 2.4.2 requires [Pressbooks >= 5.4.0](https://github.com/pressbooks/pressbooks/releases/5.4.0).
+
+#### Patches
+
+- Upgrade to [Buckram 1.0.1](https://github.com/pressbooks/buckram/releases/1.0.1): [#235](https://github.com/pressbooks/pressbooks-book/pull/235)
+- Allow sections with their own containers to collapse ([#237](https://github.com/pressbooks/pressbooks-book/issues/237), props [@beckej13820](https://github.com/beckej13820) for the bug report): [#240](https://github.com/pressbooks/pressbooks-book/pull/240)
+- Adopt Pressbooks coding standards: [#241](https://github.com/pressbooks/pressbooks-book/pull/241)
+
 ### 2.4.1
 
 #### Upgrade Notice

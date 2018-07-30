@@ -9,6 +9,12 @@ permalink: >
 published: true
 post_date: 2018-02-26 20:46:14
 ---
+### 1.4.1
+
+#### Patches
+
+- Ensure that unsupported catalog subject codes aren't loaded: [#133](https://github.com/pressbooks/pressbooks-aldine/pull/133)
+
 ### 1.4.0
 
 #### Upgrade Notice

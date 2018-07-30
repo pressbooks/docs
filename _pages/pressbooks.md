@@ -9,6 +9,18 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+### 5.4.3
+
+#### Upgrade Notice
+
+* Pressbooks 5.4.3 requires [WordPress 4.9.7](https://wordpress.org/news/2018/07/wordpress-4-9-7-security-and-maintenance-release/).
+* Pressbooks 5.4.3 requires [McLuhan >= 2.4.0](https://github.com/pressbooks/pressbooks-book/).
+
+#### Patches
+
+* Ensure that contributor taxonomy is always registered when needed, fixing an issue where empty author data would be cached: [#1300](https://github.com/pressbooks/pressbooks/pull/1300)
+
+
 ### 5.4.2
 
 #### Upgrade Notice

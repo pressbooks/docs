@@ -9,6 +9,12 @@ permalink: >
 published: true
 post_date: 2018-02-26 20:58:56
 ---
+### 1.1.1
+
+#### Patches
+
+- Fix page numbering and running content position in print PDF exports (see [pressbooks/pressbooks-book#244](https://github.com/pressbooks/pressbooks-book/issues/244)): [#26](https://github.com/pressbooks/pressbooks-jacobs/pull/26)
+
 ### 1.1.0
 
 #### Minor Changes

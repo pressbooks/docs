@@ -9,6 +9,17 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:04:06
 ---
+### 2.4.3
+
+### Upgrade Notice
+
+- McLuhan 2.4.2 requires [Pressbooks >= 5.4.0](https://github.com/pressbooks/pressbooks/releases/5.4.0).
+
+#### Patches
+
+- Fix page numbering and running content position in print PDF exports ([#244](https://github.com/pressbooks/pressbooks-book/issues/244)): [#245](https://github.com/pressbooks/pressbooks-book/pull/245)
+- Upgrade to Buckram 1.0.2: [#246](https://github.com/pressbooks/pressbooks-book/pull/246)
+
 ### 2.4.2
 
 #### Upgrade Notice
@@ -194,7 +205,7 @@ The webbook has undergone a much needed design refresh, with several long reques
 * **Feature:** Add support for Punjabi Gurmukhi script (props to @alexpflores) (see #27).
 * **Fix:** Fix an issue where enabling social media would break the mobile webbook layout (see #28, #30).
 * **Fix:** Fix an issue where numberless chapters in a book would cause the MOBI export to fail with certain book themes (see #33).
-* **Fix:** Add webbook theme support for WordPress' built-in `\<!--nextpage--\>` tag, which splits a single post into multiple web pages (see #35).
+* **Fix:** Add webbook theme support for WordPress' built-in `<!--nextpage-->` tag, which splits a single post into multiple web pages (see #35).
 
 ### 1.9.2
 

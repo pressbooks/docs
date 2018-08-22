@@ -9,6 +9,18 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+## 5.4.6
+
+#### Upgrade Notice
+
+* Pressbooks 5.4.6 requires [WordPress 4.9.7](https://wordpress.org/news/2018/07/wordpress-4-9-7-security-and-maintenance-release/).
+* Pressbooks 5.4.6 requires [McLuhan >= 2.4.0](https://github.com/pressbooks/pressbooks-book/).
+
+#### Patches
+
+* Resolve additional bugs related to default paragraph separation ([#1303](https://github.com/pressbooks/pressbooks/issues/1303)): [#1318](https://github.com/pressbooks/pressbooks/pull/1318)
+
+
 ## 5.4.5
 
 #### Upgrade Notice

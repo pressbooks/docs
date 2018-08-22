@@ -9,7 +9,18 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
-## 5.4.6
+### 5.4.7
+
+#### Upgrade Notice
+
+* Pressbooks 5.4.7 requires [WordPress 4.9.7](https://wordpress.org/news/2018/07/wordpress-4-9-7-security-and-maintenance-release/).
+* Pressbooks 5.4.7 requires [McLuhan >= 2.4.0](https://github.com/pressbooks/pressbooks-book/).
+
+#### Patches
+
+* Fix 500 error introduced in [#1318](https://github.com/pressbooks/pressbooks/pull/1318): [#1326](https://github.com/pressbooks/pressbooks/pull/1326)
+
+### 5.4.6
 
 #### Upgrade Notice
 

@@ -9,9 +9,28 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:04:06
 ---
+### 2.5.0
+
+#### Upgrade Notice
+
+- McLuhan 2.5.0 requires [Pressbooks >= 5.5.0](https://github.com/pressbooks/pressbooks/releases/5.5.0).
+
+#### Minor Changes
+
+- Improve the accuracy of the comparison tool: [#248](https://github.com/pressbooks/pressbooks-book/pull/248)
+- Display front and back matter types in navigation: [#253](https://github.com/pressbooks/pressbooks-book/pull/253)
+- Make webbook navigation consistent on all screen size (props [@colomet](https://github.com/colomet) for the [idea](https://github.com/pressbooks/ideas/issues/10)): [#256](https://github.com/pressbooks/pressbooks-book/pull/256)
+- Use smaller size for the webbook cover image (props [@colomet](https://github.com/colomet) for [#250](https://github.com/pressbooks/pressbooks-book/issues/250)): [#262](https://github.com/pressbooks/pressbooks-book/pull/262)
+
+#### Patches
+
+- Support deleted source books in cloned book info ([#254](https://github.com/pressbooks/pressbooks-book/issues/254)): [#258](https://github.com/pressbooks/pressbooks-book/pull/258), [#259](https://github.com/pressbooks/pressbooks-book/pull/259)
+- Preserve tags in collapsible section headings: ([#255](https://github.com/pressbooks/pressbooks-book/issues/255)): [#257](https://github.com/pressbooks/pressbooks-book/pull/257)
+- Prevent button icons from shrinking when collapsible sections have long titles ([#261](https://github.com/pressbooks/pressbooks-book/issues/261)): [#263](https://github.com/pressbooks/pressbooks-book/pull/263)
+
 ### 2.4.3
 
-### Upgrade Notice
+#### Upgrade Notice
 
 - McLuhan 2.4.2 requires [Pressbooks >= 5.4.0](https://github.com/pressbooks/pressbooks/releases/5.4.0).
 

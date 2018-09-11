@@ -9,6 +9,12 @@ permalink: >
 published: true
 post_date: 2018-03-07 19:53:56
 ---
+### 1.5.0
+
+#### Minor Changes
+
+- Update minimum PHP and coding standards ([#9](https://github.com/pressbooks/pressbooks-stats/issues/9)): [#10](https://github.com/pressbooks/pressbooks-stats/pull/10)
+
 ### 1.4.1
 
 #### Patches

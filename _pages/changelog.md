@@ -13,6 +13,8 @@ post_date: 2017-07-07 22:29:32
 - [Pressbooks][1]  
 - [DocRaptor for Pressbooks][2]  
 - [Excalibur][9]  
+- [Pressbooks CAS SSO](https://docs.pressbooks.org/changelog/pressbooks-cas-sso)
+- [Pressbooks LTI Provider](https://docs.pressbooks.org/changelog/pressbooks-lti-provider)
 - [Pressbooks Stats](https://docs.pressbooks.org/changelog/pressbooks-stats)
 
 ## Themes

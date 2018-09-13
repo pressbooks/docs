@@ -9,6 +9,18 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+### 5.5.1
+
+#### Upgrade Notice
+
+* Pressbooks 5.5.1 requires PHP >= 7.1.
+* Pressbooks 5.5.1 requires [WordPress 4.9.8](https://wordpress.org/news/2018/08/wordpress-4-9-8-maintenance-release/).
+* Pressbooks 5.5.1 requires [McLuhan >= 2.5.0](https://github.com/pressbooks/pressbooks-book/).
+
+#### Patches
+
+* Fixed an issue where cover generator stylesheets were missing from the release package: [#1349](https://github.com/pressbooks/pressbooks/pull/1349)
+
 ### 5.5.0
 
 #### Upgrade Notice

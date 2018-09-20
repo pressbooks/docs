@@ -9,6 +9,17 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:04:06
 ---
+### 2.5.1
+
+#### Upgrade Notice
+
+- McLuhan 2.5.1 requires [Pressbooks >= 5.5.2](https://github.com/pressbooks/pressbooks/releases/5.5.2).
+
+#### Patches
+
+- Gracefully handle missing source authors ([#265](https://github.com/pressbooks/pressbooks-book/issues/265)): [#267](https://github.com/pressbooks/pressbooks-book/pull/267)
+- Add trailing slash to URL in footer: [#271](https://github.com/pressbooks/pressbooks-book/pull/271)
+
 ### 2.5.0
 
 #### Upgrade Notice

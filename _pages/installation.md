@@ -96,8 +96,12 @@ Pressbooks requires some third-party libraries to be installed on your server to
 * For EPUB validation install [EpubCheck][13] 4.0.2
 * For XML validation install [xmllint][14] 20903
 * For ODT export install [Saxon-HE][15] 9.7.0-10
-* Certain Linux installations do not ship with the `php-xsl` library enabled by default. If you attempt to export an ePub and get a either a white screen with minimal text, or a "Fatal error: Class 'XSLTProcessor' not found" error, you may need to run a command like `apt install php-xsl`.
-* Certain Linux installations do not ship with the `php-exif` library enabled by default. If you attempt to export an ePub and get a either a white screen with minimal text, or an error, you may need to install this extension (e.g. `apt install php-exif` )
+* For the Cover Generator feature, install:
+  * Ghostscript 9.18: `sudo apt-get install ghostscript`
+  * ImageMagick 6.8.9: `sudo apt-get install imagemagick`
+  * PdfToPpm and PdfInfo 0.41.0: `sudo-apt-get install poppler-utils`
+* Certain Linux installations do not ship with the `php-xsl` library enabled by default. If you attempt to export an ePub and get a either a white screen with minimal text, or a "Fatal error: Class 'XSLTProcessor' not found" error, you may need to run a command like `sudo apt-get install php-xsl`.
+* Certain Linux installations do not ship with the `php-exif` library enabled by default. If you attempt to export an ePub and get a either a white screen with minimal text, or an error, you may need to install this extension (e.g. `sudo apt-get install php-exif` )
 
 Unlisted versions are not supported. Upgrade/downgrade accordingly.
 

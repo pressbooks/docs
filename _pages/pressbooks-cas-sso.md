@@ -9,6 +9,10 @@ permalink: >
 published: true
 post_date: 2018-06-26 15:16:39
 ---
+## 1.1.1
+ * New `pb_integrations_multidomain_email` filter
+ * Update apereo/phpCAS to 5ad9c1e
+
 ## 1.1.0
 
 ### Minor Changes

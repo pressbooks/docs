@@ -9,6 +9,18 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:04:06
 ---
+### 2.5.1
+
+#### Upgrade Notice
+
+- McLuhan 2.5.1 requires [Pressbooks >= 5.5.2](https://github.com/pressbooks/pressbooks/releases/5.5.2).
+
+#### Patches
+
+- Gracefully handle missing source authors ([#265](https://github.com/pressbooks/pressbooks-book/issues/265)): [#267](https://github.com/pressbooks/pressbooks-book/pull/267)
+- Add trailing slash to URL in footer: [#271](https://github.com/pressbooks/pressbooks-book/pull/271)
+- Update Buckram to [1.1.1](https://github.com/pressbooks/buckram/releases/1.1.1) (see also [1.1.0](https://github.com/pressbooks/buckram/releases/1.1.0)): [#273](https://github.com/pressbooks/pressbooks-book/pull/273)
+
 ### 2.5.0
 
 #### Upgrade Notice

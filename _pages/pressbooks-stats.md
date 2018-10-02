@@ -9,6 +9,12 @@ permalink: >
 published: true
 post_date: 2018-03-07 19:53:56
 ---
+### 1.6.0
+
+#### Minor Changes
+
+- Add network storage usage to network dashboard: [#11](https://github.com/pressbooks/pressbooks-stats/pull/11)
+
 ### 1.5.0
 
 #### Minor Changes

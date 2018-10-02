@@ -9,6 +9,10 @@ permalink: >
 published: true
 post_date: 2018-09-11 09:17:48
 ---
+## 1.1.1
+ * Update izumi-kun/lti to version 1.1.5 (fix broken signature verification)
+ * New `pb_integrations_multidomain_email` filter
+
 ## 1.1.0
 
 - Update izumi-kun/lti to version 1.1.4

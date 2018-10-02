@@ -9,6 +9,13 @@ permalink: >
 published: true
 post_date: 2018-02-26 20:46:14
 ---
+### 1.5.0
+
+#### Minor Changes
+
+- Add a new menu item to allow logged-in users without books to create a new book: [#132](https://github.com/pressbooks/pressbooks-aldine/pull/132)
+- Add simple honeypot to contact form ([#134](https://github.com/pressbooks/pressbooks-aldine/issues/134)): [#135](https://github.com/pressbooks/pressbooks-aldine/pull/135)
+
 ### 1.4.1
 
 #### Patches

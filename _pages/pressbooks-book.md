@@ -9,6 +9,16 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:04:06
 ---
+### 2.5.2
+
+#### Upgrade Notice
+
+- McLuhan 2.5.2 requires [Pressbooks >= 5.5.3](https://github.com/pressbooks/pressbooks/releases/5.5.3).
+
+#### Patches
+
+- Fix invalid CSS in `.sidebar` rules (update Buckram to 1.1.2): [#275](https://github.com/pressbooks/pressbooks-book/pull/275)
+
 ### 2.5.1
 
 #### Upgrade Notice

@@ -9,6 +9,19 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+### 5.5.3
+
+#### Upgrade Notice
+
+* Pressbooks 5.5.3 requires PHP >= 7.1.
+* Pressbooks 5.5.3 requires [WordPress 4.9.8](https://wordpress.org/news/2018/08/wordpress-4-9-8-maintenance-release/).
+* Pressbooks 5.5.3 requires [McLuhan >= 2.5.2](https://github.com/pressbooks/pressbooks-book/).
+
+#### Patches
+
+* Optimize TOC and XHTML generation: [#1389](https://github.com/pressbooks/pressbooks/pull/1389), [#1396](https://github.com/pressbooks/pressbooks/pull/1396)
+* Prevent stylesheet rebuild stampede ([#1383](https://github.com/pressbooks/pressbooks/issues/1383)): [#1384](https://github.com/pressbooks/pressbooks/pull/1384)
+
 ### 5.5.2
 
 #### Upgrade Notice

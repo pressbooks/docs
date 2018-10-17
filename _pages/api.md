@@ -39,7 +39,7 @@ Pressbooks has different API endpoints for book and the root site: [caption id="
 
 ### Features
 
-WP API items have a `_links` node based on [HAL][8] (Hypertext Application Language): [caption id="attachment_129" align="aligncenter" width="586"]<img class="size-full wp-image-129" src="https://pressbooks.org/app/uploads/sites/2/2017/07/links.png" alt="_links" width="586" height="800" /> _links[/caption] To reduce the number of HTTP requests use [the *embed parameter][9] to tell the API that the response should include embeddable resources. [caption id="attachment_130" align="aligncenter" width="680"][<img class="wp-image-130 size-full" src="https://pressbooks.org/app/uploads/sites/2/2017/07/embeded.png" alt="_embedded" width="680" height="489" />][9][10] \_embedded[/caption] WP API exposes pagination info in the response header. [caption id="attachment\_131" align="aligncenter" width="1024"][<img class="wp-image-131 size-full" src="https://pressbooks.org/app/uploads/sites/2/2017/07/pagination.png" alt="Pagination" width="1024" height="584" />][10][11] Pagination[/caption]
+WP API items have a `_links` node based on [HAL][8] (Hypertext Application Language): [caption id="attachment_129" align="aligncenter" width="586"]<img class="size-full wp-image-129" src="https://pressbooks.org/app/uploads/sites/2/2017/07/links.png" alt="_links" width="586" height="800" /> _links[/caption] To reduce the number of HTTP requests use [the *embed parameter][9] to tell the API that the response should include embeddable resources. [caption id="attachment_130" align="aligncenter" width="680"][<img class="wp-image-130 size-full" src="https://pressbooks.org/app/uploads/sites/2/2017/07/embeded.png" alt="_embedded" width="680" height="489" />][9][10] _embedded[/caption] WP API exposes pagination info in the response header. [caption id="attachment_131" align="aligncenter" width="1024"][<img class="wp-image-131 size-full" src="https://pressbooks.org/app/uploads/sites/2/2017/07/pagination.png" alt="Pagination" width="1024" height="584" />][10][11] Pagination[/caption]
 
 ### PHP to JSON
 
@@ -48,15 +48,15 @@ WP API renders JSON in a generic way that does not match the DB columns. Keep ca
 [RTFM][12]:
 
 <pre><code class="php">if ( ! empty( $schema['properties']['author'] ) ) {
-    $data['author'] = (int) $post-&gt;post_author;
+    $data['author'] = (int) $post->post_author;
 }
 if ( ! empty( $schema['properties']['slug'] ) ) {
-    $data['slug'] = $post-&gt;post_name;
+    $data['slug'] = $post->post_name;
 }
 if ( ! empty( $schema['properties']['content'] ) ) {
     $data['content'] = array(
-        'rendered'  =&gt; post_password_required( $post ) ? '' : apply_filters( 'the_content', $post-&gt;post_content ),
-        'protected' =&gt; (bool) $post-&gt;post_password,
+        'rendered'  => post_password_required( $post ) ? '' : apply_filters( 'the_content', $post->post_content ),
+        'protected' => (bool) $post->post_password,
     );
 }</code></pre>
 
@@ -64,7 +64,7 @@ if ( ! empty( $schema['properties']['content'] ) ) {
   "author": 1,
   "slug": "chapter-1",
   "content": {
-    "rendered": "&lt;p&gt;This is the first chapter in the main body of the text. You can change the text, rename the chapter, add new chapters, and add new parts.&lt;/p&gt;",
+    "rendered": "<p>This is the first chapter in the main body of the text. You can change the text, rename the chapter, add new chapters, and add new parts.</p>",
     "protected": false
   }
 }</code></pre>

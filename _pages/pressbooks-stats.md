@@ -9,6 +9,13 @@ permalink: >
 published: true
 post_date: 2018-03-07 19:53:56
 ---
+### 1.6.2
+
+### Patches
+
+- Prevent cache stampedes: [#17](https://github.com/pressbooks/pressbooks-stats/pull/17)
+- Add PB_DISABLE_NETWORK_STORAGE constant: ]#18](https://github.com/pressbooks/pressbooks-stats/pull/18)
+
 ### 1.6.1
 
 #### Patches

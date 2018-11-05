@@ -9,6 +9,9 @@ permalink: >
 published: true
 post_date: 2018-09-11 09:17:48
 ---
+## 1.1.2
+* Adjust `pb_integrations_multidomain_email` filter logic: [0fd5280](https://github.com/pressbooks/pressbooks-lti-provider/commit/0fd5280952560821492459e2c1d857db6fa67046)
+
 ## 1.1.1
  * Update izumi-kun/lti to version 1.1.5 (fix broken signature verification)
  * New `pb_integrations_multidomain_email` filter

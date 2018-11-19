@@ -9,6 +9,19 @@ permalink: >
 published: true
 post_date: 2018-02-26 20:21:14
 ---
+### 0.3.4
+
+#### Patches
+
+* Add vanillawxr, wxr to supported export types (fixes [#13](https://github.com/pressbooks/excalibur/issues/13)): [#17](https://github.com/pressbooks/excalibur/pull/17)
+
+
+### 0.3.3
+
+#### Patches
+
+ * Special Characters being escaped multiple times (fix #12)
+
 ### 0.3.2
 
 #### Patches

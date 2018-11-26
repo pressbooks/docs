@@ -9,6 +9,17 @@ permalink: >
 published: true
 post_date: 2018-02-26 20:58:56
 ---
+### 1.2.0
+
+#### Minor Changes
+
+- Fix header type scaling ([#27](https://github.com/pressbooks/pressbooks-jacobs/issues/27)): [#29](https://github.com/pressbooks/pressbooks-jacobs/pull/29)
+
+#### Patches
+
+- Remove link text decoration: [#40](https://github.com/pressbooks/pressbooks-jacobs/pull/40)
+- Remove link colours: [#39](https://github.com/pressbooks/pressbooks-jacobs/pull/39)
+
 ### 1.1.1
 
 #### Patches

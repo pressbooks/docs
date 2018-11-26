@@ -9,7 +9,14 @@ permalink: >
 published: true
 post_date: 2017-11-16 13:59:58
 ---
-#### 2.3.0
+### 2.3.1
+
+#### Patches
+
+- Remove link text decoration: [#32](https://github.com/pressbooks/pressbooks-clarke/pull/32)
+- Remove link colours: [#31](https://github.com/pressbooks/pressbooks-clarke/pull/31)
+
+### 2.3.0
 
 #### Minor Changes
 

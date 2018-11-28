@@ -9,6 +9,31 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+### 5.6.2
+
+#### Upgrade Notice
+
+* Pressbooks 5.6.2 requires PHP >= 7.1.
+* Pressbooks 5.6.2 requires [WordPress 4.9.8](https://wordpress.org/news/2018/08/wordpress-4-9-8-maintenance-release/).
+* Pressbooks 5.6.2 requires [McLuhan >= 2.6.0](https://github.com/pressbooks/pressbooks-book/).
+
+#### Patches
+
+* Escape quotes in glossary term content ([#1481](https://github.com/pressbooks/pressbooks/issues/1481), props [@pbstudent](https://github.com/pbstudent) for the bug report): [#1482](https://github.com/pressbooks/pressbooks/pull/1482)
+
+### 5.6.1
+
+#### Upgrade Notice
+
+* Pressbooks 5.6.1 requires PHP >= 7.1.
+* Pressbooks 5.6.1 requires [WordPress 4.9.8](https://wordpress.org/news/2018/08/wordpress-4-9-8-maintenance-release/).
+* Pressbooks 5.6.1 requires [McLuhan >= 2.6.0](https://github.com/pressbooks/pressbooks-book/).
+
+#### Patches
+
+* Improve sanitization of glossary term content: [#1480](https://github.com/pressbooks/pressbooks/pull/1480)
+* Ignore deleted posts when importing from WXR: [#1471](https://github.com/pressbooks/pressbooks/pull/1471)
+
 ### 5.6.0
 
 #### Upgrade Notice
@@ -22,7 +47,7 @@ post_date: 2017-09-06 21:02:12
 * Update [pagedjs](https://gitlab.pagedmedia.org/tools/pagedjs) to to 0.1.25: [#1469](https://github.com/pressbooks/pressbooks/pull/1469)
 * Update [masterminds/html5](https://packagist.org/packages/masterminds/html5) to 2.4.0: [#1468](https://github.com/pressbooks/pressbooks/pull/1468)
 * Add filters for default contact and help links: [#1464](https://github.com/pressbooks/pressbooks/pull/1464)
-* Add subsection caching to `\Pressbooks\Book` class: [#1453](https://github.com/pressbooks/pressbooks/issues/1453)
+* Add subsection caching to `PressbooksBook` class: [#1453](https://github.com/pressbooks/pressbooks/issues/1453)
 * Add `print` class to (X)HTML source for print PDF ([#1437](https://github.com/pressbooks/pressbooks/issues/1437)): [#1454](https://github.com/pressbooks/pressbooks/pull/1454)
 * Update path to Buckram components: [#1452](https://github.com/pressbooks/pressbooks/pull/1452)
 * Add title attribute to section `<div>` elements: [#1441](https://github.com/pressbooks/pressbooks/pull/1441)
@@ -56,7 +81,7 @@ post_date: 2017-09-06 21:02:12
 * Preserve `menu_order` when cloning: [#1430](https://github.com/pressbooks/pressbooks/pull/1430)
 * Remove deprecated border attribute from tables: [#1422](https://github.com/pressbooks/pressbooks/pull/1422)
 * Improve unit testing for export modules: [#1414](https://github.com/pressbooks/pressbooks/pull/1414)
-* Process `[heading]` shortcode in `\Pressbooks\Book::getSubsections()` ([#1403](https://github.com/pressbooks/pressbooks/issues/1403)): [#1404](https://github.com/pressbooks/pressbooks/pull/1404)
+* Process `[heading]` shortcode in `PressbooksBook::getSubsections()` ([#1403](https://github.com/pressbooks/pressbooks/issues/1403)): [#1404](https://github.com/pressbooks/pressbooks/pull/1404)
 * Return self-closing image tags in license attributions ([#1395](https://github.com/pressbooks/pressbooks/issues/1395), props [@thomasdumm](https://github.com/thomasdumm) for the bug report): [#1397](https://github.com/pressbooks/pressbooks/pull/1397)
 * Check if user is spammy before displaying user catalog: [#1394](https://github.com/pressbooks/pressbooks/pull/1394)
 * Don't strip custom `<h1>` class attributes when building two-level table of contents ([#1386](https://github.com/pressbooks/pressbooks/issues/1386), props [@thomasdumm](https://github.com/thomasdumm) for the bug report): [#1393](https://github.com/pressbooks/pressbooks/pull/1393)

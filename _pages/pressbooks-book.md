@@ -9,6 +9,18 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:04:06
 ---
+### 2.6.1
+
+#### Upgrade Notice
+
+- McLuhan 2.6.1 requires [Pressbooks >= 5.6.0](https://github.com/pressbooks/pressbooks/releases/5.6.0).
+
+#### Patches
+
+- Improve focus style for webbook TOC dropdown button ([#399](https://github.com/pressbooks/pressbooks-book/issues/399)): [#401](https://github.com/pressbooks/pressbooks-book/pull/401)
+- Ensure that Hypothesis highlights are shown as expected ([#392](https://github.com/pressbooks/pressbooks-book/issues/392)): [#400](https://github.com/pressbooks/pressbooks-book/pull/400)
+- Use short title in navigation cues ([#396](https://github.com/pressbooks/pressbooks-book/issues/396)): [#397](https://github.com/pressbooks/pressbooks-book/pull/397)
+
 ### 2.6.0
 
 #### Upgrade Notice

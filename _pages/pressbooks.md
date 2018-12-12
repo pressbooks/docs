@@ -9,6 +9,29 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+### 5.6.3
+
+#### Upgrade Notice
+
+* Pressbooks 5.6.3 requires PHP >= 7.1.
+* Pressbooks 5.6.3 requires [WordPress 4.9.8](https://wordpress.org/news/2018/08/wordpress-4-9-8-maintenance-release/).
+* Pressbooks 5.6.3 requires [McLuhan >= 2.6.0](https://github.com/pressbooks/pressbooks-book/).
+
+#### Patches
+
+* Ensure that uninstalled themes are excluded from allowed theme list: [#1507](https://github.com/pressbooks/pressbooks/pull/1507)
+* Clarify copy on import content selection screen ([#1504](https://github.com/pressbooks/pressbooks/issues/1504)): [#1506](https://github.com/pressbooks/pressbooks/pull/1506)
+* Delete hidden anchor from Word imports ([#1473](https://github.com/pressbooks/pressbooks/issues/1473)): [#1502](https://github.com/pressbooks/pressbooks/pull/1502)
+* Ensure that book language is used for part/chapter labels ([#1486](https://github.com/pressbooks/pressbooks/issues/1486)): [#1501](https://github.com/pressbooks/pressbooks/pull/1501)
+* Update [johnbillion/extended-cpts](https://packagist.org/packages/johnbillion/extended-cpts) to 4.2.3: [#1499](https://github.com/pressbooks/pressbooks/pull/1499), [#1503](https://github.com/pressbooks/pressbooks/pull/1503)
+* Remove fancy quotes around media shortcode attributes ([#1493](https://github.com/pressbooks/pressbooks/issues/1493)): [#1498](https://github.com/pressbooks/pressbooks/pull/1498)
+* Fix conflict between footnote and media shortcodes ([#1472](https://github.com/pressbooks/pressbooks/issues/1472)): [#1497](https://github.com/pressbooks/pressbooks/pull/1497)
+* Fix import of chapters with more than one URL from Word ([#1475](https://github.com/pressbooks/pressbooks/issues/1475)): [#1495](https://github.com/pressbooks/pressbooks/pull/1495)
+* Remove HTML tags from running content title strings ([#1491](https://github.com/pressbooks/pressbooks/issues/1491)): [#1492](https://github.com/pressbooks/pressbooks/pull/1492), [#1496](https://github.com/pressbooks/pressbooks/pull/1496)
+* Update [pagedjs](https://gitlab.pagedmedia.org/tools/pagedjs) to 0.1.28: [#1490](https://github.com/pressbooks/pressbooks/pull/1490)
+* Handle locked themes in `Styles::updateWebBookStylesheet()` ([#1487](https://github.com/pressbooks/pressbooks/issues/1487)): [#1488](https://github.com/pressbooks/pressbooks/pull/1488)
+* Use PNG to JPG conversion as failsafe in cover generator (props @bdolor): [#1474](https://github.com/pressbooks/pressbooks/pull/1474)
+
 ### 5.6.2
 
 #### Upgrade Notice

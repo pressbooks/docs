@@ -21,9 +21,7 @@ Install Git for Windows: <https://git-for-windows.github.io/>
 
 Install PHP7 and Composer: <http://kizu514.com/blog/install-php7-and-composer-on-windows-10/>
 
-Install Node.js LTS: <https://nodejs.org/en/download/>
-
-Install Yarn: [https://yarnpkg.com/en/docs/install][7]
+Install Node.js LTS with NPM: <https://nodejs.org/en/download/>
 
 Install Virtual Box: <https://www.virtualbox.org/>
 
@@ -143,8 +141,9 @@ composer standards
 
 We use [webpack][6] wrapped in [Laravel Mix][16] to build plugin assets (CSS and JavaScript) for Pressbooks.
 
-1. At the command prompt from the Pressbooks plugin directory, e.g. `~/Code/pressbooks-dev/site/web/app/plugins/pressbooks`, run `yarn` to install build dependencies.
-2. Then, run `yarn run build` or `yarn run build:production` to build your plugin assets (`yarn run build:production` will add a version hash to the asset manifest for browser cache busting).
+1. At the command prompt from the Pressbooks plugin directory, e.g. `~/Code/pressbooks-dev/site/web/app/plugins/pressbooks`, run `npm install` to install build tools.
+2. To lint your [Javascript](https://eslint.org) and [SCSS](https://stylelint.io) assets, run `npm run lint`.
+3. Then, run `npm run build` or `npm run build:production` to build your plugin assets (`npm run build:production` will add a version hash to the asset manifest for browser cache busting).
 
 ### Updating Plugins & Themes
 

@@ -49,13 +49,9 @@ Install [Composer][14]:
 
 `brew install composer`
 
-Install [Node][15]:
+Install [Node][15] with NPM:
 
 `brew install node`
-
-Install [Yarn][5]:
-
-`brew install yarn`
 
 ## 2. Setup
 
@@ -148,12 +144,13 @@ cd /srv/www/example.com/current
 composer standards
 ```
 
-### Asset Building
+### Asset Linting & Building
 
 We use [webpack][6] wrapped in [Laravel Mix][23] to build plugin assets (CSS and JavaScript) for Pressbooks.
 
-1. At the command prompt from the Pressbooks plugin directory, e.g. `~/Code/pressbooks-dev/site/web/app/plugins/pressbooks`, run `yarn` to install build dependencies.
-2. Then, run `yarn run build` or `yarn run build:production` to build your plugin assets (`yarn run build:production` will add a version hash to the asset manifest for browser cache busting).
+1. At the command prompt from the Pressbooks plugin directory, e.g. `~/Code/pressbooks-dev/site/web/app/plugins/pressbooks`, run `npm install` to install build tools.
+2. To lint your [Javascript](https://eslint.org) and [SCSS](https://stylelint.io) assets, run `npm run lint`.
+3. Then, run `npm run build` or `npm run build:production` to build your plugin assets (`npm run build:production` will add a version hash to the asset manifest for browser cache busting).
 
 ### Updating Plugins & Themes
 
@@ -206,7 +203,6 @@ Then commit the merge. You may need to regenerate your composer.lock file before
 [2]: https://roots.io/trellis
 [3]: https://phpunit.de
 [4]: https://github.com/squizlabs/PHP_CodeSniffer
-[5]: https://yarnpkg.com
 [6]: https://webpack.github.io
 [7]: http://brew.sh
 [8]: https://caskroom.github.io

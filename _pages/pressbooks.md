@@ -9,6 +9,18 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+### 5.6.4
+
+#### Upgrade Notice
+
+* Pressbooks 5.6.3 requires PHP >= 7.1.
+* Pressbooks 5.6.3 requires [WordPress 4.9.8](https://wordpress.org/news/2018/08/wordpress-4-9-8-maintenance-release/).
+* Pressbooks 5.6.3 requires [McLuhan >= 2.6.0](https://github.com/pressbooks/pressbooks-book/).
+
+#### Patches
+
+* Handle missing legacy images: [#1542](https://github.com/pressbooks/pressbooks/pull/1542)
+
 ### 5.6.3
 
 #### Upgrade Notice

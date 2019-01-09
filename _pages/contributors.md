@@ -35,7 +35,7 @@ Pressbooks was created by the team at Book Oven Inc. (<code@pressbooks.com>), wi
 *   Bracken Mosbacker ([@bracken][22])
 *   Daisuke Muro ([@dicekmuro][23])
 *   Wendell Norman ([@unit29868][24])
-*   Alex Paredes ([@alexpflores][25])
+*   Alex Paredes ([@alex-418][25])
 *   Brad Payne ([@bdolor][26])
 *   John Rankin ([WikiPublisher][27])
 *   Ron
@@ -66,7 +66,7 @@ Pressbooks was created by the team at Book Oven Inc. (<code@pressbooks.com>), wi
  [22]: https://github.com/bracken
  [23]: https://github.com/dicekmuro
  [24]: https://github.com/unit29868
- [25]: https://github.com/alexpflores
+ [25]: https://github.com/alex-418
  [26]: https://github.com/bdolor
  [27]: http://www.wikipublisher.org
  [28]: https://github.com/chrillep

@@ -1,10 +1,10 @@
 ---
 ID: 78
-post_title: Changelog
+post_title: Changelogs
 author: Ned Zimmerman
 post_excerpt: ""
 layout: page
-permalink: https://docs.pressbooks.org/changelog/
+permalink: https://docs.pressbooks.org/changelogs/
 published: true
 post_date: 2017-07-07 22:29:32
 ---

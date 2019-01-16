@@ -5,7 +5,7 @@ author: JC Guan
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.pressbooks.org/integrations/central-authentication-service/
+  https://docs.pressbooks.org/integrations/cas-sso/
 published: true
 post_date: 2018-06-14 16:56:46
 ---

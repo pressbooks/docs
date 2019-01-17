@@ -16,12 +16,12 @@ post_date: 2018-06-21 16:47:35
 * [Manually Set up a LTI Configuration](#manually-set-up-a-lti-configuration)
 * [Common Cartridge](#common-cartridge)
 
-This documentation is up to date as of version 1.0.0 of the Pressbooks LTI Provider plugin.
+This documentation is up to date as of version 1.1.2 of the Pressbooks LTI Provider plugin.
 
 # Installation
 Get the plugin here: [https://github.com/pressbooks/pressbooks-lti-provider](https://github.com/pressbooks/pressbooks-lti-provider)
 
-This plugin is installed and activated on the network level, but has configurations available both at the network and book level.
+This plugin should be installed and activated on the network level, but has configurations available both at the network and book level.
 
 **Note**: If the user's web browser does not allow 3rd Party Cookies, then logins will not work when Pressbooks is in an iframe.
 
@@ -94,6 +94,8 @@ Whitelisting is not necessary for manual configurations.
 <div style="background-color: #fff8e1;padding: 8px">Note: if the domain was whitelisted while the LTI configuration was initially (automatically) set up and the domain was subsequently removed from the whitelist, the LTI connection *will still work*.</div>
 To disable an LTI connection, go to **Network admin > Integrations > LTI Consumers**, select the target connection, and either trash it or uncheck the "**Enabled**" box.
 
+**Note:** Automatic configuration is a feature of the LTI2.0 specification and is not widely supported by Learning Management Systems.
+
 ## User creation and mapping
 When a user accesses Pressbooks content via LTI, it is possible for Pressbooks to automatically create a new user or log a returning user into his Pressbooks account based on information sent by the LMS (user role and ID).
 
@@ -129,7 +131,7 @@ If the mapping is set to:
             - Note: If the user is a super admin, the book role assignment will not impact their super admin privileges.
             - since the user is now logged in, the LMS will be able to display contents of books set to "private"
 
-**User mapping mechanism **
+**User mapping mechanism**
 - Get the user role from the LMS. (abstracted as: Anonymous Guest, Learner, Staff, Admin)
 - Get the email from the LMS.
 - Get LTI ID from the LMS. [tool_consumer_instance_guid + user_id]
@@ -138,7 +140,7 @@ Sometimes an email is not sent so we create a fake email using the [UserID@127.0
 
 - Try to match a Pressbooks user by LTI ID (Stored in user_meta table.)
 - If no match, then try to match a Pressbooks user by email.
-- If there's no match, then check if we should create a user (Anonymous Guest = No, Everything Else = Yes).  When creating a user: Username = email prefix,  email = see above, and the LTI ID will be stored in the user_meta table. A user can have more than one LTI ID (Example: Moodle, Sakai, Canvas, Blackboard all point to the same Book and we can match the user's email). 
+- If there's no match, then check if we should create a user (Anonymous Guest = No, Everything Else = Yes).  When creating a user: Username = email prefix,  email = see above, and the LTI ID will be stored in the user_meta table. A user can have more than one LTI ID (Example: Moodle, Sakai, Canvas, Blackboard all point to the same Book and we can match the user's email).
 - If the user does not have rights to the book, and role is not Anonymous Guest, then add them to the book with appropriate role and log them in.
 
 # Manually Set Up a LTI Configuration
@@ -146,7 +148,7 @@ Sometimes an email is not sent so we create a fake email using the [UserID@127.0
 <a href="https://pressbooks.org/app/uploads/sites/2/2018/06/pb-lti-addconsumer.png"><img class="alignnone size-large wp-image-521" src="https://pressbooks.org/app/uploads/sites/2/2018/06/pb-lti-addconsumer-1024x507.png" alt="" width="840" height="416" /></a>
 2. Fill in:
 - **Name**: Name of LTI consumer
-- **Key**: identification key used for the LTI protocol; can be any string
+- **Key**: identification key used for the LTI protocol; can be any string (though some LMSes will reject a key if it is too long).
 - **Secret**: string used for encryption. A secret is automatically generated when the user opens the form; they may choose to keep it or pick their own secret.
 - **Enabled**: Check to allow the LMS to access content through this connection; Uncheck to prevent LMS from accessing content through this connection.
 - **Enable from/Enable until**: (optional) specify date range during which this connection should be active. Connections outside the date range will be automatically refused.
@@ -154,6 +156,11 @@ Note: the "Enabled" checkbox above takes precedence over this setting: if the co
 - **Protected**: When turned on, the code will bail with 'A tool consumer GUID must be included in the launch request.' if one is not provided by the LMS. We recommend keeping it on.
 
 **Note**: once a configuration is created, it will not be possible to edit the "**Key**" and "**Secret**" fields.
+
+# Configuring Pressbooks with a Tool Consumer
+While the steps for configuring LTI providers differ among different tool consumers (like Learning Management Systems), a typical registration process will require a key/secret pair and a launch URL. The key/secret pair can be obtained following the manual "Adding LTI Consumer" form instructions above. The launch URL can be either the URL for the network itself, i.e. [https://yourinstitution.pressbooks.pub] or the URL for a particular book, i.e. [https://yourinstitution.pressbooks/pub/mybook].
+
+Setting the launch URL to the root domain for the network will mean that the LTI configuration will be valid for all books on that network. Setting the launch URL to a particular book on the network will limit the LTI configuration to that book and its components only.
 
 # Common Cartridge
 

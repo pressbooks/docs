@@ -94,7 +94,7 @@ Whitelisting is not necessary for manual configurations.
 <div style="background-color: #fff8e1;padding: 8px">Note: if the domain was whitelisted while the LTI configuration was initially (automatically) set up and the domain was subsequently removed from the whitelist, the LTI connection *will still work*.</div>
 To disable an LTI connection, go to **Network admin > Integrations > LTI Consumers**, select the target connection, and either trash it or uncheck the "**Enabled**" box.
 
-**Note:** Automatic configuration is a feature of the LTI2.0 specification and is not widely supported by Learning Management Systems.
+**Note:** Automatic configuration is a feature of the [LTI 2.0](https://www.imsglobal.org/specs/ltiv2p0) specification and is not widely supported by Learning Management Systems.
 
 ## User creation and mapping
 When a user accesses Pressbooks content via LTI, it is possible for Pressbooks to automatically create a new user or log a returning user into his Pressbooks account based on information sent by the LMS (user role and ID).

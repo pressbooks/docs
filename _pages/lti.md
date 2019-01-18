@@ -158,7 +158,7 @@ Note: the "Enabled" checkbox above takes precedence over this setting: if the co
 **Note**: once a configuration is created, it will not be possible to edit the "**Key**" and "**Secret**" fields.
 
 # Configuring Pressbooks with a Tool Consumer
-While the steps for configuring LTI providers differ among different tool consumers (like Learning Management Systems), a typical registration process will require a key/secret pair and a launch URL. The key/secret pair can be obtained following the manual "Adding LTI Consumer" form instructions above. The launch URL can be either the URL for the network itself, i.e. [https://yourinstitution.pressbooks.pub] or the URL for a particular book, i.e. [https://yourinstitution.pressbooks/pub/mybook].
+While the steps for configuring LTI providers differ among different tool consumers (like Learning Management Systems), a typical registration process will require a key/secret pair and a launch URL. The key/secret pair can be obtained following the manual "Adding LTI Consumer" form instructions above. The launch URL can be either the URL for the network itself, i.e. [https://yourinstitution.pressbooks.pub] or the URL for a particular book, i.e. [https://yourinstitution.pressbooks.pub/mybook].
 
 Setting the launch URL to the root domain for the network will mean that the LTI configuration will be valid for all books on that network. Setting the launch URL to a particular book on the network will limit the LTI configuration to that book and its components only.
 

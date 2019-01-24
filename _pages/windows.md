@@ -13,7 +13,7 @@ Following these instructions will give you a local development network of Pressb
 
 * Unit testing via [PHPUnit][3]
 * Code standards evaluation via [PHP_CodeSniffer][4]
-* Build tools for plugin assets via [Yarn][5] and [webpack][6].
+* Build tools for plugin assets via [npm][5] and [webpack][6].
 
 ## 1. Dependencies
 
@@ -66,28 +66,28 @@ composer.phar require pressbooks/pressbooks-jacobs:dev-dev
 
 ## 3. Configuration
 
-Edit `~/Code/pressbooks-dev/trellis/group_vars/development/wordpress_sites.yml` to reflect your desired local development site URL, replacing all instances of `example.test` with `pressbooks.test` or whatever you prefer. For example:
+The file `~/Code/pressbooks-dev/trellis/group_vars/development/wordpress_sites.yml` reflects your desired local development site URL. It looks like:
 
 ```
 wordpress_sites:
-    example.com:
-        site_hosts:
-            - canonical: pressbooks.test
+  pressbooks.test:
+    site_hosts:
+      - canonical: pressbooks.test
         redirects:
-            - www.pressbooks.test
-        local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-        admin_email: admin@pressbooks.test
-        multisite:
-            enabled: true
-            subdomains: false
-        ssl:
-            enabled: false
-            provider: self-signed
-        cache:
-            enabled: false
+          - www.pressbooks.test
+    local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
+    admin_email: ops@pressbooks.test
+    multisite:
+      enabled: true
+      subdomains: false
+    ssl:
+      enabled: true
+      provider: self-signed
+    cache:
+      enabled: false
 ```
 
-You can leave `example.com` as is unless you plan on setting up matching staging or production environments. In that case, you will need to update all instances of `example.com` in `~/Code/pressbooks-dev/trellis/group_vars/` to a consistent value. If you are interested in configuring a staging or production environment, you should consult the [Trellis docs][15] as that is outside the scope of this tutorial.
+It should work out-of-the-box. If you want to setup staging or production environments, you will need to update all instances of `example.com` and `pressbooks.test` in `~/Code/pressbooks-dev/trellis/group_vars/` to a consistent value. For more info, consult the [Trellis docs][15] as that is outside the scope of this tutorial.
 
 ## 4. Launch
 
@@ -198,9 +198,8 @@ Then commit the merge. You may need to regenerate your composer.lock file before
 [2]: https://roots.io/trellis
 [3]: https://phpunit.de
 [4]: https://github.com/squizlabs/PHP_CodeSniffer
-[5]: https://yarnpkg.com
+[5]: https://www.npmjs.com/
 [6]: https://webpack.github.io
-[7]: https://yarnpkg.com/en/docs/install#windows-tab
 [8]: https://git-for-windows.github.io/
 [9]: https://github.com/pressbooks/trellis/
 [10]: https://github.com/pressbooks/bedrock/

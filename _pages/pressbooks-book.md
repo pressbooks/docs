@@ -9,6 +9,16 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:04:06
 ---
+### 2.7.1
+
+#### Upgrade Notice
+
+- McLuhan 2.7.1 requires [Pressbooks >= 5.6.5](https://github.com/pressbooks/pressbooks/releases/5.6.5).
+
+#### Patches
+
+- Buckram 1.3.1: [b72e3d6](https://github.com/pressbooks/pressbooks-book/commit/b72e3d6b77f0080ffff26e3330dbd1367434c6a8)
+
 ### 2.7.0
 
 #### Upgrade Notice

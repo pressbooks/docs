@@ -5,10 +5,24 @@ author: Ned Zimmerman
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.pressbooks.org/changelog/pressbooks/
+  https://docs.pressbooks.org/changelogs/pressbooks/
 published: true
 post_date: 2017-09-06 21:02:12
 ---
+### 5.6.5
+
+#### Upgrade Notice
+
+* Pressbooks 5.6.5 requires PHP >= 7.1.
+* Pressbooks 5.6.5 requires [WordPress 4.9.8](https://wordpress.org/news/2018/08/wordpress-4-9-8-maintenance-release/).
+* Pressbooks 5.6.5 requires [McLuhan >= 2.7.0](https://github.com/pressbooks/pressbooks-book/).
+
+#### Patches
+
+* Prevent unnecessary alert while saving parts ([#1555](pressbooks/pressbooks/issues/1555), props [@josieg](https://github.com/josieg) for the bug report): [#1562](https://github.com/pressbooks/pressbooks/pull/1562)
+* Add support for EPUBCheck 4.1 (props [@bdolor](https://github.com/bdolor)): [#1524](https://github.com/pressbooks/pressbooks/pull/1524), [#1556](https://github.com/pressbooks/pressbooks/pull/1556)
+* Prevent SCSS compilation during AJAX calls: [#1483](https://github.com/pressbooks/pressbooks/pull/1483)
+
 ### 5.6.4
 
 #### Upgrade Notice

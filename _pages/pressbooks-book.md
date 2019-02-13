@@ -9,6 +9,28 @@ permalink: >
 published: true
 post_date: 2017-09-06 21:04:06
 ---
+### 2.7.3
+
+#### Upgrade Notice
+
+- McLuhan 2.7.3 requires [Pressbooks >= 5.6.5](https://github.com/pressbooks/pressbooks/releases/5.6.5).
+
+### Patches
+
+- Suppress unused Gutenberg block styles: [#500](https://github.com/pressbooks/pressbooks-book/pull/500)
+- [Buckram 1.3.3](https://github.com/pressbooks/pressbooks-book/blob/baafe9075dde8d2f6e4e67ac2e0a24dc13b984aa/packages/buckram/CHANGELOG.md#133): [#497](https://github.com/pressbooks/pressbooks-book/pull/497)
+
+### 2.7.2
+
+#### Upgrade Notice
+
+- McLuhan 2.7.2 requires [Pressbooks >= 5.6.5](https://github.com/pressbooks/pressbooks/releases/5.6.5).
+
+#### Patches
+
+- Prevent pagination links from being included in collapsed sections ([#489](https://github.com/pressbooks/pressbooks-book/issues/489)): [#491](https://github.com/pressbooks/pressbooks-book/pull/491)
+- Update to Buckram 1.3.2: [13199bb](https://github.com/pressbooks/pressbooks-book/commit/13199bb612b4f1a3c9b04704a8bed72af69213ba)
+
 ### 2.7.1
 
 #### Upgrade Notice

@@ -143,6 +143,8 @@ Sometimes an email is not sent so we create a fake email using the [UserID@127.0
 - If there's no match, then check if we should create a user (Anonymous Guest = No, Everything Else = Yes).  When creating a user: Username = email prefix,  email = see above, and the LTI ID will be stored in the user_meta table. A user can have more than one LTI ID (Example: Moodle, Sakai, Canvas, Blackboard all point to the same Book and we can match the user's email).
 - If the user does not have rights to the book, and role is not Anonymous Guest, then add them to the book with appropriate role and log them in.
 
+The email can be filtered, example: `add_filter( 'pb_integrations_multidomain_email', function( $email, $uid, $plugin ) { /* Custom use case, return $email */ }, 10, 3 );`
+
 # Manually Set Up a LTI Configuration
 1. Click the Add new button on the LTI Consumers page. You will be brought to the "Adding LTI Consumer" form:
 <a href="https://pressbooks.org/app/uploads/sites/2/2018/06/pb-lti-addconsumer.png"><img class="alignnone size-large wp-image-521" src="https://pressbooks.org/app/uploads/sites/2/2018/06/pb-lti-addconsumer-1024x507.png" alt="" width="840" height="416" /></a>

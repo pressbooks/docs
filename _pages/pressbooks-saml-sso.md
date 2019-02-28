@@ -1,11 +1,11 @@
 ---
 ID: 601
-post_title: Pressbooks Shibboleth SSO
+post_title: Pressbooks SAML SSO
 author: Ned Zimmerman
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.pressbooks.org/changelog/pressbooks-shibboleth-sso/
+  https://docs.pressbooks.org/changelogs/pressbooks-saml-sso/
 published: true
 post_date: 2018-10-02 13:02:51
 ---

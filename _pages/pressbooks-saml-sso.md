@@ -12,7 +12,7 @@ post_date: 2018-10-02 13:02:51
 ## 0.0.5
 ### Patches
 
-* [Security] Bump [robrichards/xmlseclibs](https://github.com/robrichards/xmlseclibs) from 3.0.1 to 3.0.2: [#8](https://github.com/pressbooks/pressbooks-shibboleth-sso/pulls/8)
+* [Security] Bump [robrichards/xmlseclibs](https://github.com/robrichards/xmlseclibs) from 3.0.1 to 3.0.2: [#8](https://github.com/pressbooks/pressbooks-saml-sso/pulls/8)
 
 ## 0.0.4  
  * New `pb_integrations_multidomain_email` filter  

@@ -20,7 +20,7 @@ IMPORTANT!
 * Do not install Pressbooks on an existing WordPress blog -- create a new WordPress install instead.
 * Pressbooks works with [PHP 7.0][php] and WordPress 4.9.6. Lower versions are not supported.
 
-The installed network (Wordpress + Pressbooks + McLuhan + Aldine) will use approximately 50 MB of server space. The total amount of server space you should provision will depend on the projected size of your network and the amount of media you expect to upload. 
+The installed network (Wordpress + Pressbooks + McLuhan + Aldine) will use approximately 50 MB of server space. The total amount of server space you should provision will depend on the projected size of your network and the amount of media you expect to upload.
 
 ### Part 1: WordPress
 
@@ -82,18 +82,18 @@ Pressbooks requires some third-party libraries to be installed on your server to
 
 * For PDF export, you have three options:
   * Configure [DocRaptor](https://docraptor.com), which is a software as a service version of [PrinceXML][9]. To do this, you just need to add your DocRaptor API key to `wp-config.php`:
-  
+
     ```php
     define( 'DOCRAPTOR_API_KEY', 'YOUR_API_KEY_HERE' );
     ```
-    
+
   * Install [PrinceXML][9] 11 on your server (note: this is not free software although you can use it free of charge for non-commercial purposes).
   * Install the [mPDF for Pressbooks][10] plugin to use the open source mPDF library. You will also need to ensure that the following folders have write access and/or they are owned by the appropriate user. See [here][11] for more details on adjusting file permissions.
     * `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/ttfontdata`
     * `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/tmp`
     * `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/graph_cache`
 * For MOBI export install [KindleGen][12] 2.9
-* For EPUB validation install [EpubCheck][13] 4.0.2
+* For EPUB validation install [EpubCheck][13] 4.1.1
 * For XML validation install [xmllint][14] 20903
 * For ODT export install [Saxon-HE][15] 9.7.0-10
 * For the Cover Generator feature, install:
@@ -126,12 +126,12 @@ Example config files for a dev site hosted at http://localhost/~example/textopre
      */
     define('WP_DEBUG', true);
     define('WP_DEBUG_LOG', true);
-    
+
     /**
      * Multi-site support, Part 1
      */
     define('WP_ALLOW_MULTISITE', true);
-    
+
     /**
      * Multi-site support, Part 2
      */
@@ -142,7 +142,7 @@ Example config files for a dev site hosted at http://localhost/~example/textopre
     define('PATH_CURRENT_SITE', '/~example/textopress/');
     define('SITE_ID_CURRENT_SITE', 1);
     define('BLOG_ID_CURRENT_SITE', 1);
-    
+
     /**
      * Pressbooks
      */
@@ -151,33 +151,33 @@ Example config files for a dev site hosted at http://localhost/~example/textopre
     define( 'PB_EPUBCHECK_COMMAND', '/usr/bin/java -jar /home/example/bin/epubcheck/epubcheck.jar' );
     define( 'PB_XMLLINT_COMMAND', '/usr/bin/xmllint' );
     define( 'PB_SAXON_COMMAND', '/usr/bin/java -jar home/example/bin/saxon-he/saxon-he.jar' );
-    
+
     /**
      * Optional definitions
      */
     // define( 'AUTOSAVE_INTERVAL', 60 ); // Autosave every N seconds
     // define( 'WP_POST_REVISIONS', 5 ); // Limit post revisions: int or false
     // define( 'EMPTY_TRASH_DAYS', 1 ); // Purge trash interval. PB default is after 30 days.
-    
+
     /* That's all, stop editing! Happy blogging. */
-    
+
 
 ### .htaccess file:
 
     RewriteEngine On
     RewriteBase /~example/textopress/
     RewriteRule ^index.php$ - [L]
-    
+
     # add a trailing slash to /wp-admin
     RewriteRule ^([_0-9a-zA-Z-]+/)?wp-admin$ $1wp-admin/ [R=301,L]
-    
+
     RewriteCond %{REQUEST_FILENAME} -f [OR]
     RewriteCond %{REQUEST_FILENAME} -d
     RewriteRule ^ - [L]
     RewriteRule  ^[_0-9a-zA-Z-]+/(wp-(content|admin|includes).*) $1 [L]
     RewriteRule  ^[_0-9a-zA-Z-]+/(.*.php)$ $1 [L]
     RewriteRule . index.php [L]
-    
+
 
 ## Installation (WP-CLI)
 
@@ -207,14 +207,14 @@ Once WP-CLI is installed on your server, the following shell commands executed i
     wp theme install https://github.com/pressbooks/pressbooks-austenclassic/archive/master.zip
     wp theme install https://github.com/pressbooks/pressbooks-clarke/archive/master.zip
     wp theme install https://github.com/pressbooks/pressbooks-donham/archive/master.zip
-    wp theme install https://github.com/pressbooks/pressbooks-fitzgerald/archive/master.zip    
+    wp theme install https://github.com/pressbooks/pressbooks-fitzgerald/archive/master.zip
     wp theme enable pressbooks-book --network
     wp theme enable pressbooks-jacobs --network
     wp theme enable pressbooks-clarke --network
     wp theme enable pressbooks-donham --network
     wp theme enable pressbooks-fitzgerald --network
-    wp theme enable pressbooks-austenclassic --network    
-    
+    wp theme enable pressbooks-austenclassic --network
+
 
 Note that this does not install the required libraries for export. See above (Part 3).
 
@@ -230,7 +230,7 @@ Note that this does not install the required libraries for export. See above (Pa
  [10]: https://wordpress.org/plugins/pressbooks-mpdf
  [11]: http://codex.wordpress.org/Changing_File_Permissions
  [12]: http://www.amazon.com/gp/feature.html?docId=1000765211
- [13]: https://github.com/idpf/epubcheck
+ [13]: https://github.com/w3c/epubcheck
  [14]: http://xmlsoft.org/xmllint.html
  [15]: https://sourceforge.net/projects/saxon/files/Saxon-HE/
  [16]: https://wp-cli.org/

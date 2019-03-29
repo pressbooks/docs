@@ -36,7 +36,7 @@ Upon activation of the plugin, a submenu item (“SAML2”) is added to the Netw
 
 ![Screenshot 1](https://raw.githubusercontent.com/pressbooks/pressbooks-saml-sso/master/screenshot-1.png)
 
-Your metadata XML can be downloaded from this page, look for the hyperlink at the top of the page:
+Your metadata XML can be downloaded from the hyperlink that appears at the top of this settings page:
 
 ![Screenshot 2](https://raw.githubusercontent.com/pressbooks/pressbooks-saml-sso/master/screenshot-2.png)
 

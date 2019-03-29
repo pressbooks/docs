@@ -88,20 +88,15 @@ If Forced Redirection is **ON**, the "Sign In" link will bring the user directly
 
 ### **Add New User / Refuse Access behaviour:**
 
-1.  1.  IF no Pressbooks user exists for this SAML2 user
-        
-        *   IF SAML2 is configured to "Add New User" AND SAML2 login is successful
-            
-            *   a Pressbooks user is created with username = uid and email = mail
-            *   user logs into Pressbooks successfully
-            *   IF SAML2 is configured to "Refuse Access" AND SAML2 login is successful
-            *   an "Unable to log in" error message appears in the Pressbooks login form (if Forced Redirection is OFF) or in its own page (if Forced Redirection is ON)
-                
-                **NOTE**: Once the user has had this error, any subsequent clicks on "Connect via SAML2" directly in the login form will generate this error message again, as the user is already authenticated in SAML2. Every time they click "Connect via SAML2", SAML2 recognizes them as authenticated, but Pressbooks is refusing access. To log out, the user must either go to the SAML2 logout page or close the browser, terminating the SAML2 session.
-                
-        *   IF there is an existing Pressbooks user for this SAML2 user
-            *   (Whether SAML2 is configured to "Add new User" or "Refuse access")
-            *   User logs into Pressbooks successfully
+1. If no Pressbooks user exists for this SAML2 user
+  * If SAML2 is configured to "Add New User" AND SAML2 login is successful       
+    * a Pressbooks user is created with username = uid and email = mail
+    * user logs into Pressbooks successfully
+  * If SAML2 is configured to "Refuse Access" AND SAML2 login is successful
+    * an "Unable to log in" error message appears in the Pressbooks login form (if Forced Redirection is OFF) or in its own page (if Forced Redirection is ON)
+    * **NOTE**: Once the user has had this error, any subsequent clicks on "Connect via SAML2" directly in the login form will generate this error message again, as the user is already authenticated in SAML2. Every time they click "Connect via SAML2", SAML2 recognizes them as authenticated, but Pressbooks is refusing access. To log out, the user must either go to the SAML2 logout page or close the browser, terminating the SAML2 session.
+2. If there is an existing Pressbooks user for this SAML2 user
+  * User logs into Pressbooks successfully (no matter if SAML2 is configured to "Add new User" or "Refuse access")   
 
 ### Customize Button Text
 

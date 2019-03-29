@@ -116,7 +116,7 @@ The mechanism to match the SAML2 user with the Pressbooks user is the following:
 
 1.  Plugin tries to find a user `where wp_usermeta.meta_key = pressbooks_saml_identity and wp_usermeta.meta_value = uid`
       * Where `uid` is a unique ID sent by the Identity Provider
-      * This allows us to, if we wanted to, manually assign any uid to any user with an imaginary mass import script, a new doesn't yet exist interface, etc. That os:
+      * This allows us to, if we wanted to, manually assign any uid to any user with an imaginary mass import script, a new doesn't yet exist interface, etc.
         * The email can be filtered, example: `add_filter( 'pb_integrations_multidomain_email', function( $email, $uid, $plugin ) { /* Custom use case, return $email */ }, 10, 3 );`
 2.  If uid is not found, try to match a user by mail or eduPersonPrincipalName
       * wp_usermeta.meta_key and wp_usermeta.meta_value are set by the SAML2 plugin upon first user matching; subsequent logins follow case #1 above.

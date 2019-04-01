@@ -42,7 +42,7 @@ Your metadata XML can be downloaded from the hyperlink that appears at the top o
 
 ## Required Settings:
 
-To configure SAML2:
+To configure SAML2 the following information is needed:
 
 *   EntityID
 *   SingleSignOnService

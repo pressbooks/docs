@@ -18,7 +18,7 @@ post_date: 2019-01-03 14:01:37
 
 Plugin to integrate Pressbooks with a SAML2 single sign-on service. ([Shibboleth](https://www.shibboleth.net/), [Microsoft ADFS](https://support.zendesk.com/hc/en-us/articles/203663886-Setting-up-single-sign-on-using-Active-Directory-with-ADFS-and-SAML-Professional-and-Enterprise-), Google Apps, Etc.)
 
-_Limitations: This plugin does not enable authentication with multilateral Shibboleth. For use in a non-federated, bilateral configuration, with a single IdP._
+_Limitations: This plugin does not enable authentication with multilateral Shibboleth. Use is restricted to non-federated, bilateral configuration with a single IdP only._
 
 This documentation is up to date as of version 1.0.0 of the Pressbooks SAML2 Single Sign-on plugin.
 
@@ -48,9 +48,8 @@ To configure SAML2:
 *   SingleSignOnService
 *   X09Certificate
 
-Decide the response if the SAML2 user does not have a Pressbooks account:
+Decide the response if the SAML2 user does not have a Pressbooks account: **Refuse Access** OR **Add New User**
 
-*   Refuse Access OR Add New User
 
 **Note**: If the Network Setting for "Allow New Registrations" is set to "No Registrations Allowed", the SAML2 "Add New User" setting will bypass the Network Settings and register new users. For detailed behaviour on new user handling, see the section **[Details of settings behaviour: Add New user / Refuse access behaviour](#add-new-user-refuse-access-behaviour)** below.
 
@@ -58,8 +57,8 @@ Decide the response if the SAML2 user does not have a Pressbooks account:
 
 *   **SingleLogoutService**: URL Location of the IdP where SLO Request will be sent.
 *   **[Bypass](#bypass-domains-behaviour)**: Bypass the "Limited Email Registrations" and "Banned Email Domains" lists under Network Settings.
-*   **[Forced redirection](#forced-redirection-behaviour)**: hide the Pressbooks login page and go directly to the insitutions's SAML2 login page.
-*   [**Customize Button Text**:](#customize-button-text) This field allows network managers to customize the label of the "Connect via SAML2" button in the Pressbooks login page. If Forced Redirection is checked, then this field is disabled.
+*   **[Forced redirection](#forced-redirection-behaviour)**: Hide the Pressbooks login page and go directly to the insitutions's SAML2 login page.
+*   [**Customize Button Text**:](#customize-button-text) Customize the label of the "Connect via SAML2" button in the Pressbooks login page. If Forced Redirection is checked, then this field is disabled.
 
 Out of the box, the plugin requires the Assertion elements of the Response to be both encrypted and signed.
 [These settings can be changed]((https://github.com/onelogin/php-saml/#settings)) using a filter, example:
@@ -123,6 +122,6 @@ The mechanism to match the SAML2 user with the Pressbooks user is the following:
 3.  If neither #1 or #2 are found, create a new user.
       * `wp_usermeta.meta_key` and `wp_usermeta.meta_value` are set by the SAML2 plugin upon user creation; subsequent logins follow case #1 above.
 
-For network admins who have created or plan to continue to manually create new users in Pressbooks, they should take care to use the correct user email address for these manually created accounts so that the SAML2 plugin can properly match this manually-created user if/when they subsequently attempt to log in via SAML2.
+Network admins who have manually created or plan to manually create new users in Pressbooks should take care to use the correct user email address for these manually created accounts so that the SAML2 plugin can properly match this manually-created user if/when they subsequently attempt to log in via SAML2.
 
 Note: the username is not used for matching purposes.

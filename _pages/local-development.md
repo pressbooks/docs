@@ -13,5 +13,5 @@ Set up your Pressbooks development environment on [macOS][1] or [Windows][2]. Wo
 
  [1]: https://docs.pressbooks.org/local-development/macos
  [2]: https://docs.pressbooks.org/local-development/windows
- [3]: https://docs.pressbooks.org//local-development/rest-api/
+ [3]: https://docs.pressbooks.org/local-development/rest-api/
  [4]: https://docs.pressbooks.org/local-development/phpstorm

@@ -226,7 +226,7 @@ Note that this does not install the required libraries for export. See above (Pa
  [wp-install]: http://codex.wordpress.org/Installing_WordPress
  [create-a-network]: http://codex.wordpress.org/Create_A_Network
  [8]: https://pressbooks.com
- [9]: http://pressbooks.com/prince
+ [9]: https://www.princexml.com/
  [10]: https://wordpress.org/plugins/pressbooks-mpdf
  [11]: http://codex.wordpress.org/Changing_File_Permissions
  [12]: http://www.amazon.com/gp/feature.html?docId=1000765211

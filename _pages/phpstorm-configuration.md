@@ -34,11 +34,11 @@ In the SSH/SSL tab:
 + Auth type: Key pair (OpenSSH)
 + Private key file: `~/Code/pressbooks-dev/trellis/.vagrant/machines/default/virtualbox/private_key`
 
-In the General tab:
+In the General tab (Tip: Credentials are comming from the `/site/.env` file):
 
 + Host: 127.0.0.1 (Port: 3306)
-+ Database: example_com_development
-+ User: example_com
++ Database: pressbooks_test_development
++ User: pressbooks_test
 + Password: example_dbpassword
 
 In the General tab for the testing database *(use the same config as above for SSH/SSL)*:

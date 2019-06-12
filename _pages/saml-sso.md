@@ -20,7 +20,7 @@ Plugin to integrate Pressbooks with a SAML2 single sign-on service. ([Shibboleth
 
 _Limitations: This plugin does not enable authentication with multilateral Shibboleth. Use is restricted to non-federated, bilateral configuration with a single IdP only._
 
-This documentation is up to date as of version 1.0.0 of the Pressbooks SAML2 Single Sign-on plugin.
+This documentation is up to date as of version 1.x of the Pressbooks SAML2 Single Sign-on plugin.
 
 ## Installation / Activation
 

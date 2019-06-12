@@ -16,7 +16,7 @@ post_date: 2018-06-14 16:56:46
 *   [Details of settings behaviours](#details-of-settings-behaviours)
 *   [User identification mechanism](#user-identification-mechanism)
 
-This documentation is up to date as of version 1.0.0 of the Pressbooks CAS Single Sign-on plugin.
+This documentation is up to date as of version 1.x of the Pressbooks CAS Single Sign-on plugin.
 
 ## Installation / Activation
 

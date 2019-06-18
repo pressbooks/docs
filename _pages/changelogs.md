@@ -11,31 +11,28 @@ post_date: 2017-07-07 22:29:32
 ## Plugins
 
 - [Pressbooks][1]  
-- [DocRaptor for Pressbooks][2]  
-- [Excalibur][9]  
-- [Pressbooks CAS SSO](https://docs.pressbooks.org/changelog/pressbooks-cas-sso)
-- [Pressbooks LTI Provider](https://docs.pressbooks.org/changelog/pressbooks-lti-provider)
-- [Pressbooks Stats](https://docs.pressbooks.org/changelog/pressbooks-stats)
+- [Pressbooks LTI Provider][2]  
+- [Pressbooks SAML SSO][3]  
+- [Pressbooks CAS SSO][4]
+- [Pressbooks Stats][5]
+- [Excalibur][6]
 
 ## Themes
 
-- [Aldine][10]  
-- [Clarke][6]  
-- [Custom CSS][4]   
-- [Donham][7]
+- [McLuhan][7]
+- [Austen][8]
+- [Clarke][9]
+- [Donham][10]
 - [Jacobs][11]
-- [Luther][8]
-- [Publisher][5]  
-- [McLuhan][3]  
 
- [1]: https://docs.pressbooks.org/changelog/pressbooks
- [2]: https://docs.pressbooks.org/changelog/pressbooks-docraptor
- [3]: https://docs.pressbooks.org/changelog/pressbooks-book
- [4]: https://docs.pressbooks.org/changelog/pressbooks-custom-css
- [5]: https://docs.pressbooks.org/changelog/pressbooks-publisher
- [6]: https://docs.pressbooks.org/changelog/pressbooks-clarke
- [7]: https://docs.pressbooks.org/changelog/pressbooks-donham
- [8]: https://docs.pressbooks.org/changelog/pressbooks-luther
- [9]: https://docs.pressbooks.org/changelog/excalibur
- [10]: https://docs.pressbooks.org/changelog/pressbooks-aldine
- [11]: https://docs.pressbooks.org/changelog/pressbooks-jacobs
+ [1]: https://github.com/pressbooks/pressbooks/releases
+ [2]: https://github.com/pressbooks/pressbooks-lti-provider/releases
+ [3]: https://github.com/pressbooks/pressbooks-saml-sso/releases
+ [4]: https://github.com/pressbooks/pressbooks-cas-sso/releases
+ [5]: https://github.com/pressbooks/pressbooks-stats/releases
+ [6]: https://github.com/pressbooks/excalibur/releases
+ [7]: https://github.com/pressbooks/pressbooks-book/releases
+ [8]: https://github.com/pressbooks/pressbooks-austen/releases
+ [9]: https://github.com/pressbooks/pressbooks-clarke/releases
+ [10]: https://github.com/pressbooks/pressbooks-donham/releases
+ [11]: https://github.com/pressbooks/pressbooks-jacobs/releases

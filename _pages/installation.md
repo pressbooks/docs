@@ -18,9 +18,7 @@ Download the latest releases of [Pressbooks][pressbooks], [McLuhan][mcluhan], an
 IMPORTANT!
 
 * Do not install Pressbooks on an existing WordPress blog -- create a new WordPress install instead.
-* Pressbooks works with [PHP 7.0][php] and WordPress 4.9.6. Lower versions are not supported.
-
-The installed network (Wordpress + Pressbooks + McLuhan + Aldine) will use approximately 50 MB of server space. The total amount of server space you should provision will depend on the projected size of your network and the amount of media you expect to upload.
+* Pressbooks works with [PHP 7.1][php] and _(usually)_ the most recent version of WordPress right now. Lower versions are not supported.
 
 ### Part 1: WordPress
 
@@ -81,17 +79,9 @@ define('WP_ALLOW_MULTISITE', true);
 Pressbooks requires some third-party libraries to be installed on your server to enable export capabilities.
 
 * For PDF export, you have three options:
-  * Configure [DocRaptor](https://docraptor.com), which is a software as a service version of [PrinceXML][9]. To do this, you just need to add your DocRaptor API key to `wp-config.php`:
-
-    ```php
-    define( 'DOCRAPTOR_API_KEY', 'YOUR_API_KEY_HERE' );
-    ```
-
-  * Install [PrinceXML][9] 11 on your server (note: this is not free software although you can use it free of charge for non-commercial purposes).
-  * Install the [mPDF for Pressbooks][10] plugin to use the open source mPDF library. You will also need to ensure that the following folders have write access and/or they are owned by the appropriate user. See [here][11] for more details on adjusting file permissions.
-    * `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/ttfontdata`
-    * `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/tmp`
-    * `wp-content/plugins/pressbooks-mpdf/symbionts/mpdf/graph_cache`
+  1. Configure [DocRaptor](https://docraptor.com), which is a software as a service version of [PrinceXML][9]. To do this, you just need to add your DocRaptor API key to `wp-config.php`: `define( 'DOCRAPTOR_API_KEY', 'YOUR_API_KEY_HERE' );`
+  2. Install [PrinceXML][9] 11 on your server (note: this is not free software although you can use it free of charge for non-commercial purposes, see their license).
+  3. Install the [mPDF for Pressbooks][10] plugin to use the open source mPDF library. (Note: As of May 2019 this project is [unmaintained](https://github.com/pressbooks/docs/issues/32#issuecomment-503255424) )
 * For MOBI export install [KindleGen][12] 2.9
 * For EPUB validation install [EpubCheck][13] 4.1.1
 * For XML validation install [xmllint][14] 20903
@@ -113,7 +103,7 @@ Once installed, define the following `wp-config.php` variables (make sure to upd
     define( 'PB_XMLLINT_COMMAND', '/usr/bin/xmllint' );
     define( 'PB_SAXON_COMMAND', '/usr/bin/java -jar /opt/saxon-he/saxon-he.jar' );
 
-Example config files for a dev site hosted at http://localhost/~example/textopress/
+Example config files for a dev site hosted at `http://localhost/~example/textopress/`
 
 ### wp-config.php file [snippet]:
 
@@ -177,46 +167,9 @@ Example config files for a dev site hosted at http://localhost/~example/textopre
     RewriteRule  ^[_0-9a-zA-Z-]+/(wp-(content|admin|includes).*) $1 [L]
     RewriteRule  ^[_0-9a-zA-Z-]+/(.*.php)$ $1 [L]
     RewriteRule . index.php [L]
-
-
-## Installation (WP-CLI)
-
-First, get [WP-CLI][16].
-
-Once WP-CLI is installed on your server, the following shell commands executed in the site root will download and install a fresh version of Pressbooks. Obviously you need to put in the correct information for your server and install on lines 2 and 10, and enter the correct paths to `WP_PRINCE_COMMAND`, `PB_KINDLEGEN_COMMAND`, `PB_EPUBCHECK_COMMAND` and `PB_XMLLINT_COMMAND` where indicated.
-
-    wp core download
-    wp core config --dbname="dbname" --dbuser="dbuser" --dbpass="dbpass" --extra-php &lt;&lt;PHP
-    /* Pressbooks */
-    define( 'WP_DEFAULT_THEME', 'pressbooks-book' );
-    define( 'PB_PRINCE_COMMAND', '/usr/bin/prince' );
-    define( 'PB_KINDLEGEN_COMMAND', '/opt/kindlegen/kindlegen' );
-    define( 'PB_EPUBCHECK_COMMAND', '/usr/bin/java -jar /opt/epubcheck/epubcheck.jar' );
-    define( 'PB_XMLLINT_COMMAND', '/usr/bin/xmllint' );
-    define( 'PB_SAXON_COMMAND', '/usr/bin/java -jar /opt/saxon-he/saxon-he.jar' );
-    PHP
-    wp core multisite-install --url='http://domain.com' --title='Pressbooks' --admin_user='username' --admin_password='password' --admin_email='user@domain.com'
-    wp plugin delete hello
-    wp plugin update-all
-    wp plugin install https://pressbooks.org/download/pressbooks/
-    mkdir wp-content/mu-plugins &amp;&amp; cp wp-content/plugins/pressbooks/hm-autoloader.php wp-content/mu-plugins
-    wp plugin activate pressbooks --network
-    wp theme install https://pressbooks.org/download/mcluhan/
-    wp theme install https://pressbooks.org/download/aldine/
-    wp theme install https://github.com/pressbooks/pressbooks-jacobs/archive/master.zip
-    wp theme install https://github.com/pressbooks/pressbooks-austenclassic/archive/master.zip
-    wp theme install https://github.com/pressbooks/pressbooks-clarke/archive/master.zip
-    wp theme install https://github.com/pressbooks/pressbooks-donham/archive/master.zip
-    wp theme install https://github.com/pressbooks/pressbooks-fitzgerald/archive/master.zip
-    wp theme enable pressbooks-book --network
-    wp theme enable pressbooks-jacobs --network
-    wp theme enable pressbooks-clarke --network
-    wp theme enable pressbooks-donham --network
-    wp theme enable pressbooks-fitzgerald --network
-    wp theme enable pressbooks-austenclassic --network
-
-
-Note that this does not install the required libraries for export. See above (Part 3).
+    
+    
+> Tip: Need a wp-cli deploy? Start here: https://github.com/pressbooks/snippets/blob/master/deploy.md    
 
  [pressbooks]: https://pressbooks.org/download/pressbooks/
  [mcluhan]: https://pressbooks.org/download/mcluhan/
@@ -227,10 +180,9 @@ Note that this does not install the required libraries for export. See above (Pa
  [create-a-network]: http://codex.wordpress.org/Create_A_Network
  [8]: https://pressbooks.com
  [9]: https://www.princexml.com/
- [10]: https://wordpress.org/plugins/pressbooks-mpdf
+ [10]: https://github.com/BCcampus/pressbooks-mpdf
  [11]: http://codex.wordpress.org/Changing_File_Permissions
  [12]: http://www.amazon.com/gp/feature.html?docId=1000765211
  [13]: https://github.com/w3c/epubcheck
  [14]: http://xmlsoft.org/xmllint.html
  [15]: https://sourceforge.net/projects/saxon/files/Saxon-HE/
- [16]: https://wp-cli.org/

@@ -268,7 +268,7 @@ $font-2: 'Lato', Helvetica, Arial, $sans-serif-prince;
 @import 'LatoFont', 'TinosFont';
 </pre>
 
-Most themes have at least two font stacks, but may have more. `$font-1` must be the body font, and `$font-2` must be the header font. The `@import` rule loads a SCSS `_font-stack-{TYPE}` file which is dynamically generated based on the Language and Script Support settings in the Global tab of Theme Options [see here][21]. The `_font-stack-{TYPE}` is built from partials found in `pressbooks-book` directory `assets/book/typography/styles`. These files, in combination with the `$serif-epub, $sans-serif-epub, $serif-prince, $sans-serif-prince, $serif-web` and `$sans-serif-web` variables, allow us to dynamically add support for non-Latin character sets. 
+Most themes have at least two font stacks, but may have more. `$font-1` must be the body font, and `$font-2` must be the header font. The `@import` rule loads a SCSS `_font-stack-{TYPE}` file which is dynamically generated based on the [Language and Script Support][21] settings in the Global tab of Theme Options. The `_font-stack-{TYPE}` is built from partials found in `pressbooks-book` directory `assets/book/typography/styles`. These files, in combination with the `$serif-epub, $sans-serif-epub, $serif-prince, $sans-serif-prince, $serif-web` and `$sans-serif-web` variables, allow us to dynamically add support for non-Latin character sets. 
 
 You can insert custom fonts for your theme into the font stacks shown below. Always end the stack with `$serif-epub` or `$sans-serif-epub`, as appropriate—this allows custom language support to be added dynamically.
 

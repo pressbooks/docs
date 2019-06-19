@@ -277,7 +277,7 @@ $font-1: "Tinos", Georgia, $serif-prince;
 $font-2: 'Lato', Helvetica, Arial, $sans-serif-prince;
 </pre>
 
-Add import rules for any fonts you want to reference. Available font partials are located in McLuhan at the path `assets/book/typography/styles` and follow the naming pattern: `_FontNameInCamelCaseFont.scss`. For example, to import `Alegreya Sans`, use this pattern:
+Add import rules for any fonts you want to reference. Available font partials are located in McLuhan at the path `assets/book/typography/styles` and follow the naming pattern: `_FontNameInCamelCaseFont.scss`. For example, to import `Alegreya Sans`, use this code:
 
 <pre>
 @import 'AlegreyaSansFont';

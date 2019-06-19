@@ -80,7 +80,7 @@ Pressbooks requires some third-party libraries to be installed on your server to
 
 * For PDF export, you have three options:
   1. Configure [DocRaptor](https://docraptor.com), which is a software as a service version of [PrinceXML][9]. To do this, you just need to add your DocRaptor API key to `wp-config.php`: `define( 'DOCRAPTOR_API_KEY', 'YOUR_API_KEY_HERE' );`
-  2. Install [PrinceXML][9] 11 on your server (note: this is not free software although you can use it free of charge for non-commercial purposes, see their license).
+  2. Install [PrinceXML][9] 12 on your server (note: this is not free software although you can use it free of charge for non-commercial purposes, see their license).
   3. Install the [mPDF for Pressbooks][10] plugin to use the open source mPDF library. (Note: As of May 2019 this project is [unmaintained](https://github.com/pressbooks/docs/issues/32#issuecomment-503255424) )
 * For MOBI export install [KindleGen][12] 2.9
 * For EPUB validation install [EpubCheck][13] 4.1.1

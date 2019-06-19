@@ -9,17 +9,13 @@ permalink: >
 published: true
 post_date: 2017-07-07 22:29:32
 ---
-*Follow along with these steps at the [pressbooks/pressbooks-demo][1] repository.*
 
 ## 1\. Getting Started
-
-*Reference Commit: [15875fb][2]*
 
 We recommend that you start by installing [WP-CLI][3], which will let you use Pressbooks built-in [pb-cli][4] utility to scaffold a new Pressbooks book theme in your development environment with the following command:
 
     wp scaffold book-theme <slug>
     
-
 For further options, [read the docs][5].
 
 The resulting theme will have the following structure and contents:
@@ -58,8 +54,6 @@ Note that [`style.css`][6] is not used except to provide Pressbooks with [theme 
 This will turn on the development compiler introduced in Pressbooks 3.9.0, which triggers a recompile of your web theme stylesheet if the source files have been modified since it was last compiled when you visit any page in your webbook ([see here][8]).
 
 ## 2\. Overriding Defaults
-
-*Reference Commit: [53619ba][9]*
 
 If you activate the theme you have just created, you will be able to export your book in all formats thanks to our sensible defaults. But now comes the fun part. Each file in `assets/styles/components` is set up to allow you to override the default values of all theme variables. Components are as follows:
 
@@ -180,8 +174,6 @@ The reason you should use the `!default` flag on your variable definitions is so
 
 ## 3\. Adding Custom Rules
 
-*Reference Commit: [550648b][16]*
-
 Now that you've overridden a variable, try adding your own custom rule. Perhaps your book needs a special type of blockquote that is centered on the page. You can add it by inserting the following rule below the `@import` rules in [`assets/styles/components/_elements.scss`][17]:
 
     blockquote.centered,
@@ -220,8 +212,6 @@ blockquote.centered,
 And when you export your book, Pressbooks will compile your new rule after the default rule for blockquotes, so `blockquote.centered` will inherit all the properties of the standard blockquote but will override the left and right margin properties.
 
 ## 4\. Different Formats, Different Rules
-
-*Reference Commit: [4eb0159][18]*
 
 Sometimes you need to set a variable differently depending on which format you are using. Perhaps you want to left-align your blockquotes for EPUB and web, but you want to justify them for PDF. This is easy to accomplish using an SCSS if-statement with the `$type` variable. Add another variable override to the top of [`assets/styles/components/_elements.scss`][19] as follows:
 

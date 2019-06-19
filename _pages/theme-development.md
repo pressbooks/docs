@@ -268,34 +268,27 @@ $font-2: 'Lato', Helvetica, Arial, $sans-serif-prince;
 @import 'LatoFont', 'TinosFont';
 </pre>
 
-Most themes have at least two font stacks, but may have more. $font-1 must be the body font, and $font-2 must be the header font. The @import rule loads a SCSS _font-stack-{TYPE} file which is dynamically generated based on the `Language and Script Support` settings in the Global tab of Theme Options(https://guide.pressbooks.com/chapter/languages/). The _font-stack-{TYPE} is built from partials found in `pressbooks-book` directory `assets/book/typography/styles`. These files, in combination with the $serif-epub, $sans-serif-epub, $serif-prince, $sans-serif-prince, $serif-web and $sans-serif-web variables, allow us to dynamically add support for non-Latin character sets. 
+Most themes have at least two font stacks, but may have more. `$font-1` must be the body font, and `$font-2` must be the header font. The `@import` rule loads a SCSS `_font-stack-{TYPE}` file which is dynamically generated based on the Language and Script Support settings in the Global tab of Theme Options [see here][21]. The `_font-stack-{TYPE}` is built from partials found in `pressbooks-book` directory `assets/book/typography/styles`. These files, in combination with the `$serif-epub, $sans-serif-epub, $serif-prince, $sans-serif-prince, $serif-web` and `$sans-serif-web` variables, allow us to dynamically add support for non-Latin character sets. 
 
-You can insert custom fonts for your theme into the font stacks shown below. Always end the stack with $serif-epub or $sans-serif-epub, as appropriate—this allows custom language support to be added dynamically.
+You can insert custom fonts for your theme into the font stacks shown below. Always end the stack with `$serif-epub` or `$sans-serif-epub`, as appropriate—this allows custom language support to be added dynamically.
 
 <pre>
 $font-1: "Tinos", Georgia, $serif-prince;
 $font-2: 'Lato', Helvetica, Arial, $sans-serif-prince;
 </pre>
 
-Add import rules for any fonts you want to reference. Available font partials are located in `pressbooks-book/assets/book/typography/styles` and follow the naming pattern: _FontNameInCamelCaseFont.scss. For example, to import Alegreya Sans, use this pattern:
+Add import rules for any fonts you want to reference. Available font partials are located in `pressbooks-book/assets/book/typography/styles` and follow the naming pattern: `_FontNameInCamelCaseFont.scss`. For example, to import `Alegreya Sans`, use this pattern:
 
 <pre>
 @import 'AlegreyaSansFont';
 </pre>
 
-You may also include a typeface from a directory like Google Fonts in your web book, import them in the following way in your web fonts file:
+You may also include a typeface from a directory like Google Fonts in your web book. Here is an example of how to import in your web fonts file:
 
 <pre>
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Crimson+Text:400,400italic,700,700italic");
 </pre>
 
-## 6\. Images
-
-TK.
-
-## 7\. Scripts
-
-TK.
 
  [1]: https://github.com/pressbooks/pressbooks-demo
  [2]: https://github.com/pressbooks/pressbooks-demo/commit/15875fb8c7d4ea8a026190c60e48ae4b4971cef3
@@ -317,3 +310,4 @@ TK.
  [18]: https://github.com/pressbooks/pressbooks-demo/commit/4eb01592c38830127f8392ecfaf4afb7de491260
  [19]: https://github.com/pressbooks/pressbooks-demo/blob/4eb01592c38830127f8392ecfaf4afb7de491260/assets/styles/components/_elements.scss
  [20]: https://github.com/pressbooks/pressbooks-demo/blob/4eb01592c38830127f8392ecfaf4afb7de491260/assets/styles/prince/style.scss
+ [21]: https://guide.pressbooks.com/chapter/languages/

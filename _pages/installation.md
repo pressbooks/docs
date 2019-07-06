@@ -90,6 +90,7 @@ Pressbooks requires some third-party libraries to be installed on your server to
   * Ghostscript 9.18: `sudo apt-get install ghostscript`
   * ImageMagick 6.8.9: `sudo apt-get install imagemagick`
   * PdfToPpm and PdfInfo 0.41.0: `sudo-apt-get install poppler-utils`
+* For MathJax export install (and host!) master branch of [pb-mathjax][16]
 * Certain Linux installations do not ship with the `php-xsl` library enabled by default. If you attempt to export an ePub and get a either a white screen with minimal text, or a "Fatal error: Class 'XSLTProcessor' not found" error, you may need to run a command like `sudo apt-get install php-xsl`.
 * Certain Linux installations do not ship with the `php-exif` library enabled by default. If you attempt to export an ePub and get a either a white screen with minimal text, or an error, you may need to install this extension (e.g. `sudo apt-get install php-exif` )
 
@@ -102,6 +103,7 @@ Once installed, define the following `wp-config.php` variables (make sure to upd
     define( 'PB_EPUBCHECK_COMMAND', '/usr/bin/java -jar /opt/epubcheck/epubcheck.jar' );
     define( 'PB_XMLLINT_COMMAND', '/usr/bin/xmllint' );
     define( 'PB_SAXON_COMMAND', '/usr/bin/java -jar /opt/saxon-he/saxon-he.jar' );
+    define( 'PB_MATHJAX_URL', 'http://localhost:3000/' );
 
 Example config files for a dev site hosted at `http://localhost/~example/textopress/`
 
@@ -169,7 +171,7 @@ Example config files for a dev site hosted at `http://localhost/~example/textopr
     RewriteRule . index.php [L]
     
     
-> Tip: Need a wp-cli deploy? Start here: https://github.com/pressbooks/snippets/blob/master/deploy.md    
+> Tip: Need a wp-cli deploy? Start here: https://github.com/pressbooks/snippets/blob/master/deploying/wp-cli-example.md 
 
  [pressbooks]: https://pressbooks.org/download/pressbooks/
  [mcluhan]: https://pressbooks.org/download/mcluhan/
@@ -186,3 +188,4 @@ Example config files for a dev site hosted at `http://localhost/~example/textopr
  [13]: https://github.com/w3c/epubcheck
  [14]: http://xmlsoft.org/xmllint.html
  [15]: https://sourceforge.net/projects/saxon/files/Saxon-HE/
+ [16]: https://github.com/pressbooks/pb-mathjax

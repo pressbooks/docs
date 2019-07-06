@@ -143,6 +143,7 @@ Example config files for a dev site hosted at `http://localhost/~example/textopr
     define( 'PB_EPUBCHECK_COMMAND', '/usr/bin/java -jar /home/example/bin/epubcheck/epubcheck.jar' );
     define( 'PB_XMLLINT_COMMAND', '/usr/bin/xmllint' );
     define( 'PB_SAXON_COMMAND', '/usr/bin/java -jar home/example/bin/saxon-he/saxon-he.jar' );
+    define( 'PB_MATHJAX_URL', 'http://localhost:3000/' );
 
     /**
      * Optional definitions

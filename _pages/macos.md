@@ -29,6 +29,8 @@ Install [Ansible][9]:
 
 `brew install ansible`
 
+Known issue: Currently the Pressbooks doesn't support ansible 2.8.4, please use previous versions. Note by Ling Ma
+
 Install [Virtualbox][10]:
 
 `brew cask install virtualbox`

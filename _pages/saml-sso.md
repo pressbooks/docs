@@ -46,7 +46,7 @@ To configure SAML2 the following information is needed:
 
 *   EntityID
 *   SingleSignOnService
-*   X09Certificate
+*   X509Certificate
 
 Decide the response if the SAML2 user does not have a Pressbooks account: **Refuse Access** OR **Add New User**
 

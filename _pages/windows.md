@@ -104,7 +104,7 @@ vagrant up
 
 Fully provisioning your development environment may take up to 30 minutes.
 
-When finished, do a `vagrant halt`, exit the Administrator Command Prompt, then redo `vagrant up` in a regular user privileged Command Prompt.
+When finished, do a `vagrant halt`, then [kill the NFS server][17] with `taskkill /f /im winnfsd.exe`, then exit the Administrator Command Prompt, then redo `vagrant up` in a regular user privileged Command Prompt.
 
 ## 5. Development Tools
 
@@ -209,3 +209,4 @@ Then commit the merge. You may need to regenerate your composer.lock file before
 [14]: http://kizu514.com/blog/php-composer-for-developers/
 [15]: https://roots.io/trellis/docs/windows/
 [16]: https://github.com/JeffreyWay/laravel-mix
+[17]: https://github.com/winnfsd/vagrant-winnfsd/issues/105

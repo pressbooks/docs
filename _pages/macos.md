@@ -25,9 +25,9 @@ Install [Homebrew Cask][8]:
 
 `brew tap caskroom/cask`
 
-Install [Ansible][9]:
+Install the version of [Ansible][9] in [requirements.txt](https://github.com/pressbooks/trellis/blob/master/requirements.txt) (currently 2.7.12, 2.8 is not supported):
 
-`brew install ansible`
+`brew install ansible@2.7`
 
 Install [Virtualbox][10]:
 

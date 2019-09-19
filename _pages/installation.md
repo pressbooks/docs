@@ -18,7 +18,7 @@ Download the latest releases of [Pressbooks][pressbooks], [McLuhan][mcluhan], an
 IMPORTANT!
 
 * Do not install Pressbooks on an existing WordPress blog -- create a new WordPress install instead.
-* Pressbooks works with [PHP 7.1][php] and _(usually)_ the most recent version of WordPress right now. Lower versions are not supported.
+* Pressbooks works with [PHP 7.1, 7.2 or 7.3][php] and _(usually)_ the most recent version of WordPress right now. Lower versions are not supported.
 
 ### Part 1: WordPress
 

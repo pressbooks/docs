@@ -89,7 +89,7 @@ Pressbooks requires some third-party libraries to be installed on your server to
 * For the Cover Generator feature, install:
   * Ghostscript 9.18: `sudo apt-get install ghostscript`
   * ImageMagick 6.8.9: `sudo apt-get install imagemagick`
-  * PdfToPpm and PdfInfo 0.41.0: `sudo-apt-get install poppler-utils`
+  * PdfToPpm and PdfInfo 0.41.0: `sudo apt-get install poppler-utils`
 * For MathJax export install (and host!) master branch of [pb-mathjax][16]
 * Certain Linux installations do not ship with the `php-xsl` library enabled by default. If you attempt to export an ePub and get a either a white screen with minimal text, or a "Fatal error: Class 'XSLTProcessor' not found" error, you may need to run a command like `sudo apt-get install php-xsl`.
 * Certain Linux installations do not ship with the `php-exif` library enabled by default. If you attempt to export an ePub and get a either a white screen with minimal text, or an error, you may need to install this extension (e.g. `sudo apt-get install php-exif` )

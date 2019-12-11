@@ -56,6 +56,8 @@ Settings &gt; Languages &amp; Frameworks &gt; PHP &gt; CLI Interpreter, click th
 
 #### XDebug
 
+Update to the latest PHPStorm.
+
 Get the [Xdebug Helper][5] Chrome plugin.
 
 Go to Settings &gt; Languages &amp; Frameworks &gt; PHP &gt; Servers, create a new server named pressbooks.dev and map:

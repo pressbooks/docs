@@ -23,7 +23,10 @@ Install [Homebrew][7]:
 
 Install the version of [Ansible][9] in [requirements.txt](https://github.com/pressbooks/trellis/blob/master/requirements.txt) (currently 2.7.12, 2.8 is not supported):
 
-`pip install ansible==2.7.12` (or `pip install -r requirements.txt`)
+```
+curl https://raw.githubusercontent.com/pressbooks/trellis/master/requirements.txt -o requirements.txt
+pip install -r requirements.txt
+```
 
 Install [Virtualbox][10]:
 

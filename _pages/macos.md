@@ -60,7 +60,7 @@ Create a directory for your local development environment and `cd` there:
 
 Clone [pressbooks/trellis][16] into `~/Code/pressbooks-dev/trellis`:
 
-`git clone git@github.com:pressbooks/trellis.git`
+`git clone git@github.com:pressbooks/trellis.git trellis`
 
 Clone [pressbooks/bedrock][17] into `~/Code/pressbooks-dev/site`:
 
@@ -101,7 +101,7 @@ wordpress_sites:
       enabled: false
 ```
 
-It should work out-of-the-box. If you want to setup staging or production environments, you will need to update all instances of `example.com` and `pressbooks.test` in `~/Code/pressbooks-dev/trellis/group_vars/` to a consistent value. For more info, consult the [Trellis docs][15] as that is outside the scope of this tutorial.
+It should work out-of-the-box. If you want to setup staging or production environments, you will need to update all instances of `example.com` and `pressbooks.test` in `~/Code/pressbooks-dev/trellis/group_vars/` to a consistent value. For more info, consult the [Trellis docs][22] as that is outside the scope of this tutorial.
 
 ## 4. Launch
 
@@ -115,7 +115,7 @@ You will be required to enter your macOS password at a certain point in the proc
 
 ### Login:
 
-The default Pressbooks username:password is `admin:admin`
+Open https://pressbooks.test/ in your browser. The default Pressbooks username:password is `admin:admin`
 
 ### Logs:
 

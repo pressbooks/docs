@@ -21,10 +21,6 @@ Install [Homebrew][7]:
 
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
-Install [Homebrew Cask][8]:
-
-`brew tap caskroom/cask`
-
 Install the version of [Ansible][9] in [requirements.txt](https://github.com/pressbooks/trellis/blob/master/requirements.txt) (currently 2.7.12, 2.8 is not supported):
 
 `pip install ansible==2.7.12` (or `pip install -r requirements.txt`)
@@ -205,7 +201,6 @@ Then commit the merge. You may need to regenerate your composer.lock file before
 [5]: https://www.npmjs.com/
 [6]: https://webpack.github.io
 [7]: http://brew.sh
-[8]: https://caskroom.github.io
 [9]: https://www.ansible.com/
 [10]: https://www.virtualbox.org/
 [11]: https://www.vagrantup.com/

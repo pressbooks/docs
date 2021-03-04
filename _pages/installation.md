@@ -93,6 +93,7 @@ Pressbooks requires some third-party libraries to be installed on your server to
 * For MathJax export install (and host!) master branch of [pb-mathjax][16]
 * Certain Linux installations do not ship with the `php-xsl` library enabled by default. If you attempt to export an ePub and get a either a white screen with minimal text, or a "Fatal error: Class 'XSLTProcessor' not found" error, you may need to run a command like `sudo apt-get install php-xsl`.
 * Certain Linux installations do not ship with the `php-exif` library enabled by default. If you attempt to export an ePub and get a either a white screen with minimal text, or an error, you may need to install this extension (e.g. `sudo apt-get install php-exif` )
+* Linux installations do not ship with Microsoft fonts, which can be useful when producing PDF exports. See https://itsfoss.com/install-microsoft-fonts-ubuntu/ or similar for instructions on installing.
 
 Unlisted versions are not supported. Upgrade/downgrade accordingly.
 

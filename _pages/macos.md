@@ -21,13 +21,12 @@ Install [Homebrew][7]:
 
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
-Install [Homebrew Cask][8]:
-
-`brew tap caskroom/cask`
-
 Install the version of [Ansible][9] in [requirements.txt](https://github.com/pressbooks/trellis/blob/master/requirements.txt) (currently 2.7.12, 2.8 is not supported):
 
-`pip install ansible==2.7.12` (or `pip install -r requirements.txt`)
+```
+curl https://raw.githubusercontent.com/pressbooks/trellis/master/requirements.txt -o requirements.txt
+pip install -r requirements.txt
+```
 
 Install [Virtualbox][10]:
 
@@ -61,7 +60,7 @@ Create a directory for your local development environment and `cd` there:
 
 Clone [pressbooks/trellis][16] into `~/Code/pressbooks-dev/trellis`:
 
-`git clone git@github.com:pressbooks/trellis.git`
+`git clone git@github.com:pressbooks/trellis.git trellis`
 
 Clone [pressbooks/bedrock][17] into `~/Code/pressbooks-dev/site`:
 
@@ -102,7 +101,7 @@ wordpress_sites:
       enabled: false
 ```
 
-It should work out-of-the-box. If you want to setup staging or production environments, you will need to update all instances of `example.com` and `pressbooks.test` in `~/Code/pressbooks-dev/trellis/group_vars/` to a consistent value. For more info, consult the [Trellis docs][15] as that is outside the scope of this tutorial.
+It should work out-of-the-box. If you want to setup staging or production environments, you will need to update all instances of `example.com` and `pressbooks.test` in `~/Code/pressbooks-dev/trellis/group_vars/` to a consistent value. For more info, consult the [Trellis docs][22] as that is outside the scope of this tutorial.
 
 ## 4. Launch
 
@@ -116,7 +115,7 @@ You will be required to enter your macOS password at a certain point in the proc
 
 ### Login:
 
-The default Pressbooks username:password is `admin:admin`
+Open https://pressbooks.test/ in your browser. The default Pressbooks username:password is `admin:admin`
 
 ### Logs:
 
@@ -205,7 +204,6 @@ Then commit the merge. You may need to regenerate your composer.lock file before
 [5]: https://www.npmjs.com/
 [6]: https://webpack.github.io
 [7]: http://brew.sh
-[8]: https://caskroom.github.io
 [9]: https://www.ansible.com/
 [10]: https://www.virtualbox.org/
 [11]: https://www.vagrantup.com/

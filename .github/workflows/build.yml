@@ -1,4 +1,4 @@
-name: Deploy to Github Pages
+name: Build for Github Pages
 
 on:
   push:
@@ -14,9 +14,7 @@ jobs:
         run: |
           npm install
           npm run docs:build
-
-      - name: Deploy to Github Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.0
+      - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          branch: main
-          folder: docs/.vuepress/dist
+          commit_message: "chore: build docs site" 
+          file_pattern: docs/.vuepress/dist

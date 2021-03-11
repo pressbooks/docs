@@ -14,7 +14,9 @@ jobs:
         run: |
           npm install
           npm run docs:build
+      - name: Move files to docs directory
+        run: mv src/.vuepress/dist docs
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "chore: build docs site" 
-          file_pattern: docs/.vuepress/dist
+          file_pattern: docs/

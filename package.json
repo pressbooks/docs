@@ -4,8 +4,8 @@
   "private": true,
   "description": "Documentation for the Pressbooks Open Source Project.",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:dev": "vuepress dev src",
+    "docs:build": "vuepress build src"
   },
   "repository": {
     "type": "git",

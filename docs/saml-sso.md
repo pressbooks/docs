@@ -1,13 +1,6 @@
 ---
-ID: 629
-post_title: Pressbooks SAML SSO
-author: Ned Zimmerman
-post_excerpt: ""
-layout: page
-permalink: >
-  https://docs.pressbooks.org/integrations/saml-sso/
-published: true
-post_date: 2019-01-03 14:01:37
+title: Pressbooks SAML SSO
+permalink: /integrations/saml-sso/
 ---
 **Table of Contents**
 

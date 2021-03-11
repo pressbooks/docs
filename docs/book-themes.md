@@ -1,12 +1,6 @@
 ---
-ID: 96
-post_title: Book Themes
-author: Ned Zimmerman
-post_excerpt: ""
-layout: page
-permalink: http://docs.pressbooks.org/book-themes/
-published: true
-post_date: 2017-07-07 22:29:32
+title: Book Themes
+permalink: /book-themes/
 ---
 _**NOTE:** These theme docs are deprecated! New docs coming soon._
 

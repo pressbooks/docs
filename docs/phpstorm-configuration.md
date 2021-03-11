@@ -1,13 +1,6 @@
 ---
-ID: 244
-post_title: PhpStorm Configuration
-author: Ned Zimmerman
-post_excerpt: ""
-layout: page
-permalink: >
-  https://docs.pressbooks.org/local-development/phpstorm-configuration/
-published: true
-post_date: 2017-08-24 12:49:59
+title: PhpStorm Configuration
+permalink: /local-development/phpstorm-configuration/
 ---
 ### Enable WordPress Integration
 
@@ -97,5 +90,5 @@ Troubleshooting: If you have restarted your VM you will see a `PHP Fatal error: 
 [8]: https://pressbooks.org/app/uploads/sites/2/2017/08/PHPUnit.png
 [9]: https://pressbooks.org/app/uploads/sites/2/2017/08/PHP-Mappings.png
 [10]: https://pressbooks.org/app/uploads/sites/2/2017/08/PHPUnit-Running.png
-[11]: https://docs.pressbooks.org/unit-testing/
-[12]: https://docs.pressbooks.org/coding-standards/
+[11]: /unit-testing/
+[12]: /coding-standards/

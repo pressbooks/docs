@@ -1,12 +1,6 @@
 ---
-ID: 84
-post_title: Debugging
-author: Ned Zimmerman
-post_excerpt: ""
-layout: page
-permalink: http://docs.pressbooks.org/debugging/
-published: true
-post_date: 2017-07-07 22:29:32
+title: Debugging
+permalink: /debugging/
 ---
 A few things you can try:
 

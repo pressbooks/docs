@@ -1,13 +1,6 @@
 ---
-ID: 80
-post_title: Coding Standards
-author: Ned Zimmerman
-post_excerpt: ""
-layout: page
-permalink: >
-  https://docs.pressbooks.org/coding-standards/
-published: true
-post_date: 2017-07-07 22:29:32
+title: Coding Standards
+permalink: /coding-standards/
 ---
 ## Validating with PHP Code Sniffer
 

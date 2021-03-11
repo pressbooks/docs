@@ -1,13 +1,6 @@
 ---
-ID: 478
-post_title: Pressbooks CAS Single Sign-On
-author: JC Guan
-post_excerpt: ""
-layout: page
-permalink: >
-  https://docs.pressbooks.org/integrations/cas-sso/
-published: true
-post_date: 2018-06-14 16:56:46
+title: Pressbooks CAS Single Sign-On
+permalink: /integrations/cas-sso/
 ---
 **Table of Contents**
 

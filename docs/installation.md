@@ -1,13 +1,6 @@
 ---
-ID: 92
-post_title: Installation
-author: Ned Zimmerman
-post_excerpt: ""
-layout: page
-permalink: >
-  https://docs.pressbooks.org/installation/
-published: true
-post_date: 2017-07-07 22:29:32
+title: Installation
+permalink: /installation/
 ---
 ## Downloads
 

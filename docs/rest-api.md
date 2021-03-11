@@ -1,12 +1,6 @@
 ---
-ID: 124
-post_title: REST API
-author: Ned Zimmerman
-post_excerpt: ""
-layout: page
-permalink: https://docs.pressbooks.org/rest-api/
-published: true
-post_date: 2017-07-07 22:44:41
+title: REST API
+permalink: /rest-api/
 ---
 ## Recommended Tools
 

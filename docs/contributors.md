@@ -1,13 +1,6 @@
 ---
-ID: 82
-post_title: Contributors
-author: Ned Zimmerman
-post_excerpt: ""
-layout: page
-permalink: >
-  https://docs.pressbooks.org/contributors/
-published: true
-post_date: 2017-07-07 22:29:32
+title: Contributors
+permalink: /contributors/
 ---
 Pressbooks was created by the team at Book Oven Inc. (<code@pressbooks.com>), with contributions from:
 

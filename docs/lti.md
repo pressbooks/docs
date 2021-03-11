@@ -1,13 +1,6 @@
 ---
-ID: 507
-post_title: Pressbooks LTI Provider
-author: JC Guan
-post_excerpt: ""
-layout: page
-permalink: >
-  https://docs.pressbooks.org/integrations/lti/
-published: true
-post_date: 2018-06-21 16:47:35
+title: Pressbooks LTI Provider
+permalink: /integrations/lti/
 ---
 ** Table of contents **
 * [Installation](#installation)

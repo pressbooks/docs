@@ -1,4 +1,2 @@
-_site
-.sass-cache
-.jekyll-metadata
-.idea/
+docs/.vuepress/dist
+node_modules

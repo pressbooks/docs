@@ -1,13 +1,6 @@
 ---
-ID: 94
-post_title: Theme Development
-author: Ned Zimmerman
-post_excerpt: ""
-layout: page
-permalink: >
-  https://docs.pressbooks.org/theme-development/
-published: true
-post_date: 2017-07-07 22:29:32
+title: Theme Development
+permalink: /theme-development/
 ---
 
 ## 1\. Getting Started

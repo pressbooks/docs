@@ -1,12 +1,6 @@
 ---
-ID: 86
-post_title: Workflow
-author: Ned Zimmerman
-post_excerpt: ""
-layout: page
-permalink: https://docs.pressbooks.org/workflow/
-published: true
-post_date: 2017-07-07 22:29:32
+title: Workflow
+permalink: /workflow/
 ---
 These are our branches:
 

@@ -1,6 +1,7 @@
 module.exports = {
   title: "Pressbooks Documentation",
   description: "User and Developer Documentation",
+  base: '/docs/',
   head: [
     ['link', { rel: 'icon', type: "image/svg+xml", href: '/icon.svg' }]
   ],

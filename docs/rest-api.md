@@ -21,27 +21,40 @@ permalink: /rest-api/
 
 WP API is self-documenting. Send an OPTIONS request to any endpoint and get back
 
-[JSON Schema][6] compatible info on how to use it: [caption id="attachment_127" align="aligncenter" width="653"][![Options in YARC](https://pressbooks.org/app/uploads/sites/2/2017/07/options.png)][7][7] Options in YARC[/caption]
+[JSON Schema][6] compatible info on how to use it:
 
-> To get the entire API schema in a single query, add `context=help` at the index. (Ie. http://site/book/wp-json?context=help )
+![Options in YARC](/images/options.png)][7]
+
+_Options in YARC_
+
+To get the entire API schema in a single query, add `context=help` at the index. (Ie. http://site/book/wp-json?context=help )
 
 ### Multisite
 
-Pressbooks has different API endpoints for book and the root site: [caption id="attachment_128" align="aligncenter" width="1366"]
+Pressbooks has different API endpoints for book and the root site:
 
-![Book vs. Root](https://pressbooks.org/app/uploads/sites/2/2017/07/namespaces.png) Book vs. Root[/caption]
-
+![Book vs. Root](/images/namespaces.png)
 ### Features
 
-WP API items have a `_links` node based on [HAL][8] (Hypertext Application Language): [caption id="attachment_129" align="aligncenter" width="586"]![_links](https://pressbooks.org/app/uploads/sites/2/2017/07/links.png) _links[/caption] To reduce the number of HTTP requests use [the *embed parameter][9] to tell the API that the response should include embeddable resources. [caption id="attachment_130" align="aligncenter" width="680"][![_embedded](https://pressbooks.org/app/uploads/sites/2/2017/07/embeded.png)][9][10] _embedded[/caption] WP API exposes pagination info in the response header. [caption id="attachment_131" align="aligncenter" width="1024"][![Pagination](https://pressbooks.org/app/uploads/sites/2/2017/07/pagination.png)][10][11] Pagination[/caption]
+WP API items have a `_links` node based on [HAL][8] (Hypertext Application Language):
+
+![_links](/images/links.png)
+
+To reduce the number of HTTP requests use [the \_embed parameter][9] to tell the API that the response should include embeddable resources. 
+
+![_embedded](/images/embeded.png)]
+
+WP API exposes pagination info in the response header.
+
+![Pagination](/images/pagination.png)]
 
 ### PHP to JSON
 
 WP API renders JSON in a generic way that does not match the DB columns. Keep calm and
 
-[RTFM][12]:
+[RTFM][10]:
 
-```
+```php
 if ( ! empty( $schema['properties']['author'] ) ) {
     $data['author'] = (int) $post->post_author;
 }
@@ -56,7 +69,7 @@ if ( ! empty( $schema['properties']['content'] ) ) {
 }
 ```
 
-```
+```json
 {
   "author": 1,
   "slug": "chapter-1",
@@ -75,7 +88,5 @@ if ( ! empty( $schema['properties']['content'] ) ) {
  [6]: http://json-schema.org/  
  [7]: https://pressbooks.org/app/uploads/sites/2/2017/07/options.png  
  [8]: http://stateless.co/hal_specification.html  
- [9]: https://developer.wordpress.org/rest-api/using-the-rest-api/global-parameters/#*embed  
- [10]: https://pressbooks.org/app/uploads/sites/2/2017/07/embeded.png  
- [11]: https://pressbooks.org/app/uploads/sites/2/2017/07/pagination.png  
- [12]: https://developer.wordpress.org/rest-api/reference/posts/
+ [9]: https://developer.wordpress.org/rest-api/using-the-rest-api/global-parameters/#_embed
+ [10]: https://developer.wordpress.org/rest-api/reference/posts/

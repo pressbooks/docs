@@ -1,4 +1,5 @@
 module.exports = {
+  plugins: ['@vuepress/medium-zoom'],
   title: "Pressbooks Documentation",
   description: "User and Developer Documentation",
   head: [

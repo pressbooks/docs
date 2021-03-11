@@ -31,7 +31,7 @@ Moreover, on the book level, a submenu item ("LTI Settings") is added to the boo
 
 The "LTI Consumers" link leads to a page listing the existing, configured LTI connexions with LTI consumers. This page is empty upon first activation of the Pressbooks LTI Provider plugin, and is populated as LTI connections are created, either manually or automatically.
 
-<a href="https://pressbooks.org/app/uploads/sites/2/2018/06/pb-lti-consumers.png"><img class="alignnone size-large wp-image-511" src="https://pressbooks.org/app/uploads/sites/2/2018/06/pb-lti-consumers-1024x366.png" alt="Screenshot of Pressbooks LTI Consumers configuration page" width="840" height="300" /></a>
+<a href="/images/pb-lti-consumers.png"><img class="alignnone size-large wp-image-511" src="https://pressbooks.org/app/uploads/sites/2/2018/06/pb-lti-consumers-1024x366.png" alt="Screenshot of Pressbooks LTI Consumers configuration page" width="840" height="300" /></a>
 
 The table containing the list of LTI configurations is based on the IMS Global example plugin. It provides a basic overview of the configuration information for each LTI consumer:
 

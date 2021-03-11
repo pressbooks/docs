@@ -6,6 +6,7 @@ _**NOTE:** These theme docs are deprecated! New docs coming soon._
 
 In addition to being WordPress compatible, a book theme must have the following directories and files. These files are used by our PDF & EPUB export modules. The files can be empty (`script.js`, for example), but must exist. We use the SCSS variant of [SASS][1] for our stylesheets, which allows us dynamically modify font stacks and other variables based on user preferences.
 
+```
     ├── _fonts-epub.scss
     ├── _fonts-prince.scss
     ├── _fonts-web.scss
@@ -20,13 +21,14 @@ In addition to being WordPress compatible, a book theme must have the following 
     │       ├── script.js
     │       └── style.scss
     ├── style.scss
-    
+```
 
 ## Fonts
 
 `_fonts-epub.scss`, `_fonts-prince.scss`, `_fonts-web.scss` are SCSS font stack definitions for EPUB, PDF and WEB. Example code in `_fonts-prince.scss`:
 
-<pre>@import '_font-stack-prince'; // Dynamically generated
+```scss
+@import '_font-stack-prince'; // Dynamically generated
 
 $serif-prince: serif !default;
 $sans-serif-prince: sans-serif !default;
@@ -35,27 +37,30 @@ $font-1: "Tinos", Georgia, $serif-prince;
 $font-2: 'Lato', Helvetica, Arial, $sans-serif-prince;
 
 @import 'LatoFont', 'TinosFont';
-</pre>
+```
 
 Most themes have at least two font stacks.
 
 `$font-1` must be the body font, and `$font-2` must be the header font. The `@import` rule loads a SCSS `_font-stack-{TYPE}` file which is dynamically generated based on the Global Typography theme option. The `_font-stack-{TYPE}` is built from partials found in `./pressbooks/assets/scss/fonts/*.*` These files, in combination with the `$serif-epub`, `$sans-serif-epub`, `$serif-prince`, `$sans-serif-prince`, `$serif-web` and `$sans-serif-web` variables, allow us to dynamically add support for non-Latin character sets. Each `style.scss` file must import the appropriate font stack(s). Example for `./export/prince/style.scss`:
 
-<pre>@import 'fonts-prince';</pre>
+```scss
+@import 'fonts-prince';
+```
 
 Font files are located in `./themes-book/pressbooks-book/fonts/`.
 
 The paths for all such fonts in your Custom CSS need to be as follows:
 
+```scss
     @font-face {
     // ...
     src: url(themes-book/pressbooks-book/fonts/YourFont.ttf) format("truetype");
     }
-    
+```
 
 ## PDF (Prince) Best Practices
 
-1.  Use CSS and JavaScript as outlined in the [Prince user guide][2].
+1. Use CSS and JavaScript as outlined in the [Prince user guide][2].
 
 ## Ebook Best Practices
 

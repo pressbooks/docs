@@ -21,7 +21,7 @@ The CAS SSO plugin is installed and activated on the network level.
 
 Upon activation of the plugin, a submenu item (“CAS”) is added to the Network Admin interface under “Integrations”. This leads to the CAS settings page:
 
-[caption id="attachment_483" align="aligncenter" width="248"][![Screenshot of the CAS settings page](https://pressbooks.org/app/uploads/sites/2/2018/06/cas-settings-248x300.png)](https://pressbooks.org/app/uploads/sites/2/2018/06/cas-settings.png) Click to enlarge[/caption]
+[![Screenshot of the CAS settings page](https://pressbooks.org/app/uploads/sites/2/2018/06/cas-settings-248x300.png)](https://pressbooks.org/app/uploads/sites/2/2018/06/cas-settings.png)
 
 ## Required Settings:
 

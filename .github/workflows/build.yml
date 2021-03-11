@@ -21,7 +21,9 @@ jobs:
           npm run docs:build
       
       - name: Move files to docs directory
-        run: mv src/.vuepress/dist docs
+        run: |
+          rm -r docs
+          mv src/.vuepress/dist docs
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "chore: build docs site" 

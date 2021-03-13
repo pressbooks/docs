@@ -10,25 +10,17 @@ Following these instructions will give you a local development network of Pressb
 
 ## 1. Dependencies
 
-Install Git: <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>
-Install PHP7.3: <https://askubuntu.com/a/1238983>
-Install Composer: <https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos>
-Install Node.js LTS with NPM: <https://nodejs.org/en/download/>
-Install Virtual Box: <https://www.virtualbox.org/>
-Install Vagrant: <https://www.vagrantup.com/>
-Install Ansible: <https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-ansible-on-specific-operating-systems>
-
-From the terminal, install the following Vagrant plugins:
-
-```
-vagrant plugin install vagrant-bindfs
-vagrant plugin install vagrant-hostmanager
-vagrant plugin install vagrant-winnfsd
-```
+* Install Git: <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>
+* Install PHP7.3: <https://askubuntu.com/a/1238983>
+* Install Composer: <https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos>
+* Install Node.js LTS with NPM: <https://nodejs.org/en/download/>
+* Install Virtual Box: <https://www.virtualbox.org/>
+* Install Vagrant: <https://www.vagrantup.com/>
+* Install Ansible: <https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-ansible-on-specific-operating-systems>
 
 ## 2. Setup
 
-Create a directory for your local development environment and `cd` there:
+Create a directory for your local development environment and `cd` there: 
 
 `mkdir ~/Code/pressbooks-dev && cd ~/Code/pressbooks-dev`
 
@@ -36,11 +28,11 @@ Clone [pressbooks/trellis][9] into `~/Code/pressbooks-dev/trellis`:
 
 `git clone git@github.com:pressbooks/trellis.git`
 
-Clone [pressbooks/bedrock][10] or a preferred bedrock into `~/Code/pressbooks-dev/site`:
+Clone [pressbooks/bedrock][10] or your preferred bedrock into `~/Code/pressbooks-dev/site`:
 
 `git clone git@github.com:pressbooks/bedrock.git site`
 
-Add [pressbooks/pressbooks][11], [pressbooks/pressbooks-aldine][12] and [the required themes][13] to your Bedrock dependencies (for more information on this strategy, [see this post][14]).
+If not already present, add [pressbooks/pressbooks][11], [pressbooks/pressbooks-aldine][12] and [the required themes][13] to your Bedrock dependencies (for more information on this strategy, [see this post][14]).
 
 ```
 cd ~/Code/pressbooks-dev/site

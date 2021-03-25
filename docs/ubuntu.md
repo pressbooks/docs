@@ -17,6 +17,8 @@ Following these instructions will give you a local development network of Pressb
 * Install Virtual Box: <https://www.virtualbox.org/>
 * Install Vagrant: <https://www.vagrantup.com/>
 * Install Ansible: <https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-ansible-on-specific-operating-systems>
+  
+Concise directions for installing VirtualBox, Vagrant, and Ansible are available [in the Trellis docs](https://roots.io/docs/getting-started/ubuntu-linux/#working-with-trellis).
 
 ## 2. Setup
 
@@ -70,6 +72,8 @@ wordpress_sites:
 It should work out-of-the-box. If you want to setup staging or production environments, you will need to update all instances of `example.com` and `pressbooks.test` in `~/Code/pressbooks-dev/trellis/group_vars/` to a consistent value. For more info, consult the [Trellis docs][15] as that is outside the scope of this tutorial.
 
 ## 4. Launch
+
+Note: the Pressbooks Trellis repository currently defines an Ansible role which will fail because Amazon has removed the KindleGen file required by the role. See https://github.com/pressbooks/trellis/issues/28. To resolve this, you can either comment out this line: https://github.com/pressbooks/trellis/blob/4cf30b98cfa5095a3902506037bec5ead1ac0cea/dev.yml#L30 or point to an available version of the Kindlegen package if you have one.
 
 Open the terminal. Change to the `~/Code/pressbooks-dev/trellis/` directory and run `vagrant up`:
 

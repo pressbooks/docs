@@ -73,8 +73,6 @@ It should work out-of-the-box. If you want to setup staging or production enviro
 
 ## 4. Launch
 
-Note: the Pressbooks Trellis repository currently defines an Ansible role which will fail because Amazon has removed the KindleGen file required by the role. See https://github.com/pressbooks/trellis/issues/28. To resolve this, you can either comment out this line: https://github.com/pressbooks/trellis/blob/4cf30b98cfa5095a3902506037bec5ead1ac0cea/dev.yml#L30 or point to an available version of the Kindlegen package if you have one.
-
 Open the terminal. Change to the `~/Code/pressbooks-dev/trellis/` directory and run `vagrant up`:
 
 ```

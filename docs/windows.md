@@ -41,20 +41,15 @@ Clone [pressbooks/trellis][9] into `~/Code/pressbooks-dev/trellis`:
 
 `git clone git@github.com:pressbooks/trellis.git`
 
-Clone [pressbooks/bedrock][10] into `~/Code/pressbooks-dev/site`:
+Clone [pressbooks/bedrock][10] or your preferred bedrock into `~/Code/pressbooks-dev/site`:
 
 `git clone git@github.com:pressbooks/bedrock.git site`
 
-Add [pressbooks/pressbooks][11], [pressbooks/pressbooks-aldine][12] and [the required themes][13] to your Bedrock dependencies (for more information on this strategy, [see this post][14])
+The generic Pressbooks bedrock already includes [pressbooks/pressbooks][11], [pressbooks/pressbooks-aldine][12] and [the required themes][13] as Composer dependencies. If you would like to add additional plugins or themes to your local development environment, add them to your Bedrock with `composer require` commands  (for more information on this strategy, [see this post][12]). The commands needed to add the Pressbooks SAML SSO plugin, for example, are shown below:
 
 ```
 cd ~/Code/pressbooks-dev/site
-composer.phar require pressbooks/pressbooks:dev-dev
-composer.phar require pressbooks/pressbooks-aldine:dev-dev
-composer.phar require pressbooks/pressbooks-book:dev-dev
-composer.phar require pressbooks/pressbooks-clarke:dev-dev
-composer.phar require pressbooks/pressbooks-donham:dev-dev
-composer.phar require pressbooks/pressbooks-jacobs:dev-dev
+composer.phar require pressbooks/pressbooks-saml-sso:dev-dev
 ```
 
 ## 3. Configuration
@@ -80,7 +75,7 @@ wordpress_sites:
       enabled: false
 ```
 
-It should work out-of-the-box. If you want to setup staging or production environments, you will need to update all instances of `example.com` and `pressbooks.test` in `~/Code/pressbooks-dev/trellis/group_vars/` to a consistent value. For more info, consult the [Trellis docs][15] as that is outside the scope of this tutorial.
+It should work out-of-the-box. If you want to setup staging or production environments, you will need to update all instances of `example.com` and `pressbooks.test` in `~/Code/pressbooks-dev/trellis/group_vars/` to a consistent value. For more info, consult the [Trellis docs][15].
 
 ## 4. Launch
 
@@ -134,7 +129,7 @@ composer standards
 
 We use [webpack][6] wrapped in [Laravel Mix][16] to build plugin assets (CSS and JavaScript) for Pressbooks.
 
-1. At the command prompt from the Pressbooks plugin directory, e.g. `~/Code/pressbooks-dev/site/web/app/plugins/pressbooks`, run `npm install` to install build tools.
+1. At the command prompt from the Pressbooks plugin directory, e.g. `~/Code/pressbooks-dev/site/web/app/plugins/pressbooks`, run `npm install --no-save pressbooks-build-tools` to install build tools.
 2. To lint your [Javascript](https://eslint.org) and [SCSS](https://stylelint.io) assets, run `npm run lint`.
 3. Then, run `npm run build` or `npm run build:production` to build your plugin assets (`npm run build:production` will add a version hash to the asset manifest for browser cache busting).
 

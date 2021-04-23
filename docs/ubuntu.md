@@ -26,24 +26,19 @@ Create a directory for your local development environment and `cd` there:
 
 `mkdir ~/Code/pressbooks-dev && cd ~/Code/pressbooks-dev`
 
-Clone [pressbooks/trellis][9] into `~/Code/pressbooks-dev/trellis`:
+Clone [pressbooks/trellis][7] into `~/Code/pressbooks-dev/trellis`:
 
 `git clone git@github.com:pressbooks/trellis.git`
 
-Clone [pressbooks/bedrock][10] or your preferred bedrock into `~/Code/pressbooks-dev/site`:
+Clone [pressbooks/bedrock][8] or your preferred bedrock into `~/Code/pressbooks-dev/site`:
 
 `git clone git@github.com:pressbooks/bedrock.git site`
 
-If not already present, add [pressbooks/pressbooks][11], [pressbooks/pressbooks-aldine][12] and [the required themes][13] to your Bedrock dependencies (for more information on this strategy, [see this post][14]).
+The generic Pressbooks bedrock already includes [pressbooks/pressbooks][9], [pressbooks/pressbooks-aldine][10] and [the required themes][11] as Composer dependencies. If you would like to add additional plugins or themes to your local development environment, add them to your Bedrock with `composer require` commands  (for more information on this strategy, [see this post][12]). The commands needed to add the Pressbooks SAML SSO plugin, for example, are shown below:
 
 ```
 cd ~/Code/pressbooks-dev/site
-composer require pressbooks/pressbooks:dev-dev
-composer require pressbooks/pressbooks-aldine:dev-dev
-composer require pressbooks/pressbooks-book:dev-dev
-composer require pressbooks/pressbooks-clarke:dev-dev
-composer require pressbooks/pressbooks-donham:dev-dev
-composer require pressbooks/pressbooks-jacobs:dev-dev
+composer require pressbooks/pressbooks-saml-sso:dev-dev
 ```
 
 ## 3. Configuration
@@ -69,7 +64,7 @@ wordpress_sites:
       enabled: false
 ```
 
-It should work out-of-the-box. If you want to setup staging or production environments, you will need to update all instances of `example.com` and `pressbooks.test` in `~/Code/pressbooks-dev/trellis/group_vars/` to a consistent value. For more info, consult the [Trellis docs][15] as that is outside the scope of this tutorial.
+It should work out-of-the-box. If you want to setup staging or production environments, you will need to update all instances of `example.com` and `pressbooks.test` in `~/Code/pressbooks-dev/trellis/group_vars/` to a consistent value. For more info, consult the [Trellis docs][13].
 
 ## 4. Launch
 
@@ -115,15 +110,15 @@ composer standards
 
 ### Asset Building
 
-We use [webpack][6] wrapped in [Laravel Mix][16] to build plugin assets (CSS and JavaScript) for Pressbooks.
+We use [webpack][6] wrapped in [Laravel Mix][14] to build plugin assets (CSS and JavaScript) for Pressbooks.
 
-1. At the command prompt from the Pressbooks plugin directory, e.g. `~/Code/pressbooks-dev/site/web/app/plugins/pressbooks`, run `npm install` to install build tools.
+1. At the command prompt from the Pressbooks plugin directory, e.g. `~/Code/pressbooks-dev/site/web/app/plugins/pressbooks`, run `npm install --no-save pressbooks-build-tools` to install build tools.
 2. To lint your [Javascript](https://eslint.org) and [SCSS](https://stylelint.io) assets, run `npm run lint`.
 3. Then, run `npm run build` or `npm run build:production` to build your plugin assets (`npm run build:production` will add a version hash to the asset manifest for browser cache busting).
 
 ### Updating Plugins & Themes
 
-In [Git Bash][8]:
+In the terminal:
 
 ```
 cd ~/Code/pressbooks-dev/site
@@ -176,13 +171,11 @@ Then commit the merge. You may need to regenerate your composer.lock file before
 [4]: https://github.com/squizlabs/PHP_CodeSniffer
 [5]: https://www.npmjs.com/
 [6]: https://webpack.github.io
-[8]: https://git-for-windows.github.io/
-[9]: https://github.com/pressbooks/trellis/
-[10]: https://github.com/pressbooks/bedrock/
-[11]: https://github.com/pressbooks/pressbooks/
-[12]: https://github.com/pressbooks/pressbooks-aldine/
-[13]: https://github.com/pressbooks/pressbooks-book/
-[14]: https://kizu514.com/blog/php-composer-for-developers/
-[15]: https://roots.io/trellis/docs/windows/
-[16]: https://github.com/JeffreyWay/laravel-mix
-[17]: https://github.com/winnfsd/vagrant-winnfsd/issues/105
+[7]: https://github.com/pressbooks/trellis/
+[8]: https://github.com/pressbooks/bedrock/
+[9]: https://github.com/pressbooks/pressbooks/
+[10]: https://github.com/pressbooks/pressbooks-aldine/
+[11]: https://github.com/pressbooks/pressbooks-book/
+[12]: https://kizu514.com/blog/php-composer-for-developers/
+[13]: https://roots.io/docs/getting-started/ubuntu-linux/
+[14]: https://github.com/JeffreyWay/laravel-mix

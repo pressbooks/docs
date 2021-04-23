@@ -177,5 +177,5 @@ Then commit the merge. You may need to regenerate your composer.lock file before
 [10]: https://github.com/pressbooks/pressbooks-aldine/
 [11]: https://github.com/pressbooks/pressbooks-book/
 [12]: https://kizu514.com/blog/php-composer-for-developers/
-[13]: https://roots.io/docs/getting-started/ubuntu-linux/
+[13]: https://roots.io/docs/trellis/master/wordpress-sites/
 [14]: https://github.com/JeffreyWay/laravel-mix

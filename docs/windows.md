@@ -195,6 +195,6 @@ Then commit the merge. You may need to regenerate your composer.lock file before
 [12]: https://github.com/pressbooks/pressbooks-aldine/
 [13]: https://github.com/pressbooks/pressbooks-book/
 [14]: http://kizu514.com/blog/php-composer-for-developers/
-[15]: https://roots.io/trellis/docs/windows/
+[15]: https://roots.io/docs/trellis/master/wordpress-sites/
 [16]: https://github.com/JeffreyWay/laravel-mix
 [17]: https://github.com/winnfsd/vagrant-winnfsd/issues/105

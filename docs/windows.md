@@ -114,7 +114,7 @@ Unit testing in the VM:
 vagrant ssh
 cd /srv/www/example.com/current
 bin/install-wp-tests.sh pressbooks_tests pressbooks_test '' 127.0.0.1 latest true
-composer test
+composer install && composer test
 ```
 
 Coding standards in the VM:
